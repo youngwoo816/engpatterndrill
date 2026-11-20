@@ -1,0 +1,59 @@
+# 바꿔 말하기 데이터: 패턴번호 | 영어 틀 | 한국어 틀 | 라벨: 영어=한국어 / ... ;; 라벨: ...
+# 패턴번호는 travel.txt의 ## 순서(1부터).
+1 | I'd like to {1}, please. | {1} 싶어요. | 동사: check in=체크인하고 / check this bag=이 가방을 부치고 / change my seat=좌석을 바꾸고 / cancel my booking=예약을 취소하고 / book a tour=투어를 예약하고
+2 | Can I get {1}, please? | {1} 좀 주실래요? | 명사: some water=물 / a blanket=담요 / another fork=포크 하나 더 / some napkins=냅킨 / a menu=메뉴판
+3 | Where can I {1}? | {1}? | 동사: buy a ticket=표는 어디서 살 수 있어요 / catch a taxi=택시는 어디서 탈 수 있어요 / exchange money=환전은 어디서 할 수 있어요 / rent a bike=자전거는 어디서 빌릴 수 있어요 / get a SIM card=유심은 어디서 살 수 있어요
+4 | Is there {1} near here? | 이 근처에 {1} 있나요? | 장소: a pharmacy=약국 / a bank=은행 / a convenience store=편의점 / a subway station=지하철역 / a good café=괜찮은 카페
+5 | Do I need to {1}? | {1}야 하나요? | 동사: show my ticket=표를 보여 줘 / pay in advance=미리 결제해 / book in advance=미리 예약해 / take off my shoes=신발을 벗어 / wait here=여기서 기다려
+6 | I'm here {1}. | {1} 왔어요. | 목적: on vacation=휴가로 / on business=출장으로 / to visit friends=친구 만나러 / to study=공부하러 / for a wedding=결혼식 때문에
+7 | I'm staying {1} for {2}. | {2} 동안 {1} 머물러요. | 장소: at a hotel=호텔에 / with my cousin=사촌 집에 / at a guesthouse=게스트하우스에 ;; 기간: three days=3일 / a week=일주일 / two weeks=2주
+8 | How long does it take to get to {1}? | {1}까지 얼마나 걸려요? | 장소: the airport=공항 / the city center=시내 / the hotel=호텔 / the beach=해변 / the station=역
+9 | I have a reservation for {1} under {2}. | {2} 이름으로 {1} 예약했어요. | 예약: two nights=2박 / one night=1박 / a double room=더블룸 ;; 이름: Kim=김 / Park=박 / Smith=스미스
+10 | Could I get {1}? | {1} 받을 수 있을까요? | 명사: a late checkout=늦은 체크아웃 / a room upgrade=객실 업그레이드 / an extra bed=엑스트라 베드 / a city map=시내 지도 / a wake-up call=모닝콜
+11 | Is {1} included? | {1} 포함인가요? | 명사: breakfast=조식 / parking=주차 / tax=세금 / the airport shuttle=공항 셔틀 / Wi-Fi=와이파이
+12 | The {1} isn't working. | {1} 작동을 안 해요. | 명사: heater=히터가 / TV=TV가 / safe=금고가 / hair dryer=헤어드라이어가 / elevator=엘리베이터가
+13 | Could you {1}, please? | {1} 주시겠어요? | 동사: call a taxi=택시 좀 불러 / bring more towels=수건 좀 더 가져다 / keep my bags=가방 좀 맡아 / change the sheets=시트 좀 갈아 / send up some ice=얼음 좀 올려 보내
+14 | What time does {1} {2}? | {1} 몇 시에 {2}? | 장소: the restaurant=식당은 / the gym=헬스장은 / the pool=수영장은 ;; 동사: open=열어요 / close=닫아요
+15 | Can I leave {1} {2}? | {1} {2} 맡겨도 될까요? | 명사: my bags=가방을 / my passport=여권을 / this box=이 상자를 ;; 장소·시간: here=여기 / at the front desk=프런트에 / until five=5시까지
+16 | Can we get a table for {1} {2}? | {2} {1} 앉을 수 있을까요? | 인원: two=두 명이 / three=세 명이 / four=네 명이 ;; 장소: by the window=창가에 / outside=밖에 / in a quiet corner=조용한 구석에
+17 | I'll have {1}, please. | {1} 주세요. | 메뉴: the salmon=연어 요리로 / a burger=버거 하나 / the pasta=파스타로 / a glass of white wine=화이트 와인 한 잔 / the soup of the day=오늘의 수프로
+18 | Could I get {1} without {2}? | {1} {2} 빼고 주실 수 있어요? | 메뉴: the salad=샐러드 / the burger=버거 / the sandwich=샌드위치 ;; 재료: onions=양파 / cheese=치즈 / tomatoes=토마토
+19 | What do you recommend {1}? | {1} 뭘 추천하세요? | 상황: for dessert=디저트로는 / for lunch=점심으로는 / for kids=아이들한테는 / with this wine=이 와인이랑은 / for two people=두 명이면
+20 | Does this come with {1}? | 이거 {1} 같이 나와요? | 명사: salad=샐러드 / bread=빵 / a drink=음료 / soup=수프 / fries=감자튀김
+21 | I'm allergic to {1}. | {1} 알레르기가 있어요. | 명사: eggs=달걀 / milk=우유 / shrimp=새우 / wheat=밀 / nuts=견과류
+22 | Can I {1}? | {1}? | 동사: pay by card=카드로 계산해도 되나요 / get the check=계산서 주실래요 / pay separately=따로 계산해도 되나요 / get a receipt=영수증 주실래요 / pay at the table=테이블에서 계산해도 되나요
+23 | Can I get {1} to go? | {1} 포장해 주실래요? | 명사: a latte=라테 한 잔 / this=이거 / two croissants=크루아상 두 개 / the rest=남은 거 / a large coffee=라지 커피 하나
+24 | How do I get to {1}? | {1} 어떻게 가요? | 장소: the museum=박물관에 / the airport=공항에 / the main square=중앙 광장에 / the beach=해변에 / this hotel=이 호텔에
+25 | Which {1} goes to {2}? | 어느 {1} {2} 가요? | 교통: bus=버스가 / train=기차가 / line=노선이 ;; 장소: the airport=공항으로 / the stadium=경기장으로 / downtown=시내로
+26 | Is this the right {1} for {2}? | 이게 {2} 가는 {1} 맞아요? | 교통: bus=버스 / train=기차 / platform=승강장 ;; 장소: downtown=시내 / the airport=공항 / the zoo=동물원
+27 | How far is {1} from here? | 여기서 {1}까지 얼마나 멀어요? | 장소: the station=역 / the old town=구시가지 / the hotel=호텔 / the night market=야시장 / the harbor=항구
+28 | Could you take me to {1}? | {1} 가 주시겠어요? | 장소: the airport=공항으로 / this address=이 주소로 / the train station=기차역으로 / my hotel=제 호텔로 / the nearest hospital=가장 가까운 병원으로
+29 | Where do I {1}? | {1}? | 동사: transfer=어디서 갈아타요 / buy a ticket=표는 어디서 사요 / get off=어디서 내려요 / pay=어디서 계산해요 / check in=어디서 체크인해요
+30 | When does the next {1} to {2} leave? | {2}행 다음 {1} 언제 출발해요? | 교통: train=기차는 / bus=버스는 / shuttle=셔틀은 ;; 장소: London=런던 / the airport=공항 / Oxford=옥스퍼드
+31 | I'd like to rent {1} for {2}. | {2} 동안 {1} 빌리고 싶어요. | 명사: a car=차를 / a bike=자전거를 / a scooter=스쿠터를 ;; 기간: three days=3일 / a week=일주일 / the day=하루
+32 | I'm looking for {1}. | {1} 찾고 있어요. | 명사: a winter coat=겨울 코트를 / a souvenir=기념품을 / running shoes=러닝화를 / a phone case=휴대폰 케이스를 / something for my dad=아빠 선물을
+33 | Do you have this in {1}? | 이거 {1} 있어요? | 옵션: blue=파란색 / a large=L 사이즈 / a size 8=8 사이즈 / a different color=다른 색 / leather=가죽으로 된 것
+34 | Can I try {1} on? | {1} 돼요? | 명사: this jacket=이 재킷 입어 봐도 / these shoes=이 신발 신어 봐도 / this hat=이 모자 써 봐도 / these jeans=이 청바지 입어 봐도 / this ring=이 반지 껴 봐도
+35 | How much is {1}? | {1} 얼마예요? | 명사: this bag=이 가방 / the blue one=파란 거 / one ticket=표 한 장 / one night=1박에 / delivery=배송비
+36 | Is there a discount for {1}? | {1} 할인 있어요? | 대상: students=학생 / seniors=경로 / groups=단체 / children=어린이 / paying in cash=현금 결제 시
+37 | I'd like to {1} this {2}. | 이 {2} {1} 싶어요. | 동사: return=반품하고 / exchange=교환하고 ;; 명사: shirt=셔츠 / sweater=스웨터 / bag=가방
+38 | Can I pay {1}? | {1} 계산해도 돼요? | 방법: by card=카드로 / in cash=현금으로 / in euros=유로로 / with Apple Pay=애플페이로 / in Korean won=한국 원화로
+39 | What's the best way to {1}? | {1} 가장 좋은 방법이 뭐예요? | 동사: get to the airport=공항에 가는 / see the city=도시를 둘러보는 / get around=돌아다니는 / avoid traffic=교통 체증을 피하는 / get tickets=표를 구하는
+40 | Are there any good {1} around here? | 이 근처에 괜찮은 {1} 있어요? | 장소: restaurants=식당 / bars=술집 / parks=공원 / bakeries=빵집 / hiking trails=등산로
+41 | Could you take a picture of {1}? | {1} 사진 좀 찍어 주실래요? | 대상: us=저희 / me=제 / my family=저희 가족 / us with the tower=탑이랑 저희
+42 | Is it possible to {1}? | {1} 수 있나요? | 동사: get a refund=환불받을 / change rooms=방을 바꿀 / leave early=일찍 나갈 / join the tour today=오늘 투어에 참여할 / pay later=나중에 계산할
+43 | What time does {1} open? | {1} 몇 시에 열어요? | 장소: the museum=박물관은 / the market=시장은 / the park=공원은 / the store=가게는 / the ticket office=매표소는
+44 | {1}, please. | {1} 주세요. | 표: Two adults=성인 두 장 / One adult and one child=성인 한 장, 어린이 한 장 / Three students=학생 세 장 / Two seniors=경로 두 장 / A family ticket=가족권 한 장
+45 | I'm from {1}. | 저는 {1}에서 왔어요. | 장소: Korea=한국 / Seoul=서울 / Busan=부산 / Canada=캐나다 / Japan=일본
+46 | Could you {1}? | {1}? | 동사: say that again=다시 말씀해 주실래요 / speak more slowly=더 천천히 말씀해 주실래요 / spell that=철자 좀 불러 주실래요 / write it down=적어 주실래요 / show me on the map=지도에서 보여 주실래요
+47 | I lost my {1} {2}. | {2} {1} 잃어버렸어요. | 명사: wallet=지갑을 / phone=폰을 / passport=여권을 ;; 장소: on the bus=버스에서 / at the station=역에서 / somewhere=어딘가에서
+48 | I missed {1}. | {1} 놓쳤어요. | 명사: my flight=비행기를 / the last bus=막차 버스를 / my train=기차를 / the shuttle=셔틀을 / my connection=환승편을
+49 | My {1} was {2}. | 제 {1} {2}. | 명사: flight=항공편이 / train=기차가 / tour=투어가 ;; 상태: delayed=지연됐어요 / canceled=취소됐어요
+50 | Someone stole my {1}. | 누가 제 {1} 훔쳐 갔어요. | 명사: bag=가방을 / wallet=지갑을 / phone=휴대폰을 / camera=카메라를 / bike=자전거를
+51 | I need {1}. | {1} 필요해요. | 명사: a doctor=의사가 / some help=도움이 / a taxi=택시가 / an interpreter=통역사가 / a pharmacy=약국이
+52 | I have {1}. | {1}. | 증상: a sore throat=목이 아파요 / a cough=기침이 나요 / a fever=열이 나요 / a rash=두드러기가 났어요 / a toothache=이가 아파요
+53 | I think there's a mistake {1}. | {1} 착오가 있는 것 같아요. | 대상: on the bill=계산서에 / with my order=제 주문에 / with my booking=제 예약에 / on my ticket=제 표에 / in the price=가격에
+54 | Can you call {1} for me? | {1} 좀 불러 주실래요? | 대상: a taxi=택시 / a doctor=의사 / the manager=매니저 / an ambulance=구급차 / security=보안 요원
+55 | Could you recommend {1}? | {1} 추천해 주시겠어요? | 명사: a good hotel=괜찮은 호텔 / a local dish=현지 음식 / a nice beach=좋은 해변 / a tour=투어 / a cheap place to eat=싸게 먹을 수 있는 곳
+56 | Can I get a {1} ticket to {2}? | {2}행 {1} 표 주세요. | 종류: one-way=편도 / round-trip=왕복 ;; 장소: Paris=파리 / Rome=로마 / Madrid=마드리드
+57 | Could I {1} my reservation? | 예약을 {1} 수 있을까요? | 동사: cancel=취소할 / change=변경할 / extend=연장할 / confirm=확인할
