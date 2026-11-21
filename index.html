@@ -251,6 +251,11 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 .exlist.h-en .ex:not(.show) .en,.exlist.h-ko .ex:not(.show) .ko{color:transparent;background:var(--sunken);border-radius:6px;user-select:none}
 .ex-nav{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 
+/* recording */
+.recbox{display:flex;gap:8px;flex-wrap:wrap}
+.pill.rec{color:var(--bad)}
+.pill.rec.on{background:var(--bad);color:#fff}
+
 /* onboarding */
 .onb{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .onb-card{background:var(--surface);border-radius:18px;max-width:420px;width:100%;padding:22px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--shadow)}
@@ -320,6 +325,7 @@ const ICON = {
   list:'<svg viewBox="0 0 24 24"><path d="M4 6h2v2H4zm4 0h12v2H8zM4 11h2v2H4zm4 0h12v2H8zm-4 5h2v2H4zm4 0h12v2H8z"/></svg>',
   book:'<svg viewBox="0 0 24 24"><path d="M5 3h11a3 3 0 0 1 3 3v15H8a3 3 0 0 1-3-3zm2 15a1 1 0 0 0 1 1h9v-2H8a1 1 0 0 0-1 1zM8 6v2h8V6zm0 4v2h6v-2z"/></svg>',
   stop:'<svg viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>',
+  mic:'<svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1a7 7 0 0 0 6-6.9z"/></svg>',
   gear:'<svg viewBox="0 0 24 24"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm8.4 4.6.1-1.1-.1-1.1 2-1.6-2-3.4-2.4 1a8 8 0 0 0-1.9-1.1L15.8 3h-3.9l-.4 2.7a8 8 0 0 0-1.9 1.1l-2.4-1-2 3.4 2 1.6-.1 1.1.1 1.1-2 1.6 2 3.4 2.4-1a8 8 0 0 0 1.9 1.1l.4 2.7h3.9l.4-2.7a8 8 0 0 0 1.9-1.1l2.4 1 2-3.4z"/></svg>',
   prev:'<svg viewBox="0 0 24 24"><path d="M15.4 5.4 14 4l-8 8 8 8 1.4-1.4L8.8 12z"/></svg>',
   next:'<svg viewBox="0 0 24 24"><path d="M8.6 18.6 10 20l8-8-8-8-1.4 1.4 6.6 6.6z"/></svg>',
@@ -821,7 +827,7 @@ function closeBtn(){
                      : `<button class="x" data-close aria-label="닫기">${ICON.x}</button>`;
 }
 function closeDrill(){
-  const from = X && X.from;
+  const from = X && X.from; recReset();
   if (TTS.ok) speechSynthesis.cancel(); dr().hidden = true; document.body.style.overflow = ""; X = null; render();
   if (from === "patterns") restoreList();
 }
@@ -842,7 +848,7 @@ function goTo(pos){
   const list = DATA[X.cat].list;
   X.pos = clamp(pos, 0, list.length-1);
   const s = list[X.pos];
-  X.steps = stepsFor(s); X.step = 0; X.round = 0; X.build = null; X.sw = null;
+  X.steps = stepsFor(s); X.step = 0; X.round = 0; X.build = null; X.sw = null; recReset();
   if (X.from === "patterns") openPat = { cat:X.cat, idx:s.pat.idx };
   drawStep();
 }
@@ -864,6 +870,41 @@ function startSwapOnly(cat, patIdx, from){
   openDrill(); drawSwap(pat);
 }
 const curS = () => X.mode === "learn" ? DATA[X.cat].list[X.pos] : X.mode === "review" ? X.items[X.i] : X.mode === "wrap" ? X.wrap.items[X.wrap.i] : null;
+
+/* 녹음 → 원어민과 비교 (마이크 권한이 있는 주소에서만 동작) */
+const REC = { ok: !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder), on:false, url:null, mr:null, stream:null, sec:0, tick:null, discard:false };
+function recInner(){
+  if (REC.on) return `<button class="pill rec on" data-rec>${ICON.stop} 녹음 중 ${REC.sec}초 · 누르면 정지</button>`;
+  return `<button class="pill rec" data-rec>${ICON.mic} ${REC.url ? '다시 녹음' : '내 발음 녹음'}</button>` +
+    (REC.url ? `<button class="pill" data-recplay>${ICON.play} 내 녹음</button><button class="pill" data-recnative>${ICON.play} 원어민</button>` : '');
+}
+const recHTML = () => REC.ok ? `<div class="recbox" id="recbox">${recInner()}</div>` : "";
+function recRefresh(){ const b = $("#recbox"); if (b) b.innerHTML = recInner(); }
+function recStop(discard){
+  clearInterval(REC.tick);
+  if (REC.on && REC.mr) { REC.discard = !!discard; REC.on = false; try { REC.mr.stop(); } catch(e){} }
+}
+function recReset(){ recStop(true); if (REC.url) { URL.revokeObjectURL(REC.url); REC.url = null; } }
+async function recStart(){
+  stopSpeech();
+  try { REC.stream = await navigator.mediaDevices.getUserMedia({ audio:true }); }
+  catch(e){ toast("마이크를 쓸 수 없어요. 마이크 권한을 허용해 주세요. claude.ai 공유 링크에서는 GitHub Pages 주소로 이용하세요."); return; }
+  const chunks = [];
+  REC.mr = new MediaRecorder(REC.stream);
+  REC.mr.ondataavailable = e => { if (e.data && e.data.size) chunks.push(e.data); };
+  REC.mr.onstop = () => {
+    if (REC.stream) { REC.stream.getTracks().forEach(t => t.stop()); REC.stream = null; }
+    if (REC.discard) { REC.discard = false; return; }
+    if (chunks.length) {
+      if (REC.url) URL.revokeObjectURL(REC.url);
+      REC.url = URL.createObjectURL(new Blob(chunks, { type: REC.mr.mimeType || "audio/webm" }));
+      new Audio(REC.url).play().catch(()=>{});
+    }
+    recRefresh();
+  };
+  REC.mr.start(); REC.on = true; REC.sec = 0; recRefresh();
+  REC.tick = setInterval(() => { REC.sec++; if (REC.sec >= 15) recStop(); else recRefresh(); }, 1000);
+}
 
 function highlight(s){
   const en = esc(s.en);
@@ -938,7 +979,8 @@ function drawStep(){
     frame(`<div class="row between"><div class="rounds">${[0,1].map(k=>`<i class="${k<r?'done':k===r?'cur':''}"></i>`).join("")}</div><span class="mono muted" style="font-size:12px">라운드 ${r+1}/2</span></div>
       <div class="big" data-peek title="눌러서 가린 단어 보기">${masked(s.en, r)}</div><div class="ko-line">${esc(s.ko)}</div>
       ${TTS.ok ? `<div class="audio-row"><button class="pill on" data-playr>${ICON.play} 듣고 따라 하기</button>${accPill()}</div>` : ''}
-      <div class="hintbox">${hint}. 가려진 단어는 문장을 누르면 잠깐 보여요.</div>`,
+      ${recHTML()}
+      <div class="hintbox">${hint}. 가려진 단어는 문장을 누르면 잠깐 보여요.${REC.ok ? ' 녹음한 내 발음을 원어민 음성과 번갈아 들어 보세요.' : ''}</div>`,
       `<button class="btn block" data-said>${r<1 ? '따라 말했어요 · 다음 라운드' : `따라 말했어요 · ${NEXT_LABEL[X.steps[X.step+1]]}`}</button>`);
     if (S.settings.auto) speak(s.en, mult);
   } else if (key === "build"){
@@ -1032,7 +1074,7 @@ function revealRecall(){
     res = `<div class="result stack" style="gap:6px"><span class="score ${p>=100?'g':p>=70?'m':'b'}">일치도 ${p}%</span><div class="w">${c.html}</div>
       <div class="hintbox">내 답: <span class="en">${esc(val)}</span>${p<100?' · 빨간 물결 단어를 놓쳤어요':''}</div></div>`;
   } else res = `<div class="result"><div class="w">${esc(s.en)}</div></div>`;
-  frame(`<span class="eyebrow">정답</span><div class="ko-line">${esc(s.ko)}</div>${res}${audioRow()}
+  frame(`<span class="eyebrow">정답</span><div class="ko-line">${esc(s.ko)}</div>${res}${audioRow()}${recHTML()}
     <div class="hintbox">정답을 한 번 더 소리 내어 말한 뒤, 얼마나 기억났는지 골라 주세요.${sug!=null?' 입력 결과에 맞는 버튼을 표시해 뒀어요.':''}</div>`,
     `<div class="grade"><button class="g-again ${sug===0?'sug':''}" data-g="0">다시<small>내일 또</small></button>
       <button class="g-ok ${sug===1?'sug':''}" data-g="1">애매<small>조금 막힘</small></button>
@@ -1040,7 +1082,7 @@ function revealRecall(){
   if (S.settings.auto) speak(s.en);
 }
 function drawReview(){
-  const s = curS();
+  const s = curS(); recReset();
   if (X.types && X.types[X.i] === "dict"){
     frame(`<span class="eyebrow">복습 · 받아쓰기</span>
       <div class="big" style="font-family:var(--f-ko);font-weight:700">들리는 문장을 영어로 써 보세요</div>
@@ -1150,6 +1192,9 @@ dr().addEventListener("click", e => {
     return drawWrap();
   }
   if ("accflip" in d) { S.settings.accent = S.settings.accent === "gb" ? "us" : "gb"; save(); b.textContent = accLabel(); const t = X.mode==="swap"||X.steps?.[X.step]==="swap" ? swapCompose(X.sw.pat.sw, X.sw.sel).plainEn : s.en; return speak(t); }
+  if ("rec" in d) { if (REC.on) recStop(); else recStart(); return; }
+  if ("recplay" in d) { stopSpeech(); if (REC.url) new Audio(REC.url).play().catch(()=>{}); return; }
+  if ("recnative" in d) return speak(s.en);
   if ("play" in d) return speak(s.en);
   if ("slow" in d) return speak(s.en, .7);
   if ("playr" in d) return speak(s.en, [0.9,1][X.round]);
