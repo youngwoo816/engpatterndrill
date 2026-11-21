@@ -269,6 +269,34 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 .pill.rec{color:var(--bad)}
 .pill.rec.on{background:var(--bad);color:#fff}
 
+/* intro page + coach marks (말풍선 안내) */
+.intro{position:fixed;inset:0;z-index:96;background:var(--bg);overflow-y:auto}
+.intro-in{max-width:480px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));padding-block:calc(20px + env(safe-area-inset-top,0px)) 0;display:flex;flex-direction:column;gap:16px}
+.intro-top{display:flex;justify-content:space-between;align-items:center}
+.intro-skip{font-weight:700;font-size:14px;color:var(--muted);padding:8px 4px}
+.intro h1{font-size:26px;line-height:1.25;letter-spacing:-.01em}
+.intro .lead{color:var(--muted);font-size:15px;margin:0}
+.intro-steps{display:flex;flex-direction:column;gap:10px}
+.intro-step{display:grid;grid-template-columns:34px 1fr;gap:4px 12px;background:var(--surface);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+.intro-step .no{grid-row:1/3;width:34px;height:34px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-family:var(--f-mono);font-weight:600;display:flex;align-items:center;justify-content:center}
+.intro-step b{font-size:15px}
+.intro-step p{margin:0;font-size:13px;color:var(--muted)}
+.intro-cta{position:sticky;bottom:0;margin-top:-8px;padding:20px 0 calc(4px + env(safe-area-inset-bottom,0px));background:linear-gradient(to bottom, transparent, var(--bg) 22px);display:flex;flex-direction:column;gap:8px}
+.flow{display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin-top:4px}
+.flow span{font-size:12px;font-weight:700;padding:3px 8px;border-radius:999px;background:var(--sunken)}
+.flow i{font-style:normal;color:var(--muted);font-size:11px}
+.tour{position:fixed;inset:0;z-index:95}
+.tour-hole{position:fixed;border-radius:14px;box-shadow:0 0 0 2px var(--accent),0 0 0 9999px rgba(6,10,8,.62);transition:top .25s,left .25s,width .25s,height .25s;pointer-events:none}
+.tour-bub{position:fixed;width:min(320px,calc(100vw - 24px));background:var(--surface);color:var(--ink);border-radius:16px;padding:14px 16px;box-shadow:0 14px 36px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:8px}
+.tour-arr{position:absolute;width:14px;height:14px;background:var(--surface);transform:rotate(45deg)}
+.tour-c{display:flex;flex-direction:column;gap:6px}
+.tour-bub .cnt{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.tour-bub b{font-size:16px}
+.tour-bub p{margin:0;font-size:14px;color:var(--muted);line-height:1.5}
+.tour-btns{display:flex;align-items:center;gap:8px;margin-top:4px}
+.tour-btns .skip{margin-right:auto;font-weight:700;font-size:13px;color:var(--muted);padding:8px 2px}
+.tour-btns .btn{min-height:38px;padding:8px 14px;font-size:14px}
+
 /* onboarding */
 .onb{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .onb-card{background:var(--surface);border-radius:18px;max-width:420px;width:100%;padding:22px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--shadow)}
@@ -358,14 +386,14 @@ const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
 function toast(msg){ const t=$("#toast"); t.textContent=msg; t.hidden=false; clearTimeout(toast._t); toast._t=setTimeout(()=>t.hidden=true,2200); }
 
 /* ---------- storage ---------- */
-const DEFAULT = { v:2, settings:{ daily:10, rate:1, auto:true, accent:"us", voiceUS:"", voiceGB:"", theme:"system", reviewMax:20, reviewType:"mix", mode:"full" }, learned:{}, sessions:[], activity:{}, newBy:{}, revDone:{}, exRead:{}, onboarded:false, lastBackup:"", snooze:{} };
+const DEFAULT = { v:2, settings:{ daily:10, rate:1, auto:true, accent:"us", voiceUS:"", voiceGB:"", theme:"system", reviewMax:20, reviewType:"mix", mode:"full" }, learned:{}, sessions:[], activity:{}, newBy:{}, revDone:{}, exRead:{}, onboarded:false, lastBackup:"", snooze:{}, tour:{} };
 let S = load();
 function normalize(o){
   const s = { ...JSON.parse(JSON.stringify(DEFAULT)), ...o };
   s.settings = { ...DEFAULT.settings, ...(o.settings||{}) };
   s.settings.daily = clamp(parseInt(s.settings.daily,10)||10, 1, 50);
   s.settings.rate = clamp(+s.settings.rate || 1, .8, 1);
-  s.revDone = s.revDone || {}; s.exRead = s.exRead || {}; s.snooze = s.snooze || {};
+  s.revDone = s.revDone || {}; s.exRead = s.exRead || {}; s.snooze = s.snooze || {}; s.tour = s.tour || {};
   s.settings.reviewMax = clamp(parseInt(s.settings.reviewMax,10)||20, 5, 100);
   s.newBy = s.newBy || {}; s.activity = s.activity || {}; s.sessions = s.sessions || []; s.learned = s.learned || {};
   return s;
@@ -760,7 +788,7 @@ function viewMore(){
     <button class="btn line" data-restore>백업 코드로 복원</button></div>
   <div class="card stack"><b>초기화</b><span class="muted" style="font-size:13px">모든 학습 기록을 지웁니다. 되돌릴 수 없어요.</span>
     <button class="btn line" data-reset style="color:var(--bad)">기록 초기화</button></div>
-  <div class="card stack" style="font-size:13px"><div class="row between"><b>학습 방법</b><button class="btn sm soft" data-onbshow>처음 안내 다시 보기</button></div>
+  <div class="card stack" style="font-size:13px"><div class="row between"><b>학습 방법</b><button class="btn sm soft" data-onbshow>사용 안내 다시 보기</button></div>
     <div><b>1. 듣기</b>: 패턴과 뜻을 확인하고 원어민 발음으로 들어요.</div>
     <div><b>2. 따라 말하기 ×2</b>: 전체 문장 → 단어 절반을 가린 문장 순서로 소리 내어 따라 해요.</div>
     <div><b>3. 조립</b>: 섞인 단어를 순서대로 눌러 문장을 완성해요.</div>
@@ -797,6 +825,101 @@ function showOnboarding(i=0){
   document.body.appendChild(el);
   el.querySelector("[data-onbnext]").focus();
 }
+/* ---------- 처음 사용 안내: 소개 페이지 → 말풍선 안내 ---------- */
+const TOURS = {
+  home: [
+    { sel:".cat [data-start]", t:"여기서 학습을 시작해요", b:"카테고리마다 Day 단위로 진행돼요. 버튼을 누르면 오늘 배울 문장이 이어서 나와요." },
+    { sel:".cat .bar.goal", t:"오늘 목표", b:"하루 분량만큼 새 문장을 마치면 초록 막대가 차고 Day가 완료로 기록돼요. 남은 예상 시간도 함께 보여요." },
+    { sel:".cat .bar.dual", t:"전체 진도", b:"연한 파랑은 한 번 이상 학습한 문장, 진한 파랑은 복습에서 '완벽'을 받아 익힌 문장이에요." },
+    { sel:".streak", t:"연속 학습일", b:"Day를 완료하거나 복습을 끝낸 날이 이어지면 숫자가 올라가요." },
+    { sel:"[data-theme-toggle]", t:"화면 모드", b:"눌러서 라이트·다크 모드를 바로 바꿀 수 있어요." },
+    { sel:'.tabbar a[href="#examples"]', t:"예문", b:"패턴마다 긍정·부정·의문·과거 등 형태가 다른 예문 10개를 듣고 읽어요." },
+    { sel:'.tabbar a[href="#progress"]', t:"진척도", b:"학습 기록 달력, Day 지도, 완료한 Day 목록을 볼 수 있어요." },
+    { sel:'.tabbar a[href="#patterns"]', t:"문장 목록", b:"전체 패턴과 문장을 검색하고, 원하는 패턴부터 바로 학습할 수 있어요." },
+    { sel:'.tabbar a[href="#more"]', t:"설정", b:"하루 분량(1~50), 빠른 모드, 미국·영국 발음, 백업 코드를 여기서 바꿔요. 이 안내도 다시 볼 수 있어요." }
+  ],
+  drill: [
+    { sel:".dr-top .steps", t:"한 문장 = 단계별 반복", b:"듣기 → 따라 말하기 → 조립 → 바꿔 말하기 → 회상 순서로 같은 문장을 여러 방식으로 반복해요. 지금 단계가 파랗게 표시돼요." },
+    { sel:".dr-top .navrow", t:"자유롭게 이동", b:"전체 문장 목록을 열거나, 이전·다음 문장, 다음 패턴으로 바로 넘어갈 수 있어요." },
+    { sel:".dr-body .audio-row", t:"원어민 발음 듣기", b:"듣기·천천히 버튼으로 반복해서 들어요. 발음 버튼을 누르면 미국·영국 발음이 바뀌어요." },
+    { sel:"[data-exsheet]", t:"패턴 예문 10개", b:"같은 패턴을 다른 형태로 쓴 예문 10개를 바로 볼 수 있어요." },
+    { sel:".dr-foot .btn", t:"다음 단계로", b:"다 들었으면 눌러서 따라 말하기로 넘어가요. 따라 말하기에서는 내 발음을 녹음해 원어민과 비교할 수 있어요." }
+  ]
+};
+let T = null;
+function showIntro(){
+  $("#intro")?.remove();
+  const el = document.createElement("div"); el.className = "intro"; el.id = "intro";
+  el.innerHTML = `<div class="intro-in" role="dialog" aria-modal="true" aria-label="사용 방법">
+    <div class="intro-top"><div class="brand" style="font-size:22px">Rep<b>.</b>English</div><button class="intro-skip" data-iskip>건너뛰기</button></div>
+    <h1>패턴 하나를 여러 문장으로<br>반복해서 입에 붙여요</h1>
+    <p class="lead">처음이라면 1분만 읽어 보세요. 사용 방법은 이게 전부예요.</p>
+    <div class="intro-steps">
+      <div class="intro-step"><span class="no">1</span><b>카테고리를 골라 Day 시작</b><p>일상 대화·여행 영어·비즈니스 영어 중 하나를 골라요. 하루 분량은 기본 10문장이고 설정에서 1~50개로 바꿀 수 있어요.</p></div>
+      <div class="intro-step"><span class="no">2</span><b>한 문장을 단계별로 반복</b><p>같은 문장을 다른 방식으로 반복해서 지루하지 않게 외워요.</p>
+        <div class="flow" style="grid-column:2"><span>듣기</span><i>›</i><span>따라 말하기</span><i>›</i><span>조립</span><i>›</i><span>바꿔 말하기</span><i>›</i><span>회상</span></div></div>
+      <div class="intro-step"><span class="no">3</span><b>Day 완료와 복습</b><p>하루 분량을 마치면 오늘 문장을 한 번 더 떠올리고 Day가 기록돼요. 헷갈린 문장은 며칠 뒤 복습으로 다시 나와요.</p></div>
+      <div class="intro-step"><span class="no">4</span><b>예문 10개 · 문장 목록</b><p>패턴마다 형태가 다른 예문 10개와 전체 문장을 언제든 듣고 볼 수 있어요.</p></div>
+      <div class="intro-step"><span class="no">5</span><b>진도는 이 기기에 저장</b><p>로그인 없이 이 브라우저에 저장돼요. 홈 화면에 추가하고 가끔 백업 코드를 저장해 두세요.</p></div>
+    </div>
+    <div class="intro-cta"><button class="btn block" data-itour>화면 둘러보기 (말풍선 안내)</button>
+    <button class="btn ghost block" data-iskip>건너뛰고 바로 시작</button></div>
+  </div>`;
+  el.addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    if ("iskip" in b.dataset) { el.remove(); S.tour.intro = 1; S.tour.home = 1; S.onboarded = true; save(); }
+    if ("itour" in b.dataset) { el.remove(); S.tour.intro = 1; S.onboarded = true; save(); startTour("home"); }
+  });
+  document.body.appendChild(el);
+  el.querySelector("[data-itour]").focus({ preventScroll:true });
+}
+function startTour(name){
+  if (name === "home" && route() !== "learn") { location.hash = "#learn"; setTimeout(() => startTour(name), 200); return; }
+  const steps = TOURS[name].filter(s => document.querySelector(s.sel));
+  if (!steps.length) return;
+  endTour(false);
+  T = { name, steps, i:0 };
+  const root = document.createElement("div"); root.className = "tour"; root.id = "tour";
+  root.innerHTML = `<div class="tour-hole"></div><div class="tour-bub" role="dialog" aria-live="polite"><div class="tour-arr"></div><div class="tour-c"></div></div>`;
+  root.addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    if ("tskip" in b.dataset) return endTour(true);
+    if ("tprev" in b.dataset) { T.i = Math.max(0, T.i-1); return tourDraw(); }
+    if ("tnext" in b.dataset) { if (T.i >= T.steps.length-1) return endTour(true); T.i++; return tourDraw(); }
+  });
+  document.body.appendChild(root);
+  tourDraw();
+}
+function tourDraw(){
+  if (!T) return;
+  const st = T.steps[T.i], target = document.querySelector(st.sel);
+  if (!target) { if (T.i < T.steps.length-1) { T.i++; return tourDraw(); } return endTour(true); }
+  const last = T.i === T.steps.length-1;
+  $("#tour .tour-c").innerHTML = `<span class="cnt">${T.i+1} / ${T.steps.length}</span><b>${st.t}</b><p>${st.b}</p>
+    <div class="tour-btns"><button class="skip" data-tskip>건너뛰기</button>${T.i>0?'<button class="btn ghost" data-tprev>이전</button>':''}<button class="btn" data-tnext>${last ? '시작하기' : '다음'}</button></div>`;
+  const inFixed = !!target.closest(".tabbar, .dr-top, .dr-foot");
+  if (!inFixed) target.scrollIntoView({ block:"center", behavior:"auto" });
+  requestAnimationFrame(() => tourPlace(target));
+  $("#tour [data-tnext]").focus({ preventScroll:true });
+}
+function tourPlace(target){
+  if (!T) return;
+  const r = target.getBoundingClientRect(), pad = 6, vw = innerWidth, vh = innerHeight;
+  const hole = $("#tour .tour-hole"), bub = $("#tour .tour-bub"), arr = $("#tour .tour-arr");
+  Object.assign(hole.style, { top:(r.top-pad)+"px", left:(r.left-pad)+"px", width:(r.width+pad*2)+"px", height:(r.height+pad*2)+"px" });
+  const bw = bub.offsetWidth, bh = bub.offsetHeight, below = (r.top + r.height/2) < vh * 0.5;
+  const left = clamp(r.left + r.width/2 - bw/2, 12, vw - bw - 12);
+  const top = below ? Math.min(r.bottom + pad + 14, vh - bh - 12) : Math.max(12, r.top - pad - 14 - bh);
+  Object.assign(bub.style, { left:left+"px", top:top+"px" });
+  const ax = clamp(r.left + r.width/2 - left - 7, 16, bw - 30);
+  Object.assign(arr.style, below ? { top:"-7px", bottom:"auto", left:ax+"px" } : { bottom:"-7px", top:"auto", left:ax+"px" });
+}
+function endTour(markDone){
+  if (T && markDone) { S.tour[T.name] = 1; save(); }
+  T = null; $("#tour")?.remove();
+}
+window.addEventListener("resize", () => { if (T) { const t = document.querySelector(T.steps[T.i].sel); if (t) tourPlace(t); } });
+
 function setDaily(v){ S.settings.daily = clamp(parseInt(v,10)||1, 1, 50); save(); const i = $("#s-daily"); if (i) i.value = S.settings.daily; }
 function bind(r){
   const app = $("#app");
@@ -826,7 +949,7 @@ function bind(r){
     else if ("learnex" in d) { stopSpeech(); startLearn(exCat, exPat().items[0].idx, "examples"); }
     else if ("dec" in d) setDaily(S.settings.daily - 1);
     else if ("inc" in d) setDaily(S.settings.daily + 1);
-    else if ("onbshow" in d) showOnboarding(0);
+    else if ("onbshow" in d) { S.tour = {}; save(); location.hash = "#learn"; setTimeout(showIntro, 150); }
     else if ("a2hs" in d) showA2HS();
     else if ("install" in d) { const ev = installEvt; installEvt = null; if (ev) { ev.prompt(); ev.userChoice.finally(() => render()); } }
     else if (d.snooze) { S.snooze[d.snooze] = addDays(today(), d.snooze === "backup" ? 3 : 14); save(); render(); }
@@ -875,7 +998,7 @@ function closeBtn(){
                      : `<button class="x" data-close aria-label="닫기">${ICON.x}</button>`;
 }
 function closeDrill(){
-  const from = X && X.from; recReset();
+  const from = X && X.from; recReset(); if (T && T.name === "drill") endTour(false);
   if (TTS.ok) speechSynthesis.cancel(); dr().hidden = true; document.body.style.overflow = ""; X = null; render();
   if (from === "patterns") restoreList();
 }
@@ -891,6 +1014,7 @@ function stepsFor(s){
 function startLearn(cat, pos, from){
   X = { mode:"learn", cat, pos, subSeen:new Set(), from: from || null };
   openDrill(); goTo(pos);
+  if (!S.tour.drill) setTimeout(() => { if (X && X.mode === "learn" && X.steps[X.step] === "listen") startTour("drill"); }, 350);
 }
 function goTo(pos){
   const list = DATA[X.cat].list;
@@ -1302,7 +1426,7 @@ if ("serviceWorker" in navigator && location.protocol === "https:" && !/claude\.
 /* ---------- boot ---------- */
 (async () => {
   $("#app").innerHTML = `<div class="wrap"><div class="empty">문장 불러오는 중…</div></div>`;
-  try { await loadData(); render(); if (!S.onboarded && Object.keys(S.learned).length === 0) showOnboarding(0); else if (!S.onboarded) { S.onboarded = true; save(); } }
+  try { await loadData(); render(); if (!S.tour.intro) showIntro(); }
   catch(e){ $("#app").innerHTML = `<div class="wrap"><div class="card stack"><b>문장 데이터를 불러오지 못했어요</b><span class="muted">파일을 직접 열었다면 웹 서버(예: GitHub Pages)로 열어 주세요. 네트워크를 확인한 뒤 새로고침하세요.</span></div></div>`; }
 })();
 })();
