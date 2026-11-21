@@ -176,8 +176,12 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 .dr-top .in{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
 .x{width:36px;height:36px;border-radius:50%;background:var(--sunken);display:flex;align-items:center;justify-content:center;flex:none}
 .x svg{width:16px;height:16px;fill:var(--ink)}
-.navrow{display:grid;grid-template-columns:auto 1fr 1fr auto;gap:6px;min-width:0}
-.nav{display:inline-flex;align-items:center;justify-content:center;gap:4px;height:34px;padding:0 10px;border-radius:10px;background:var(--surface);box-shadow:var(--shadow);font-size:13px;font-weight:600;white-space:nowrap}
+.navrow{display:grid;grid-template-columns:auto 1fr auto;gap:6px;min-width:0;align-items:center}
+.pager{display:flex;align-items:center;justify-content:center;gap:4px;min-width:0}
+.pager span{font-size:13px;font-weight:600;min-width:56px;text-align:center}
+.pager small{color:var(--muted);font-weight:500}
+.nav.icon{width:40px;padding:0;flex:none}
+.nav{display:inline-flex;align-items:center;justify-content:center;gap:4px;height:40px;padding:0 10px;border-radius:10px;background:var(--surface);box-shadow:var(--shadow);font-size:13px;font-weight:600;white-space:nowrap}
 .nav svg{width:15px;height:15px;fill:currentColor}
 .nav[disabled]{opacity:.4;pointer-events:none}
 .nav.pat-next{color:var(--accent)}
@@ -208,7 +212,7 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 .rounds i.cur{background:var(--accent)}
 .mask{color:transparent;background:var(--sunken);border-radius:5px;box-shadow:inset 0 -2px 0 var(--line)}
 .peek .mask{color:var(--muted);background:transparent;box-shadow:none}
-.hintbox{font-size:12px;color:var(--muted)}
+.hintbox{font-size:13px;color:var(--muted);line-height:1.5}
 .answer{min-height:64px;background:var(--surface);border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--line);padding:10px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start}
 .answer.ok{box-shadow:inset 0 0 0 2px var(--good);background:var(--good-soft)}
 .answer.no{animation:shake .35s}
@@ -384,7 +388,7 @@ const dstr = (d=new Date()) => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(
 const addDays = (s, n) => { const [y,m,d] = s.split("-").map(Number); const t = new Date(y,m-1,d); t.setDate(t.getDate()+n); return dstr(t); };
 const shuffle = a => { a = a.slice(); for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
 const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
-function toast(msg){ const t=$("#toast"); t.textContent=msg; t.hidden=false; clearTimeout(toast._t); toast._t=setTimeout(()=>t.hidden=true,2200); }
+function toast(msg, ms=2200){ if (!msg) return; const t=$("#toast"); t.textContent=msg; t.hidden=false; clearTimeout(toast._t); toast._t=setTimeout(()=>t.hidden=true,ms); }
 
 /* ---------- storage ---------- */
 const DEFAULT = { v:2, settings:{ daily:10, rate:1, auto:true, accent:"us", voiceUS:"", voiceGB:"", theme:"system", reviewMax:20, reviewType:"mix", mode:"full" }, learned:{}, sessions:[], activity:{}, newBy:{}, revDone:{}, exRead:{}, onboarded:false, lastBackup:"", snooze:{}, tour:{}, profile:{ id:"", name:"" }, sync:{ on:true, last:"" } };
@@ -515,6 +519,7 @@ function speakList(texts, onStart, onDone){
   } catch(e){}
 }
 const accLabel = () => S.settings.accent === "gb" ? "영국 발음" : "미국 발음";
+const accBtn = () => `${accLabel()} ⇄`;
 
 /* ---------- progress logic ---------- */
 const today = () => dstr();
@@ -543,6 +548,12 @@ function checkClear(cat){
   if (doneToday(cat) || todayNew(cat) < S.settings.daily) return false;
   S.sessions.push({ date:today(), cat, day:S.sessions.filter(x=>x.cat===cat).length+1, n:todayNew(cat) });
   return true;
+}
+function gradeMsg(id, g){
+  const L = S.learned[id]; if (!L) return "";
+  const [y,m,d] = L.due.split("-").map(Number), [ty,tm,td] = today().split("-").map(Number);
+  const days = Math.round((new Date(y,m-1,d) - new Date(ty,tm-1,td)) / 864e5);
+  return `${["다시","애매","완벽"][g]} · ${days <= 1 ? "내일 다시 나와요" : `${days}일 뒤 복습`}`;
 }
 function grade(id, g){ // g: 0 다시, 1 애매, 2 완벽
   const cur = S.learned[id];
@@ -744,7 +755,7 @@ function viewExamples(){
   h += `<div class="stack"><div class="seg" role="group">${CATS.map(x=>`<button data-ec="${x.key}" aria-pressed="${x.key===exCat}">${x.ko}</button>`).join("")}</div>
     <select id="ex-pat" class="search" aria-label="패턴 선택">${D.sections.map(sec=>`<optgroup label="${esc(sec.name)}">${sec.patterns.map(q=>`<option value="${q.idx}" ${q===p?'selected':''}>${S.exRead[exKey(q)]?'✓ ':''}${q.idx+1}. ${esc(q.p)}</option>`).join("")}</optgroup>`).join("")}</select>
     <div class="card stack">${patChip(p)}
-      ${TTS.ok ? `<div class="audio-row"><button class="pill on" data-exall>${ICON.play} 10개 전체 듣기</button><button class="pill" data-exstop>${ICON.stop} 정지</button><button class="pill acc" data-exacc>${accLabel()}</button></div>` : ''}
+      ${TTS.ok ? `<div class="audio-row"><button class="pill on" data-exall>${ICON.play} 10개 전체 듣기</button><button class="pill" data-exstop>${ICON.stop} 정지</button><button class="pill acc" data-exacc title="누르면 미국·영국 발음이 바뀌어요">${accBtn()}</button></div>` : ''}
       <div class="seg" role="group">${[["none","모두 보기"],["en","영어 가리기"],["ko","한국어 가리기"]].map(([v,l])=>`<button data-exh="${v}" aria-pressed="${exHide===v}">${l}</button>`).join("")}</div>
       <div class="exlist ${exHide!=='none'?'h-'+exHide:''}" id="exlist">${ex.length ? exRows(ex, "data-exsay") : '<div class="empty">이 패턴의 예문이 없어요.</div>'}</div>
       <div class="hintbox">${exHide==='none' ? '문장 왼쪽 버튼을 누르면 한 문장씩 들을 수 있어요.' : '가려진 문장을 떠올려 말해 본 뒤, 줄을 눌러 정답을 확인하세요.'}</div>
@@ -949,7 +960,7 @@ function bind(r){
     else if ("exall" in d) { const p = exPat(), ex = p.ex || []; speakList(ex.map(e=>e.en), i => exMark(i), () => { exMark(-1); if (!S.exRead[exKey(p)] && route()==="examples" && exPat()===p) { markExRead(p); render(); toast("10개 전체를 들어서 읽음으로 표시했어요"); } }); }
     else if (d.exread) { markExRead(exPat(), d.exread === "1"); render(); }
     else if ("exstop" in d) { stopSpeech(); exMark(-1); }
-    else if ("exacc" in d) { S.settings.accent = S.settings.accent === "gb" ? "us" : "gb"; save(); b.textContent = accLabel(); }
+    else if ("exacc" in d) { S.settings.accent = S.settings.accent === "gb" ? "us" : "gb"; save(); b.textContent = accBtn(); }
     else if ("exprev" in d) { exIdx--; exCur = -1; stopSpeech(); render(); }
     else if ("exnext" in d) { exIdx++; exCur = -1; stopSpeech(); render(); }
     else if ("learnex" in d) { stopSpeech(); startLearn(exCat, exPat().items[0].idx, "examples"); }
@@ -1125,11 +1136,9 @@ function headerHTML(){
       <span class="mono" style="font-weight:600;font-size:13px" title="오늘 새로 배운 문장">오늘 ${Math.min(tn,n)}/${n}</span></div>
       <div class="navrow">
         <button class="nav" data-sheet>${ICON.list} 전체 문장</button>
-        <button class="nav" data-prev ${X.pos<=0?'disabled':''}>${ICON.prev} 이전</button>
-        <button class="nav" data-skip ${X.pos>=list.length-1?'disabled':''}>다음 ${ICON.next}</button>
+        <div class="pager"><button class="nav icon" data-prev aria-label="이전 문장" title="이전 문장" ${X.pos<=0?'disabled':''}>${ICON.prev}</button><span class="mono" title="문장 번호">${X.pos+1}<small>/${list.length}</small></span><button class="nav icon" data-skip aria-label="다음 문장으로 건너뛰기" title="다음 문장" ${X.pos>=list.length-1?'disabled':''}>${ICON.next}</button></div>
         <button class="nav pat-next" data-nextpat ${np<0?'disabled':''}>다음 패턴 ${ICON.skip}</button>
       </div>
-      <div class="row between" style="font-size:12px"><span class="muted">${esc(list[X.pos].pat.p)}</span><span class="muted mono">${X.pos+1} / ${list.length}</span></div>
       <div class="steps">${X.steps.map((k,i)=>`<span class="${i===X.step?'on':i<X.step?'past':''}">${STEP_LABEL[k]}</span>`).join("")}</div>`;
   }
   if (X.mode === "wrap"){
@@ -1150,7 +1159,7 @@ function frame(body, foot){
     <div class="dr-foot"><div class="in">${foot}</div></div>`;
   dr().querySelector(".dr-body").scrollTop = 0;
 }
-const accPill = () => `<button class="pill acc" data-accflip title="발음 바꾸기">${accLabel()}</button>`;
+const accPill = () => `<button class="pill acc" data-accflip title="누르면 미국·영국 발음이 바뀌어요" aria-label="${accLabel()}, 눌러서 발음 바꾸기">${accBtn()}</button>`;
 const audioRow = () => TTS.ok ? `<div class="audio-row"><button class="pill" data-play>${ICON.play} 듣기</button><button class="pill" data-slow>${ICON.slow} 천천히</button>${accPill()}</div>` : `<div class="hintbox">이 브라우저는 음성 읽기를 지원하지 않아요. 문장을 소리 내어 읽어 주세요.</div>`;
 const patChip = p => `<div class="patchip"><span class="p">${esc(p.p)}</span><span class="k">${esc(p.k)}</span>${p.tip?`<span class="tip">${esc(p.tip)}</span>`:''}</div>`;
 
@@ -1186,7 +1195,7 @@ function drawStep(){
     X.build = { words, order, picked:[], endP };
     frame(`<div class="ko-line" style="color:var(--ink);font-weight:600">${esc(s.ko)}</div>
       <div class="answer" id="ans"></div><div class="pool" id="pool">${order.map((wi,k)=>`<button class="chip" data-chip="${k}">${esc(words[wi])}</button>`).join("")}</div>
-      <div class="hintbox">단어를 순서대로 누르세요. 위 칸의 단어를 누르면 되돌아가요.</div>`,
+      <div class="hintbox" id="buildmsg">단어를 순서대로 누르세요. 위 칸의 단어를 누르면 되돌아가요.</div>`,
       `<button class="btn ghost" data-clear>다시 놓기</button><button class="btn" data-adv>정답 보고 넘어가기</button>`);
   } else if (key === "swap"){
     drawSwap(s.pat);
@@ -1218,9 +1227,9 @@ function drawSwap(pat){
   W.made.set(W.sel.join(","), c.plainEn);
   const n = W.made.size, need = SWAP_MIN;
   const ok = n >= need;
-  const footLearn = `<button class="btn ghost" data-adv>건너뛰기</button><button class="btn" data-adv ${ok?'':'disabled'}>${ok ? '회상으로' : `${need - n}개 더 만들어 말해 보기`}</button>`;
+  const footLearn = `<button class="btn ghost" data-adv>건너뛰기</button><button class="btn" data-adv ${ok?'':'disabled'}>${ok ? '회상으로' : `${need - n}개 더 만들기`}</button>`;
   const footOnly = `<button class="btn block" data-close>${X.from==="patterns" ? (ok ? '완료 · 목록으로' : '목록으로 돌아가기') : (ok ? '완료' : '닫기')}</button>`;
-  frame(`${patChip(pat)}
+  frame(`<div class="patchip"><span class="p">${esc(pat.p)}</span><span class="k">${esc(pat.k)}</span></div>
     <span class="eyebrow">아래 단어를 눌러 바꾸고, 바뀐 문장을 소리 내어 말해 보세요</span>
     <div class="big" id="swEn">${c.en}</div><div class="ko-line" id="swKo">${c.ko}</div>
     ${TTS.ok ? `<div class="audio-row"><button class="pill" data-swplay>${ICON.play} 듣기</button><button class="pill" data-swslow>${ICON.slow} 천천히</button>${accPill()}</div>` : ''}
@@ -1380,7 +1389,7 @@ dr().addEventListener("click", e => {
     if (W.i >= W.items.length) { X.wrapScore = `${W.ok}/${W.items.length} 기억`; return endWrap(); }
     return drawWrap();
   }
-  if ("accflip" in d) { S.settings.accent = S.settings.accent === "gb" ? "us" : "gb"; save(); b.textContent = accLabel(); const t = X.mode==="swap"||X.steps?.[X.step]==="swap" ? swapCompose(X.sw.pat.sw, X.sw.sel).plainEn : s.en; return speak(t); }
+  if ("accflip" in d) { S.settings.accent = S.settings.accent === "gb" ? "us" : "gb"; save(); b.textContent = accBtn(); const t = X.mode==="swap"||X.steps?.[X.step]==="swap" ? swapCompose(X.sw.pat.sw, X.sw.sel).plainEn : s.en; return speak(t); }
   if ("rec" in d) { if (REC.on) recStop(); else recStart(); return; }
   if ("recplay" in d) { stopSpeech(); if (REC.url) new Audio(REC.url).play().catch(()=>{}); return; }
   if ("recnative" in d) return speak(s.en);
@@ -1402,18 +1411,34 @@ dr().addEventListener("click", e => {
     const g = +d.g;
     if (X.mode === "learn") {
       const wasNew = !S.learned[s.id];
-      grade(s.id, g); logActivity(1);
+      grade(s.id, g); logActivity(1); toast(gradeMsg(s.id, g));
       if (wasNew) addNew(X.cat);
       const cleared = wasNew && checkClear(X.cat);
       save();
       if (cleared) return startWrap();
       return nextSentence();
     } else {
-      grade(s.id, g); logActivity(1); save();
+      grade(s.id, g); logActivity(1); save(); toast(gradeMsg(s.id, g));
       X.i++; if (X.i >= X.items.length) { S.revDone[today()] = 1; save(); toast("오늘 복습 완료 · 연속 학습일에 반영됐어요"); return closeDrill(); }
       return drawReview();
     }
   }
+});
+
+dr().addEventListener("keydown", e => {
+  if (e.target.id === "rin" && e.key === "Enter" && !e.shiftKey && !e.isComposing && e.keyCode !== 229) {
+    e.preventDefault(); dr().querySelector("[data-reveal]")?.click();
+  }
+});
+document.addEventListener("keydown", e => {
+  if (dr().hidden || !X || $("#tour") || $("#onb") || $("#intro")) return;
+  const tag = (e.target.tagName || "").toLowerCase();
+  if (tag === "textarea" || tag === "input" || tag === "select" || e.metaKey || e.ctrlKey || e.altKey) return;
+  if (e.key === "Escape") { if ($("#sheet")) dr().querySelector("[data-sheetclose]")?.click(); return; }
+  if ($("#sheet")) return;
+  if (e.key === " ") { const p = dr().querySelector("[data-play],[data-playr],[data-swplay]"); if (p) { e.preventDefault(); p.click(); } return; }
+  if (["1","2","3"].includes(e.key)) { const g = dr().querySelector(`[data-g="${+e.key-1}"]`); if (g) { e.preventDefault(); g.click(); } return; }
+  if (e.key === "Enter" && tag !== "button") { const btns = [...dr().querySelectorAll(".dr-foot .btn:not([disabled])")]; const p = btns.find(b => !b.classList.contains("ghost")) || btns[0]; if (p) { e.preventDefault(); p.click(); } }
 });
 
 function drawAnswer(){
@@ -1431,6 +1456,13 @@ function drawAnswer(){
       void ans.offsetWidth; ans.classList.add("no");
       const first = B.picked.findIndex((k,i) => B.words[B.order[k]] !== B.words[i]);
       const el = ans.children[first]; if (el) el.classList.add("wrong");
+      const msg = $("#buildmsg"); if (msg) { msg.textContent = `순서가 달라요. ${first+1}번째 단어부터 다시 골라 보세요.`; msg.style.color = "var(--bad)"; }
+      setTimeout(() => {                         // 맞게 놓은 앞부분은 두고, 틀린 단어부터 자동으로 되돌림
+        if (!X || X.build !== B) return;
+        B.picked = B.picked.slice(0, first);
+        dr().querySelectorAll("#pool .chip").forEach(c => c.classList.toggle("used", B.picked.includes(+c.dataset.chip)));
+        drawAnswer();
+      }, 900);
     }
   }
 }
