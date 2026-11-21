@@ -328,7 +328,7 @@ const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
 function toast(msg){ const t=$("#toast"); t.textContent=msg; t.hidden=false; clearTimeout(toast._t); toast._t=setTimeout(()=>t.hidden=true,2200); }
 
 /* ---------- storage ---------- */
-const DEFAULT = { v:2, settings:{ daily:10, rate:1, auto:true, accent:"us", voiceUS:"", voiceGB:"", theme:"system", reviewMax:20 }, learned:{}, sessions:[], activity:{}, newBy:{}, revDone:{} };
+const DEFAULT = { v:2, settings:{ daily:10, rate:1, auto:true, accent:"us", voiceUS:"", voiceGB:"", theme:"system", reviewMax:20, reviewType:"mix" }, learned:{}, sessions:[], activity:{}, newBy:{}, revDone:{} };
 let S = load();
 function normalize(o){
   const s = { ...JSON.parse(JSON.stringify(DEFAULT)), ...o };
@@ -668,6 +668,8 @@ function viewMore(){
       <div class="stepper"><button data-dec aria-label="하나 줄이기">−</button><input id="s-daily" type="number" inputmode="numeric" min="1" max="50" step="1" value="${st.daily}" aria-label="하루 분량"><button data-inc aria-label="하나 늘리기">+</button></div></div>
     <div class="set-row"><div><div class="t">하루 복습 상한</div><div class="d">복습이 밀려도 하루에 이 개수까지만, 오래된 문장부터 나와요</div></div>
       <select id="s-revmax">${[10,20,30,50].map(v=>`<option value="${v}" ${v===st.reviewMax?'selected':''}>${v}문장</option>`).join("")}</select></div>
+    <div class="set-row"><div><div class="t">복습 방식</div><div class="d">한국어 보고 영어로 말하기, 소리만 듣고 받아쓰기, 또는 둘을 번갈아</div></div>
+      <div class="seg" role="group">${[["mix","섞어서"],["recall","한→영"],["dict","받아쓰기"]].map(([v,l])=>`<button data-rt="${v}" aria-pressed="${st.reviewType===v}">${l}</button>`).join("")}</div></div>
     <div class="set-row"><div><div class="t">화면 모드</div><div class="d">라이트·다크 중 고르거나 기기 설정을 따라가요</div></div>
       <div class="seg" role="group">${[["system","기기 설정"],["light","라이트"],["dark","다크"]].map(([v,l])=>`<button data-th="${v}" aria-pressed="${st.theme===v}">${l}</button>`).join("")}</div></div>
     <div class="set-row"><div><div class="t">발음</div><div class="d">미국식 또는 영국식 원어민 발음</div></div>
@@ -694,6 +696,7 @@ function viewMore(){
     <div><b>예문 탭</b>: 패턴마다 긍정·부정·의문·과거 등 형태가 다른 예문 10개를 읽고 들을 수 있어요.</div>
     <div><b>이동</b>: 학습 중 상단의 전체 문장·이전·다음 문장·다음 패턴 버튼으로 자유롭게 옮겨 다닐 수 있어요.</div>
     <div><b>Day 기록</b>: 하루 분량만큼 새 문장을 마치면, 오늘 배운 문장을 한 번 더 떠올리는 마무리 후 Day가 완료로 표시돼요.</div>
+    <div><b>받아쓰기</b>: 복습 방식에서 고르면 소리만 듣고 문장을 써 보며 듣기 실력을 확인해요.</div>
     <div><b>복습</b>: 채점 결과에 따라 1·2·4·7·15·30·60일 간격으로 다시 나와요. 복습에서 '완벽'을 받으면 '익힘'으로 표시돼요.</div></div></div>`;
   return h;
 }
@@ -729,6 +732,7 @@ function bind(r){
     else if ("learnex" in d) { stopSpeech(); startLearn(exCat, exPat().items[0].idx, "examples"); }
     else if ("dec" in d) setDaily(S.settings.daily - 1);
     else if ("inc" in d) setDaily(S.settings.daily + 1);
+    else if (d.rt) { S.settings.reviewType = d.rt; save(); render(); }
     else if (d.th) { S.settings.theme = d.th; save(); applyTheme(); render(); }
     else if (d.acc) { S.settings.accent = d.acc; save(); render(); speak("Hello! This is how I sound."); }
     else if ("test" in d) speak("Hi! I'm about to start my English practice.");
@@ -802,7 +806,9 @@ function nextPatternIndex(){
 }
 function startReview(){
   const due = shuffle(dueList().slice(0, S.settings.reviewMax)); if (!due.length) return;
-  X = { mode:"review", items:due, i:0 };
+  const rt = TTS.ok ? S.settings.reviewType : "recall";
+  const types = due.map((_,i) => rt === "dict" ? "dict" : rt === "recall" ? "recall" : (i % 2 ? "dict" : "recall"));
+  X = { mode:"review", items:due, i:0, types };
   openDrill(); drawReview();
 }
 function startSwapOnly(cat, patIdx, from){
@@ -977,6 +983,16 @@ function revealRecall(){
 }
 function drawReview(){
   const s = curS();
+  if (X.types && X.types[X.i] === "dict"){
+    frame(`<span class="eyebrow">복습 · 받아쓰기</span>
+      <div class="big" style="font-family:var(--f-ko);font-weight:700">들리는 문장을 영어로 써 보세요</div>
+      <div class="audio-row"><button class="pill on" data-play>${ICON.play} 듣기</button><button class="pill" data-slow>${ICON.slow} 천천히</button>${accPill()}</div>
+      <textarea id="rin" class="input" rows="2" placeholder="들은 문장 입력" autocapitalize="off" autocorrect="off" spellcheck="false"></textarea>
+      <div class="hintbox">몇 번이든 다시 들어도 괜찮아요. 뜻은 정답에서 확인할 수 있어요.</div>`,
+      `<button class="btn block" data-reveal>정답 확인</button>`);
+    speak(s.en);
+    return;
+  }
   frame(`<span class="eyebrow">복습 · ${esc(s.pat.p)}</span><div class="big" style="font-family:var(--f-ko);font-weight:700">${esc(s.ko)}</div>
     <textarea id="rin" class="input" rows="2" placeholder="영어 문장 입력 (선택)" autocapitalize="off" autocorrect="off" spellcheck="false"></textarea>
     <div class="hintbox">소리 내어 말하거나 입력한 뒤 정답을 확인하세요.</div>`,
