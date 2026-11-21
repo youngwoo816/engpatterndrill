@@ -693,7 +693,7 @@ function viewMore(){
     <div><b>5. 회상</b>: 한국어만 보고 영어로 말하거나 입력한 뒤, 스스로 채점해요.</div>
     <div><b>예문 탭</b>: 패턴마다 긍정·부정·의문·과거 등 형태가 다른 예문 10개를 읽고 들을 수 있어요.</div>
     <div><b>이동</b>: 학습 중 상단의 전체 문장·이전·다음 문장·다음 패턴 버튼으로 자유롭게 옮겨 다닐 수 있어요.</div>
-    <div><b>Day 기록</b>: 하루 분량만큼 새 문장을 마치면 Day가 완료로 표시돼요.</div>
+    <div><b>Day 기록</b>: 하루 분량만큼 새 문장을 마치면, 오늘 배운 문장을 한 번 더 떠올리는 마무리 후 Day가 완료로 표시돼요.</div>
     <div><b>복습</b>: 채점 결과에 따라 1·2·4·7·15·30·60일 간격으로 다시 나와요. 복습에서 '완벽'을 받으면 '익힘'으로 표시돼요.</div></div></div>`;
   return h;
 }
@@ -810,7 +810,7 @@ function startSwapOnly(cat, patIdx, from){
   X = { mode:"swap", cat, pat, from: from || null };
   openDrill(); drawSwap(pat);
 }
-const curS = () => X.mode === "learn" ? DATA[X.cat].list[X.pos] : X.mode === "review" ? X.items[X.i] : null;
+const curS = () => X.mode === "learn" ? DATA[X.cat].list[X.pos] : X.mode === "review" ? X.items[X.i] : X.mode === "wrap" ? X.wrap.items[X.wrap.i] : null;
 
 function highlight(s){
   const en = esc(s.en);
@@ -848,6 +848,12 @@ function headerHTML(){
       </div>
       <div class="row between" style="font-size:12px"><span class="muted">${esc(list[X.pos].pat.p)}</span><span class="muted mono">${X.pos+1} / ${list.length}</span></div>
       <div class="steps">${X.steps.map((k,i)=>`<span class="${i===X.step?'on':i<X.step?'past':''}">${STEP_LABEL[k]}</span>`).join("")}</div>`;
+  }
+  if (X.mode === "wrap"){
+    const W = X.wrap;
+    return `<div class="row between">${closeBtn()}
+      <span class="eyebrow" style="flex:1;text-align:center">오늘 문장 다시 떠올리기</span><span class="mono" style="font-weight:600">${W.i+1} / ${W.items.length}</span></div>
+      <div class="bar goal" style="height:6px"><i style="width:${W.i/W.items.length*100}%"></i></div>`;
   }
   const label = X.mode === "review" ? "복습" : "바꿔 말하기";
   const prog = X.mode === "review" ? `${X.i+1} / ${X.items.length}` : "";
@@ -969,14 +975,35 @@ function drawReview(){
     `<button class="btn block" data-reveal>정답 확인</button>`);
 }
 
+function startWrap(){
+  const items = shuffle(DATA[X.cat].list.filter(s => S.learned[s.id] && S.learned[s.id].t === today()));
+  if (items.length < 2) return drawClear();
+  X.wrap = { items, i:0, phase:"q", ok:0 }; X.mode = "wrap";
+  drawWrap();
+}
+function drawWrap(){
+  const W = X.wrap, s = curS();
+  if (W.phase === "q"){
+    frame(`<span class="eyebrow">Day 마무리 · 오늘 배운 문장을 한 번 더</span>
+      <div class="big" style="font-family:var(--f-ko);font-weight:700">${esc(s.ko)}</div>
+      <div class="hintbox">시간 제한은 없어요. 영어로 소리 내어 말해 본 뒤 정답을 확인하세요.</div>`,
+      `<button class="btn ghost" data-wskip>마무리 건너뛰기</button><button class="btn" data-wflip>정답 보기</button>`);
+  } else {
+    frame(`<span class="eyebrow">Day 마무리</span><div class="ko-line">${esc(s.ko)}</div><div class="big">${highlight(s)}</div>${audioRow()}`,
+      `<button class="btn ghost" data-wok="0">헷갈렸어요</button><button class="btn" data-wok="1">기억났어요</button>`);
+    if (S.settings.auto) speak(s.en);
+  }
+}
+function endWrap(){ X.mode = "learn"; X.wrap = null; drawClear(); }
+
 function drawClear(){
   const c = CATS.find(c=>c.key===X.cat), day = S.sessions.filter(x=>x.cat===X.cat).length, st = streak();
   X.clear = true;
   dr().innerHTML = `<div class="dr-body" style="padding-top:calc(16px + env(safe-area-inset-top,0px))"><div class="in"><div class="done-hero">
     <div class="stamp"><span>DAY</span><b>${day}</b><span>CLEAR</span></div>
     <h2 style="font-size:22px;margin-top:10px">${c.ko} Day ${day} 완료</h2>
-    <div class="muted">오늘 새 문장 ${todayNew(X.cat)}개 · 연속 ${st}일</div>
-    <div class="hintbox">'애매'·'다시'로 채점한 문장은 내일 복습에 나와요. 더 하고 싶으면 이어서 학습할 수 있어요.</div></div></div></div>
+    <div class="muted">오늘 새 문장 ${todayNew(X.cat)}개 · 연속 ${st}일${X.wrapScore ? ` · 마무리 ${X.wrapScore}` : ''}</div>
+    <div class="hintbox">'애매'·'다시'로 채점했거나 마무리에서 헷갈린 문장은 내일 복습에 나와요. 더 하고 싶으면 이어서 학습할 수 있어요.</div></div></div></div>
     <div class="dr-foot"><div class="in"><button class="btn ghost" data-close>${X.from ? FROM_LABEL[X.from]+'으로' : '홈으로'}</button><button class="btn" data-continue>이어서 학습</button></div></div>`;
 }
 
@@ -1030,6 +1057,16 @@ dr().addEventListener("click", e => {
   if ("skip" in d) return goTo(X.pos + 1);
   if ("nextpat" in d) { const i = nextPatternIndex(); if (i >= 0) goTo(i); return; }
   if ("continue" in d) { X.clear = false; return nextSentence(); }
+  if ("wskip" in d) return endWrap();
+  if ("wflip" in d) { X.wrap.phase = "a"; return drawWrap(); }
+  if (d.wok != null) {
+    const W = X.wrap;
+    if (d.wok === "1") W.ok++;
+    else { const L = S.learned[s.id]; if (L) { L.box = 0; L.g = 0; L.due = addDays(today(), 1); save(); } }
+    W.i++; W.phase = "q";
+    if (W.i >= W.items.length) { X.wrapScore = `${W.ok}/${W.items.length} 기억`; return endWrap(); }
+    return drawWrap();
+  }
   if ("accflip" in d) { S.settings.accent = S.settings.accent === "gb" ? "us" : "gb"; save(); b.textContent = accLabel(); const t = X.mode==="swap"||X.steps?.[X.step]==="swap" ? swapCompose(X.sw.pat.sw, X.sw.sel).plainEn : s.en; return speak(t); }
   if ("play" in d) return speak(s.en);
   if ("slow" in d) return speak(s.en, .7);
@@ -1053,7 +1090,7 @@ dr().addEventListener("click", e => {
       if (wasNew) addNew(X.cat);
       const cleared = wasNew && checkClear(X.cat);
       save();
-      if (cleared) return drawClear();
+      if (cleared) return startWrap();
       return nextSentence();
     } else {
       grade(s.id, g); logActivity(1); save();
