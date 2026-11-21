@@ -596,15 +596,19 @@ function viewProgress(){
     <div class="heat-wrap"><div class="heat">${cells}</div></div>
     <div class="legend">적음 <span style="background:var(--heat0)"></span><span style="background:var(--heat1)"></span><span style="background:var(--heat2)"></span><span style="background:var(--heat3)"></span><span style="background:var(--heat4)"></span> 많음</div></div>`;
   const c = CATS.find(x=>x.key===progCat), D = DATA[c.key], n = S.settings.daily;
-  const days = Math.ceil(D.list.length / n);
-  let grid = "";
-  for (let i=0;i<days;i++){ const chunk = D.list.slice(i*n,(i+1)*n); const k = chunk.filter(s=>S.learned[s.id]).length;
-    const cls = k===chunk.length ? "done" : k>0 ? "part" : ""; grid += `<span class="${cls}" title="Day ${i+1}: ${k}/${chunk.length}">${i+1}</span>`; }
+  // 실제 완료 기록 기준: 완료한 Day → 진행 중 Day → 남은 문장으로 계산한 예상 Day
+  const doneDays = S.sessions.filter(x => x.cat === c.key);
+  let grid = doneDays.map((x,i) => `<span class="done" title="Day ${i+1} · ${x.date} · 새 문장 ${x.n}개">${i+1}</span>`).join("");
+  let k = doneDays.length;
+  const tnow = todayNew(c.key), left = D.list.length - learnedIn(c.key);
+  if (!doneToday(c.key) && tnow > 0) { k++; grid += `<span class="part cur" title="Day ${k} 진행 중 · ${tnow}/${n}">${k}</span>`; }
+  const future = Math.ceil(Math.max(0, left - (!doneToday(c.key) && tnow > 0 ? Math.max(0, n - tnow) : 0)) / n);
+  for (let i=0;i<future;i++){ k++; grid += `<span title="Day ${k} (예상)">${k}</span>`; }
   h += `<div class="card stack"><div class="seg" role="group">${CATS.map(x=>`<button data-pc="${x.key}" aria-pressed="${x.key===progCat}">${x.ko}</button>`).join("")}</div>
     <div class="row between"><b>Day 지도</b><span class="muted mono" style="font-size:12px">${learnedIn(c.key)} / ${D.list.length}</span></div>
     <div class="daygrid">${grid}</div>
     <div class="row between" style="font-size:13px"><span>예문 10개를 읽은 패턴</span><span class="muted mono">${exReadIn(c.key)} / ${D.patterns.length}</span></div>
-    <div class="legend"><span style="background:var(--accent)"></span> 완료 <span style="background:var(--accent-soft);margin-left:8px"></span> 진행 중 <span style="background:var(--sunken);margin-left:8px"></span> 예정 · 하루 ${n}문장 기준</div>
+    <div class="legend"><span style="background:var(--accent)"></span> 완료 <span style="background:var(--accent-soft);margin-left:8px"></span> 진행 중 <span style="background:var(--sunken);margin-left:8px"></span> 남은 예상 Day · 하루 ${n}문장 기준</div>
     <div class="stack" style="gap:6px;margin-top:4px">${D.sections.map(sec => {
       const its = sec.patterns.flatMap(p=>p.items), k = its.filter(s=>S.learned[s.id]).length, p = Math.round(k/its.length*100);
       return `<div class="stack" style="gap:4px"><div class="row between" style="font-size:13px"><span>${esc(sec.name)}</span><span class="muted mono">${k}/${its.length}</span></div><div class="bar" style="height:6px"><i style="width:${p}%"></i></div></div>`; }).join("")}</div></div>`;
