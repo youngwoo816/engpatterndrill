@@ -889,9 +889,17 @@ function drawStep(){
       `<button class="btn block" data-said>${r<1 ? '따라 말했어요 · 다음 라운드' : `따라 말했어요 · ${NEXT_LABEL[X.steps[X.step+1]]}`}</button>`);
     if (S.settings.auto) speak(s.en, mult);
   } else if (key === "build"){
-    const words = s.en.split(" ");
-    let order; do { order = shuffle(words.map((w,i)=>i)); } while (order.every((v,i)=>v===i));
-    X.build = { words, order, picked:[] };
+    const raw = s.en.split(" ");
+    const endP = (raw[raw.length-1].match(/[.?!]+$/) || [""])[0];
+    // 첫 단어 대문자·마지막 문장부호로 순서가 드러나지 않게 정리
+    const words = raw.map((w,i) => {
+      let t = w;
+      if (i === 0 && !/^I($|')/.test(t) && /^[A-Z][a-z']/.test(t)) t = t[0].toLowerCase() + t.slice(1);
+      if (i === raw.length-1) t = t.slice(0, t.length - endP.length) || t;
+      return t;
+    });
+    let order; do { order = shuffle(words.map((w,i)=>i)); } while (order.every((v,i)=>v===i) || order.every((v,i)=>words[v]===words[i]));
+    X.build = { words, order, picked:[], endP };
     frame(`<div class="ko-line" style="color:var(--ink);font-weight:600">${esc(s.ko)}</div>
       <div class="answer" id="ans"></div><div class="pool" id="pool">${order.map((wi,k)=>`<button class="chip" data-chip="${k}">${esc(words[wi])}</button>`).join("")}</div>
       <div class="hintbox">단어를 순서대로 누르세요. 위 칸의 단어를 누르면 되돌아가요.</div>`,
@@ -1102,12 +1110,14 @@ dr().addEventListener("click", e => {
 
 function drawAnswer(){
   const B = X.build, ans = $("#ans");
-  ans.className = "answer";
-  ans.innerHTML = B.picked.map(k => `<button class="chip" data-ans="${k}">${esc(B.words[B.order[k]])}</button>`).join("");
+  ans.className = "answer"; $("#buildok")?.remove();
+  ans.innerHTML = B.picked.map(k => `<button class="chip" data-ans="${k}">${esc(B.words[B.order[k]])}</button>`).join("") + (B.endP ? `<span class="chip" style="box-shadow:none;background:transparent;padding:8px 2px" aria-hidden="true">${esc(B.endP)}</span>` : "");
   if (B.picked.length === B.words.length){
     const built = B.picked.map(k => B.words[B.order[k]]).join(" ");
     if (built === B.words.join(" ")){
       ans.classList.add("ok"); speak(curS().en);
+      $("#buildok")?.remove();
+      ans.insertAdjacentHTML("afterend", `<div id="buildok" class="hintbox en" style="font-size:16px;color:var(--ink);font-weight:600">${esc(curS().en)}</div>`);
       dr().querySelector(".dr-foot .in").innerHTML = `<button class="btn block" data-adv>정답! ${NEXT_LABEL[X.steps[X.step+1]]}</button>`;
     } else {
       void ans.offsetWidth; ans.classList.add("no");
