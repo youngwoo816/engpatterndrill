@@ -80,6 +80,10 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .bar{height:8px;background:var(--sunken);border-radius:99px;overflow:hidden}
 .bar i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .4s}
 .bar.goal i{background:var(--good)}
+.bar.dual{position:relative}
+.bar.dual i{position:absolute;left:0;top:0;bottom:0}
+.bar.dual i.l{background:var(--heat2)}
+.bar.dual i.m{background:var(--accent)}
 .next{font-size:13px;color:var(--muted);display:flex;gap:6px;min-width:0}
 .next .en{color:var(--ink);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:13px 18px;font-weight:600;font-size:15px;background:var(--accent);color:var(--accent-ink);min-height:48px;transition:transform .08s}
@@ -324,13 +328,15 @@ const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
 function toast(msg){ const t=$("#toast"); t.textContent=msg; t.hidden=false; clearTimeout(toast._t); toast._t=setTimeout(()=>t.hidden=true,2200); }
 
 /* ---------- storage ---------- */
-const DEFAULT = { v:2, settings:{ daily:10, rate:1, auto:true, accent:"us", voiceUS:"", voiceGB:"", theme:"system" }, learned:{}, sessions:[], activity:{}, newBy:{} };
+const DEFAULT = { v:2, settings:{ daily:10, rate:1, auto:true, accent:"us", voiceUS:"", voiceGB:"", theme:"system", reviewMax:20 }, learned:{}, sessions:[], activity:{}, newBy:{}, revDone:{} };
 let S = load();
 function normalize(o){
   const s = { ...JSON.parse(JSON.stringify(DEFAULT)), ...o };
   s.settings = { ...DEFAULT.settings, ...(o.settings||{}) };
   s.settings.daily = clamp(parseInt(s.settings.daily,10)||10, 1, 50);
   s.settings.rate = clamp(+s.settings.rate || 1, .8, 1);
+  s.revDone = s.revDone || {};
+  s.settings.reviewMax = clamp(parseInt(s.settings.reviewMax,10)||20, 5, 100);
   s.newBy = s.newBy || {}; s.activity = s.activity || {}; s.sessions = s.sessions || []; s.learned = s.learned || {};
   return s;
 }
@@ -453,13 +459,20 @@ const accLabel = () => S.settings.accent === "gb" ? "영국 발음" : "미국 �
 /* ---------- progress logic ---------- */
 const today = () => dstr();
 function learnedIn(cat){ return DATA[cat].list.filter(s => S.learned[s.id]).length; }
+const isMastered = r => !!r && r.box >= 2;   // 익힘: 복습에서 한 번 이상 '완벽'
+function masteredIn(cat){ return DATA[cat].list.filter(s => isMastered(S.learned[s.id])).length; }
 function firstUnlearned(cat){ const i = DATA[cat].list.findIndex(s => !S.learned[s.id]); return i < 0 ? 0 : i; }
 function todayNew(cat){ return (S.newBy[today()] || {})[cat] || 0; }
 function doneToday(cat){ return S.sessions.some(x => x.cat===cat && x.date===today()); }
 function dayNo(cat){ const n = S.sessions.filter(x => x.cat===cat).length; return doneToday(cat) ? n : n + 1; }
-function dueList(){ const t = today(); return Object.keys(S.learned).filter(id => BYID[id] && S.learned[id].due <= t).map(id => BYID[id]); }
+function dueList(){
+  const t = today();
+  return Object.keys(S.learned).filter(id => BYID[id] && S.learned[id].due <= t)
+    .sort((a,b) => (S.learned[a].due < S.learned[b].due ? -1 : S.learned[a].due > S.learned[b].due ? 1 : S.learned[a].box - S.learned[b].box))
+    .map(id => BYID[id]);
+}
 function streak(){
-  const days = new Set(S.sessions.map(x => x.date));
+  const days = new Set([...S.sessions.map(x => x.date), ...Object.keys(S.revDone)]);
   let d = today(); if (!days.has(d)) d = addDays(d,-1);
   let n = 0; while (days.has(d)) { n++; d = addDays(d,-1); }
   return n;
@@ -525,10 +538,11 @@ function viewLearn(){
     <div><div class="n">${todayCount}</div><div class="l">오늘 연습한 문장</div></div>
     <div><div class="n">${doneCats}<span class="muted" style="font-size:14px">/3</span></div><div class="l">오늘 완료한 Day</div></div>
     <div><div class="n">${learned}</div><div class="l">누적 / ${total.toLocaleString()}</div></div></div><div class="stack">`;
-  if (due) h += `<div class="card review-card"><div class="stack" style="gap:2px"><b>복습할 문장</b><span class="muted" style="font-size:13px">간격 반복 일정상 오늘 다시 볼 차례예요</span></div>
-    <div class="row"><span class="n">${due}</span><button class="btn" data-review>복습</button></div></div>`;
+  if (due) { const now = Math.min(due, S.settings.reviewMax);
+    h += `<div class="card review-card"><div class="stack" style="gap:2px"><b>복습할 문장</b><span class="muted" style="font-size:13px">${due > now ? `밀린 ${due}개 중 오래된 순으로 ${now}개만 해요` : '간격 반복 일정상 오늘 다시 볼 차례예요'}</span></div>
+    <div class="row"><span class="n">${now}</span><button class="btn" data-review>복습</button></div></div>`; }
   for (const c of CATS){
-    const D = DATA[c.key], L = learnedIn(c.key), pct = Math.round(L/D.list.length*100);
+    const D = DATA[c.key], L = learnedIn(c.key), M = masteredIn(c.key), pct = Math.round(L/D.list.length*100), mpct = Math.round(M/D.list.length*100);
     const dn = doneToday(c.key), day = dayNo(c.key), tn = todayNew(c.key);
     const totalDays = Math.ceil(D.list.length / n);
     const allDone = L >= D.list.length;
@@ -540,8 +554,9 @@ function viewLearn(){
       <div class="stack" style="gap:6px">
         <div class="row between" style="font-size:12px"><span>오늘 목표</span><span class="mono">${Math.min(tn,n)} / ${n}문장</span></div>
         <div class="bar goal"><i style="width:${Math.min(100, tn/n*100)}%"></i></div>
-        <div class="row between" style="font-size:12px;margin-top:4px"><span class="muted">전체 진도</span><span class="muted mono">${L} / ${D.list.length} (${pct}%) · 약 ${totalDays}일 과정</span></div>
-        <div class="bar" style="height:6px"><i style="width:${pct}%"></i></div></div>
+        <div class="row between" style="font-size:12px;margin-top:4px"><span class="muted">전체 진도 · 약 ${totalDays}일 과정</span><span class="muted mono">학습 ${L} · 익힘 ${M} / ${D.list.length}</span></div>
+        <div class="bar dual" style="height:8px" title="학습 ${pct}% · 익힘 ${mpct}%"><i class="l" style="width:${pct}%"></i><i class="m" style="width:${mpct}%"></i></div>
+        <div class="legend"><span style="background:var(--heat2)"></span> 학습함 <span style="background:var(--accent);margin-left:8px"></span> 익힘 (복습 성공)</div></div>
       ${!allDone ? `<div class="next"><span style="flex:none">다음 패턴</span><span class="en">${esc(nextS.pat.p)}</span></div>` : ''}
       <button class="btn ${dn?'ghost':''} block" data-start="${c.key}">${label}</button>
     </div>`;
@@ -554,13 +569,13 @@ function viewProgress(){
   const total = CATS.reduce((a,c)=>a+DATA[c.key].list.length,0);
   const learned = Object.keys(S.learned).length;
   const studyDays = new Set(S.sessions.map(x=>x.date)).size;
-  const mastered = Object.values(S.learned).filter(x=>x.box>=3).length;
+  const mastered = Object.values(S.learned).filter(isMastered).length;
   let h = topBar("진척도");
   h += `<div class="stack"><div class="stats">
-    <div class="stat"><div class="n">${learned}<small> / ${total}</small></div><div class="l">학습한 문장</div></div>
-    <div class="stat"><div class="n">${streak()}<small>일</small></div><div class="l">연속 학습 (Day 완료 기준)</div></div>
+    <div class="stat"><div class="n">${learned}<small> / ${total}</small></div><div class="l">학습한 문장 (한 번 이상 학습)</div></div>
+    <div class="stat"><div class="n">${streak()}<small>일</small></div><div class="l">연속 학습 (Day 또는 복습 완료)</div></div>
     <div class="stat"><div class="n">${studyDays}<small>일</small></div><div class="l">Day를 완료한 날</div></div>
-    <div class="stat"><div class="n">${mastered}</div><div class="l">장기 기억 문장 (복습 3회 이상 성공)</div></div></div>`;
+    <div class="stat"><div class="n">${mastered}</div><div class="l">익힌 문장 (복습에서 '완벽' 1회 이상)</div></div></div>`;
   const weeks = 16, end = new Date(); const start = new Date(end); start.setDate(end.getDate() - end.getDay() - (weeks-1)*7);
   let cells = ""; const t = today();
   for (let i=0;i<weeks*7;i++){ const d = new Date(start); d.setDate(start.getDate()+i); const s = dstr(d); if (s > t) { cells += `<span style="visibility:hidden"></span>`; continue; }
@@ -651,6 +666,8 @@ function viewMore(){
   h += `<div class="stack"><div class="card">
     <div class="set-row"><div><div class="t">하루 분량</div><div class="d">하루에 배울 새 문장 수 (1~50개)</div></div>
       <div class="stepper"><button data-dec aria-label="하나 줄이기">−</button><input id="s-daily" type="number" inputmode="numeric" min="1" max="50" step="1" value="${st.daily}" aria-label="하루 분량"><button data-inc aria-label="하나 늘리기">+</button></div></div>
+    <div class="set-row"><div><div class="t">하루 복습 상한</div><div class="d">복습이 밀려도 하루에 이 개수까지만, 오래된 문장부터 나와요</div></div>
+      <select id="s-revmax">${[10,20,30,50].map(v=>`<option value="${v}" ${v===st.reviewMax?'selected':''}>${v}문장</option>`).join("")}</select></div>
     <div class="set-row"><div><div class="t">화면 모드</div><div class="d">라이트·다크 중 고르거나 기기 설정을 따라가요</div></div>
       <div class="seg" role="group">${[["system","기기 설정"],["light","라이트"],["dark","다크"]].map(([v,l])=>`<button data-th="${v}" aria-pressed="${st.theme===v}">${l}</button>`).join("")}</div></div>
     <div class="set-row"><div><div class="t">발음</div><div class="d">미국식 또는 영국식 원어민 발음</div></div>
@@ -677,7 +694,7 @@ function viewMore(){
     <div><b>예문 탭</b>: 패턴마다 긍정·부정·의문·과거 등 형태가 다른 예문 10개를 읽고 들을 수 있어요.</div>
     <div><b>이동</b>: 학습 중 상단의 전체 문장·이전·다음 문장·다음 패턴 버튼으로 자유롭게 옮겨 다닐 수 있어요.</div>
     <div><b>Day 기록</b>: 하루 분량만큼 새 문장을 마치면 Day가 완료로 표시돼요.</div>
-    <div><b>복습</b>: 채점 결과에 따라 1·2·4·7·15·30·60일 간격으로 다시 나와요.</div></div></div>`;
+    <div><b>복습</b>: 채점 결과에 따라 1·2·4·7·15·30·60일 간격으로 다시 나와요. 복습에서 '완벽'을 받으면 '익힘'으로 표시돼요.</div></div></div>`;
   return h;
 }
 
@@ -737,6 +754,7 @@ function bind(r){
   if (r==="more"){
     $("#s-daily").onchange = e => { setDaily(e.target.value); toast(`하루 분량: ${S.settings.daily}문장`); };
     $("#s-rate").onchange = e => { S.settings.rate = +e.target.value; save(); };
+    $("#s-revmax").onchange = e => { S.settings.reviewMax = +e.target.value; save(); };
     $("#s-auto").onchange = e => { S.settings.auto = e.target.value==="1"; save(); };
     const v = $("#s-voice"); if (v) v.onchange = e => { if (S.settings.accent==="gb") S.settings.voiceGB = e.target.value; else S.settings.voiceUS = e.target.value; save(); speak("This is my voice."); };
   }
@@ -783,7 +801,7 @@ function nextPatternIndex(){
   return i;
 }
 function startReview(){
-  const due = shuffle(dueList()).slice(0, 20); if (!due.length) return;
+  const due = shuffle(dueList().slice(0, S.settings.reviewMax)); if (!due.length) return;
   X = { mode:"review", items:due, i:0 };
   openDrill(); drawReview();
 }
@@ -1039,7 +1057,7 @@ dr().addEventListener("click", e => {
       return nextSentence();
     } else {
       grade(s.id, g); logActivity(1); save();
-      X.i++; if (X.i >= X.items.length) { toast("오늘 복습 완료"); return closeDrill(); }
+      X.i++; if (X.i >= X.items.length) { S.revDone[today()] = 1; save(); toast("오늘 복습 완료 · 연속 학습일에 반영됐어요"); return closeDrill(); }
       return drawReview();
     }
   }
