@@ -877,7 +877,7 @@ function startTour(name){
   if (name === "home" && route() !== "learn") { location.hash = "#learn"; setTimeout(() => startTour(name), 200); return; }
   const steps = TOURS[name].filter(s => document.querySelector(s.sel));
   if (!steps.length) return;
-  endTour(false);
+  endTour(false); stopSpeech();
   T = { name, steps, i:0 };
   const root = document.createElement("div"); root.className = "tour"; root.id = "tour";
   root.innerHTML = `<div class="tour-hole"></div><div class="tour-bub" role="dialog" aria-live="polite"><div class="tour-arr"></div><div class="tour-c"></div></div>`;
@@ -915,8 +915,11 @@ function tourPlace(target){
   Object.assign(arr.style, below ? { top:"-7px", bottom:"auto", left:ax+"px" } : { bottom:"-7px", top:"auto", left:ax+"px" });
 }
 function endTour(markDone){
+  const name = T && T.name;
   if (T && markDone) { S.tour[T.name] = 1; save(); }
   T = null; $("#tour")?.remove();
+  // 학습 화면 안내를 다 닫은 뒤에 문장을 읽어 줌
+  if (markDone && name === "drill" && X && X.mode === "learn" && X.steps[X.step] === "listen" && S.settings.auto) speak(curS().en);
 }
 window.addEventListener("resize", () => { if (T) { const t = document.querySelector(T.steps[T.i].sel); if (t) tourPlace(t); } });
 
@@ -1014,7 +1017,11 @@ function stepsFor(s){
 function startLearn(cat, pos, from){
   X = { mode:"learn", cat, pos, subSeen:new Set(), from: from || null };
   openDrill(); goTo(pos);
-  if (!S.tour.drill) setTimeout(() => { if (X && X.mode === "learn" && X.steps[X.step] === "listen") startTour("drill"); }, 350);
+  if (!S.tour.drill) setTimeout(() => {
+    if (!(X && X.mode === "learn" && X.steps[X.step] === "listen")) return;
+    startTour("drill");
+    if (!T) { S.tour.drill = 1; save(); if (S.settings.auto) speak(curS().en); }
+  }, 350);
 }
 function goTo(pos){
   const list = DATA[X.cat].list;
@@ -1144,7 +1151,7 @@ function drawStep(){
       ${s.pat.ex && s.pat.ex.length ? `<div class="row"><button class="btn sm soft" data-exsheet>${ICON.book} 이 패턴 예문 10개 보기</button></div>` : ''}
       <div class="hintbox">밑줄 친 부분이 패턴이에요. 뜻을 떠올리며 두세 번 들어 보세요.</div>`,
       `<button class="btn block" data-adv>따라 말하기로</button>`);
-    if (S.settings.auto) speak(s.en);
+    if (S.settings.auto && S.tour.drill && !T) speak(s.en);   // 첫 말풍선 안내 중에는 소리 대기
   } else if (key === "shadow"){
     const r = X.round, mult = [0.9, 1][r];
     const hint = ["전체 문장을 보며 천천히 따라 말하세요", "단어 절반이 가려졌어요. 떠올리며 따라 말하세요"][r];
