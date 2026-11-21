@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Rep English 관리자</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: 관리 대시보드 — 연결 설정 → 요약 타일 → 필터 → 학습자 목록(펼치면 상세) */
+:root{
+  --bg:#EEF1EC; --surface:#FFFFFF; --sunken:#E4E9E3; --ink:#15201B; --muted:#5B6862; --line:#D3DBD5;
+  --accent:#2747D9; --accent-ink:#FFFFFF; --accent-soft:#DFE5FF; --heat2:#8EA1F0;
+  --good:#11865E; --good-soft:#D8F1E6; --warn:#B47A00; --warn-soft:#FBEFCF; --bad:#C93B3B; --bad-soft:#F8DEDE;
+  --shadow:0 1px 2px rgba(20,32,27,.06),0 6px 20px rgba(20,32,27,.06);
+  --f-en:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --f-ko:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0D1210; --surface:#161D1A; --sunken:#1D2622; --ink:#E7EDE9; --muted:#95A39C; --line:#2A3631;
+  --accent:#8299FF; --accent-ink:#0D1210; --accent-soft:#1F2850; --heat2:#34488F;
+  --good:#3FCB95; --good-soft:#123227; --warn:#E8B53A; --warn-soft:#352A0D; --bad:#FF7A7A; --bad-soft:#3A1818;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25); color-scheme:dark;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-ko);font-size:15px;line-height:1.5}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:calc(20px + env(safe-area-inset-top,0px)) calc(40px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:14px}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--f-en);font-weight:800;font-size:26px;letter-spacing:-.02em;line-height:1}
+.brand b{color:var(--accent)}
+.eyebrow{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.03em}
+.card{background:var(--surface);border-radius:14px;box-shadow:var(--shadow);padding:16px}
+.stack{display:flex;flex-direction:column;gap:10px}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.muted{color:var(--muted)}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:10px;padding:9px 14px;font-weight:700;font-size:14px;background:var(--accent);color:var(--accent-ink);min-height:40px}
+.btn.ghost{background:var(--sunken);color:var(--ink)}
+.btn.danger{background:var(--bad-soft);color:var(--bad)}
+.btn[disabled]{opacity:.5;pointer-events:none}
+.inp{width:100%;padding:10px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);min-width:0}
+label{font-size:13px;font-weight:600}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+@media (max-width:640px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tile{background:var(--surface);border-radius:12px;box-shadow:var(--shadow);padding:12px 14px}
+.tile .n{font-family:var(--f-mono);font-size:24px;font-weight:600}
+.tile .l{font-size:12px;color:var(--muted)}
+.filters{display:grid;grid-template-columns:1fr auto auto;gap:8px}
+@media (max-width:640px){.filters{grid-template-columns:1fr 1fr}.filters .inp:first-child{grid-column:1/3}}
+.list{display:flex;flex-direction:column;gap:8px}
+.lrn{background:var(--surface);border-radius:12px;box-shadow:var(--shadow)}
+.lrn summary{list-style:none;cursor:pointer;padding:12px 14px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) auto;gap:4px 12px;align-items:center}
+.lrn summary::-webkit-details-marker{display:none}
+.nm{font-weight:700;font-size:16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sub{font-size:12px;color:var(--muted)}
+.pill{display:inline-flex;align-items:center;font-size:12px;font-weight:700;border-radius:999px;padding:2px 8px;white-space:nowrap}
+.pill.ok{background:var(--good-soft);color:var(--good)}
+.pill.mid{background:var(--warn-soft);color:var(--warn)}
+.pill.off{background:var(--bad-soft);color:var(--bad)}
+.spark{display:flex;align-items:flex-end;gap:2px;height:28px}
+.spark i{width:7px;background:var(--accent);border-radius:2px 2px 0 0;min-height:2px;opacity:.9}
+.spark i.z{background:var(--line)}
+@media (max-width:640px){.lrn summary{grid-template-columns:minmax(0,1fr) auto}.lrn summary .spark{display:none}}
+.detail{padding:0 14px 14px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.box.wide{grid-column:span 2}
+@media (max-width:640px){.detail{grid-template-columns:1fr}.box.wide{grid-column:auto}}
+.box{background:var(--sunken);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.box b{font-size:13px}
+.bar{position:relative;height:8px;background:var(--surface);border-radius:99px;overflow:hidden}
+.bar i{position:absolute;left:0;top:0;bottom:0;border-radius:99px}
+.bar i.l{background:var(--heat2)}.bar i.m{background:var(--accent)}
+.kv{display:flex;justify-content:space-between;gap:8px;font-size:13px}
+.msg{font-size:14px;padding:10px 12px;border-radius:10px}
+.msg.err{background:var(--bad-soft);color:var(--bad)}
+.msg.info{background:var(--accent-soft);color:var(--accent)}
+.empty{text-align:center;color:var(--muted);padding:32px 0}
+.table-wrap{overflow-x:auto}
+</style>
+</head>
+<body>
+<script src="config.js"></script>
+<div class="wrap" id="root"></div>
+<script>
+(() => {
+"use strict";
+const LS = "rep-english-admin";
+const CAT = { daily:"일상", travel:"여행", business:"비즈니스" };
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pad = n => String(n).padStart(2,"0");
+const dstr = (d=new Date()) => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const daysAgo = s => { if (!s) return Infinity; const [y,m,d] = s.split("-").map(Number); return Math.round((new Date(dstr()) - new Date(y,m-1,d)) / 864e5); };
+
+let cfg = load(), rows = [], state = { q:"", sort:"recent", filter:"all", loading:false, err:"", fetchedAt:"" };
+function load(){ try { return JSON.parse(localStorage.getItem(LS)) || {}; } catch(e){ return {}; } }
+function store(){ try { localStorage.setItem(LS, JSON.stringify(cfg)); } catch(e){} }
+const url = () => (cfg.url || (window.REP_CONFIG||{}).syncUrl || "").trim();
+const connected = () => !!url() && !!cfg.key;
+
+async function fetchRows(){
+  state.loading = true; state.err = ""; render();
+  try {
+    const r = await fetch(url() + "?key=" + encodeURIComponent(cfg.key) + "&t=" + Date.now());
+    const j = await r.json();
+    if (!j.ok) throw new Error(j.error === "unauthorized" ? "관리자 키가 맞지 않아요. Apps Script의 ADMIN_KEY와 같은지 확인하세요." : (j.error || "알 수 없는 오류"));
+    rows = j.rows || []; state.fetchedAt = new Date().toLocaleString("ko-KR");
+  } catch(e){
+    state.err = e.message && !/Failed to fetch|NetworkError|JSON/.test(e.message) ? e.message : "데이터를 불러오지 못했어요. 웹 앱 주소와 배포 설정(액세스: 모든 사용자)을 확인하세요.";
+  }
+  state.loading = false; render();
+}
+async function del(id, name){
+  try {
+    const r = await fetch(url() + "?key=" + encodeURIComponent(cfg.key) + "&action=delete&id=" + encodeURIComponent(id));
+    const j = await r.json(); if (!j.ok) throw 0;
+    rows = rows.filter(x => x.id !== id); render();
+  } catch(e){ state.err = `${name} 삭제에 실패했어요.`; render(); }
+}
+
+function status(r){
+  const a = daysAgo(r.lastStudy);
+  if (a === 0) return ["ok","오늘 학습"];
+  if (a <= 3) return ["mid", `${a}일 전`];
+  if (a === Infinity) return ["off","학습 전"];
+  return ["off", `${a}일 쉼`];
+}
+function spark(week){
+  const w = week || [], mx = Math.max(1, ...w);
+  return `<div class="spark" title="최근 14일 학습 문장 수">${w.map(v => `<i class="${v?'':'z'}" style="height:${v ? Math.max(12, v/mx*100) : 8}%"></i>`).join("")}</div>`;
+}
+function view(){
+  const q = state.q.trim().toLowerCase();
+  let list = rows.filter(r => !q || String(r.name||"").toLowerCase().includes(q));
+  if (state.filter === "today") list = list.filter(r => daysAgo(r.lastStudy) === 0);
+  if (state.filter === "idle") list = list.filter(r => daysAgo(r.lastStudy) > 3);
+  const key = { recent: r => -(daysAgo(r.lastStudy) === Infinity ? -1e9 : -daysAgo(r.lastStudy)), learned: r => -(r.learned||0), streak: r => -(r.streak||0), name: r => String(r.name||"") };
+  list.sort((a,b) => { const ka = key[state.sort](a), kb = key[state.sort](b); return ka < kb ? -1 : ka > kb ? 1 : 0; });
+  return list;
+}
+function tiles(){
+  const n = rows.length, today = rows.filter(r => daysAgo(r.lastStudy) === 0).length;
+  const week = rows.filter(r => daysAgo(r.lastStudy) <= 6).length;
+  const avg = n ? Math.round(rows.reduce((a,r) => a + (r.learned||0), 0) / n) : 0;
+  return `<div class="tiles">
+    <div class="tile"><div class="n">${n}</div><div class="l">전체 학습자</div></div>
+    <div class="tile"><div class="n">${today}</div><div class="l">오늘 학습</div></div>
+    <div class="tile"><div class="n">${week}</div><div class="l">최근 7일 학습</div></div>
+    <div class="tile"><div class="n">${avg}</div><div class="l">1인 평균 학습 문장</div></div></div>`;
+}
+function detail(r){
+  const cats = r.cats || {};
+  const catBox = Object.keys(CAT).map(k => { const c = cats[k] || {}; const t = c.total || 1;
+    return `<div class="stack" style="gap:4px"><div class="kv"><span>${CAT[k]}</span><span class="mono muted">학습 ${c.learned||0} · 익힘 ${c.mastered||0} / ${c.total||0} · Day ${c.days||0}</span></div>
+      <div class="bar"><i class="l" style="width:${(c.learned||0)/t*100}%"></i><i class="m" style="width:${(c.mastered||0)/t*100}%"></i></div></div>`; }).join("");
+  const s = r.settings || {};
+  return `<div class="detail">
+    <div class="box wide"><b>카테고리별 진도</b>${catBox}</div>
+    <div class="box"><b>학습 습관</b>
+      <div class="kv"><span>연속 학습일</span><span class="mono">${r.streak||0}일</span></div>
+      <div class="kv"><span>학습한 날 (누적)</span><span class="mono">${r.activeDays||0}일</span></div>
+      <div class="kv"><span>완료한 Day</span><span class="mono">${r.daysDone||0}</span></div>
+      <div class="kv"><span>오늘 새 문장</span><span class="mono">${r.todayNew||0}</span></div>
+      <div class="kv"><span>밀린 복습</span><span class="mono">${r.reviewDue||0}</span></div>
+      <div class="kv"><span>예문 읽은 패턴</span><span class="mono">${r.exRead||0}</span></div></div>
+    <div class="box"><b>최근 14일</b>${spark(r.week)}<span class="sub">하루에 연습한 문장 수</span></div>
+    <div class="box"><b>설정·기록</b>
+      <div class="kv"><span>하루 분량</span><span class="mono">${s.daily ?? "-"}문장</span></div>
+      <div class="kv"><span>학습 모드</span><span>${s.mode === "quick" ? "빠른 모드" : "기본"}</span></div>
+      <div class="kv"><span>발음</span><span>${s.accent === "gb" ? "영국" : "미국"}</span></div>
+      <div class="kv"><span>처음 학습</span><span class="mono">${esc(r.firstStudy||"-")}</span></div>
+      <div class="kv"><span>마지막 전송</span><span class="mono">${r.updatedAt ? new Date(r.updatedAt).toLocaleString("ko-KR") : "-"}</span></div></div>
+    <div class="box"><b>관리</b><span class="sub">테스트 데이터나 그만둔 학습자를 목록에서 지워요. 학습자 기기의 기록은 지워지지 않아요.</span>
+      <button class="btn danger" data-del="${esc(r.id)}" data-name="${esc(r.name)}">이 학습자 삭제</button></div>
+  </div>`;
+}
+function setupCard(){
+  return `<div class="card stack"><b>연결 설정</b>
+    <span class="muted" style="font-size:13px">Apps Script 웹 앱 주소와 관리자 키(ADMIN_KEY)를 입력하세요. 키는 이 브라우저에만 저장돼요. 설정 방법은 저장소의 <span class="mono">admin/SETUP.md</span>를 보세요.</span>
+    <label for="a-url">웹 앱 주소</label><input id="a-url" class="inp mono" placeholder="https://script.google.com/macros/s/.../exec" value="${esc(url())}">
+    <label for="a-key">관리자 키</label><input id="a-key" class="inp mono" type="password" autocomplete="off" value="${esc(cfg.key||"")}">
+    <div class="row"><button class="btn" data-connect>연결하고 불러오기</button>${connected() ? '<button class="btn ghost" data-hidecfg>닫기</button>' : ''}</div></div>`;
+}
+function render(){
+  const list = view();
+  let h = `<div class="top"><div class="stack" style="gap:6px"><span class="eyebrow">학습자 관리</span><div class="brand">Rep<b>.</b>English <span style="font-size:16px;color:var(--muted)">관리자</span></div></div>
+    <div class="row">${connected() ? `<span class="sub">${state.fetchedAt ? `불러온 시각 ${esc(state.fetchedAt)}` : ''}</span><button class="btn ghost" data-refresh ${state.loading?'disabled':''}>${state.loading ? '불러오는 중…' : '새로고침'}</button><button class="btn ghost" data-csv ${rows.length?'':'disabled'}>CSV 저장</button><button class="btn ghost" data-showcfg>연결 설정</button><button class="btn ghost" data-logout>로그아웃</button>` : ''}</div></div>`;
+  if (!connected() || state.showCfg) h += setupCard();
+  if (state.err) h += `<div class="msg err">${esc(state.err)}</div>`;
+  if (connected()) {
+    h += tiles();
+    h += `<div class="filters"><input id="a-q" class="inp" placeholder="이름 검색" value="${esc(state.q)}">
+      <select id="a-filter" class="inp"><option value="all">전체</option><option value="today" ${state.filter==='today'?'selected':''}>오늘 학습한 사람</option><option value="idle" ${state.filter==='idle'?'selected':''}>4일 이상 쉰 사람</option></select>
+      <select id="a-sort" class="inp"><option value="recent">최근 학습순</option><option value="learned" ${state.sort==='learned'?'selected':''}>학습량순</option><option value="streak" ${state.sort==='streak'?'selected':''}>연속일순</option><option value="name" ${state.sort==='name'?'selected':''}>이름순</option></select></div>`;
+    h += list.length ? `<div class="list">${list.map(r => { const [cls, txt] = status(r);
+      return `<details class="lrn"><summary><div style="min-width:0"><div class="nm">${esc(r.name || "(이름 없음)")}</div><div class="sub">학습 ${r.learned||0} · 익힘 ${r.mastered||0} · 연속 ${r.streak||0}일 · Day ${r.daysDone||0}</div></div>${spark(r.week)}<span class="pill ${cls}">${txt}</span></summary>${detail(r)}</details>`; }).join("")}</div>`
+      : `<div class="card empty">${state.loading ? '불러오는 중…' : rows.length ? '조건에 맞는 학습자가 없어요.' : '아직 기록을 보낸 학습자가 없어요. 학습자가 앱에서 이름을 입력하고 학습하면 여기에 나타나요.'}</div>`;
+  }
+  $("#root").innerHTML = h;
+  const q = $("#a-q"); if (q) q.oninput = () => { state.q = q.value; const p = q.selectionStart; render(); const n = $("#a-q"); n.focus(); n.setSelectionRange(p,p); };
+  const f = $("#a-filter"); if (f) f.onchange = () => { state.filter = f.value; render(); };
+  const so = $("#a-sort"); if (so) so.onchange = () => { state.sort = so.value; render(); };
+}
+function csv(){
+  const head = ["이름","마지막 학습","연속일","학습 문장","익힌 문장","완료 Day","밀린 복습","예문 읽은 패턴","일상 학습","여행 학습","비즈니스 학습","마지막 전송"];
+  const lines = [head].concat(rows.map(r => [r.name, r.lastStudy, r.streak, r.learned, r.mastered, r.daysDone, r.reviewDue, r.exRead,
+    (r.cats||{}).daily?.learned, (r.cats||{}).travel?.learned, (r.cats||{}).business?.learned, r.updatedAt]));
+  const text = "﻿" + lines.map(l => l.map(v => `"${String(v ?? "").replace(/"/g,'""')}"`).join(",")).join("\n");
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type:"text/csv" })); a.download = `rep-english-learners-${dstr()}.csv`; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  const d = b.dataset;
+  if ("connect" in d) { cfg.url = $("#a-url").value.trim(); cfg.key = $("#a-key").value.trim(); store(); state.showCfg = false; if (connected()) fetchRows(); else { state.err = "웹 앱 주소와 관리자 키를 모두 입력하세요."; render(); } }
+  else if ("refresh" in d) fetchRows();
+  else if ("csv" in d) csv();
+  else if ("showcfg" in d) { state.showCfg = true; render(); }
+  else if ("hidecfg" in d) { state.showCfg = false; render(); }
+  else if ("logout" in d) { cfg.key = ""; store(); rows = []; state.err = ""; render(); }
+  else if (d.del) {
+    if (b.dataset.armed) del(d.del, d.name);
+    else { b.dataset.armed = "1"; b.textContent = "한 번 더 누르면 삭제돼요"; }
+  }
+});
+render();
+if (connected()) fetchRows();
+})();
+</script>
+</body>
+</html>

@@ -77,3 +77,9 @@ English sentence. | 한국어 해석
   (Settings → Pages → Branch: `backup/v1.0-stable` → Save)
 - **기능 하나만 되돌리기:** 기능마다 커밋이 나뉘어 있어 해당 커밋만 `git revert <커밋>`으로 취소할 수 있습니다.
 - 학습 기록(브라우저 저장)은 v1·v2가 같은 형식을 쓰므로 롤백해도 사라지지 않습니다.
+
+## 관리자 페이지 (학습자 진도 모아 보기)
+- 주소: `admin.html` (앱 화면에는 링크 없음) · 관리자 키를 아는 사람만 조회 가능
+- 저장소: 관리자 본인의 Google 스프레드시트 + Apps Script 웹 앱 (무료)
+- 설정 방법: [`admin/SETUP.md`](admin/SETUP.md) · Apps Script 코드: [`admin/apps-script.gs`](admin/apps-script.gs)
+- `config.js`의 `syncUrl`이 비어 있으면 전송 기능은 꺼져 있고 앱은 기존과 똑같이 동작합니다.
