@@ -1001,7 +1001,18 @@ function drawSwap(pat){
 
 /* recall compare */
 const CONTR = {"i'm":"i am","you're":"you are","we're":"we are","they're":"they are","he's":"he is","she's":"she is","it's":"it is","that's":"that is","there's":"there is","what's":"what is","where's":"where is","who's":"who is","how's":"how is","don't":"do not","doesn't":"does not","didn't":"did not","can't":"cannot","won't":"will not","isn't":"is not","aren't":"are not","wasn't":"was not","weren't":"were not","haven't":"have not","hasn't":"has not","shouldn't":"should not","couldn't":"could not","wouldn't":"would not","i'll":"i will","you'll":"you will","we'll":"we will","it'll":"it will","i've":"i have","you've":"you have","we've":"we have","i'd":"i would","you'd":"you would","we'd":"we would"};
-const norm = s => s.toLowerCase().replace(/[’‘]/g,"'").replace(/[^a-z0-9'\s-]/g," ").split(/\s+/).filter(Boolean).flatMap(w => (CONTR[w]||w).split(" "));
+// 채점 정규화: 축약형, 숫자↔영어 숫자, 약어 마침표(p.m.), 하이픈, 영국식 철자를 같은 것으로 처리
+const NUMW = {zero:"0",one:"1",two:"2",three:"3",four:"4",five:"5",six:"6",seven:"7",eight:"8",nine:"9",ten:"10",eleven:"11",twelve:"12",thirteen:"13",fourteen:"14",fifteen:"15",sixteen:"16",seventeen:"17",eighteen:"18",nineteen:"19",twenty:"20",thirty:"30",forty:"40",fifty:"50",sixty:"60",hundred:"100"};
+const SPELL = {okay:"ok",colour:"color",colours:"colors",favourite:"favorite",centre:"center",theatre:"theater",cancelled:"canceled",cancelling:"canceling",travelling:"traveling",travelled:"traveled",realise:"realize",organise:"organize",apologise:"apologize",grey:"gray",cheque:"check",programme:"program",metre:"meter",kilometres:"kilometers",kilometre:"kilometer",towards:"toward"};
+const JOIN = {"wi fi":"wifi","e mail":"email"};
+const norm = s => {
+  let t = s.toLowerCase().replace(/[’‘]/g,"'").replace(/\./g,"").replace(/-/g," ")
+    .replace(/(\d)([a-z])/g,"$1 $2").replace(/([a-z])(\d)/g,"$1 $2").replace(/[^a-z0-9'\s]/g," ");
+  let w = t.split(/\s+/).filter(Boolean).flatMap(x => (CONTR[x]||x).split(" ")).map(x => NUMW[x] || SPELL[x] || x);
+  const out = [];
+  for (let i=0;i<w.length;i++){ const pair = w[i] + " " + (w[i+1]||""); if (JOIN[pair]) { out.push(JOIN[pair]); i++; } else out.push(w[i]); }
+  return out;
+};
 function compare(user, ans){
   const a = norm(ans), u = norm(user);
   const dp = Array.from({length:a.length+1},()=>new Array(u.length+1).fill(0));
