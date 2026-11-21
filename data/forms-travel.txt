@@ -106,7 +106,7 @@ can | How long can I park here? | 여기 얼마 동안 주차할 수 있어요?
 긍정 | Could I leave my bags here? | 가방 여기 둬도 될까요?
 주어 변화 | Could you help me with this? | 이것 좀 도와주실래요?
 주어 변화 | Could we have another table? | 다른 테이블로 옮길 수 있을까요?
-may | May I come in? | 들어가도 될까요?
+can | Can I come in? | 들어가도 돼요?
 possible | Is it possible to check in now? | 지금 체크인 가능한가요?
 응답 | Of course. | 물론이죠.
 @11 Is ~ included?
@@ -140,7 +140,7 @@ won't | The door won't lock. | 문이 안 잠겨요.
 긍정 | Could you give me directions? | 길 좀 알려 주시겠어요?
 can | Can you help me? | 좀 도와주실래요?
 would mind | Would you mind opening the door? | 문 좀 열어 주시겠어요?
-명령 | Please send someone up. | 사람 좀 올려 보내 주세요.
+요청 | Can you send someone up? | 사람 좀 올려 보내 줄래요?
 응답 | I'll take care of it right away. | 바로 처리해 드릴게요.
 @14 What time is ~?
 긍정 | What time is dinner? | 저녁은 몇 시예요?
@@ -296,11 +296,11 @@ does | Does this train stop at Oxford? | 이 기차 옥스퍼드에 서요?
 응답 | It's about a ten-minute walk. | 걸어서 10분 정도예요.
 응답 | It's just around the corner. | 바로 모퉁이 돌면 있어요.
 응답 | It's too far to walk. | 걸어가기엔 너무 멀어요.
-@28 Please take me to ~
+@28 Could you take me to ~?
 긍정 | Take me to Central Station, please. | 중앙역으로 가 주세요.
 정중 | Could you take me to the hotel? | 호텔로 가 주시겠어요?
 can | Can you take me to the nearest pharmacy? | 가장 가까운 약국으로 가 주실래요?
-정차 | Please stop at the next corner. | 다음 모퉁이에서 세워 주세요.
+정차 | Can you stop at the next corner? | 다음 모퉁이에서 세워 줄래요?
 대기 | Could you wait here for a minute? | 여기서 잠깐 기다려 주시겠어요?
 속도 | Can you go a little faster? | 조금만 빨리 가 주실래요?
 속도 | Can you slow down, please? | 천천히 가 주세요.
@@ -449,7 +449,7 @@ quickest | What's the quickest way to the station? | 역에 가는 가장 빠른
 허락 | Can I take a photo of you? | 사진 찍어 드려도 될까요?
 허락 | Can I take a picture with you? | 같이 사진 찍어도 될까요?
 구호 | Say cheese! | 김치!
-응답 | Thank you, it looks great. | 감사해요, 잘 나왔네요.
+응답 | Thanks, it looks great! | 고마워요, 잘 나왔네요!
 @42 Is it possible to ~?
 긍정 | Is it possible to get a room with two beds? | 침대 두 개 있는 방이 가능한가요?
 긍정 | Is it possible to visit without a guide? | 가이드 없이 방문할 수 있나요?
@@ -504,7 +504,7 @@ reopen | When does it reopen? | 언제 다시 열어요?
 의문 | How do you say this in English? | 이거 영어로 뭐라고 해요?
 요청 | Can you type it on my phone? | 제 폰에 입력해 주실래요?
 평서 | I'm still learning English. | 영어를 아직 배우는 중이에요.
-응답 | Oh, I see. Thank you. | 아, 알겠어요. 감사해요.
+응답 | Oh, got it. Thanks! | 아, 알겠어요. 고마워요!
 @47 I lost my ~
 긍정 | I lost my room key. | 방 키를 잃어버렸어요.
 긍정 | I lost my bag at the airport. | 공항에서 가방을 잃어버렸어요.

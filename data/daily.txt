@@ -3,9 +3,9 @@
 I'm about to leave. | 막 나가려던 참이야.
 I'm about to call you. | 막 너한테 전화하려던 참이었어.
 I'm about to go to bed. | 막 자려던 참이야.
-I'm about to start dinner. | 막 저녁 준비 시작하려던 참이야.
+I'm about to make dinner. | 막 저녁 하려던 참이야.
 I was about to say the same thing. | 나도 막 같은 말 하려던 참이었어.
-The movie is about to start. | 영화가 곧 시작해.
+The movie's about to start. | 영화 곧 시작해.
 We're about to head out. | 우리 막 나가려던 참이야.
 Are you about to eat? | 너 이제 막 먹으려던 거야?
 
@@ -14,7 +14,7 @@ I'm trying to lose weight. | 살 빼려고 노력 중이야.
 I'm trying to save money. | 돈 모으려고 노력 중이야.
 I'm trying to sleep. | 자려고 하는 중이야.
 I'm trying to cut down on coffee. | 커피 줄이려고 노력 중이야.
-I'm trying to remember his name. | 그 사람 이름 기억해 내려고 하는 중이야.
+I'm trying to think of his name. | 그 사람 이름 떠올리려는 중이야.
 I'm trying to focus right now. | 지금 집중하려고 하는 중이야.
 I'm just trying to help. | 그냥 도와주려는 거야.
 What are you trying to say? | 무슨 말을 하려는 거야?
@@ -24,7 +24,7 @@ I was going to call you. | 너한테 전화하려고 했었어.
 I was going to tell you. | 너한테 말하려고 했었어.
 I was going to cook tonight. | 오늘 밤에 요리하려고 했었어.
 I was going to ask you the same thing. | 나도 너한테 같은 걸 물어보려고 했어.
-I was going to go, but I was too tired. | 가려고 했는데 너무 피곤했어.
+I was going to go, but I was super tired. | 가려고 했는데 너무 피곤했어.
 I was going to buy it, but it sold out. | 사려고 했는데 다 팔렸어.
 We were going to meet at six. | 우리 6시에 만나기로 했었잖아.
 Were you going to say something? | 뭐 말하려고 했어?
@@ -74,7 +74,7 @@ It's time to go. | 갈 시간이야.
 It's time to wake up. | 일어날 시간이야.
 It's time to eat. | 밥 먹을 시간이야.
 It's time to say goodbye. | 작별할 시간이야.
-It's time to make a decision. | 이제 결정할 때야.
+It's time to make up your mind. | 이제 마음 정할 때야.
 It's time for bed. | 잘 시간이야.
 Maybe it's time to get a new phone. | 이제 새 폰 살 때가 된 것 같아.
 I think it's time to go home. | 이제 집에 갈 시간인 것 같아.
@@ -86,19 +86,19 @@ Do you want me to drive? | 내가 운전할까?
 Do you want me to pick you up? | 내가 데리러 갈까?
 Do you want me to call him? | 내가 그 사람한테 전화할까?
 Do you want me to come with you? | 내가 같이 가 줄까?
-Do you want me to make some coffee? | 커피 좀 타 줄까?
+Do you want me to make you a coffee? | 커피 한 잔 타 줄까?
 Do you want me to save you a seat? | 자리 맡아 줄까?
-Do you want me to check for you? | 내가 확인해 줄까?
+Do you want me to check? | 내가 확인해 볼까?
 
 ## Would you like to ~? | ~하실래요? | 정중한 제안·초대
 Would you like to come in? | 들어오실래요?
 Would you like to join us? | 저희랑 같이 하실래요?
 Would you like to sit down? | 앉으실래요?
-Would you like to have dinner with me? | 저랑 저녁 드실래요?
-Would you like to leave a message? | 메시지 남기시겠어요?
+Would you like to grab dinner with me? | 저랑 저녁 먹을래요?
+Would you like to leave a message? | 메시지 남길래요?
 Would you like something to drink? | 뭐 마실 것 좀 드릴까요?
 Would you like to try it? | 한번 해 보실래요?
-Would you like me to wait? | 제가 기다릴까요?
+Would you like me to wait? | 기다려 줄까요?
 
 ## How about ~ing? | ~하는 거 어때? | 가벼운 제안
 How about going for a walk? | 산책하는 거 어때?
@@ -145,10 +145,10 @@ Can you help me with this? | 이것 좀 도와줄래?
 Can you help me move this table? | 이 테이블 옮기는 것 좀 도와줄래?
 Can you help me find my keys? | 내 열쇠 찾는 것 좀 도와줄래?
 Can you help me carry these bags? | 이 가방들 드는 것 좀 도와줄래?
-Can you help me with my homework? | 숙제 좀 도와줄래?
+Can you help me out with my homework? | 숙제 좀 도와줄래?
 Can you help me set up my phone? | 내 폰 설정하는 것 좀 도와줄래?
 Can you give me a hand? | 좀 도와줄래?
-Could you help me out? | 좀 도와주실 수 있어요?
+Could you help me out? | 좀 도와줄 수 있어?
 
 ## Do you mind if I ~? | 제가 ~해도 될까요? | 허락 구하기 (괜찮으면 No로 답함)
 Do you mind if I sit here? | 여기 앉아도 될까요?
@@ -171,11 +171,11 @@ Is it okay if we start a little late? | 조금 늦게 시작해도 괜찮아?
 Is it okay to bring my dog? | 강아지 데려가도 괜찮아?
 
 ## I was wondering if ~ | 혹시 ~할 수 있을까 해서 | 아주 정중한 부탁
-I was wondering if you could help me. | 혹시 저 좀 도와주실 수 있을까 해서요.
+I was wondering if you could help me out. | 혹시 좀 도와줄 수 있나 해서.
 I was wondering if you were free tonight. | 혹시 오늘 밤에 시간 있나 해서.
 I was wondering if I could borrow your car. | 혹시 네 차 좀 빌릴 수 있을까 해서.
 I was wondering if you'd like to come. | 혹시 오고 싶은가 해서.
-I was wondering if you had a minute. | 혹시 잠깐 시간 있으신가 해서요.
+I was wondering if you had a sec. | 혹시 잠깐 시간 있나 해서.
 I was wondering if we could talk. | 혹시 얘기 좀 할 수 있을까 해서.
 I was wondering if you could give me a ride. | 혹시 차 좀 태워 줄 수 있을까 해서.
 I was wondering where you were. | 너 어디 있나 궁금했어.
@@ -185,7 +185,7 @@ I was wondering where you were. | 너 어디 있나 궁금했어.
 I'm looking forward to seeing you. | 만나는 게 기대돼.
 I'm looking forward to the weekend. | 주말이 기대돼.
 I'm looking forward to your visit. | 네가 오는 게 기대돼.
-I'm looking forward to working with you. | 함께 일하게 되어 기대돼요.
+I'm looking forward to hanging out. | 같이 노는 거 기대돼.
 I'm looking forward to trying the food. | 그 음식 먹어 보는 게 기대돼.
 I'm really looking forward to this trip. | 이번 여행 정말 기대돼.
 I'm not looking forward to Monday. | 월요일이 오는 게 싫어.
@@ -273,7 +273,7 @@ I wish it were that easy. | 그렇게 쉬우면 좋겠다.
 
 ## I'm sorry to hear ~ / I'm sorry for ~ | ~라니 안타깝다 / ~해서 미안해 | 위로와 사과
 I'm sorry to hear that. | 그 말 들으니 안타깝다.
-I'm sorry to hear about your dad. | 아버님 일은 정말 안타까워.
+I'm so sorry to hear about your dad. | 아버님 일은 정말 안됐다.
 I'm sorry for being late. | 늦어서 미안해.
 I'm sorry for the mess. | 어질러져 있어서 미안해.
 I'm sorry for not calling you back. | 다시 전화 못 해서 미안해.
@@ -281,15 +281,15 @@ I'm sorry I didn't tell you. | 말 안 해서 미안해.
 Sorry to bother you. | 귀찮게 해서 미안해요.
 Sorry to keep you waiting. | 기다리게 해서 미안해요.
 
-## Thank you for ~ing | ~해 줘서 고마워 | for 뒤에 명사/동명사
-Thank you for coming. | 와 줘서 고마워.
-Thank you for your help. | 도와줘서 고마워.
-Thank you for inviting me. | 초대해 줘서 고마워.
-Thank you for waiting. | 기다려 줘서 고마워요.
-Thank you for understanding. | 이해해 줘서 고마워.
+## Thanks for ~ing | ~해 줘서 고마워 | for 뒤에 명사/동명사 (Thank you보다 편한 말)
+Thanks for coming. | 와 줘서 고마워.
+Thanks for your help. | 도와줘서 고마워.
+Thanks for having me. | 초대해 줘서 고마워.
+Thanks for waiting. | 기다려 줘서 고마워.
+Thanks for understanding. | 이해해 줘서 고마워.
 Thanks for the ride. | 태워 줘서 고마워.
 Thanks for letting me know. | 알려 줘서 고마워.
-Thank you for everything. | 여러모로 다 고마워.
+Thanks for everything. | 여러모로 다 고마워.
 
 ## I didn't mean to ~ | ~하려던 건 아니었어 | 의도 없음을 해명
 I didn't mean to hurt you. | 상처 주려던 건 아니었어.
@@ -301,15 +301,15 @@ I didn't mean to wake you up. | 깨우려던 건 아니었어.
 I didn't mean to make you wait. | 기다리게 하려던 건 아니었어.
 I didn't mean that in a bad way. | 나쁜 뜻으로 한 말은 아니었어.
 
-## I should have ~ | ~했어야 했는데 | 과거에 대한 후회
-I should have called you. | 너한테 전화했어야 했는데.
-I should have known. | 알았어야 했는데.
-I should have left earlier. | 더 일찍 출발했어야 했는데.
-I should have listened to you. | 네 말 들었어야 했는데.
-I should have brought an umbrella. | 우산 가져올걸.
-You should have told me. | 나한테 말했어야지.
-I shouldn't have said that. | 그 말 하지 말았어야 했는데.
-We should have booked earlier. | 더 일찍 예약했어야 했어.
+## I should've ~ | ~했어야 했는데 | 과거에 대한 후회 (should have를 말할 땐 should've)
+I should've called you. | 너한테 전화할걸.
+I should've known. | 그럴 줄 알았어야 했는데.
+I should've left earlier. | 더 일찍 나올걸.
+I should've listened to you. | 네 말 들을걸.
+I should've brought an umbrella. | 우산 가져올걸.
+You should've told me. | 나한테 말하지 그랬어.
+I shouldn't have said that. | 그 말 하지 말걸.
+We should've booked earlier. | 더 일찍 예약할걸.
 
 # 생각·의견
 ## I'm not sure if ~ | ~인지 잘 모르겠어 | 불확실함 표현
@@ -333,14 +333,14 @@ I had no idea it was your birthday. | 네 생일인 줄 전혀 몰랐어.
 She has no idea what's going on. | 그녀는 무슨 일인지 전혀 몰라.
 
 ## It seems like ~ | ~인 것 같아 | 관찰에 근거한 추측
-It seems like a good idea. | 좋은 생각인 것 같아.
+Seems like a good idea. | 좋은 생각 같아.
 It seems like he's busy. | 그가 바쁜 것 같아.
 It seems like it's going to rain. | 비가 올 것 같아.
-It seems like you're tired. | 너 피곤해 보여.
+Seems like you're tired. | 너 피곤해 보여.
 It seems like nobody's home. | 아무도 집에 없는 것 같아.
 It seems like yesterday. | 엊그제 같아.
 It looks like we're lost. | 우리 길 잃은 것 같아.
-It sounds like a good plan. | 좋은 계획 같아.
+Sounds like a plan. | 좋아, 그렇게 하자.
 
 ## What do you think of ~? | ~ 어떻게 생각해? | 의견 묻기
 What do you think of this? | 이거 어떻게 생각해?
@@ -388,15 +388,15 @@ It's worth a try. | 한번 해 볼 만해.
 It's worth visiting. | 가 볼 만해.
 It's worth the wait. | 기다릴 만한 가치가 있어.
 It's not worth the money. | 그 돈 낼 가치는 없어.
-That movie is worth watching. | 그 영화 볼 만해.
+That movie's worth watching. | 그 영화 볼 만해.
 It's not worth arguing about. | 그걸로 싸울 가치는 없어.
-Is it worth buying? | 그거 살 만해?
+Is it worth getting? | 그거 살 만해?
 
 ## There's no need to ~ | ~할 필요 없어 | 불필요함 표현
 There's no need to worry. | 걱정할 필요 없어.
 There's no need to rush. | 서두를 필요 없어.
 There's no need to apologize. | 사과할 필요 없어.
-There's no need to shout. | 소리 지를 필요 없어.
+There's no need to yell. | 소리 지를 필요 없어.
 There's no need to bring anything. | 아무것도 가져올 필요 없어.
 You don't have to do that. | 그렇게 안 해도 돼.
 You don't need to thank me. | 고마워할 필요 없어.
@@ -405,7 +405,7 @@ There's no need to be nervous. | 긴장할 필요 없어.
 ## It's not that ~, it's just that ~ | ~인 게 아니라 그냥 ~인 거야 | 오해를 바로잡는 말
 It's not that I don't like you. | 네가 싫다는 게 아니야.
 It's not that I'm angry. It's just that I'm tired. | 화난 게 아니라 그냥 피곤한 거야.
-It's not that it's bad. It's just that it's expensive. | 나쁜 게 아니라 그냥 비싸.
+It's not that it's bad. It's just that it's pricey. | 나쁜 게 아니라 그냥 좀 비싸.
 It's not that I don't want to go. | 가기 싫다는 게 아니야.
 It's just that I need some time. | 그냥 시간이 좀 필요한 거야.
 It's just that I'm a little busy. | 그냥 좀 바빠서 그래.
@@ -418,7 +418,7 @@ That's why I'm late. | 그래서 늦은 거야.
 That's why I love you. | 그래서 내가 널 좋아해.
 That's why she was upset. | 그래서 그녀가 속상했던 거야.
 That's why I didn't go. | 그래서 내가 안 간 거야.
-That's because I was busy. | 그건 내가 바빴기 때문이야.
+That's 'cause I was busy. | 그건 내가 바빠서 그랬어.
 That's what I mean. | 내 말이 그 말이야.
 That's not what I said. | 내가 한 말은 그게 아니야.
 
@@ -440,8 +440,8 @@ Have you ever seen this movie? | 이 영화 본 적 있어?
 Have you ever met him? | 그 사람 만나 본 적 있어?
 Have you ever been on TV? | TV에 나온 적 있어?
 Have you ever lived abroad? | 해외에서 살아 본 적 있어?
-Have you ever thought about it? | 그것에 대해 생각해 본 적 있어?
-Have you ever done this before? | 전에 이거 해 본 적 있어?
+Have you ever thought about it? | 그거 생각해 본 적 있어?
+Have you done this before? | 이거 해 본 적 있어?
 
 ## I've never ~ | ~해 본 적 없어 | 경험 없음
 I've never been there. | 거기 가 본 적 없어.
@@ -511,10 +511,10 @@ How long will it take? | 얼마나 걸릴까?
 How long did it take you? | 너는 얼마나 걸렸어?
 How long have you been here? | 여기 온 지 얼마나 됐어?
 How long are you staying? | 얼마나 머물러?
-How long ago was that? | 그게 얼마나 전이었어?
+How long ago was that? | 그게 언제 적 얘기야?
 
 ## It takes ~ to ~ | ~하는 데 (시간)이 걸려 | It takes + 시간 + to 동사
-It takes 20 minutes to get there. | 거기 가는 데 20분 걸려.
+It takes like twenty minutes to get there. | 거기 가는 데 20분쯤 걸려.
 It takes time. | 시간이 걸려.
 It took me two hours to finish. | 끝내는 데 두 시간 걸렸어.
 It takes a while to get used to. | 익숙해지는 데 시간이 좀 걸려.
@@ -531,7 +531,7 @@ I'm in the middle of a meeting. | 지금 회의 중이야.
 I'm in the middle of cleaning. | 한창 청소 중이야.
 I'm in the middle of moving. | 한창 이사 중이야.
 We're in the middle of a movie. | 우리 영화 보는 중이야.
-Can I call you back? I'm in the middle of work. | 다시 전화해도 돼? 일하는 중이라.
+Can I call you back? I'm in the middle of work. | 나중에 다시 전화해도 돼? 지금 일하는 중이라.
 I'm kind of in the middle of something. | 내가 지금 좀 뭐 하는 중이라서.
 
 ## Don't forget to ~ | ~하는 거 잊지 마 | 상기시키기
@@ -542,7 +542,7 @@ Don't forget to take your medicine. | 약 먹는 거 잊지 마.
 Don't forget to bring your ID. | 신분증 챙기는 거 잊지 마.
 Don't forget to turn off the lights. | 불 끄는 거 잊지 마.
 Don't forget to text me when you get home. | 집에 도착하면 문자하는 거 잊지 마.
-Remind me to buy milk. | 우유 사라고 나한테 말해 줘.
+Remind me to grab some milk. | 우유 사야 된다고 나중에 말해 줘.
 
 ## Make sure ~ | 꼭 ~하도록 해 | 확실히 하라는 당부
 Make sure you lock the door. | 문 꼭 잠가.
@@ -570,7 +570,7 @@ I'm afraid I have to go. | 미안하지만 가 봐야 해.
 I'm afraid not. | 유감이지만 아니야.
 I'm afraid so. | 유감스럽게도 그래.
 I'm afraid it's too late. | 유감이지만 너무 늦었어.
-I'm afraid I don't know. | 죄송하지만 잘 모르겠어요.
+I'm afraid I don't know. | 미안한데 잘 모르겠어.
 I'm afraid we're out of time. | 아쉽지만 시간이 다 됐어.
 I'm afraid of heights. | 나 고소공포증 있어.
 
@@ -601,8 +601,8 @@ I'm glad to hear that. | 그 말 들으니 기쁘다.
 I'm glad it's over. | 끝나서 다행이야.
 I'm glad you're okay. | 네가 괜찮아서 다행이야.
 I'm so glad I came. | 오길 정말 잘했다.
-I'm glad we talked. | 얘기 나눠서 다행이야.
-Glad to see you again. | 다시 만나서 반가워.
+I'm glad we talked. | 얘기해서 다행이야.
+Good to see you again. | 다시 보니까 반갑다.
 
 # 일상 문제 상황 (구어체)
 ## My ~ is acting up | 내 ~가 말썽이야 | 기기나 몸이 말을 안 들을 때 (act up = 말썽 부리다)

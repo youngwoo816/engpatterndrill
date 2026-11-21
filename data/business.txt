@@ -1,575 +1,575 @@
 # 회의
-## Let's get started / Let's move on to ~ | 시작합시다 / ~로 넘어가죠 | 회의 진행
-Let's get started. | 시작하겠습니다.
-Shall we get started? | 시작할까요?
+## Let's get started / Let's move on to ~ | 시작할게요 / ~로 넘어가죠 | 회의 진행
+Okay, let's get started. | 자, 시작할게요.
+Shall we get going? | 시작해 볼까요?
 Let's move on to the next item. | 다음 안건으로 넘어가죠.
 Let's move on to the budget. | 예산 얘기로 넘어가죠.
-Let's go over the agenda first. | 먼저 안건부터 훑어보죠.
-Let's start with a quick update from each team. | 각 팀의 간단한 업데이트로 시작하죠.
-Let's wrap up here. | 여기서 마무리하죠.
-Let's take a five-minute break. | 5분간 쉬었다 하죠.
+Let's go over the agenda real quick. | 안건부터 빠르게 훑어보죠.
+Let's start with a quick update from each team. | 팀별로 간단히 업데이트부터 해요.
+Let's wrap it up here. | 여기서 마무리하죠.
+Let's take five. | 5분만 쉬었다 해요.
 
-## The purpose of this meeting is to ~ | 이 회의의 목적은 ~입니다 | 회의 목적 제시
-The purpose of this meeting is to review the plan. | 이 회의의 목적은 계획을 검토하는 것입니다.
-The purpose of this meeting is to set our goals for Q3. | 이 회의의 목적은 3분기 목표를 정하는 것입니다.
-The purpose of today's call is to discuss the timeline. | 오늘 통화의 목적은 일정을 논의하는 것입니다.
-We're here to decide on the launch date. | 출시일을 정하려고 모였습니다.
-Today, I'd like to focus on customer feedback. | 오늘은 고객 피드백에 집중하고 싶습니다.
-We have three items on the agenda today. | 오늘 안건은 세 가지입니다.
-We have about thirty minutes, so let's keep it short. | 30분 정도 있으니 짧게 하죠.
-The main goal is to agree on next steps. | 주된 목표는 다음 단계에 합의하는 것입니다.
+## We're here to ~ | ~하려고 모였어요 | 회의 목적 말하기
+We're here to go over the plan. | 계획 같이 보려고 모였어요.
+We're here to set our goals for Q3. | 3분기 목표 정하려고 모였어요.
+We're here to figure out the timeline. | 일정 정하려고 모였어요.
+We're here to decide on the launch date. | 출시일 정하려고 모였어요.
+Today I want to focus on customer feedback. | 오늘은 고객 피드백 위주로 볼게요.
+We've got three things to cover today. | 오늘 볼 게 세 가지예요.
+We've got about thirty minutes, so let's keep it short. | 30분 정도 있으니까 짧게 하죠.
+The main thing is to agree on next steps. | 핵심은 다음 단계를 정하는 거예요.
 
-## I'd like to ~ | ~하고자 합니다 | 회의 중 발언 시작
-I'd like to share an update. | 업데이트 하나 공유드리겠습니다.
-I'd like to add something. | 한 가지 덧붙이고 싶습니다.
-I'd like to raise a concern. | 우려 사항을 하나 말씀드리고 싶습니다.
-I'd like to make a suggestion. | 제안을 하나 드리고 싶습니다.
-I'd like to hear from the sales team. | 영업팀 의견을 듣고 싶습니다.
-I'd like to go back to what you said earlier. | 아까 말씀하신 부분으로 돌아가고 싶습니다.
-I'd like to point out one thing. | 한 가지 짚고 넘어가고 싶습니다.
-I'd like to introduce our new team member. | 새로 오신 팀원을 소개하겠습니다.
+## I just want to ~ | 그냥 ~하고 싶어서요 | 회의 중 말 꺼내기
+I just want to give a quick update. | 간단히 업데이트 하나 드릴게요.
+I just want to add something. | 하나만 덧붙일게요.
+I just want to flag a concern. | 걱정되는 게 하나 있어서요.
+I just want to throw out an idea. | 아이디어 하나 던져 볼게요.
+I just want to hear from the sales team. | 영업팀 얘기도 듣고 싶어요.
+I just want to go back to what you said earlier. | 아까 하신 말씀으로 잠깐 돌아갈게요.
+I just want to point out one thing. | 한 가지만 짚을게요.
+I just want to introduce our new team member. | 새로 온 팀원 소개할게요.
 
-## Sorry to interrupt, but ~ | 말씀 중에 죄송하지만 ~ | 끼어들기
-Sorry to interrupt, but I have a quick question. | 말씀 중에 죄송한데, 간단한 질문이 있습니다.
-Can I jump in here? | 제가 잠깐 말씀드려도 될까요?
-If I could just add something here. | 여기에 한마디만 덧붙이자면요.
-Sorry, can I just say one thing? | 죄송한데, 한 가지만 말씀드려도 될까요?
-Sorry, go ahead. | 죄송해요, 먼저 말씀하세요.
-Please let me finish. | 끝까지 말씀드릴게요.
-Can I finish my point first? | 제 얘기 먼저 마무리해도 될까요?
-You were saying? | 무슨 말씀 하시던 중이었죠?
+## Sorry to interrupt, but ~ | 말씀 중에 죄송한데 ~ | 끼어들기
+Sorry to interrupt, but I've got a quick question. | 말씀 중에 죄송한데, 간단한 질문 하나만요.
+Can I jump in here? | 저 잠깐 한마디 해도 될까요?
+Sorry, can I just add something? | 죄송한데 하나만 덧붙여도 될까요?
+Sorry, can I just say one thing? | 죄송한데 한 가지만 말해도 될까요?
+Oh, sorry, go ahead. | 아, 죄송해요, 먼저 하세요.
+Hang on, let me finish. | 잠깐만요, 마저 말할게요.
+Can I just finish this point? | 이 얘기만 마저 해도 될까요?
+Sorry, you were saying? | 죄송해요, 무슨 말씀 하셨죠?
 
-## What's your take on ~? | ~에 대한 생각은 어떠세요? | 의견 묻기
-What's your take on this? | 이 건에 대해 어떻게 생각하세요?
-What's your take on the new policy? | 새 정책에 대해 어떻게 생각하세요?
-What are your thoughts on the proposal? | 제안서에 대해 어떻게 생각하세요?
-How do you feel about the timeline? | 일정에 대해 어떻게 보세요?
-Does anyone have any thoughts? | 의견 있으신 분 계신가요?
-Does anyone have any questions? | 질문 있으신 분 계신가요?
-Any objections? | 반대 의견 있으신가요?
-Would anyone like to add anything? | 덧붙이실 분 계신가요?
+## What's your take on ~? | ~ 어떻게 보세요? | 의견 묻기
+What's your take on this? | 이거 어떻게 보세요?
+What's your take on the new policy? | 새 정책 어떻게 보세요?
+What do you think of the proposal? | 제안서 어떻게 생각해요?
+How do you feel about the timeline? | 일정은 어떤 것 같아요?
+Any thoughts? | 의견 있어요?
+Any questions so far? | 지금까지 질문 있어요?
+Anyone disagree? | 반대하는 분 있어요?
+Anything else to add? | 더 덧붙일 거 있어요?
 
-## I see your point, but ~ | 무슨 말씀인지 알겠지만 ~ | 부드러운 반대
-I see your point, but I think it's too risky. | 무슨 말씀인지 알겠지만 너무 위험한 것 같아요.
-I see what you mean, but we don't have the budget. | 무슨 뜻인지 알겠는데 예산이 없어요.
+## I see your point, but ~ | 무슨 말인지 알겠는데 ~ | 부드럽게 반대하기
+I see your point, but I think it's too risky. | 무슨 말인지 알겠는데 너무 위험한 것 같아요.
+I get what you mean, but we don't have the budget. | 무슨 뜻인지 알겠는데 예산이 없어요.
 That's a good point, but what about the cost? | 좋은 지적인데, 비용은요?
-I understand your concern, but we're on a tight schedule. | 우려하시는 건 이해하지만 일정이 빠듯합니다.
-I agree to some extent, but I have a different view. | 어느 정도는 동의하지만, 제 생각은 좀 다릅니다.
-I'm not sure I agree with that. | 그 부분은 동의하기 어려울 것 같아요.
-I'm afraid I have to disagree. | 죄송하지만 동의하기 어렵습니다.
-Let's look at it from a different angle. | 다른 관점에서 한번 보죠.
+I hear you, but we're on a tight schedule. | 무슨 말인지 아는데 일정이 빠듯해요.
+I kind of agree, but I see it a little differently. | 어느 정도는 동의하는데 저는 좀 다르게 봐요.
+I'm not sure I agree with that. | 그건 동의하기 좀 어려운 것 같아요.
+Honestly, I don't think that'll work. | 솔직히 그건 안 될 것 같아요.
+Let's look at it another way. | 다른 쪽으로 한번 보죠.
 
-## I agree with ~ | ~에 동의합니다 | 동의 표현
-I agree with you. | 동의합니다.
-I completely agree. | 전적으로 동의합니다.
-I agree with Sarah on this. | 이 건은 사라 의견에 동의합니다.
-That makes sense. | 일리가 있네요.
-That's exactly what I was thinking. | 제가 생각한 게 바로 그거예요.
-I'm on board with that. | 저는 그 안에 찬성합니다.
-Sounds good to me. | 저는 좋습니다.
-I couldn't agree more. | 더할 나위 없이 동의합니다.
+## I agree with ~ | ~ 말에 동의해요 | 동의하기
+I agree with you. | 저도 그렇게 생각해요.
+Totally agree. | 완전 동의해요.
+I agree with Sarah on this. | 이건 사라 말에 동의해요.
+That makes sense. | 말 되네요.
+That's exactly what I was thinking. | 제가 딱 그 생각 했어요.
+I'm on board with that. | 저는 찬성이에요.
+Sounds good to me. | 저는 좋아요.
+I couldn't agree more. | 백 퍼센트 동의해요.
 
-## Could you clarify ~? | ~를 명확히 해 주시겠어요? | 확인·설명 요청
-Could you clarify what you mean? | 무슨 뜻인지 명확히 해 주시겠어요?
-Could you clarify the deadline? | 마감일을 확실히 해 주시겠어요?
-Could you elaborate on that? | 그 부분 좀 더 자세히 설명해 주시겠어요?
-Could you give us an example? | 예를 하나 들어 주시겠어요?
-What do you mean by "soon"? | "곧"이라는 게 언제를 말씀하시는 거죠?
-Could you go over that again? | 그 부분 다시 한번 짚어 주시겠어요?
-Can you explain how this works? | 이게 어떻게 돌아가는지 설명해 주실래요?
-Could you be more specific? | 좀 더 구체적으로 말씀해 주시겠어요?
+## What do you mean by ~? | ~가 무슨 뜻이에요? | 확인·설명 요청
+What do you mean by that? | 그게 무슨 뜻이에요?
+What do you mean by "soon"? | "곧"이면 언제쯤이에요?
+Can you say a bit more about that? | 그거 좀 더 얘기해 줄래요?
+Can you give us an example? | 예를 하나 들어 줄래요?
+What do you mean exactly? | 정확히 무슨 말이에요?
+Sorry, can you go over that again? | 죄송한데 그거 다시 한번 설명해 줄래요?
+How does this work, exactly? | 이거 정확히 어떻게 돌아가는 거예요?
+Can you be a bit more specific? | 조금만 더 구체적으로 말해 줄래요?
 
-## Just to make sure we're on the same page, ~ | 서로 이해한 게 맞는지 확인하자면 ~ | 합의 내용 확인
-Just to make sure we're on the same page, the deadline is Friday. | 확실히 하자면, 마감은 금요일이죠.
-Just to confirm, you'll send the files by noon? | 확인차 여쭤보면, 정오까지 파일 보내 주시는 거죠?
-So, if I understand correctly, we need two more people. | 제가 제대로 이해했다면, 두 명이 더 필요하다는 거죠.
-Let me make sure I got this right. | 제가 제대로 이해했는지 확인해 볼게요.
-Are we all on the same page? | 다들 같은 생각이신 거죠?
-So what you're saying is we should wait. | 그러니까 기다려야 한다는 말씀이시죠.
-Is that correct? | 맞습니까?
-Correct me if I'm wrong. | 제가 틀렸으면 정정해 주세요.
+## So just to be clear, ~ | 그러니까 확실히 하자면 ~ | 합의 내용 확인
+So just to be clear, the deadline's Friday. | 그러니까 확실히 하자면, 마감은 금요일이죠.
+So just to be clear, you'll send the files by noon? | 확인하자면, 정오까지 파일 보내 주는 거죠?
+So if I've got this right, we need two more people. | 제가 맞게 이해했다면, 두 명 더 필요한 거죠.
+Let me make sure I've got this right. | 제가 맞게 이해했는지 확인해 볼게요.
+Are we all on the same page? | 다들 같은 생각인 거죠?
+So you're saying we should wait? | 그러니까 기다려야 한다는 거죠?
+Is that right? | 맞아요?
+Correct me if I'm wrong. | 틀렸으면 말해 줘요.
 
-## Let's circle back to ~ | ~ 얘기로 다시 돌아오죠 | 보류·재논의
-Let's circle back to this later. | 이건 나중에 다시 얘기하죠.
-Let's circle back to the pricing issue. | 가격 문제로 다시 돌아가죠.
-Let's put that on hold for now. | 그건 일단 보류하죠.
-Let's park that for now. | 그건 잠시 미뤄 두죠.
-Let's take this offline. | 이건 회의 끝나고 따로 얘기하죠.
-We can discuss that in a separate meeting. | 그건 따로 회의를 잡아서 논의하죠.
-We're running out of time. | 시간이 얼마 안 남았습니다.
-We're getting a bit off track. | 얘기가 좀 옆으로 새고 있네요.
+## Let's circle back to ~ | ~ 얘기는 나중에 다시 해요 | 보류·재논의
+Let's circle back to this later. | 이건 나중에 다시 얘기해요.
+Let's circle back to the pricing thing. | 가격 얘기는 다시 돌아가서 하죠.
+Let's put that on hold for now. | 그건 일단 보류해요.
+Let's park that for now. | 그건 잠깐 미뤄 둬요.
+Let's take this offline. | 이건 회의 끝나고 따로 얘기해요.
+We can talk about that in a separate meeting. | 그건 따로 회의 잡아서 얘기해요.
+We're running out of time. | 시간이 얼마 없어요.
+We're getting a bit off track. | 얘기가 좀 샜네요.
 
-## Who's going to ~? | ~는 누가 맡을까요? | 역할 분담
-Who's going to take the lead on this? | 이건 누가 주도할까요?
-Who's going to handle the client? | 고객 응대는 누가 맡을까요?
-Who will take care of the slides? | 슬라이드는 누가 맡을까요?
-Who's taking notes today? | 오늘 회의록은 누가 작성하나요?
-Can you take the lead on this, Tom? | 톰, 이 건 맡아 주실 수 있어요?
-I can take care of that. | 그건 제가 맡을 수 있어요.
-I'll volunteer for the research part. | 리서치 부분은 제가 맡겠습니다.
-Let's split the work between us. | 일을 나눠서 하죠.
+## Who's going to ~? | ~는 누가 맡을래요? | 역할 나누기
+Who's going to take the lead on this? | 이건 누가 맡아서 할래요?
+Who's going to handle the client? | 고객 쪽은 누가 맡을래요?
+Who's taking care of the slides? | 슬라이드는 누가 해요?
+Who's taking notes today? | 오늘 회의록 누가 써요?
+Tom, can you take the lead on this? | 톰, 이거 맡아 줄 수 있어요?
+I can take care of that. | 그건 제가 할게요.
+I'll take the research part. | 리서치 부분은 제가 할게요.
+Let's split it up. | 나눠서 하죠.
 
-## To sum up, ~ | 정리하자면 ~ | 회의 마무리
-To sum up, we'll launch in May. | 정리하자면, 5월에 출시합니다.
-To sum up, we agreed on three things. | 정리하면 세 가지에 합의했습니다.
-So the next steps are as follows. | 그럼 다음 단계는 다음과 같습니다.
-Let's recap what we decided. | 결정한 사항을 정리해 보죠.
-I'll send out the meeting notes later today. | 오늘 중으로 회의록 보내 드릴게요.
-Let's meet again next week to check progress. | 다음 주에 다시 모여서 진행 상황 확인하죠.
-Thank you all for your time. | 시간 내 주셔서 모두 감사합니다.
-That's all for today. | 오늘은 여기까지입니다.
+## So, to wrap up, ~ | 자, 정리하면 ~ | 회의 마무리
+So, to wrap up, we're launching in May. | 자, 정리하면 5월에 출시해요.
+So, to wrap up, we agreed on three things. | 정리하면 세 가지 정했어요.
+So here are the next steps. | 그럼 다음 할 일은 이거예요.
+Let's quickly recap what we decided. | 정한 거 빠르게 정리해 볼게요.
+I'll send out the notes later today. | 이따가 회의록 보낼게요.
+Let's meet again next week and check in. | 다음 주에 다시 모여서 확인해요.
+Thanks, everyone, for your time. | 다들 시간 내 줘서 고마워요.
+That's it for today. | 오늘은 여기까지예요.
 
-## According to ~ | ~에 따르면 | 근거 제시
-According to the data, sales went up by ten percent. | 데이터에 따르면 매출이 10% 올랐습니다.
-According to our survey, customers want faster delivery. | 설문 결과에 따르면 고객들은 더 빠른 배송을 원합니다.
-According to the report, costs have doubled. | 보고서에 따르면 비용이 두 배로 늘었습니다.
-As you can see on this chart, traffic is growing. | 이 차트에서 보시다시피 트래픽이 늘고 있습니다.
-The numbers show a clear trend. | 수치가 뚜렷한 추세를 보여 줍니다.
-Based on last year's results, we expect growth. | 작년 실적을 바탕으로 성장을 예상합니다.
-Compared to last quarter, we're doing better. | 지난 분기와 비교하면 나아졌습니다.
-This is mainly due to the new campaign. | 이건 주로 새 캠페인 덕분입니다.
+## According to ~ | ~에 따르면 | 근거 말하기
+According to the data, sales went up ten percent. | 데이터 보면 매출이 10% 올랐어요.
+According to our survey, customers want faster delivery. | 설문 보면 고객들은 더 빠른 배송을 원해요.
+According to the report, costs have doubled. | 보고서 보면 비용이 두 배가 됐어요.
+As you can see here, traffic's going up. | 여기 보시면 트래픽이 늘고 있어요.
+The numbers are pretty clear. | 숫자가 꽤 분명해요.
+Looking at last year, we should see growth. | 작년을 보면 성장할 것 같아요.
+We're doing better than last quarter. | 지난 분기보다 잘하고 있어요.
+It's mostly thanks to the new campaign. | 거의 새 캠페인 덕분이에요.
 
 ## Can we push ~ to ~? | ~를 ~로 미룰 수 있을까요? | 일정 조정
-Can we push the meeting to Thursday? | 회의를 목요일로 미룰 수 있을까요?
-Can we move the call to 3 p.m.? | 통화를 오후 3시로 옮길 수 있을까요?
-Can we reschedule for next week? | 다음 주로 일정 다시 잡을 수 있을까요?
-Could we push the deadline back a few days? | 마감을 며칠 늦출 수 있을까요?
-Can we bring the meeting forward to Monday? | 회의를 월요일로 앞당길 수 있을까요?
-Does Tuesday work for everyone? | 화요일 다들 괜찮으세요?
-I have a conflict at that time. | 그 시간에 다른 일정이 있습니다.
-Let me check my calendar. | 제 일정 확인해 볼게요.
+Can we push the meeting to Thursday? | 회의 목요일로 미룰 수 있을까요?
+Can we move the call to three? | 통화 3시로 옮길 수 있을까요?
+Can we do next week instead? | 대신 다음 주에 할 수 있을까요?
+Could we push the deadline back a few days? | 마감 며칠만 늦출 수 있을까요?
+Can we move the meeting up to Monday? | 회의 월요일로 당길 수 있을까요?
+Does Tuesday work for everyone? | 화요일 다들 괜찮아요?
+I've got something else at that time. | 그 시간엔 다른 일정이 있어요.
+Let me check my calendar. | 일정 좀 볼게요.
 
-# 이메일
-## I'm writing to ~ | ~하고자 메일 드립니다 | 메일 첫 문장
-I'm writing to follow up on our meeting. | 회의 관련 후속 메일 드립니다.
-I'm writing to ask about the delivery date. | 납품일 문의드리고자 메일 드립니다.
-I'm writing to confirm our appointment. | 약속 일정 확인차 메일 드립니다.
-I'm writing to let you know about a change in the schedule. | 일정 변경 사항을 알려 드리고자 메일 드립니다.
-I'm writing to request a quote. | 견적을 요청드리고자 메일 드립니다.
-I'm writing on behalf of my team. | 저희 팀을 대표해 메일 드립니다.
-I'm reaching out to introduce myself. | 제 소개를 드리고자 연락드립니다.
-I hope this email finds you well. | 잘 지내고 계시길 바랍니다.
+# 메일·메신저 (구어체)
+## Just wanted to ~ | ~하려고 연락했어요 | 메일·메신저 첫마디
+Just wanted to follow up on our meeting. | 회의 건으로 다시 연락드려요.
+Just wanted to ask about the delivery date. | 납품일 여쭤보려고요.
+Just wanted to confirm our meeting. | 미팅 확인차 연락드려요.
+Just wanted to let you know the schedule's changed. | 일정 바뀐 거 알려 드리려고요.
+Just wanted to get a quote. | 견적 좀 받아 보려고요.
+Just wanted to check in on behalf of my team. | 팀 대신 확인차 연락드려요.
+Just wanted to introduce myself. | 인사드리려고 연락했어요.
+Hope you're doing well! | 잘 지내시죠?
 
-## I'm following up on ~ | ~ 관련해 다시 연락드립니다 | 후속 메일
-I'm following up on my previous email. | 지난번 메일 관련해 다시 연락드립니다.
-I'm following up on the invoice I sent last week. | 지난주 보내 드린 청구서 관련해 다시 연락드립니다.
-I'm just following up to see if you had a chance to review it. | 혹시 검토해 보셨는지 여쭤보려고 연락드립니다.
-I wanted to check in on the status of the order. | 주문 진행 상황을 확인하고 싶어 연락드렸습니다.
-Following up on our call, here are the details. | 통화 관련해서, 세부 내용 보내 드립니다.
-Just checking in on this. | 이 건 확인차 연락드립니다.
-I haven't heard back yet, so I wanted to follow up. | 아직 회신을 못 받아서 다시 연락드립니다.
-Any updates on this? | 이 건 업데이트 있으신가요?
+## I'm following up on ~ | ~ 관련해서 다시 연락드려요 | 후속 연락
+I'm following up on my last email. | 지난번 메일 관련해서 다시 연락드려요.
+I'm following up on the invoice from last week. | 지난주 청구서 건으로 다시 연락드려요.
+Just following up to see if you had a chance to look at it. | 혹시 보셨나 해서 다시 연락드려요.
+Just checking on the status of the order. | 주문 어떻게 돼 가는지 확인차 연락드려요.
+Following up on our call, here are the details. | 통화한 거 관련해서 세부 내용 보내요.
+Just checking in on this. | 이 건 어떻게 됐나 해서요.
+Haven't heard back yet, so just following up. | 아직 답이 없어서 다시 연락드려요.
+Any updates? | 진행된 거 있어요?
 
-## Please find attached ~ | ~를 첨부합니다 | 첨부 안내
-Please find attached the report. | 보고서를 첨부합니다.
-Please find attached the updated schedule. | 수정된 일정표를 첨부합니다.
-I've attached the contract for your review. | 검토하실 수 있도록 계약서를 첨부했습니다.
-Attached is the presentation from today. | 오늘 발표 자료를 첨부합니다.
-I've attached a copy of the invoice. | 청구서 사본을 첨부했습니다.
-Please see the attached file for details. | 자세한 내용은 첨부 파일을 확인해 주세요.
-I'm resending the file you requested. | 요청하신 파일을 다시 보내 드립니다.
-Let me know if you have trouble opening the file. | 파일이 안 열리면 말씀해 주세요.
+## I've attached ~ | ~ 첨부했어요 | 파일 보낼 때
+I've attached the report. | 보고서 첨부했어요.
+I've attached the updated schedule. | 수정된 일정표 첨부했어요.
+I've attached the contract for you to look over. | 보실 수 있게 계약서 첨부했어요.
+Here's the deck from today. | 오늘 발표 자료예요.
+I've attached a copy of the invoice. | 청구서 사본 첨부했어요.
+The details are in the attached file. | 자세한 건 첨부 파일에 있어요.
+Resending the file you asked for. | 요청하신 파일 다시 보내요.
+Let me know if it doesn't open. | 안 열리면 말해 줘요.
 
-## Could you please ~? | ~해 주시겠어요? | 메일 요청
-Could you please send me the file? | 파일 좀 보내 주시겠어요?
-Could you please review the draft by Friday? | 금요일까지 초안 검토해 주시겠어요?
-Could you please confirm the details below? | 아래 세부 사항 확인해 주시겠어요?
-Could you please sign and return the form? | 양식에 서명 후 회신해 주시겠어요?
-Could you please share your availability? | 가능한 일정 공유해 주시겠어요?
-Could you please update the numbers? | 수치 업데이트해 주시겠어요?
-Could you please forward this to the team? | 이거 팀에 전달해 주시겠어요?
-Could you please get back to me by tomorrow? | 내일까지 회신 주시겠어요?
+## Could you ~ when you get a chance? | 시간 될 때 ~해 줄래요? | 부담 없는 부탁
+Could you send me the file when you get a chance? | 시간 될 때 파일 좀 보내 줄래요?
+Could you look over the draft by Friday? | 금요일까지 초안 좀 봐 줄래요?
+Could you double-check the details below? | 아래 내용 한 번만 확인해 줄래요?
+Could you sign this and send it back? | 이거 서명해서 다시 보내 줄래요?
+When are you free this week? | 이번 주 언제 시간 돼요?
+Could you update the numbers when you get a chance? | 시간 될 때 숫자 좀 업데이트해 줄래요?
+Could you pass this on to the team? | 이거 팀에 좀 전달해 줄래요?
+Could you get back to me by tomorrow? | 내일까지 답 줄 수 있어요?
 
-## I would appreciate it if you could ~ | ~해 주시면 감사하겠습니다 | 매우 정중한 요청
-I would appreciate it if you could reply by Monday. | 월요일까지 회신 주시면 감사하겠습니다.
-I would appreciate it if you could look into this. | 이 건 확인해 주시면 감사하겠습니다.
-I would appreciate it if you could send the payment soon. | 빠른 시일 내 입금해 주시면 감사하겠습니다.
-I would appreciate your feedback. | 피드백 주시면 감사하겠습니다.
-I would appreciate any help you can give. | 어떤 도움이든 주시면 감사하겠습니다.
-It would be great if you could join us. | 함께해 주시면 좋겠습니다.
-It would be helpful if you could share the data. | 데이터를 공유해 주시면 도움이 될 것 같습니다.
-Your prompt reply would be appreciated. | 빠른 회신 부탁드립니다.
+## It'd be great if you could ~ | ~해 주면 좋겠어요 | 정중하지만 편한 부탁
+It'd be great if you could reply by Monday. | 월요일까지 답 주면 좋겠어요.
+It'd be great if you could look into this. | 이거 좀 알아봐 주면 좋겠어요.
+It'd be great if you could send the payment soon. | 빨리 입금해 주면 좋겠어요.
+Any feedback would be great. | 피드백 주면 좋겠어요.
+Any help would be awesome. | 뭐든 도와주면 정말 좋겠어요.
+It'd be great if you could join us. | 같이해 주면 좋겠어요.
+It'd really help if you could share the data. | 데이터 공유해 주면 진짜 도움 될 거예요.
+A quick reply would be great. | 빨리 답 주면 좋겠어요.
 
-## Please let me know if ~ | ~하시면 알려 주세요 | 맺음 문장
-Please let me know if you have any questions. | 궁금한 점 있으시면 알려 주세요.
-Please let me know if this works for you. | 이렇게 진행해도 괜찮으신지 알려 주세요.
-Please let me know if you need anything else. | 다른 필요한 게 있으시면 알려 주세요.
-Please let me know your thoughts. | 의견 알려 주세요.
-Please let me know what time works best. | 몇 시가 가장 좋으신지 알려 주세요.
-Let me know if anything changes. | 변동 사항 있으면 알려 주세요.
-Please let me know as soon as possible. | 가능한 한 빨리 알려 주세요.
-Please don't hesitate to contact me. | 언제든 편하게 연락 주세요.
+## Let me know if ~ | ~면 알려 줘요 | 맺음말
+Let me know if you have any questions. | 궁금한 거 있으면 알려 줘요.
+Let me know if this works for you. | 이렇게 해도 괜찮은지 알려 줘요.
+Let me know if you need anything else. | 다른 거 필요하면 말해 줘요.
+Let me know what you think. | 어떻게 생각하는지 알려 줘요.
+Let me know what time works best. | 몇 시가 제일 좋은지 알려 줘요.
+Let me know if anything changes. | 뭐 바뀌면 알려 줘요.
+Let me know as soon as you can. | 최대한 빨리 알려 줘요.
+Just shoot me a message anytime. | 언제든 메시지 줘요.
 
-## Thank you for your ~ | ~에 감사드립니다 | 감사 인사
-Thank you for your quick reply. | 빠른 회신 감사합니다.
-Thank you for your patience. | 기다려 주셔서 감사합니다.
-Thank you for your understanding. | 양해해 주셔서 감사합니다.
-Thank you for your time today. | 오늘 시간 내 주셔서 감사합니다.
-Thank you for your hard work on this project. | 이 프로젝트에서 수고해 주셔서 감사합니다.
-Thank you for reaching out. | 연락 주셔서 감사합니다.
-Thank you for the update. | 업데이트 감사합니다.
-Thanks in advance for your help. | 미리 도움에 감사드립니다.
+## Thanks for ~ | ~ 고마워요 | 감사 인사
+Thanks for getting back to me so fast. | 빨리 답해 줘서 고마워요.
+Thanks for being patient. | 기다려 줘서 고마워요.
+Thanks for understanding. | 이해해 줘서 고마워요.
+Thanks for your time today. | 오늘 시간 내 줘서 고마워요.
+Thanks for all your hard work on this. | 이거 하느라 고생 많았어요.
+Thanks for reaching out. | 연락 줘서 고마워요.
+Thanks for the update. | 업데이트 고마워요.
+Thanks in advance! | 미리 고마워요!
 
-## I apologize for ~ | ~에 대해 사과드립니다 | 공식 사과
-I apologize for the delay. | 지연된 점 사과드립니다.
-I apologize for the late reply. | 답장이 늦어 죄송합니다.
-I apologize for any inconvenience. | 불편을 끼쳐 드려 죄송합니다.
-I apologize for the confusion. | 혼선을 드려 죄송합니다.
-I apologize for the error in the invoice. | 청구서 오류에 대해 사과드립니다.
-Sorry for the short notice. | 급하게 연락드려 죄송합니다.
-Sorry for the back-and-forth. | 여러 번 왔다 갔다 하게 해서 죄송합니다.
-We're sorry for the trouble this has caused. | 이로 인해 불편을 드려 죄송합니다.
+## Sorry about ~ | ~ 미안해요 | 사과하기
+Sorry about the delay. | 늦어서 미안해요.
+Sorry about the late reply. | 답장 늦어서 미안해요.
+Sorry about the hassle. | 번거롭게 해서 미안해요.
+Sorry about the confusion. | 헷갈리게 해서 미안해요.
+Sorry about the mistake on the invoice. | 청구서 실수 미안해요.
+Sorry for the short notice. | 갑자기 연락해서 미안해요.
+Sorry for all the back-and-forth. | 여러 번 왔다 갔다 해서 미안해요.
+Really sorry for the trouble. | 불편 드려서 정말 미안해요.
 
-## As discussed, ~ | 논의한 대로 ~ | 이전 대화 언급
-As discussed, I'm sending the proposal. | 논의한 대로 제안서 보내 드립니다.
-As discussed in the meeting, we'll start next month. | 회의에서 논의한 대로 다음 달에 시작합니다.
-As mentioned earlier, the price has changed. | 앞서 말씀드린 대로 가격이 변경되었습니다.
-As we agreed, the payment is due on the 30th. | 합의한 대로 대금은 30일까지입니다.
-As requested, here is the sales data. | 요청하신 대로 매출 데이터 보내 드립니다.
-As you know, the office will be closed on Friday. | 아시다시피 금요일엔 사무실이 휴무입니다.
-As per our conversation, I've updated the file. | 대화 나눈 대로 파일 업데이트했습니다.
-As promised, here are the slides. | 약속드린 대로 슬라이드 보내 드립니다.
+## Like we talked about, ~ | 얘기한 대로 ~ | 이전 대화 언급
+Like we talked about, here's the proposal. | 얘기한 대로 제안서 보내요.
+Like we said in the meeting, we're starting next month. | 회의에서 말한 대로 다음 달에 시작해요.
+Like I mentioned, the price has changed. | 말씀드린 대로 가격이 바뀌었어요.
+Like we agreed, payment's due on the 30th. | 정한 대로 대금은 30일까지예요.
+Here's the sales data you asked for. | 요청하신 매출 데이터예요.
+As you know, the office is closed Friday. | 아시다시피 금요일엔 사무실 쉬어요.
+Like we discussed, I've updated the file. | 얘기한 대로 파일 업데이트했어요.
+As promised, here are the slides. | 말한 대로 슬라이드 보내요.
 
-## Just a quick reminder that ~ | ~ 다시 한번 알려 드립니다 | 리마인드
-Just a quick reminder that the meeting is at ten. | 회의가 10시라는 점 다시 알려 드립니다.
-Just a reminder that the deadline is this Friday. | 마감이 이번 주 금요일이라는 점 알려 드립니다.
-This is a friendly reminder about tomorrow's event. | 내일 행사 관련해 안내드립니다.
-Just a reminder to submit your timesheet. | 근무 시간표 제출 잊지 마세요.
-I wanted to remind you about the payment. | 결제 건 다시 한번 알려 드리고자 합니다.
-Don't forget to RSVP by Wednesday. | 수요일까지 참석 여부 회신 잊지 마세요.
-Just a heads-up, the server will be down tonight. | 미리 알려 드리면, 오늘 밤 서버가 중단됩니다.
-Please keep in mind that the office closes early today. | 오늘 사무실이 일찍 닫는다는 점 참고해 주세요.
+## Just a reminder, ~ | 다시 한번 말씀드리면 ~ | 리마인드
+Just a reminder, the meeting's at ten. | 다시 말씀드리면, 회의 10시예요.
+Just a reminder, the deadline's this Friday. | 다시 말씀드리면, 마감 이번 주 금요일이에요.
+Quick reminder about tomorrow's event. | 내일 행사 다시 한번 알려 드려요.
+Just a reminder to send in your timesheet. | 근무 시간표 내는 거 잊지 마세요.
+Just a quick reminder about the payment. | 결제 건 다시 한번 말씀드려요.
+Don't forget to RSVP by Wednesday. | 수요일까지 참석 여부 알려 주는 거 잊지 마세요.
+Heads up, the server's down tonight. | 미리 말씀드리면 오늘 밤 서버 멈춰요.
+Just so you know, the office closes early today. | 참고로 오늘 사무실 일찍 닫아요.
 
-## Unfortunately, ~ | 안타깝게도 ~ | 나쁜 소식 전하기
-Unfortunately, I won't be able to attend. | 안타깝게도 참석이 어렵겠습니다.
-Unfortunately, the item is out of stock. | 안타깝게도 해당 상품이 품절입니다.
-Unfortunately, we can't meet that deadline. | 안타깝게도 그 마감일은 맞추기 어렵습니다.
-I'm afraid we have to cancel the meeting. | 죄송하지만 회의를 취소해야 할 것 같습니다.
-I'm afraid the budget has been cut. | 안타깝지만 예산이 삭감되었습니다.
-Due to a technical issue, the launch is delayed. | 기술적인 문제로 출시가 지연되었습니다.
-Due to high demand, delivery may take longer. | 주문량이 많아 배송이 지연될 수 있습니다.
-Regrettably, we have decided not to proceed. | 유감스럽게도 진행하지 않기로 결정했습니다.
+## Unfortunately, ~ | 아쉽게도 ~ | 안 좋은 소식 전하기
+Unfortunately, I can't make it. | 아쉽게도 못 갈 것 같아요.
+Unfortunately, it's out of stock. | 아쉽게도 품절이에요.
+Unfortunately, we can't hit that deadline. | 아쉽게도 그 마감은 못 맞출 것 같아요.
+I'm afraid we have to cancel the meeting. | 죄송한데 회의 취소해야 할 것 같아요.
+I'm afraid the budget got cut. | 아쉽지만 예산이 깎였어요.
+There's a tech issue, so the launch is pushed back. | 기술 문제가 있어서 출시가 미뤄졌어요.
+Orders are crazy right now, so delivery might take longer. | 요즘 주문이 엄청 많아서 배송이 늦어질 수 있어요.
+Sadly, we've decided not to go ahead. | 아쉽지만 진행 안 하기로 했어요.
 
 ## Feel free to ~ | 편하게 ~하세요 | 부담 없는 권유
-Feel free to contact me anytime. | 언제든 편하게 연락 주세요.
-Feel free to ask questions. | 편하게 질문하세요.
-Feel free to share this with your team. | 팀에 편하게 공유하셔도 됩니다.
-Feel free to make any changes. | 자유롭게 수정하셔도 됩니다.
-Feel free to call me if it's urgent. | 급하시면 편하게 전화 주세요.
-Feel free to add comments to the document. | 문서에 편하게 코멘트 남겨 주세요.
-Feel free to reach out if anything comes up. | 무슨 일 생기면 편하게 연락 주세요.
-Feel free to skip the meeting if you're busy. | 바쁘시면 회의는 빠지셔도 됩니다.
+Feel free to reach out anytime. | 언제든 편하게 연락 줘요.
+Feel free to ask questions. | 편하게 물어보세요.
+Feel free to share this with your team. | 팀에 편하게 공유해도 돼요.
+Feel free to make changes. | 편하게 수정해도 돼요.
+Feel free to call me if it's urgent. | 급하면 편하게 전화 줘요.
+Feel free to leave comments in the doc. | 문서에 편하게 코멘트 남겨요.
+Feel free to ping me if anything comes up. | 무슨 일 있으면 편하게 메시지 줘요.
+Feel free to skip the meeting if you're busy. | 바쁘면 회의 빠져도 돼요.
 
-## I look forward to ~ | ~를 기대합니다 | 메일 마무리
-I look forward to hearing from you. | 회신 기다리겠습니다.
-I look forward to meeting you. | 뵙기를 기대합니다.
-I look forward to working with you. | 함께 일하길 기대합니다.
-I look forward to your reply. | 답장 기다리겠습니다.
-I look forward to seeing you next week. | 다음 주에 뵙겠습니다.
-We look forward to your visit. | 방문을 기다리겠습니다.
-Looking forward to our call tomorrow. | 내일 통화 기다리겠습니다.
-Best regards. | 감사합니다. (메일 끝인사)
+## Looking forward to ~ | ~ 기대돼요 | 마무리 인사
+Looking forward to hearing from you. | 연락 기다릴게요.
+Looking forward to meeting you. | 만나는 거 기대돼요.
+Looking forward to working with you. | 같이 일하는 거 기대돼요.
+Looking forward to your reply. | 답장 기다릴게요.
+Looking forward to seeing you next week. | 다음 주에 봬요.
+We're looking forward to your visit. | 방문 기다릴게요.
+Looking forward to our call tomorrow. | 내일 통화 기다릴게요.
+Talk soon! | 곧 얘기해요!
 
-## Please note that ~ | ~를 참고해 주세요 | 주의 사항 안내
-Please note that the office will be closed on Monday. | 월요일은 사무실 휴무임을 참고해 주세요.
-Please note that prices are subject to change. | 가격은 변동될 수 있음을 참고해 주세요.
-Please note that the link expires in 24 hours. | 링크는 24시간 후 만료됩니다.
-Please be aware that the meeting room has changed. | 회의실이 변경되었음을 유의해 주세요.
-Note that this is a draft. | 이것은 초안임을 참고해 주세요.
-Please keep this confidential. | 이 내용은 대외비로 해 주세요.
-Please make sure to read the guidelines. | 가이드라인을 꼭 읽어 주세요.
-For your information, the system will be updated tonight. | 참고로 오늘 밤 시스템 업데이트가 있습니다.
+## Keep in mind ~ | ~ 참고해 줘요 | 주의 사항 알리기
+Keep in mind the office is closed Monday. | 월요일엔 사무실 쉬는 거 참고해 줘요.
+Keep in mind prices might change. | 가격은 바뀔 수 있다는 거 참고해 줘요.
+Keep in mind the link expires in 24 hours. | 링크가 24시간 뒤에 만료되는 거 참고해 줘요.
+Heads up, we're in a different room today. | 참고로 오늘 회의실 바뀌었어요.
+Keep in mind this is just a draft. | 이건 그냥 초안이에요.
+Let's keep this between us for now. | 일단 이건 우리끼리만 알아요.
+Make sure you read the guidelines. | 가이드라인 꼭 읽어 봐요.
+FYI, there's a system update tonight. | 참고로 오늘 밤에 시스템 업데이트 있어요.
 
-## I've cc'd ~ | ~를 참조로 넣었습니다 | 수신자 관리
-I've cc'd my manager on this email. | 이 메일에 저희 매니저를 참조로 넣었습니다.
-I'm looping in Jessica from finance. | 재무팀 제시카 님을 추가합니다.
-I've added David to this thread. | 이 메일 스레드에 데이비드를 추가했습니다.
-Moving Mark to BCC. | 마크 님은 숨은 참조로 옮깁니다.
-Please reply all. | 전체 회신 부탁드립니다.
-I'm forwarding this to the right person. | 담당자에게 전달하겠습니다.
-Could you loop me in on that email? | 그 메일에 저도 넣어 주시겠어요?
-I'll introduce you two by email. | 두 분을 메일로 소개해 드릴게요.
+## I'm looping in ~ | ~도 같이 넣을게요 | 수신자·참여자 추가
+I'm looping in my manager. | 저희 매니저도 같이 넣을게요.
+I'm looping in Jessica from finance. | 재무팀 제시카도 넣을게요.
+I've added David to this thread. | 이 스레드에 데이비드 추가했어요.
+Moving Mark to BCC. | 마크는 숨은 참조로 옮길게요.
+Can you reply all? | 전체 답장으로 해 줄래요?
+I'm forwarding this to the right person. | 담당자한테 넘길게요.
+Can you loop me in on that email? | 그 메일에 저도 넣어 줄래요?
+Let me connect you two. | 두 분 연결해 드릴게요.
 
-## Could you confirm ~? | ~ 확인해 주시겠어요? | 확인 요청
-Could you confirm receipt of this email? | 이 메일 받으셨는지 확인 부탁드립니다.
-Could you confirm the time and place? | 시간과 장소 확인해 주시겠어요?
-Could you confirm the final price? | 최종 가격 확인해 주시겠어요?
-Could you confirm whether you can attend? | 참석 가능하신지 확인해 주시겠어요?
-Can you confirm the shipping address? | 배송 주소 확인해 주실 수 있나요?
-I just want to confirm the details. | 세부 사항만 확인하고 싶습니다.
-I can confirm that the payment has been made. | 결제가 완료되었음을 확인드립니다.
-I'm writing to confirm your order. | 주문 확인차 메일 드립니다.
+## Can you confirm ~? | ~ 확인해 줄래요? | 확인 요청
+Can you confirm you got this? | 이거 받았는지 확인해 줄래요?
+Can you confirm the time and place? | 시간이랑 장소 확인해 줄래요?
+Can you confirm the final price? | 최종 가격 확인해 줄래요?
+Can you confirm if you can make it? | 올 수 있는지 확인해 줄래요?
+Can you confirm the shipping address? | 배송 주소 확인해 줄래요?
+I just want to double-check the details. | 세부 사항만 한번 확인하고 싶어요.
+Just confirming the payment went through. | 결제 완료된 거 확인해 드려요.
+Just confirming your order. | 주문 확인해 드려요.
 
 # 업무
-## I'm working on ~ | ~ 작업 중입니다 | 진행 상황 공유
-I'm working on the report now. | 지금 보고서 작업 중입니다.
-I'm working on a new project. | 새 프로젝트를 진행 중입니다.
-I'm still working on it. | 아직 작업 중입니다.
-I'm working on fixing the bug. | 버그 수정 중입니다.
-We're working on a solution. | 해결책을 찾고 있습니다.
-I'm putting together the slides. | 슬라이드를 정리하고 있습니다.
-I'm almost done with the draft. | 초안 거의 다 끝났습니다.
-I've just finished the first part. | 첫 부분을 막 끝냈습니다.
+## I'm working on ~ | ~ 하고 있어요 | 진행 상황 공유
+I'm working on the report right now. | 지금 보고서 하고 있어요.
+I'm working on a new project. | 새 프로젝트 하고 있어요.
+I'm still working on it. | 아직 하고 있어요.
+I'm working on fixing the bug. | 버그 고치는 중이에요.
+We're working on a fix. | 해결책 찾는 중이에요.
+I'm putting the slides together. | 슬라이드 만드는 중이에요.
+I'm almost done with the draft. | 초안 거의 다 했어요.
+I just finished the first part. | 첫 부분 방금 끝냈어요.
 
-## I'm in charge of ~ | ~를 담당하고 있습니다 | 역할 소개
-I'm in charge of marketing. | 저는 마케팅을 담당하고 있습니다.
-I'm in charge of this project. | 이 프로젝트를 맡고 있습니다.
-I'm responsible for customer support. | 고객 지원을 책임지고 있습니다.
-I handle the overseas accounts. | 해외 거래처를 담당합니다.
-I work in the finance department. | 재무팀에서 일합니다.
-I report to the head of sales. | 영업 본부장님께 보고합니다.
-Who's in charge of this? | 이건 누가 담당하나요?
-Who should I talk to about this? | 이 건은 누구와 얘기해야 하나요?
+## I'm in charge of ~ | ~ 담당이에요 | 역할 소개
+I'm in charge of marketing. | 저는 마케팅 담당이에요.
+I'm in charge of this project. | 이 프로젝트 제가 맡고 있어요.
+I handle customer support. | 고객 지원 담당이에요.
+I take care of the overseas accounts. | 해외 거래처 담당이에요.
+I'm in the finance team. | 재무팀이에요.
+I report to the head of sales. | 영업 본부장님 밑에서 일해요.
+Who's in charge of this? | 이거 누가 담당해요?
+Who should I talk to about this? | 이건 누구랑 얘기하면 돼요?
 
-## Do you have a minute to ~? | 잠깐 ~할 시간 있으세요? | 동료에게 말 걸기
-Do you have a minute? | 잠깐 시간 있으세요?
-Do you have a minute to talk? | 잠깐 얘기할 시간 있으세요?
-Do you have a few minutes to go over this? | 이거 잠깐 같이 볼 시간 있으세요?
-Are you free this afternoon? | 오늘 오후에 시간 괜찮으세요?
-Is now a good time? | 지금 괜찮으세요?
-Can I grab you for a second? | 잠깐 얘기 좀 할 수 있을까요?
-Can we talk after lunch? | 점심 먹고 얘기할 수 있을까요?
-When would be a good time for you? | 언제가 편하세요?
+## Do you have a minute to ~? | 잠깐 ~할 시간 있어요? | 동료에게 말 걸기
+Got a minute? | 잠깐 시간 돼요?
+Do you have a minute to talk? | 잠깐 얘기할 시간 있어요?
+Do you have a few minutes to go over this? | 이거 잠깐 같이 볼 시간 있어요?
+Are you free this afternoon? | 오늘 오후에 시간 돼요?
+Is now a good time? | 지금 괜찮아요?
+Can I grab you for a sec? | 잠깐 얘기 좀 할 수 있어요?
+Can we talk after lunch? | 점심 먹고 얘기할까요?
+When's good for you? | 언제가 편해요?
 
-## Can you take a look at ~? | ~ 좀 봐 주실래요? | 검토 요청
-Can you take a look at this? | 이것 좀 봐 주실래요?
-Can you take a look at my draft? | 제 초안 좀 봐 주실래요?
-Could you double-check these numbers? | 이 숫자들 다시 확인해 주실래요?
-Could you give me some feedback? | 피드백 좀 주실래요?
-Can you proofread this email? | 이 메일 교정 좀 봐 주실래요?
-Would you mind reviewing this before I send it? | 보내기 전에 검토해 주실 수 있을까요?
-Let me know if anything looks off. | 이상한 부분 있으면 알려 주세요.
-I'd love a second pair of eyes on this. | 다른 분도 한번 봐 주셨으면 해요.
+## Can you take a look at ~? | ~ 좀 봐 줄래요? | 검토 요청
+Can you take a look at this? | 이것 좀 봐 줄래요?
+Can you take a look at my draft? | 제 초안 좀 봐 줄래요?
+Can you double-check these numbers? | 이 숫자 한 번만 확인해 줄래요?
+Can you give me some feedback? | 피드백 좀 줄래요?
+Can you proofread this email real quick? | 이 메일 빠르게 한번 봐 줄래요?
+Mind taking a look before I send it? | 보내기 전에 한번 봐 줄래요?
+Let me know if anything looks off. | 이상한 거 있으면 말해 줘요.
+I'd love a second pair of eyes on this. | 다른 사람도 한번 봐 줬으면 해요.
 
-## I'll get back to you ~ | ~ 다시 연락드리겠습니다 | 답변 미루기
-I'll get back to you soon. | 곧 다시 연락드리겠습니다.
-I'll get back to you by the end of the day. | 오늘 중으로 다시 연락드리겠습니다.
-I'll get back to you on that. | 그건 확인하고 다시 말씀드릴게요.
-Let me check and get back to you. | 확인해 보고 다시 연락드릴게요.
-I'll let you know as soon as I hear anything. | 소식 들리는 대로 알려 드릴게요.
-Can I get back to you tomorrow? | 내일 다시 연락드려도 될까요?
-I'll look into it. | 알아보겠습니다.
-I'll keep you posted. | 계속 진행 상황 알려 드릴게요.
+## I'll get back to you ~ | ~ 다시 연락할게요 | 답변 미루기
+I'll get back to you soon. | 곧 다시 연락할게요.
+I'll get back to you by the end of the day. | 오늘 안에 다시 연락할게요.
+I'll get back to you on that. | 그건 알아보고 다시 말할게요.
+Let me check and get back to you. | 확인해 보고 다시 연락할게요.
+I'll let you know as soon as I hear anything. | 뭐 들리면 바로 알려 줄게요.
+Can I get back to you tomorrow? | 내일 다시 연락해도 돼요?
+I'll look into it. | 알아볼게요.
+I'll keep you posted. | 계속 알려 줄게요.
 
-## I'll take care of ~ | ~는 제가 처리할게요 | 업무 자청
-I'll take care of it. | 제가 처리할게요.
+## I'll take care of ~ | ~는 제가 할게요 | 업무 맡기
+I'll take care of it. | 제가 할게요.
 I'll take care of the booking. | 예약은 제가 할게요.
-I'm on it. | 바로 처리하겠습니다.
-I'll handle the paperwork. | 서류 작업은 제가 할게요.
-Leave it to me. | 저한테 맡기세요.
+I'm on it. | 바로 할게요.
+I'll handle the paperwork. | 서류는 제가 할게요.
+Leave it to me. | 저한테 맡겨요.
 I'll deal with the client. | 고객은 제가 상대할게요.
 I'll sort it out. | 제가 해결할게요.
-Consider it done. | 해 둔 걸로 생각하세요.
+Consider it done. | 해 놓은 걸로 생각해요.
 
-## ~ is on track / behind schedule | ~는 순조롭습니다 / 일정보다 늦습니다 | 진척 보고
-The project is on track. | 프로젝트는 순조롭게 진행 중입니다.
-We're on schedule. | 일정대로 진행 중입니다.
-We're a little behind schedule. | 일정보다 조금 늦어지고 있습니다.
-We're ahead of schedule. | 일정보다 앞서 있습니다.
-Everything is going as planned. | 모든 게 계획대로 진행되고 있습니다.
-We're about halfway through. | 절반 정도 진행됐습니다.
-We should be able to finish by Friday. | 금요일까지는 끝낼 수 있을 것 같습니다.
-There might be a slight delay. | 약간 지연될 수도 있습니다.
+## ~ is on track / behind schedule | ~는 잘 가고 있어요 / 일정보다 늦어요 | 진척 보고
+The project's on track. | 프로젝트 잘 가고 있어요.
+We're on schedule. | 일정대로 가고 있어요.
+We're a little behind. | 조금 늦어지고 있어요.
+We're ahead of schedule. | 일정보다 빨라요.
+Everything's going as planned. | 다 계획대로 가고 있어요.
+We're about halfway there. | 반쯤 왔어요.
+We should be done by Friday. | 금요일까진 끝날 것 같아요.
+There might be a slight delay. | 조금 늦어질 수도 있어요.
 
-## We're short on ~ | ~가 부족합니다 | 자원 부족
-We're short on time. | 시간이 부족합니다.
-We're short on staff this week. | 이번 주는 인력이 부족합니다.
-We're running out of budget. | 예산이 바닥나고 있습니다.
-We're running low on supplies. | 비품이 떨어져 가고 있습니다.
-We don't have enough people for this. | 이 일을 할 사람이 부족합니다.
-We need more resources. | 리소스가 더 필요합니다.
-We're stretched thin right now. | 지금 인력이 너무 빠듯합니다.
-We'll need extra help to finish on time. | 제때 끝내려면 추가 인력이 필요합니다.
+## We're short on ~ | ~가 부족해요 | 자원 부족
+We're short on time. | 시간이 부족해요.
+We're short-staffed this week. | 이번 주 사람이 부족해요.
+We're running out of budget. | 예산이 바닥나고 있어요.
+We're running low on supplies. | 비품이 거의 다 떨어졌어요.
+We don't have enough people for this. | 이거 할 사람이 부족해요.
+We need more hands. | 일손이 더 필요해요.
+We're stretched pretty thin right now. | 지금 인력이 진짜 빠듯해요.
+We'll need extra help to finish on time. | 제때 끝내려면 도움이 더 필요해요.
 
-## What's the status of ~? | ~는 어떻게 진행되고 있나요? | 진행 확인
-What's the status of the project? | 프로젝트 진행 상황이 어떻게 되나요?
-What's the status of my order? | 제 주문은 어떻게 진행되고 있나요?
-How's the report coming along? | 보고서는 어떻게 돼 가요?
-Where are we with the contract? | 계약 건은 어디까지 진행됐죠?
-Any progress on the design? | 디자인 진척 있나요?
-Is everything on track? | 다 순조롭게 진행되고 있나요?
-When do you think it'll be ready? | 언제쯤 준비될 것 같아요?
-Can you give me a quick update? | 간단히 진행 상황 알려 주실래요?
+## What's the status of ~? | ~ 어떻게 돼 가요? | 진행 확인
+What's the status of the project? | 프로젝트 어떻게 돼 가요?
+What's the status of my order? | 제 주문 어떻게 됐어요?
+How's the report coming along? | 보고서 어떻게 돼 가요?
+Where are we with the contract? | 계약 건 어디까지 왔어요?
+Any progress on the design? | 디자인 진척 있어요?
+Is everything on track? | 다 잘 가고 있어요?
+When do you think it'll be ready? | 언제쯤 될 것 같아요?
+Can you give me a quick update? | 간단히 업데이트 좀 해 줄래요?
 
-## I need your approval on ~ | ~에 대한 승인이 필요합니다 | 결재 요청
-I need your approval on this budget. | 이 예산안 승인이 필요합니다.
-Could you sign off on this? | 이거 결재해 주시겠어요?
-Can I get the green light on this? | 이거 진행해도 될까요?
-Do I have your permission to proceed? | 진행해도 될까요?
-This needs to be approved by Friday. | 이건 금요일까지 승인받아야 합니다.
-I'm waiting for approval from legal. | 법무팀 승인을 기다리고 있습니다.
-Has this been approved yet? | 이거 승인됐나요?
-Once you approve it, we can start. | 승인해 주시면 바로 시작할 수 있습니다.
+## Can I get your OK on ~? | ~ 승인해 줄래요? | 결재·허락 받기
+Can I get your OK on this budget? | 이 예산 승인해 줄래요?
+Can you sign off on this? | 이거 결재해 줄래요?
+Can I get the green light on this? | 이거 진행해도 돼요?
+Are we good to go? | 진행해도 될까요?
+This needs to be approved by Friday. | 이거 금요일까지 승인 나야 해요.
+I'm still waiting on legal. | 아직 법무팀 답 기다리는 중이에요.
+Has this been approved yet? | 이거 승인 났어요?
+Once you OK it, we can start. | 승인해 주면 바로 시작할 수 있어요.
 
-## Could you walk me through ~? | ~를 차근차근 설명해 주실래요? | 상세 설명 요청
-Could you walk me through the process? | 절차를 차근차근 설명해 주실래요?
-Could you walk me through this report? | 이 보고서를 하나씩 설명해 주실래요?
-Can you show me how to use this system? | 이 시스템 사용법 좀 알려 주실래요?
-Can you explain this part again? | 이 부분 다시 설명해 주실래요?
-I'm not familiar with this tool. | 이 툴은 익숙하지 않아요.
-Where can I find the files? | 파일은 어디서 찾을 수 있나요?
-Who should I ask about this? | 이건 누구한테 물어봐야 하나요?
-Is there a manual for this? | 이거 매뉴얼이 있나요?
+## Could you walk me through ~? | ~ 하나씩 설명해 줄래요? | 자세한 설명 요청
+Could you walk me through the process? | 절차 하나씩 설명해 줄래요?
+Could you walk me through this report? | 이 보고서 하나씩 설명해 줄래요?
+Can you show me how to use this? | 이거 어떻게 쓰는지 보여 줄래요?
+Can you explain this part again? | 이 부분 다시 설명해 줄래요?
+I'm not really familiar with this tool. | 이 툴은 잘 몰라요.
+Where can I find the files? | 파일 어디 있어요?
+Who should I ask about this? | 이건 누구한테 물어봐요?
+Is there a guide for this? | 이거 가이드 있어요?
 
-## I have a lot on my plate | 할 일이 많아요 | 업무량 표현
-I have a lot on my plate right now. | 지금 할 일이 너무 많아요.
-I'm swamped with work this week. | 이번 주 일에 파묻혀 있어요.
+## I have a lot on my plate | 할 일이 많아요 | 바쁠 때
+I've got a lot on my plate right now. | 지금 할 일이 너무 많아요.
+I'm swamped this week. | 이번 주 일에 파묻혀 있어요.
 I'm tied up until three. | 3시까지 꼼짝 못 해요.
-I'm fully booked today. | 오늘 일정이 꽉 찼어요.
-I'm working on a tight deadline. | 빠듯한 마감에 쫓기고 있어요.
-I don't think I can take on anything else. | 다른 일은 더 못 맡을 것 같아요.
-Can this wait until tomorrow? | 이거 내일까지 기다려도 될까요?
-I'll squeeze it in today. | 오늘 어떻게든 짬을 내 볼게요.
+I'm booked solid today. | 오늘 일정 꽉 찼어요.
+I'm up against a tight deadline. | 빠듯한 마감에 쫓기고 있어요.
+I don't think I can take on anything else. | 더는 못 맡을 것 같아요.
+Can this wait till tomorrow? | 이거 내일 해도 돼요?
+I'll try to squeeze it in today. | 오늘 어떻게든 끼워 넣어 볼게요.
 
-## Can we prioritize ~? | ~를 우선으로 할 수 있을까요? | 우선순위 조정
-Can we prioritize this task? | 이 업무를 우선으로 할 수 있을까요?
-What should I prioritize? | 뭘 먼저 해야 할까요?
-This is our top priority. | 이게 최우선입니다.
-This is urgent. | 이건 급한 건입니다.
-This can wait. | 이건 나중에 해도 됩니다.
-Let's focus on the most important things first. | 가장 중요한 것부터 집중하죠.
-Which one is more urgent? | 어떤 게 더 급한가요?
-Let's put this at the top of the list. | 이걸 맨 앞 순위로 두죠.
+## Can we prioritize ~? | ~ 먼저 할 수 있을까요? | 우선순위 정하기
+Can we prioritize this? | 이거 먼저 할 수 있을까요?
+What should I do first? | 뭐부터 할까요?
+This is top priority. | 이게 제일 급해요.
+This is urgent. | 이거 급해요.
+This can wait. | 이건 나중에 해도 돼요.
+Let's focus on the big stuff first. | 중요한 것부터 하죠.
+Which one's more urgent? | 어떤 게 더 급해요?
+Let's bump this to the top of the list. | 이거 맨 위로 올리죠.
 
-## I'd like to propose ~ | ~를 제안하고 싶습니다 | 제안하기
-I'd like to propose a new plan. | 새로운 계획을 제안하고 싶습니다.
-I'd like to suggest a different approach. | 다른 방식을 제안하고 싶습니다.
-I suggest we hire a freelancer. | 프리랜서를 고용하는 걸 제안합니다.
-What if we split the project into two phases? | 프로젝트를 두 단계로 나누면 어떨까요?
-How about running a test first? | 먼저 테스트를 해 보는 건 어떨까요?
-One option would be to outsource it. | 외주를 주는 것도 한 가지 방법입니다.
-I recommend that we wait until next quarter. | 다음 분기까지 기다리는 걸 권합니다.
-It might be worth trying a new vendor. | 새 업체를 써 보는 것도 해 볼 만합니다.
+## I was thinking we could ~ | ~하면 어떨까 했어요 | 제안하기
+I was thinking we could try a new plan. | 새 계획을 해 보면 어떨까 했어요.
+I was thinking we could do it differently. | 다르게 해 보면 어떨까 했어요.
+I was thinking we could hire a freelancer. | 프리랜서를 써 보면 어떨까 했어요.
+What if we split it into two phases? | 두 단계로 나누면 어때요?
+How about we run a test first? | 먼저 테스트해 보는 건 어때요?
+We could always outsource it. | 외주 주는 방법도 있어요.
+I'd say we wait until next quarter. | 저라면 다음 분기까지 기다리겠어요.
+It might be worth trying a new vendor. | 새 업체 써 보는 것도 괜찮을 것 같아요.
 
-## It would be better to ~ | ~하는 게 나을 것 같습니다 | 완곡한 의견
-It would be better to wait. | 기다리는 게 나을 것 같습니다.
-It would be better to ask the client first. | 고객에게 먼저 물어보는 게 나을 것 같습니다.
-It would be better to send it by email. | 메일로 보내는 게 나을 것 같습니다.
-It might be a good idea to double-check. | 다시 확인하는 게 좋을 것 같아요.
-It makes more sense to do it in-house. | 내부에서 하는 게 더 합리적입니다.
+## It'd be better to ~ | ~하는 게 나을 것 같아요 | 완곡한 의견
+It'd be better to wait. | 기다리는 게 나을 것 같아요.
+It'd be better to ask the client first. | 고객한테 먼저 물어보는 게 나을 것 같아요.
+It'd be better to just email it. | 그냥 메일로 보내는 게 나을 것 같아요.
+It might be a good idea to double-check. | 한 번 더 확인하는 게 좋겠어요.
+It makes more sense to do it ourselves. | 우리가 직접 하는 게 더 말이 돼요.
 I think we should keep it simple. | 단순하게 가는 게 좋을 것 같아요.
-We might want to reconsider. | 다시 생각해 보는 게 좋을 것 같습니다.
-It's probably best to wait for their reply. | 그쪽 회신을 기다리는 게 가장 좋을 것 같습니다.
+We might want to rethink this. | 다시 생각해 보는 게 좋겠어요.
+It's probably best to wait for their reply. | 그쪽 답 기다리는 게 제일 나을 것 같아요.
 
-## The client wants ~ | 고객이 ~를 원합니다 | 고객 요구 전달
-The client wants a faster turnaround. | 고객이 더 빠른 처리를 원합니다.
-The client wants to change the design. | 고객이 디자인 변경을 원합니다.
-The client is asking for a discount. | 고객이 할인을 요청하고 있습니다.
-The client has requested a meeting. | 고객이 미팅을 요청했습니다.
-The client isn't happy with the results. | 고객이 결과에 만족하지 않습니다.
-The client approved the proposal. | 고객이 제안서를 승인했습니다.
-We need to manage the client's expectations. | 고객 기대치를 조율해야 합니다.
-Let's get the client's feedback first. | 먼저 고객 피드백을 받아 보죠.
+## The client wants ~ | 고객이 ~를 원해요 | 고객 요구 전달
+The client wants it done faster. | 고객이 더 빨리 해 달래요.
+The client wants to change the design. | 고객이 디자인 바꾸고 싶대요.
+The client's asking for a discount. | 고객이 할인해 달래요.
+The client wants a meeting. | 고객이 미팅하자고 해요.
+The client isn't happy with the results. | 고객이 결과에 만족을 못 해요.
+The client signed off on the proposal. | 고객이 제안서 오케이했어요.
+We need to manage the client's expectations. | 고객 기대치를 좀 조절해야 해요.
+Let's get the client's feedback first. | 고객 피드백부터 받아 보죠.
 
-## I'll be out of the office ~ | ~ 부재중입니다 | 부재 안내
-I'll be out of the office tomorrow. | 내일 부재중입니다.
-I'll be out of the office until Monday. | 월요일까지 부재중입니다.
-I'm taking a day off on Friday. | 금요일에 하루 휴가입니다.
-I'll be on a business trip next week. | 다음 주에 출장 갑니다.
-I'll have limited access to email. | 이메일 확인이 어려울 수 있습니다.
-For urgent matters, please contact Jane. | 급한 일은 제인 님께 연락해 주세요.
-I'm working from home today. | 오늘은 재택근무합니다.
-I'll be back in the office on Wednesday. | 수요일에 사무실 복귀합니다.
+## I'm out ~ | ~ 자리에 없어요 | 부재 알리기
+I'm out tomorrow. | 저 내일 없어요.
+I'm out until Monday. | 월요일까지 없어요.
+I'm taking Friday off. | 금요일에 쉬어요.
+I'm on a business trip next week. | 다음 주에 출장이에요.
+I won't be checking email much. | 메일 확인이 잘 안 될 거예요.
+If it's urgent, just reach out to Jane. | 급하면 제인한테 연락해요.
+I'm working from home today. | 오늘 재택이에요.
+I'll be back in the office Wednesday. | 수요일에 사무실 나와요.
 
-## Let's set up a ~ | ~를 잡읍시다 | 미팅 일정 잡기
-Let's set up a meeting. | 미팅 잡읍시다.
-Let's set up a call next week. | 다음 주에 통화 일정 잡죠.
-Let's schedule a follow-up meeting. | 후속 회의 일정 잡죠.
-I'll send you a calendar invite. | 일정 초대 보내 드릴게요.
-Are you available on Tuesday at two? | 화요일 2시 가능하세요?
-What time works for you? | 몇 시가 괜찮으세요?
-Let's do a quick video call. | 간단히 화상 통화 하죠.
-I'll book a meeting room. | 회의실 예약할게요.
+## Let's set up a ~ | ~ 잡아요 | 미팅 일정 잡기
+Let's set up a meeting. | 미팅 잡아요.
+Let's set up a call next week. | 다음 주에 통화 잡아요.
+Let's set up a follow-up. | 후속 미팅 잡아요.
+I'll send you an invite. | 초대 보낼게요.
+Are you free Tuesday at two? | 화요일 2시 돼요?
+What time works for you? | 몇 시가 좋아요?
+Let's just do a quick video call. | 그냥 간단히 화상 통화 해요.
+I'll grab a meeting room. | 회의실 잡을게요.
 
-## I'm calling about ~ | ~ 건으로 전화드렸습니다 | 업무 전화
-I'm calling about the order. | 주문 건으로 전화드렸습니다.
-I'm calling about your email. | 보내 주신 메일 건으로 전화드렸습니다.
-I'm calling to confirm our meeting. | 미팅 확인차 전화드렸습니다.
-This is Minjun from ABC Company. | ABC 회사의 민준입니다.
-May I speak to Mr. Brown? | 브라운 씨와 통화할 수 있을까요?
-Could you put me through to sales? | 영업팀으로 연결해 주시겠어요?
+## I'm calling about ~ | ~ 때문에 전화했어요 | 업무 전화
+I'm calling about the order. | 주문 건 때문에 전화했어요.
+I'm calling about your email. | 보내 준 메일 때문에 전화했어요.
+I'm calling to confirm our meeting. | 미팅 확인하려고 전화했어요.
+Hi, this is Minjun from ABC. | 안녕하세요, ABC의 민준이에요.
+Is Mr. Brown around? | 브라운 씨 계세요?
+Can you put me through to sales? | 영업팀으로 연결해 줄래요?
 Can I leave a message? | 메시지 남겨도 될까요?
-I'll call back later. | 나중에 다시 전화드리겠습니다.
+I'll call back later. | 이따 다시 전화할게요.
 
-## Could we get an extension ~? | 기한 연장이 가능할까요? | 마감 연장 요청
-Could we get an extension on the deadline? | 마감 기한 연장이 가능할까요?
-Is it possible to extend the deadline by a week? | 마감을 일주일 연장할 수 있을까요?
-We need a few more days. | 며칠 더 필요합니다.
-Could you give us until Friday? | 금요일까지 시간을 주실 수 있을까요?
-We won't be able to make the deadline. | 마감을 맞추기 어려울 것 같습니다.
-Is the deadline flexible? | 마감일 조정이 가능한가요?
-We can deliver part of it by Monday. | 월요일까지 일부는 전달할 수 있습니다.
-Thank you for giving us more time. | 시간을 더 주셔서 감사합니다.
+## Can we get a few more days ~? | ~ 며칠만 더 받을 수 있을까요? | 마감 연장 요청
+Can we get a few more days on this? | 이거 며칠만 더 받을 수 있을까요?
+Can we push the deadline back a week? | 마감 일주일만 미룰 수 있을까요?
+We just need a few more days. | 며칠만 더 있으면 돼요.
+Could you give us till Friday? | 금요일까지 시간 줄 수 있어요?
+We're not going to make the deadline. | 마감 못 맞출 것 같아요.
+Is there any wiggle room on the deadline? | 마감에 여유가 좀 있을까요?
+We can get you part of it by Monday. | 월요일까지 일부는 드릴 수 있어요.
+Thanks for giving us more time. | 시간 더 줘서 고마워요.
 
-## Great job on ~ | ~ 정말 잘하셨어요 | 칭찬·피드백
-Great job on the presentation. | 발표 정말 잘하셨어요.
-Nice work on the report. | 보고서 잘 쓰셨네요.
-You did a great job. | 정말 잘하셨어요.
-Thanks for going the extra mile. | 기대 이상으로 애써 주셔서 감사해요.
-I really appreciate your effort. | 노력해 주셔서 정말 감사해요.
-This looks great, but I have a few comments. | 아주 좋네요. 다만 몇 가지 코멘트가 있어요.
-One thing you could improve is the intro. | 한 가지 개선할 점은 도입부예요.
-Keep up the good work. | 앞으로도 계속 잘 부탁해요.
+## Great job on ~ | ~ 진짜 잘했어요 | 칭찬·피드백
+Great job on the presentation. | 발표 진짜 잘했어요.
+Nice work on the report. | 보고서 잘 썼네요.
+You did a great job. | 진짜 잘했어요.
+Thanks for going the extra mile. | 신경 많이 써 줘서 고마워요.
+I really appreciate the effort. | 애써 줘서 정말 고마워요.
+This looks great, but I've got a few notes. | 아주 좋아요. 근데 몇 가지만 얘기할게요.
+Maybe tighten up the intro a bit. | 도입부만 조금 다듬어 봐요.
+Keep it up! | 계속 이렇게 해 줘요!
 
 # 업무 추가
-## I'll send you ~ | ~ 보내 드릴게요 | 자료 전달 약속
-I'll send you the details later. | 자세한 내용은 나중에 보내 드릴게요.
-I'll send you the file right away. | 파일 바로 보내 드릴게요.
-I'll send you a summary after the call. | 통화 끝나고 요약 보내 드릴게요.
-I'll send you the link in the chat. | 채팅으로 링크 보내 드릴게요.
-I'll send over the contract this afternoon. | 오늘 오후에 계약서 보내 드릴게요.
-I'll share my screen. | 제 화면 공유할게요.
-I'll share the document with you. | 문서 공유해 드릴게요.
-Did you get my email? | 제 메일 받으셨어요?
+## I'll send you ~ | ~ 보내 줄게요 | 자료 전달 약속
+I'll send you the details later. | 자세한 건 이따 보내 줄게요.
+I'll send you the file right now. | 파일 지금 보내 줄게요.
+I'll send you a summary after the call. | 통화 끝나고 요약 보내 줄게요.
+I'll drop the link in the chat. | 채팅에 링크 올릴게요.
+I'll send over the contract this afternoon. | 오늘 오후에 계약서 보내 줄게요.
+Let me share my screen. | 제 화면 공유할게요.
+I'll share the doc with you. | 문서 공유해 줄게요.
+Did you get my email? | 제 메일 받았어요?
 
-## There seems to be ~ | ~가 있는 것 같습니다 | 문제 제기
-There seems to be a problem with the system. | 시스템에 문제가 있는 것 같습니다.
-There seems to be a mistake in the report. | 보고서에 오류가 있는 것 같습니다.
-There seems to be some confusion. | 혼선이 좀 있는 것 같습니다.
-There seems to be a gap in the data. | 데이터에 빠진 부분이 있는 것 같습니다.
-It looks like the numbers don't match. | 숫자가 맞지 않는 것 같습니다.
-I noticed an error on page five. | 5페이지에서 오류를 발견했습니다.
-We have an issue with the supplier. | 공급업체 쪽에 문제가 생겼습니다.
-Something went wrong with the payment. | 결제에 문제가 생겼습니다.
+## There seems to be ~ | ~가 있는 것 같아요 | 문제 제기
+There seems to be a problem with the system. | 시스템에 문제가 있는 것 같아요.
+There seems to be a mistake in the report. | 보고서에 실수가 있는 것 같아요.
+There seems to be some confusion. | 좀 헷갈리는 게 있는 것 같아요.
+There seems to be something missing in the data. | 데이터에 빠진 게 있는 것 같아요.
+Looks like the numbers don't match. | 숫자가 안 맞는 것 같아요.
+I noticed a mistake on page five. | 5페이지에 실수가 있던데요.
+We've got an issue with the supplier. | 공급업체 쪽에 문제가 생겼어요.
+Something went wrong with the payment. | 결제에 뭔가 문제가 생겼어요.
 
-## Let's make sure ~ | 확실히 ~하도록 합시다 | 리스크 관리
-Let's make sure everyone is informed. | 모두에게 확실히 공유되도록 합시다.
-Let's make sure we have a backup plan. | 대안을 꼭 마련해 둡시다.
-Let's make sure this doesn't happen again. | 이런 일이 다시 없도록 합시다.
-Let's make sure the client is happy. | 고객이 만족하도록 확실히 합시다.
-Let's double-check before we send it. | 보내기 전에 다시 확인합시다.
-Let's keep everyone in the loop. | 모두에게 계속 공유해 줍시다.
-We need to be careful with the budget. | 예산은 신중하게 다뤄야 합니다.
-Let's not take any chances. | 위험을 감수하지 맙시다.
+## Let's make sure ~ | ~ 확실히 해요 | 리스크 관리
+Let's make sure everyone's in the loop. | 모두한테 꼭 공유해요.
+Let's make sure we've got a backup plan. | 플랜 B 꼭 챙겨 둬요.
+Let's make sure this doesn't happen again. | 다시는 이런 일 없게 해요.
+Let's make sure the client's happy. | 고객이 만족하게 확실히 해요.
+Let's double-check before we send it. | 보내기 전에 한 번 더 봐요.
+Let's keep everyone posted. | 다들 계속 업데이트해 줘요.
+We need to be careful with the budget. | 예산은 조심해서 써야 해요.
+Let's not take any chances. | 괜히 모험하지 말아요.
 
 ## How about we ~? | ~하는 건 어때요? | 동료에게 가벼운 제안
-How about we meet at ten? | 10시에 만나는 건 어때요?
-How about we grab lunch and talk? | 점심 먹으면서 얘기하는 건 어때요?
-How about we try it for a month? | 한 달만 시도해 보는 건 어때요?
-How about we ask the team? | 팀에 물어보는 건 어때요?
-Why don't we start with the easy part? | 쉬운 부분부터 시작하는 게 어때요?
+How about we meet at ten? | 10시에 보는 거 어때요?
+How about we grab lunch and talk? | 점심 먹으면서 얘기하는 거 어때요?
+How about we try it for a month? | 한 달만 해 보는 거 어때요?
+How about we ask the team? | 팀한테 물어보는 거 어때요?
+Why don't we start with the easy stuff? | 쉬운 것부터 하는 게 어때요?
 Why don't we hop on a quick call? | 잠깐 통화하는 게 어때요?
-Shall we go over it together? | 같이 한번 검토해 볼까요?
-Let's brainstorm some ideas. | 아이디어를 같이 내 봅시다.
+Want to go over it together? | 같이 한번 볼래요?
+Let's throw some ideas around. | 아이디어 좀 같이 내 봐요.
 
-## I'm not sure ~ | ~인지 잘 모르겠습니다 | 신중한 답변
-I'm not sure, but I'll find out. | 잘 모르겠지만, 알아보겠습니다.
-I'm not sure if that's possible. | 그게 가능한지 잘 모르겠습니다.
-I'm not sure who's in charge of that. | 그건 누가 담당하는지 잘 모르겠어요.
-I'm not sure I understand the question. | 질문을 제가 제대로 이해했는지 모르겠습니다.
-I don't have that information right now. | 지금 당장은 그 정보가 없습니다.
-That's a good question. | 좋은 질문입니다.
-Let me think about it and get back to you. | 생각해 보고 다시 말씀드릴게요.
-I'd need to check with my manager. | 매니저에게 확인해 봐야 합니다.
+## I'm not sure ~ | ~인지 잘 모르겠어요 | 신중한 답변
+I'm not sure, but I'll find out. | 잘 모르겠는데, 알아볼게요.
+I'm not sure if that's possible. | 그게 되는지 잘 모르겠어요.
+I'm not sure who's in charge of that. | 그거 누가 담당인지 잘 모르겠어요.
+I'm not sure I get the question. | 질문을 제가 잘 이해했는지 모르겠어요.
+I don't have that info right now. | 지금은 그 정보가 없어요.
+Good question. | 좋은 질문이에요.
+Let me think about it and get back to you. | 생각해 보고 다시 말해 줄게요.
+I'd have to check with my manager. | 매니저한테 확인해 봐야 해요.
 
-## Congratulations on ~ | ~ 축하드립니다 | 사내 인사·스몰톡
-Congratulations on your promotion. | 승진 축하드립니다.
-Congratulations on the new role. | 새 직책 맡으신 거 축하드려요.
-Welcome to the team. | 팀에 오신 걸 환영합니다.
-How was your weekend? | 주말 잘 보내셨어요?
-How's your week going? | 이번 주 어떻게 보내고 계세요?
-Have a great weekend. | 주말 잘 보내세요.
-It was nice working with you. | 함께 일해서 좋았습니다.
+## Congrats on ~ | ~ 축하해요 | 사내 인사·스몰톡
+Congrats on the promotion! | 승진 축하해요!
+Congrats on the new role! | 새 자리 축하해요!
+Welcome to the team! | 팀에 온 거 환영해요!
+How was your weekend? | 주말 잘 보냈어요?
+How's your week going? | 이번 주 어때요?
+Have a great weekend! | 주말 잘 보내요!
+It was great working with you. | 같이 일해서 좋았어요.
 Let's grab coffee sometime. | 언제 커피 한잔해요.
 
 # 업무 문제 상황 (구어체)

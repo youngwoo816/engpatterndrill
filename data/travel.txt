@@ -7,7 +7,7 @@ I'd like to check this bag. | 이 가방을 부치고 싶어요.
 I'd like to change my flight. | 항공편을 변경하고 싶어요.
 I'd like to upgrade my seat. | 좌석을 업그레이드하고 싶어요.
 I'd like to sit with my friend. | 친구랑 같이 앉고 싶어요.
-I'd like to carry this on. | 이건 기내에 들고 타고 싶어요.
+I'd like to bring this on the plane. | 이건 기내에 들고 탈게요.
 
 ## Can I get ~? | ~ 좀 주실래요? | 기내·가게에서 가장 많이 쓰는 요청
 Can I get a blanket, please? | 담요 좀 주실래요?
@@ -16,7 +16,7 @@ Can I get another pillow? | 베개 하나 더 주실래요?
 Can I get an extra napkin? | 냅킨 하나 더 주실래요?
 Can I get the chicken, please? | 치킨으로 주세요.
 Can I get a customs form? | 세관 신고서 하나 주실래요?
-Can I get a pen, please? | 펜 좀 빌릴 수 있을까요?
+Can I borrow a pen? | 펜 좀 빌릴 수 있을까요?
 Could I have some coffee, please? | 커피 좀 주시겠어요?
 
 ## Where can I ~? | 어디서 ~할 수 있어요? | 장소 묻기
@@ -27,7 +27,7 @@ Where can I get a taxi? | 택시는 어디서 탈 수 있어요?
 Where can I buy a SIM card? | 유심은 어디서 살 수 있어요?
 Where can I charge my phone? | 휴대폰은 어디서 충전할 수 있어요?
 Where can I get Wi-Fi? | 와이파이는 어디서 쓸 수 있어요?
-Where can I find a restroom? | 화장실은 어디에 있어요?
+Where can I find the restroom? | 화장실 어디 있어요?
 
 ## Is there ~? | ~가 있나요? | 시설·서비스 유무 확인
 Is there a direct flight? | 직항이 있나요?
@@ -36,7 +36,7 @@ Is there a pharmacy nearby? | 근처에 약국이 있나요?
 Is there free Wi-Fi here? | 여기 무료 와이파이 있나요?
 Is there an ATM around here? | 이 근처에 ATM 있나요?
 Is there a lounge in this terminal? | 이 터미널에 라운지가 있나요?
-Is there anything to eat on this flight? | 이 비행기에서 먹을 게 나오나요?
+Is there any food on this flight? | 이 비행기에서 먹을 거 나와요?
 Are there any seats left? | 남은 좌석 있나요?
 
 ## Do I need to ~? | ~해야 하나요? | 절차 확인
@@ -45,7 +45,7 @@ Do I need to take out my laptop? | 노트북 꺼내야 하나요?
 Do I need to fill out this form? | 이 양식 작성해야 하나요?
 Do I need to pay for this bag? | 이 가방 요금 내야 하나요?
 Do I need to change terminals? | 터미널을 옮겨야 하나요?
-Do I need to pick up my bags and check them again? | 짐을 찾아서 다시 부쳐야 하나요?
+Do I need to grab my bags and check them again? | 짐 찾아서 다시 부쳐야 해요?
 Do I need a visa? | 비자가 필요한가요?
 Do I need to show my passport? | 여권 보여 드려야 하나요?
 
@@ -54,7 +54,7 @@ I'm here for vacation. | 휴가로 왔어요.
 I'm here for business. | 출장으로 왔어요.
 I'm here to visit my family. | 가족 만나러 왔어요.
 I'm here for a conference. | 학회 때문에 왔어요.
-I'm here for sightseeing. | 관광하러 왔어요.
+I'm just here to sightsee. | 그냥 관광하러 왔어요.
 I'm just passing through. | 경유 중이에요.
 It's my first time here. | 여기 처음 왔어요.
 I'm traveling alone. | 혼자 여행 중이에요.
@@ -72,12 +72,12 @@ I'm flying back on the 15th. | 15일에 돌아가요.
 ## How long ~? | 얼마나 ~? | 시간·기간 묻기
 How long is the flight? | 비행시간이 얼마나 돼요?
 How long is the layover? | 경유 대기 시간이 얼마나 돼요?
-How long will the delay be? | 얼마나 지연되나요?
+How long's the delay? | 얼마나 늦어져요?
 How long does it take to get through security? | 보안 검색 통과하는 데 얼마나 걸려요?
 How long does it take to get downtown? | 시내까지 얼마나 걸려요?
 How long is the wait? | 얼마나 기다려야 해요?
 How long are you staying? | 얼마나 머무세요?
-How long is the ticket valid? | 표는 얼마 동안 유효해요?
+How long is this ticket good for? | 이 표 언제까지 쓸 수 있어요?
 
 # 호텔
 ## I have a reservation ~ | ~로 예약했어요 | 체크인
@@ -86,7 +86,7 @@ I have a reservation for two nights. | 2박 예약했어요.
 I booked a double room. | 더블룸 예약했어요.
 I booked it online. | 온라인으로 예약했어요.
 Here's my confirmation number. | 여기 예약 번호예요.
-I'd like to check in early, if possible. | 가능하면 일찍 체크인하고 싶어요.
+I'd like to check in early, if that's okay. | 괜찮으면 일찍 체크인하고 싶어요.
 I'd like to check out, please. | 체크아웃할게요.
 Do you have any rooms available tonight? | 오늘 밤 빈방 있나요?
 
@@ -94,7 +94,7 @@ Do you have any rooms available tonight? | 오늘 밤 빈방 있나요?
 Could I get a late checkout? | 늦게 체크아웃해도 될까요?
 Could I get a room with a view? | 전망 좋은 방으로 받을 수 있을까요?
 Could I change rooms? | 방을 바꿀 수 있을까요?
-Could I get a wake-up call at seven? | 7시에 모닝콜 해 주실 수 있나요?
+Could I get a wake-up call at seven? | 7시에 모닝콜 해 줄 수 있어요?
 Could I have another key card? | 카드 키 하나 더 받을 수 있을까요?
 Could I get a quiet room? | 조용한 방으로 받을 수 있을까요?
 Could I see the room first? | 방을 먼저 볼 수 있을까요?
@@ -105,13 +105,13 @@ Is breakfast included? | 조식 포함인가요?
 Is tax included? | 세금 포함인가요?
 Is Wi-Fi included in the price? | 와이파이도 요금에 포함인가요?
 Is parking included? | 주차 포함인가요?
-Is the service charge included? | 봉사료 포함인가요?
+Is service included? | 봉사료 포함이에요?
 Is there an extra charge for that? | 그건 추가 요금이 있나요?
-What's included in the price? | 요금에 뭐가 포함돼 있나요?
+What's included? | 뭐가 포함돼 있어요?
 Does the room come with a fridge? | 방에 냉장고가 있나요?
 
 ## The ~ isn't working | ~가 작동을 안 해요 | 객실 문제 신고
-The air conditioner isn't working. | 에어컨이 작동을 안 해요.
+The AC isn't working. | 에어컨이 안 돼요.
 The TV isn't working. | TV가 안 나와요.
 The key card isn't working. | 카드 키가 안 돼요.
 The shower isn't working. | 샤워기가 안 돼요.
@@ -125,7 +125,7 @@ Could you send someone to fix it? | 고치러 사람 좀 보내 주시겠어요?
 Could you bring some more water? | 물 좀 더 가져다주시겠어요?
 Could you clean my room? | 방 청소 좀 해 주시겠어요?
 Could you call a taxi for me? | 택시 좀 불러 주시겠어요?
-Could you keep my luggage? | 짐 좀 맡아 주시겠어요?
+Could you hold my bags for me? | 짐 좀 맡아 줄 수 있어요?
 Could you recommend a good restaurant? | 좋은 식당 추천해 주시겠어요?
 Could you write down the address? | 주소 좀 적어 주시겠어요?
 Could you help me with my bags? | 가방 옮기는 것 좀 도와주시겠어요?
@@ -133,10 +133,10 @@ Could you help me with my bags? | 가방 옮기는 것 좀 도와주시겠어요
 ## What time is ~? | ~는 몇 시예요? | 시간 확인
 What time is checkout? | 체크아웃은 몇 시예요?
 What time is check-in? | 체크인은 몇 시예요?
-What time is breakfast served? | 조식은 몇 시에 나와요?
+What time's breakfast? | 조식 몇 시예요?
 What time does the pool close? | 수영장은 몇 시에 닫아요?
 What time does the shuttle leave? | 셔틀은 몇 시에 출발해요?
-What time does the last train leave? | 막차는 몇 시예요?
+What time's the last train? | 막차 몇 시예요?
 What time do you open tomorrow? | 내일 몇 시에 여세요?
 What time should I be there? | 몇 시까지 가면 돼요?
 
@@ -148,18 +148,18 @@ Can I leave a message for him? | 그에게 메시지 남겨도 될까요?
 Can I leave my car here overnight? | 차를 여기 밤새 둬도 될까요?
 Can I use the gym? | 헬스장 이용해도 되나요?
 Can I pay when I check out? | 체크아웃할 때 계산해도 되나요?
-Can I store this in the safe? | 이거 금고에 보관해도 되나요?
+Can I put this in the safe? | 이거 금고에 넣어도 돼요?
 
 # 식당·카페
 ## A table for ~ | ~명 자리 있어요? | 입장·예약
 A table for two, please. | 두 명이요.
 Do you have a table for four? | 4명 자리 있나요?
-I'd like to make a reservation for tonight. | 오늘 저녁 예약하고 싶어요.
+I'd like to book a table for tonight. | 오늘 저녁 자리 예약하고 싶어요.
 I have a reservation at seven. | 7시에 예약했어요.
 Can we sit outside? | 밖에 앉아도 될까요?
 Can we sit by the window? | 창가에 앉아도 될까요?
 How long is the wait? | 대기 시간이 얼마나 돼요?
-We're still waiting for one more person. | 한 명 더 올 거예요.
+We're waiting on one more. | 한 명 더 와요.
 
 ## I'll have ~ | ~로 할게요 | 주문
 I'll have the steak. | 스테이크로 할게요.
@@ -177,15 +177,15 @@ Could I get the dressing on the side? | 드레싱은 따로 주실 수 있어요
 Could I get it less spicy? | 덜 맵게 해 주실 수 있어요?
 Could I get a small one? | 작은 사이즈로 주실 수 있어요?
 Could I get oat milk instead? | 대신 귀리 우유로 주실 수 있어요?
-Could I get no ice, please? | 얼음 빼 주시겠어요?
+Could I get it with no ice? | 얼음 빼 줄 수 있어요?
 Could I get extra cheese? | 치즈 추가해 주실 수 있어요?
 Medium rare, please. | 미디엄 레어로 주세요.
 
 ## What do you recommend? | 뭘 추천하세요? | 메뉴 고민
 What do you recommend? | 뭘 추천하세요?
-What's your most popular dish? | 가장 인기 있는 메뉴가 뭐예요?
+What's the most popular thing here? | 여기서 제일 잘 나가는 게 뭐예요?
 What's good here? | 여기 뭐가 맛있어요?
-What's the special today? | 오늘의 특선 메뉴가 뭐예요?
+What's today's special? | 오늘의 메뉴가 뭐예요?
 Which one is less spicy? | 어떤 게 덜 매워요?
 What do you recommend for dessert? | 디저트는 뭘 추천하세요?
 What kind of beer do you have? | 어떤 맥주가 있어요?
@@ -196,7 +196,7 @@ Does this come with fries? | 이거 감자튀김 같이 나와요?
 Does this come with a drink? | 이거 음료 포함이에요?
 Does it come with rice? | 밥이 같이 나와요?
 What does this come with? | 이건 뭐랑 같이 나와요?
-How big is the portion? | 양이 얼마나 돼요?
+How big are the portions? | 양이 어느 정도예요?
 Is this enough for two people? | 두 명이 먹기에 충분해요?
 How spicy is this? | 이거 얼마나 매워요?
 Are refills free? | 리필 무료예요?
@@ -206,7 +206,7 @@ I'm allergic to peanuts. | 땅콩 알레르기가 있어요.
 I'm allergic to shellfish. | 갑각류 알레르기가 있어요.
 I don't eat pork. | 저는 돼지고기를 안 먹어요.
 I'm a vegetarian. | 저는 채식주의자예요.
-Does this have any nuts in it? | 이거 견과류 들어 있나요?
+Are there any nuts in this? | 이거 견과류 들어 있어요?
 Is this gluten-free? | 이거 글루텐 프리예요?
 Do you have any vegetarian options? | 채식 메뉴 있나요?
 Can you make it without dairy? | 유제품 빼고 만들어 주실 수 있어요?
@@ -215,20 +215,20 @@ Can you make it without dairy? | 유제품 빼고 만들어 주실 수 있어요
 Can I get the check, please? | 계산서 주실래요?
 Can we pay separately? | 따로 계산해도 될까요?
 Can I pay by card? | 카드로 계산해도 되나요?
-I think there's a mistake on the bill. | 계산서에 착오가 있는 것 같아요.
+I think the bill's wrong. | 계산서가 잘못된 것 같아요.
 Is the tip included? | 팁 포함인가요?
 Keep the change. | 잔돈은 가지세요.
 Can I get a receipt? | 영수증 주실래요?
-It was delicious, thank you. | 맛있었어요, 감사합니다.
+That was delicious, thanks! | 진짜 맛있었어요, 감사해요!
 
 ## ~ to go | 포장해 주세요 | 카페·패스트푸드
 Can I get this to go? | 이거 포장해 주실래요?
 For here, please. | 먹고 갈게요.
 To go, please. | 포장이요.
-Can I get a box for this? | 이거 담아 갈 용기 주실래요?
+Can I get a box for this? | 이거 싸 갈 통 좀 주실래요?
 Can I get an iced Americano? | 아이스 아메리카노 주실래요?
 Can I get a large latte with an extra shot? | 라지 라테에 샷 추가해 주실래요?
-Can I have it for here? | 매장에서 먹을게요.
+I'll eat it here. | 여기서 먹을게요.
 How long will it take? | 얼마나 걸려요?
 
 # 교통·길 찾기
@@ -260,25 +260,25 @@ Does this bus stop at Central Park? | 이 버스 센트럴 파크에 서요?
 Does this train go to Brooklyn? | 이 기차 브루클린 가요?
 Is this seat taken? | 이 자리 주인 있어요?
 Is this the last stop? | 여기가 종점이에요?
-Is this train express? | 이 기차 급행이에요?
+Is this an express? | 이거 급행이에요?
 
 ## How far is ~? | ~까지 얼마나 멀어요? | 거리 묻기
 How far is it from here? | 여기서 얼마나 멀어요?
 How far is the beach? | 해변까지 얼마나 멀어요?
-Is it within walking distance? | 걸어갈 수 있는 거리예요?
+Is it walking distance? | 걸어갈 만한 거리예요?
 Can I walk there? | 거기 걸어갈 수 있어요?
 Is it far from the station? | 역에서 멀어요?
 How many stops is it? | 몇 정거장이에요?
 Is it close to here? | 여기서 가까워요?
-How long does it take on foot? | 걸어서 얼마나 걸려요?
+How long's the walk? | 걸어서 얼마나 걸려요?
 
-## Please take me to ~ | ~로 가 주세요 | 택시
-Please take me to this address. | 이 주소로 가 주세요.
-Please take me to the airport. | 공항으로 가 주세요.
+## Could you take me to ~? | ~로 가 주실래요? | 택시
+Could you take me to this address? | 이 주소로 가 주실래요?
+Could you take me to the airport? | 공항으로 가 주실래요?
 Could you drop me off here? | 여기서 내려 주시겠어요?
 Could you drop me off at the corner? | 모퉁이에서 내려 주시겠어요?
 Could you stop here, please? | 여기서 세워 주세요.
-How much will it be to downtown? | 시내까지 얼마 나올까요?
+About how much to downtown? | 시내까지 대충 얼마 나와요?
 Could you turn on the meter? | 미터기 켜 주시겠어요?
 Could you open the trunk? | 트렁크 좀 열어 주시겠어요?
 
@@ -297,7 +297,7 @@ When does the next train leave? | 다음 기차는 언제 출발해요?
 When does the next bus come? | 다음 버스는 언제 와요?
 When does the last bus leave? | 막차 버스는 언제 출발해요?
 How often does the bus come? | 버스는 얼마나 자주 와요?
-Is the train on time? | 기차 제시간에 와요?
+Is the train running on time? | 기차 제시간에 와요?
 What time does it arrive? | 몇 시에 도착해요?
 When does the ferry leave? | 페리는 언제 출발해요?
 Do I have time to buy a ticket? | 표 살 시간 있을까요?
@@ -307,19 +307,19 @@ I'd like to rent a car. | 차를 빌리고 싶어요.
 I'd like to rent a bike for the day. | 하루 동안 자전거를 빌리고 싶어요.
 I'd like a compact car. | 소형차로 주세요.
 Does it come with insurance? | 보험 포함인가요?
-I'd like full coverage, please. | 종합 보험으로 해 주세요.
-Do I need to return it with a full tank? | 기름 가득 채워서 반납해야 하나요?
+I'll take full coverage. | 종합 보험으로 할게요.
+Do I need to bring it back with a full tank? | 기름 꽉 채워서 갖다줘야 해요?
 Can I return it at the airport? | 공항에서 반납해도 되나요?
 Is there a mileage limit? | 주행 거리 제한이 있나요?
 
 # 쇼핑
 ## I'm looking for ~ | ~를 찾고 있어요 | 매장에서
-I'm just looking, thanks. | 그냥 구경하는 거예요, 감사해요.
+Just looking, thanks. | 그냥 구경하는 거예요.
 I'm looking for a jacket. | 재킷을 찾고 있어요.
 I'm looking for a gift for my mom. | 엄마 선물을 찾고 있어요.
 I'm looking for something local. | 이 지역 특산품을 찾고 있어요.
 I'm looking for sunscreen. | 선크림 찾고 있어요.
-I'm looking for this item. | 이 제품을 찾고 있어요.
+I'm looking for this one. | 이거 찾고 있어요.
 Where can I find shoes? | 신발은 어디에 있어요?
 Do you sell phone chargers? | 휴대폰 충전기 파나요?
 
@@ -329,9 +329,9 @@ Do you have this in black? | 이거 검은색 있어요?
 Do you have this in a smaller size? | 이거 더 작은 사이즈 있어요?
 Do you have this in a bigger size? | 이거 더 큰 사이즈 있어요?
 Do you have any other colors? | 다른 색상도 있어요?
-Do you have a new one? | 새 제품 있어요?
+Do you have a new one in the back? | 안에 새 거 있어요?
 Is this the only one? | 이게 하나뿐이에요?
-When will you get more in stock? | 언제 재입고돼요?
+When are you getting more in? | 언제 다시 들어와요?
 
 ## Can I try ~ on? | ~ 입어 봐도 돼요? | 피팅
 Can I try this on? | 이거 입어 봐도 돼요?
@@ -368,9 +368,9 @@ I'd like to return this. | 이거 반품하고 싶어요.
 I'd like to exchange this for a different size. | 이거 다른 사이즈로 교환하고 싶어요.
 I'd like a refund, please. | 환불받고 싶어요.
 I have the receipt. | 영수증 있어요.
-It's damaged. | 이거 손상됐어요.
+It's damaged. | 이거 망가졌어요.
 I haven't used it. | 사용 안 했어요.
-Can I exchange it without a receipt? | 영수증 없이 교환 되나요?
+Can I swap it without a receipt? | 영수증 없이 바꿀 수 있어요?
 What's your return policy? | 반품 규정이 어떻게 돼요?
 
 ## Can I pay with ~? | ~로 계산해도 돼요? | 결제
@@ -378,19 +378,19 @@ Can I pay with a credit card? | 신용카드로 계산해도 돼요?
 Can I pay in cash? | 현금으로 계산해도 돼요?
 Can I pay with my phone? | 폰으로 결제해도 돼요?
 Do you take US dollars? | 미국 달러 받나요?
-Can I pay in installments? | 할부 되나요?
+Can I split it into payments? | 할부 돼요?
 Can I get a bag, please? | 봉투 하나 주실래요?
-Could you gift wrap it? | 선물 포장해 주실 수 있어요?
+Could you gift-wrap it? | 선물 포장해 줄 수 있어요?
 Could you wrap them separately? | 따로따로 포장해 주시겠어요?
 
 # 관광·현지 대화
 ## What's the best way to ~? | ~하는 가장 좋은 방법이 뭐예요? | 현지 팁 묻기
 What's the best way to get around? | 돌아다니기 제일 좋은 방법이 뭐예요?
 What's the best way to see the city? | 도시를 둘러보는 가장 좋은 방법이 뭐예요?
-What's the best way to avoid the crowds? | 사람 많은 걸 피하는 가장 좋은 방법이 뭐예요?
+What's the best way to beat the crowds? | 사람 많은 거 피하려면 어떻게 하는 게 제일 좋아요?
 What's the best time to visit? | 방문하기 제일 좋은 때가 언제예요?
 What's the best place to watch the sunset? | 노을 보기 제일 좋은 곳이 어디예요?
-What's the best thing to do around here? | 이 근처에서 제일 할 만한 게 뭐예요?
+What's the best thing to do around here? | 이 근처에서 뭐 하는 게 제일 좋아요?
 What's the easiest way to get to the old town? | 구시가지 가는 제일 쉬운 방법이 뭐예요?
 What's this area famous for? | 이 지역은 뭐로 유명해요?
 
@@ -411,7 +411,7 @@ Could you get the building in the background? | 건물이 뒤에 나오게 찍�
 Just press this button. | 이 버튼만 누르시면 돼요.
 Would you like me to take one for you? | 제가 찍어 드릴까요?
 Can I take a picture here? | 여기서 사진 찍어도 돼요?
-Is flash photography allowed? | 플래시 사용해도 되나요?
+Is it okay to use flash? | 플래시 써도 돼요?
 Can you take it vertically? | 세로로 찍어 주실래요?
 
 ## Is it possible to ~? | ~하는 게 가능한가요? | 가능 여부 확인
@@ -420,16 +420,16 @@ Is it possible to go inside? | 안에 들어가 볼 수 있나요?
 Is it possible to get there by bus? | 거기 버스로 갈 수 있나요?
 Is it possible to change the date? | 날짜 변경이 가능한가요?
 Is it possible to cancel? | 취소가 가능한가요?
-Is it possible to get a map in Korean? | 한국어 지도 받을 수 있나요?
+Is it possible to get a Korean map? | 한국어 지도 받을 수 있어요?
 Is it possible to see it in one day? | 하루 만에 다 볼 수 있나요?
-Is it possible to reserve in advance? | 미리 예약할 수 있나요?
+Is it possible to book ahead? | 미리 예약할 수 있어요?
 
 ## What time does ~ open? | ~는 몇 시에 열어요? | 운영 시간
 What time does the museum open? | 박물관은 몇 시에 열어요?
 What time does it close? | 몇 시에 닫아요?
 Is it open on Mondays? | 월요일에도 열어요?
 Are you open on holidays? | 공휴일에도 영업하세요?
-When is the last entry? | 마지막 입장이 언제예요?
+When's the last entry? | 마지막 입장 언제예요?
 How late are you open? | 몇 시까지 영업하세요?
 Is it open now? | 지금 열었어요?
 When does the show start? | 공연은 언제 시작해요?
@@ -439,9 +439,9 @@ How much is admission? | 입장료가 얼마예요?
 Two adults, please. | 성인 두 장이요.
 Do I need to buy tickets in advance? | 표를 미리 사야 하나요?
 Is there a discount for children? | 어린이 할인 있어요?
-Does the ticket include the audio guide? | 표에 오디오 가이드 포함돼요?
+Does the ticket come with an audio guide? | 표에 오디오 가이드 포함이에요?
 Can I buy tickets here? | 여기서 표 살 수 있어요?
-Are tickets still available? | 아직 표 있어요?
+Are there any tickets left? | 표 아직 남았어요?
 Can I get a map, please? | 지도 하나 받을 수 있을까요?
 
 ## Where are you from? | 어디서 오셨어요? | 현지인·여행자와 스몰톡
@@ -451,7 +451,7 @@ Is this your first time here? | 여기 처음 오셨어요?
 How long have you been traveling? | 여행한 지 얼마나 됐어요?
 Where are you headed next? | 다음엔 어디로 가세요?
 Do you live around here? | 이 근처 사세요?
-What do you recommend I see? | 뭘 보면 좋을지 추천해 주실래요?
+What should I check out around here? | 이 근처에 뭐 보면 좋아요?
 Enjoy the rest of your trip! | 남은 여행 즐겁게 하세요!
 
 ## Could you say that again? | 다시 말씀해 주실래요? | 못 알아들었을 때
@@ -462,7 +462,7 @@ What does this mean? | 이게 무슨 뜻이에요?
 How do you pronounce this? | 이거 어떻게 발음해요?
 Could you write it down for me? | 적어 주실 수 있어요?
 Do you speak Korean? | 한국어 하세요?
-My English isn't very good. | 제가 영어를 잘 못해요.
+Sorry, my English isn't great. | 죄송해요, 제가 영어를 잘 못해요.
 
 # 문제·긴급 상황
 ## I lost my ~ | ~를 잃어버렸어요 | 분실
@@ -473,7 +473,7 @@ I left my bag in the taxi. | 택시에 가방을 두고 내렸어요.
 I can't find my hotel. | 호텔을 못 찾겠어요.
 I'm lost. | 길을 잃었어요.
 Where's the lost and found? | 분실물 센터가 어디예요?
-Has anyone turned in a black backpack? | 혹시 검은 백팩 맡겨진 거 있나요?
+Did anyone turn in a black backpack? | 혹시 검은 백팩 들어온 거 있어요?
 
 ## I missed my ~ | ~를 놓쳤어요 | 교통편 놓침
 I missed my flight. | 비행기를 놓쳤어요.
@@ -481,29 +481,29 @@ I missed my connecting flight. | 연결 항공편을 놓쳤어요.
 I missed the last train. | 막차를 놓쳤어요.
 I missed my stop. | 내릴 정류장을 지나쳤어요.
 What should I do now? | 이제 어떻게 해야 하죠?
-Can you put me on the next flight? | 다음 비행기로 바꿔 주실 수 있나요?
+Can you get me on the next flight? | 다음 비행기로 바꿔 줄 수 있어요?
 Is there another way to get there? | 거기 가는 다른 방법이 있나요?
-Will I have to pay again? | 다시 돈을 내야 하나요?
+Do I have to pay again? | 돈 또 내야 해요?
 
 ## My ~ was delayed / canceled | ~가 지연 / 취소됐어요 | 일정 차질
 My flight was delayed. | 비행기가 지연됐어요.
 My flight was canceled. | 비행기가 결항됐어요.
 My baggage didn't arrive. | 제 짐이 안 나왔어요.
-My suitcase is damaged. | 제 캐리어가 파손됐어요.
-Will I get compensation? | 보상받을 수 있나요?
+My suitcase got damaged. | 제 캐리어가 망가졌어요.
+Do I get any compensation? | 보상받을 수 있어요?
 Can you give me a meal voucher? | 식사 쿠폰 받을 수 있나요?
-Will the airline provide a hotel? | 항공사에서 호텔을 제공해 주나요?
-When will my bag be delivered? | 제 가방은 언제 배달돼요?
+Will the airline put me up in a hotel? | 항공사에서 호텔 잡아 줘요?
+When will I get my bag? | 제 가방 언제 받을 수 있어요?
 
 ## Someone stole ~ | 누가 ~를 훔쳐 갔어요 | 도난 신고
 Someone stole my wallet. | 누가 제 지갑을 훔쳐 갔어요.
-My bag was stolen. | 가방을 도난당했어요.
-I want to report a theft. | 도난 신고하고 싶어요.
+My bag got stolen. | 가방 도둑맞았어요.
+I need to report a theft. | 도난 신고해야 해요.
 Where's the police station? | 경찰서가 어디예요?
-Can I get a police report? | 경찰 신고 확인서 받을 수 있나요?
-I need to cancel my credit card. | 신용카드를 정지해야 해요.
+Can I get a copy of the police report? | 경찰 신고서 사본 받을 수 있어요?
+I need to cancel my card. | 카드 정지해야 해요.
 Can I use your phone? | 전화 좀 써도 될까요?
-Please call the police. | 경찰 좀 불러 주세요.
+Please call the police! | 경찰 좀 불러 주세요!
 
 ## I need ~ | ~가 필요해요 | 긴급 요청
 I need help. | 도와주세요.
@@ -511,8 +511,8 @@ I need a doctor. | 의사가 필요해요.
 I need an ambulance. | 구급차가 필요해요.
 Please call an ambulance. | 구급차 좀 불러 주세요.
 Where's the nearest hospital? | 가장 가까운 병원이 어디예요?
-I need to contact the Korean embassy. | 한국 대사관에 연락해야 해요.
-Is there someone who speaks Korean? | 한국어 하시는 분 있나요?
+I need to get in touch with the Korean embassy. | 한국 대사관에 연락해야 해요.
+Does anyone here speak Korean? | 여기 한국어 하시는 분 있어요?
 It's an emergency. | 긴급 상황이에요.
 
 ## I have a ~ | ~가 있어요 | 증상 말하기
@@ -522,8 +522,8 @@ I have a fever. | 열이 나요.
 I have a stomachache. | 배가 아파요.
 I feel dizzy. | 어지러워요.
 I think I have food poisoning. | 식중독인 것 같아요.
-I need something for a cold. | 감기약이 필요해요.
-How often should I take this? | 이거 얼마나 자주 먹어야 해요?
+I need something for a cold. | 감기약 좀 주세요.
+How often do I take this? | 이거 얼마나 자주 먹어요?
 
 ## I think there's a mistake ~ | ~에 착오가 있는 것 같아요 | 오류 지적
 I think there's a mistake on my bill. | 계산서에 착오가 있는 것 같아요.
@@ -531,26 +531,26 @@ I think I was charged twice. | 두 번 결제된 것 같아요.
 This isn't what I ordered. | 이거 제가 주문한 게 아니에요.
 I didn't order this. | 이건 주문 안 했어요.
 I think you gave me the wrong change. | 거스름돈을 잘못 주신 것 같아요.
-My reservation isn't showing up. | 제 예약이 조회가 안 돼요.
-I booked a non-smoking room. | 금연 객실로 예약했는데요.
-Could you check again, please? | 다시 한번 확인해 주시겠어요?
+You can't find my reservation? | 제 예약이 안 나와요?
+I booked a non-smoking room, though. | 금연 방으로 예약했는데요.
+Could you check again? | 한 번만 다시 봐 줄래요?
 
 ## Can you call ~ for me? | ~ 좀 불러 주실래요? | 대신 연락 요청
 Can you call a taxi for me? | 택시 좀 불러 주실래요?
 Can you call the front desk for me? | 프런트에 전화 좀 해 주실래요?
 Can you call this number for me? | 이 번호로 전화 좀 해 주실래요?
-Can you help me call my hotel? | 호텔에 전화하는 것 좀 도와주실래요?
+Can you help me call my hotel? | 호텔에 전화하는 것 좀 도와줄래요?
 Can I borrow a charger? | 충전기 좀 빌릴 수 있을까요?
 Can you tell me where I am on the map? | 지도에서 제가 어디 있는지 알려 주실래요?
 Could you help me, please? | 좀 도와주시겠어요?
-Thank you so much for your help. | 도와주셔서 정말 감사해요.
+Thanks so much for your help! | 도와줘서 정말 고마워요!
 
 # 숙소·체크아웃 추가
 ## Could you recommend ~? | ~ 추천해 주시겠어요? | 직원·현지인에게 추천 요청
 Could you recommend a good place for breakfast? | 아침 먹기 좋은 곳 추천해 주시겠어요?
 Could you recommend a day trip from here? | 여기서 당일치기로 갈 만한 곳 추천해 주시겠어요?
 Could you recommend a quiet beach? | 조용한 해변 추천해 주시겠어요?
-Could you recommend a local bar? | 현지 술집 추천해 주시겠어요?
+Could you recommend a bar the locals like? | 현지인들 가는 술집 추천해 줄래요?
 Could you recommend something for my kids? | 아이들이 할 만한 거 추천해 주시겠어요?
 Could you recommend a good souvenir? | 괜찮은 기념품 추천해 주시겠어요?
 Could you recommend a hiking trail? | 등산로 추천해 주시겠어요?
@@ -561,10 +561,10 @@ Can I get a one-way ticket to Paris? | 파리행 편도 표 주세요.
 Can I get a round-trip ticket? | 왕복 표 주세요.
 Can I get a day pass? | 1일 패스 주세요.
 Two tickets for the 3 o'clock show, please. | 3시 공연 표 두 장 주세요.
-Is there a cheaper ticket? | 더 싼 표 있나요?
+Is there anything cheaper? | 더 싼 거 있어요?
 Can I reserve a seat? | 좌석 지정할 수 있나요?
 Can I use this ticket on the bus too? | 이 표로 버스도 탈 수 있나요?
-Do I need to validate my ticket? | 표를 개찰해야 하나요?
+Do I need to stamp my ticket? | 표에 펀칭해야 해요?
 
 ## Could I ~ my reservation? | 예약을 ~할 수 있을까요? | 예약 변경·취소
 Could I cancel my reservation? | 예약을 취소할 수 있을까요?
@@ -572,9 +572,9 @@ Could I change my reservation to Friday? | 예약을 금요일로 바꿀 수 있
 Could I add one more night? | 하루 더 연장할 수 있을까요?
 Could I add one more person to the reservation? | 예약 인원을 한 명 추가할 수 있을까요?
 Is there a cancellation fee? | 취소 수수료가 있나요?
-Can I get a full refund? | 전액 환불 받을 수 있나요?
-Until when can I cancel for free? | 언제까지 무료 취소가 가능한가요?
-I'd like to keep my reservation, but change the time. | 예약은 유지하고 시간만 바꾸고 싶어요.
+Can I get my money back? | 전액 환불돼요?
+How late can I cancel for free? | 언제까지 무료로 취소할 수 있어요?
+Can I keep the booking and just change the time? | 예약은 그대로 두고 시간만 바꿀 수 있어요?
 
 # 문제 상황 대처 (구어체)
 ## Sorry, but there's a problem with ~ | 저기, ~에 문제가 있는데요 | 불만을 부드럽게 꺼낼 때. Sorry로 시작하면 덜 공격적으로 들려요

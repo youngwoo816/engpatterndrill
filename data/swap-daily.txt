@@ -28,9 +28,9 @@
 26 | I can't believe {1}. | {1} 믿을 수가 없어. | 내용: it's already December=벌써 12월이라니 / he said that=그가 그런 말을 했다니 / we missed the bus=우리가 버스를 놓쳤다니 / you remember me=네가 날 기억하다니 / it's so cheap=이게 이렇게 싸다니
 27 | I wish I could {1}. | {1} 수 있으면 좋을 텐데. | 동사: speak French=프랑스어를 할 / go with you=너랑 같이 갈 / take a day off=하루 쉴 / sleep longer=더 오래 잘 / fly=날
 28 | I'm sorry for {1}. | {1} 미안해. | 명사: being late=늦어서 / the noise=시끄럽게 해서 / forgetting your birthday=네 생일 잊어버려서 / the confusion=헷갈리게 해서 / not replying sooner=답장 늦게 해서
-29 | Thank you for {1}. | {1} 고마워. | 명사: the gift=선물 / your help=도와줘서 / calling me=전화해 줘서 / waiting for me=기다려 줘서 / the advice=조언해 줘서
+29 | Thanks for {1}. | {1} 고마워. | 명사: the gift=선물 / your help=도와줘서 / calling me=전화해 줘서 / waiting for me=기다려 줘서 / the advice=조언해 줘서
 30 | I didn't mean to {1}. | {1}려던 건 아니었어. | 동사: make you cry=널 울리 / yell at you=너한테 소리 지르 / break it=그걸 깨뜨리 / be late=늦으 / ignore you=널 무시하
-31 | {1} should have {2}. | {1} {2}야 했는데. | 주어: I=나 / You=너 / We=우리 ;; 동사: left earlier=더 일찍 출발했어 / asked first=먼저 물어봤어 / checked the weather=날씨를 확인했어
+31 | {1} should've {2}. | {1} {2}야 했는데. | 주어: I=나 / You=너 / We=우리 ;; 동사: left earlier=더 일찍 출발했어 / asked first=먼저 물어봤어 / checked the weather=날씨를 확인했어
 32 | I'm not sure if {1}. | {1}지 잘 모르겠어. | 내용: he's coming=그가 오는 / it's true=그게 사실인 / I can go=내가 갈 수 있을 / the store is open=가게가 열었는 / this is right=이게 맞는
 33 | I have no idea {1}. | {1}지 전혀 모르겠어. | 내용: where she went=그녀가 어디 갔는 / what he wants=그가 뭘 원하는 / how to use this=이걸 어떻게 쓰는 / why it's broken=이게 왜 고장 났는 / when it starts=언제 시작하는
 34 | It seems like {1}. | {1} 것 같아. | 내용: she's busy=그녀가 바쁜 / it's going to snow=눈이 올 / you're right=네 말이 맞는 / they're not home=그 사람들 집에 없는 / the store is closed=가게가 문을 닫은

@@ -138,7 +138,7 @@
 긍정 | Let me call you back. | 내가 다시 전화할게.
 긍정 | Let me ask my boss. | 상사한테 물어볼게.
 부탁 | Let me go. | 나 좀 놔줘.
-부탁 | Please let me know by Friday. | 금요일까지 알려 줘.
+부탁 | Let me know by Friday, okay? | 금요일까지 알려 줘, 알았지?
 부정 | Don't let me forget. | 내가 잊지 않게 해 줘.
 3인칭 | Let him finish. | 그가 말 끝내게 해 줘.
 3인칭 | Let them decide. | 그들이 결정하게 두자.
@@ -307,15 +307,15 @@ have | I wish I had a car. | 차가 있으면 좋겠다.
 과거 | I was sorry to hear the news. | 그 소식 듣고 마음이 안 좋았어.
 변형 | I feel sorry for him. | 그가 안됐어.
 응답 | No need to be sorry. | 미안해할 필요 없어.
-@29 Thank you for ~ing
-긍정 | Thank you for your time. | 시간 내 주셔서 감사합니다.
-긍정 | Thank you for listening. | 들어 줘서 고마워.
-긍정 | Thank you for having me. | 초대해 주셔서 감사해요.
-긍정 | Thank you for the lovely dinner. | 멋진 저녁 고마워.
-긍정 | Thank you for taking care of my dog. | 우리 강아지 돌봐 줘서 고마워.
+@29 Thanks for ~ing
+긍정 | Thanks for your time. | 시간 내 줘서 고마워.
+긍정 | Thanks for listening. | 들어 줘서 고마워.
+긍정 | Thanks for the invite. | 초대해 줘서 고마워.
+긍정 | Thanks for dinner, it was great. | 저녁 고마워, 진짜 맛있었어.
+긍정 | Thanks for watching my dog. | 우리 강아지 봐 줘서 고마워.
 짧게 | Thanks for everything. | 다 고마워.
 짧게 | Thanks for asking. | 물어봐 줘서 고마워.
-강조 | Thank you so much for coming all this way. | 이렇게 먼 길 와 줘서 정말 고마워.
+강조 | Thanks so much for coming all this way. | 이렇게 먼 길 와 줘서 정말 고마워.
 미리 | Thanks in advance. | 미리 고마워.
 응답 | You're welcome. | 천만에.
 @30 I didn't mean to ~
@@ -329,16 +329,16 @@ have | I wish I had a car. | 차가 있으면 좋겠다.
 현재완료 | I've been meaning to ask you. | 너한테 물어보려고 했었어.
 의문 | What do you mean? | 무슨 뜻이야?
 의문 | Did you mean to do that? | 일부러 그런 거야?
-@31 I should have ~
-긍정 | I should have gone to bed earlier. | 더 일찍 잤어야 했는데.
-긍정 | I should have asked for help. | 도움을 요청했어야 했는데.
-긍정 | I should have saved my work. | 작업한 걸 저장했어야 했는데.
-주어 변화 | You should have seen his face. | 그의 표정을 봤어야 했는데. (정말 볼만했어)
-주어 변화 | She should have called first. | 그녀가 먼저 전화했어야지.
+@31 I should've ~
+긍정 | I should've gone to bed earlier. | 더 일찍 잘걸.
+긍정 | I should've asked for help. | 도와 달라고 할걸.
+긍정 | I should've saved my work. | 저장해 둘걸.
+주어 변화 | You should've seen his face. | 걔 표정을 봤어야 했는데. (진짜 볼만했어)
+주어 변화 | She should've called first. | 그녀가 먼저 전화했어야지.
 부정 | I shouldn't have eaten so much. | 그렇게 많이 먹지 말걸.
 부정 | You shouldn't have. | 이러지 않아도 되는데. (선물 받을 때)
-could have | We could have won. | 우리가 이길 수도 있었는데.
-would have | It would have been better to wait. | 기다리는 게 나았을 텐데.
+could've | We could've won. | 우리가 이길 수도 있었는데.
+would've | It would've been better to wait. | 기다리는 게 나았을 텐데.
 의문 | What should I have done? | 내가 어떻게 했어야 했어?
 @32 I'm not sure if ~
 긍정 | I'm not sure if she's awake. | 그녀가 깨어 있는지 모르겠어.
