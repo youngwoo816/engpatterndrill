@@ -1015,13 +1015,28 @@ if (window.matchMedia) matchMedia("(prefers-color-scheme: dark)").addEventListen
 /* ---------- DRILL ---------- */
 let X = null;
 const dr = () => $("#drill");
-function openDrill(){ dr().hidden = false; document.body.style.overflow = "hidden"; }
+let ignorePop = 0;
+function pushLayer(){ try { history.pushState({ repLayer: Date.now() }, ""); } catch(e){} }
+function popLayer(n=1){ try { if (history.state && history.state.repLayer) { ignorePop++; history.go(-n); } } catch(e){} }
+function openDrill(){
+  dr().hidden = false; document.body.style.overflow = "hidden"; pushLayer();
+  try { document.activeElement && document.activeElement.blur(); } catch(e){}
+  dr().setAttribute("tabindex", "-1"); dr().focus({ preventScroll:true });   // 가려진 홈 버튼에 초점이 남지 않게
+}
+function closeSheet(fromPop){ if (!$("#sheet")) return; stopSpeech(); $("#sheet").remove(); if (!fromPop) popLayer(); }
+window.addEventListener("popstate", () => {
+  if (ignorePop > 0) { ignorePop--; return; }
+  if ($("#tour")) endTour(false);
+  if ($("#sheet")) return closeSheet(true);
+  if (!dr().hidden) return closeDrill(true);
+});
 const FROM_LABEL = { patterns:"문장 목록", examples:"예문" };
 function closeBtn(){
   return X && X.from ? `<button class="backbtn" data-close aria-label="${FROM_LABEL[X.from]}(으)로 돌아가기">${ICON.prev}<span>${FROM_LABEL[X.from]}</span></button>`
                      : `<button class="x" data-close aria-label="닫기">${ICON.x}</button>`;
 }
-function closeDrill(){
+function closeDrill(fromPop){
+  if (!fromPop) { const n = $("#sheet") ? 2 : 1; $("#sheet")?.remove(); popLayer(n); }
   const from = X && X.from; recReset(); if (T && T.name === "drill") endTour(false);
   if (TTS.ok) speechSynthesis.cancel(); dr().hidden = true; document.body.style.overflow = ""; X = null; render();
   if (from === "patterns") restoreList();
@@ -1339,7 +1354,7 @@ function openSheet(){
   const el = document.createElement("div");
   el.className = "sheet"; el.id = "sheet";
   el.innerHTML = `<div class="sheet-in" role="dialog" aria-label="문장 목록"><div class="sheet-h"><b>${CATS.find(c=>c.key===X.cat).ko} 문장 목록</b><button class="x" data-sheetclose aria-label="닫기">${ICON.x}</button></div><div class="sheet-b">${html}</div></div>`;
-  dr().appendChild(el);
+  dr().appendChild(el); pushLayer();
   const c = el.querySelector(".jump.cur"); if (c) c.scrollIntoView({ block:"center" });
 }
 
@@ -1350,7 +1365,7 @@ function openExSheet(pat){
   el.innerHTML = `<div class="sheet-in" role="dialog" aria-label="예문 10개"><div class="sheet-h"><div class="stack" style="gap:0"><b class="en">${esc(pat.p)}</b><span class="muted" style="font-size:12px">${esc(pat.k)}</span></div><button class="x" data-sheetclose aria-label="닫기">${ICON.x}</button></div>
     <div class="sheet-b">${TTS.ok ? `<div class="audio-row" style="padding:12px 0 4px"><button class="pill on" data-shexall>${ICON.play} 10개 전체 듣기</button><button class="pill" data-shexstop>${ICON.stop} 정지</button></div>` : ''}
     <div class="exlist">${exRows(pat.ex, "data-shexsay")}</div></div></div>`;
-  dr().appendChild(el);
+  dr().appendChild(el); pushLayer();
 }
 
 function advance(){
@@ -1365,15 +1380,15 @@ function nextSentence(){
 dr().addEventListener("click", e => {
   if (!X) return;
   const b = e.target.closest("button,[data-peek]");
-  if (!b) { if (e.target.id === "sheet") { stopSpeech(); e.target.remove(); } return; }
+  if (!b) { if (e.target.id === "sheet") closeSheet(); return; }
   const d = b.dataset, s = curS();
   if ("close" in d) { save(); return closeDrill(); }
-  if ("sheetclose" in d) { stopSpeech(); $("#sheet")?.remove(); return; }
+  if ("sheetclose" in d) return closeSheet();
   if ("exsheet" in d) return openExSheet(s.pat);
   if (d.shexsay != null) { exMark(+d.shexsay); return speak(s.pat.ex[+d.shexsay].en); }
   if ("shexall" in d) { const p = s.pat; return speakList(p.ex.map(e=>e.en), i => exMark(i), () => { exMark(-1); markExRead(p); }); }
   if ("shexstop" in d) { stopSpeech(); return exMark(-1); }
-  if (d.jump != null) { $("#sheet")?.remove(); return goTo(+d.jump); }
+  if (d.jump != null) { closeSheet(); return goTo(+d.jump); }
   if ("sheet" in d) return openSheet();
   if ("prev" in d) return goTo(X.pos - 1);
   if ("skip" in d) return goTo(X.pos + 1);
@@ -1438,7 +1453,7 @@ document.addEventListener("keydown", e => {
   if ($("#sheet")) return;
   if (e.key === " ") { const p = dr().querySelector("[data-play],[data-playr],[data-swplay]"); if (p) { e.preventDefault(); p.click(); } return; }
   if (["1","2","3"].includes(e.key)) { const g = dr().querySelector(`[data-g="${+e.key-1}"]`); if (g) { e.preventDefault(); g.click(); } return; }
-  if (e.key === "Enter" && tag !== "button") { const btns = [...dr().querySelectorAll(".dr-foot .btn:not([disabled])")]; const p = btns.find(b => !b.classList.contains("ghost")) || btns[0]; if (p) { e.preventDefault(); p.click(); } }
+  if (e.key === "Enter" && !(tag === "button" && dr().contains(e.target))) { const btns = [...dr().querySelectorAll(".dr-foot .btn:not([disabled])")]; const p = btns.find(b => !b.classList.contains("ghost")) || btns[0]; if (p) { e.preventDefault(); p.click(); } }
 });
 
 function drawAnswer(){
