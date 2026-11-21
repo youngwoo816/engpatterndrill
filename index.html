@@ -166,7 +166,7 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 .dr-top .in{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
 .x{width:36px;height:36px;border-radius:50%;background:var(--sunken);display:flex;align-items:center;justify-content:center;flex:none}
 .x svg{width:16px;height:16px;fill:var(--ink)}
-.navrow{display:grid;grid-template-columns:auto 1fr 1fr auto;gap:6px}
+.navrow{display:grid;grid-template-columns:auto 1fr 1fr auto;gap:6px;min-width:0}
 .nav{display:inline-flex;align-items:center;justify-content:center;gap:4px;height:34px;padding:0 10px;border-radius:10px;background:var(--surface);box-shadow:var(--shadow);font-size:13px;font-weight:600;white-space:nowrap}
 .nav svg{width:15px;height:15px;fill:currentColor}
 .nav[disabled]{opacity:.4;pointer-events:none}
@@ -246,6 +246,13 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 .ex .play{grid-row:1/4}
 .exlist.h-en .ex:not(.show) .en,.exlist.h-ko .ex:not(.show) .ko{color:transparent;background:var(--sunken);border-radius:6px;user-select:none}
 .ex-nav{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
+/* back navigation */
+.backbar{display:inline-flex;align-items:center;gap:2px;min-height:40px;padding:6px 12px 6px 4px;margin:-6px 0 10px -4px;border-radius:12px;color:var(--accent);font-weight:700;font-size:15px}
+.backbar svg{width:20px;height:20px;fill:currentColor}
+.backbar:active{background:var(--accent-soft)}
+.backbtn{display:inline-flex;align-items:center;gap:2px;height:36px;padding:0 12px 0 6px;border-radius:18px;background:var(--sunken);font-weight:700;font-size:14px;flex:none}
+.backbtn svg{width:18px;height:18px;fill:currentColor}
 
 /* list sheet */
 .sheet{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.35);display:flex;align-items:flex-end;justify-content:center}
@@ -475,7 +482,12 @@ function grade(id, g){ // g: 0 다시, 1 애매, 2 완벽
 /* ---------- routing ---------- */
 const TABS = [["learn","학습",ICON.learn],["examples","예문",ICON.book],["progress","진척도",ICON.chart],["patterns","문장 목록",ICON.list],["more","설정",ICON.gear]];
 function route(){ const h = location.hash.slice(1); return TABS.some(t=>t[0]===h) ? h : "learn"; }
-window.addEventListener("hashchange", () => { render(); window.scrollTo(0,0); });
+window.addEventListener("hashchange", () => {
+  const r = route();
+  if (r !== "examples") backTo = null;
+  if (r === "patterns" && openPat) { patCat = openPat.cat; render(); restoreList(); }
+  else { render(); window.scrollTo(0,0); }
+});
 
 function shell(inner){
   const r = route();
@@ -588,7 +600,7 @@ function viewPatterns(){
     for (const p of sec.patterns){
       const items = q ? p.items.filter(s => s.en.toLowerCase().includes(q) || s.ko.includes(q) || p.p.toLowerCase().includes(q) || p.k.includes(q)) : p.items;
       if (!items.length) continue;
-      block += `<details class="pat" ${q?'open':''}><summary><span class="pt">${esc(p.p)}</span><span class="dots">${p.items.map(s=>`<i class="${S.learned[s.id]?'on':''}"></i>`).join("")}</span><span class="pk">${esc(p.k)}</span></summary>
+      block += `<details class="pat" data-pi="${p.idx}" ${q || (openPat && openPat.cat===patCat && openPat.idx===p.idx) ?'open':''}><summary><span class="pt">${esc(p.p)}</span><span class="dots">${p.items.map(s=>`<i class="${S.learned[s.id]?'on':''}"></i>`).join("")}</span><span class="pk">${esc(p.k)}</span></summary>
         ${p.tip?`<div class="muted" style="font-size:12px;margin:-4px 0 8px">${esc(p.tip)}</div>`:''}
         <div class="pat-acts"><button class="btn sm" data-learnat="${p.items[0].idx}">이 패턴 학습</button>${p.ex&&p.ex.length?`<button class="btn sm soft" data-exat="${p.idx}">예문 10개</button>`:''}${p.sw?`<button class="btn sm soft" data-swapat="${p.idx}">바꿔 말하기</button>`:''}</div>
         ${items.map(s=>`<div class="sent"><button class="play" data-say="${s.id}" aria-label="재생">${ICON.play}</button><span class="en">${esc(s.en)}</span><span class="ko">${esc(s.ko)}</span></div>`).join("")}</details>`;
@@ -600,13 +612,21 @@ function viewPatterns(){
 }
 
 let exCat = "daily", exIdx = 0, exHide = "none", exCur = -1;
+let backTo = null;   // 예문 탭을 문장 목록에서 열었을 때
+let openPat = null;  // 문장 목록으로 돌아올 때 펼칠 패턴 {cat, idx}
+function restoreList(){
+  if (!openPat || route() !== "patterns") return;
+  const el = document.querySelector(`details.pat[data-pi="${openPat.idx}"]`);
+  if (el) { el.open = true; el.scrollIntoView({ block:"start" }); window.scrollBy(0, -12); }
+}
 function exPat(){ const D = DATA[exCat]; exIdx = clamp(exIdx, 0, D.patterns.length-1); return D.patterns[exIdx]; }
 function exRows(ex, attr){
   return ex.map((e,i)=>`<div class="ex ${i===exCur?'cur':''}" data-exi="${i}"><button class="play" ${attr}="${i}" aria-label="재생">${ICON.play}</button><span class="tag">${esc(e.tag)}</span><span class="en">${esc(e.en)}</span><span class="ko">${esc(e.ko)}</span></div>`).join("");
 }
 function viewExamples(){
   const D = DATA[exCat], p = exPat(), ex = p.ex || [];
-  let h = topBar("예문 10");
+  let h = backTo ? `<button class="backbar" data-back>${ICON.prev}<span>문장 목록</span></button>` : "";
+  h += topBar("예문 10");
   h += `<div class="stack"><div class="seg" role="group">${CATS.map(x=>`<button data-ec="${x.key}" aria-pressed="${x.key===exCat}">${x.ko}</button>`).join("")}</div>
     <select id="ex-pat" class="search" aria-label="패턴 선택">${D.sections.map(sec=>`<optgroup label="${esc(sec.name)}">${sec.patterns.map(q=>`<option value="${q.idx}" ${q===p?'selected':''}>${q.idx+1}. ${esc(q.p)}</option>`).join("")}</optgroup>`).join("")}</select>
     <div class="card stack">${patChip(p)}
@@ -655,7 +675,7 @@ function viewMore(){
     <div><b>4. 바꿔 말하기</b>: 패턴의 주어·명사·동사 자리를 바꿔 새 문장을 만들어 말해요. 패턴마다 한 번 나와요.</div>
     <div><b>5. 회상</b>: 한국어만 보고 영어로 말하거나 입력한 뒤, 스스로 채점해요.</div>
     <div><b>예문 탭</b>: 패턴마다 긍정·부정·의문·과거 등 형태가 다른 예문 10개를 읽고 들을 수 있어요.</div>
-    <div><b>이동</b>: 학습 중 상단의 이전·다음 문장, 다음 패턴, 목록 버튼으로 자유롭게 옮겨 다닐 수 있어요.</div>
+    <div><b>이동</b>: 학습 중 상단의 전체 문장·이전·다음 문장·다음 패턴 버튼으로 자유롭게 옮겨 다닐 수 있어요.</div>
     <div><b>Day 기록</b>: 하루 분량만큼 새 문장을 마치면 Day가 완료로 표시돼요.</div>
     <div><b>복습</b>: 채점 결과에 따라 1·2·4·7·15·30·60일 간격으로 다시 나와요.</div></div></div>`;
   return h;
@@ -677,9 +697,10 @@ function bind(r){
     else if (d.say) speak(BYID[d.say].en);
     else if (d.pc) { progCat = d.pc; render(); }
     else if (d.pt) { patCat = d.pt; render(); }
-    else if (d.learnat != null) startLearn(patCat, +d.learnat);
-    else if (d.swapat != null) startSwapOnly(patCat, +d.swapat);
-    else if (d.exat != null) { exCat = patCat; exIdx = +d.exat; exCur = -1; location.hash = "#examples"; }
+    else if (d.learnat != null) { openPat = { cat:patCat, idx:DATA[patCat].list[+d.learnat].pat.idx }; startLearn(patCat, +d.learnat, "patterns"); }
+    else if (d.swapat != null) { openPat = { cat:patCat, idx:+d.swapat }; startSwapOnly(patCat, +d.swapat, "patterns"); }
+    else if (d.exat != null) { openPat = { cat:patCat, idx:+d.exat }; backTo = "patterns"; exCat = patCat; exIdx = +d.exat; exCur = -1; location.hash = "#examples"; }
+    else if ("back" in d) { stopSpeech(); location.hash = "#patterns"; }
     else if (d.ec) { exCat = d.ec; exIdx = 0; exCur = -1; stopSpeech(); render(); }
     else if (d.exh) { exHide = d.exh; render(); }
     else if (d.exsay != null) { const e = exPat().ex[+d.exsay]; exMark(+d.exsay); speak(e.en); }
@@ -688,7 +709,7 @@ function bind(r){
     else if ("exacc" in d) { S.settings.accent = S.settings.accent === "gb" ? "us" : "gb"; save(); b.textContent = accLabel(); }
     else if ("exprev" in d) { exIdx--; exCur = -1; stopSpeech(); render(); }
     else if ("exnext" in d) { exIdx++; exCur = -1; stopSpeech(); render(); }
-    else if ("learnex" in d) { stopSpeech(); startLearn(exCat, exPat().items[0].idx); }
+    else if ("learnex" in d) { stopSpeech(); startLearn(exCat, exPat().items[0].idx, "examples"); }
     else if ("dec" in d) setDaily(S.settings.daily - 1);
     else if ("inc" in d) setDaily(S.settings.daily + 1);
     else if (d.th) { S.settings.theme = d.th; save(); applyTheme(); render(); }
@@ -710,6 +731,7 @@ function bind(r){
       else { d.armed = "1"; b.textContent = "한 번 더 누르면 초기화돼요"; }
     }
   };
+  if (r==="patterns") app.querySelectorAll("details.pat").forEach(el => el.addEventListener("toggle", () => { if (el.open) openPat = { cat:patCat, idx:+el.dataset.pi }; }));
   if (r==="examples"){ const sel = $("#ex-pat"); sel.onchange = () => { exIdx = +sel.value; exCur = -1; stopSpeech(); render(); }; }
   if (r==="patterns"){ const q = $("#q"); q.oninput = () => { query = q.value; const pos = q.selectionStart; render(); const nq = $("#q"); nq.focus(); nq.setSelectionRange(pos,pos); }; }
   if (r==="more"){
@@ -725,7 +747,16 @@ if (window.matchMedia) matchMedia("(prefers-color-scheme: dark)").addEventListen
 let X = null;
 const dr = () => $("#drill");
 function openDrill(){ dr().hidden = false; document.body.style.overflow = "hidden"; }
-function closeDrill(){ if (TTS.ok) speechSynthesis.cancel(); dr().hidden = true; document.body.style.overflow = ""; X = null; render(); }
+const FROM_LABEL = { patterns:"문장 목록", examples:"예문" };
+function closeBtn(){
+  return X && X.from ? `<button class="backbtn" data-close aria-label="${FROM_LABEL[X.from]}(으)로 돌아가기">${ICON.prev}<span>${FROM_LABEL[X.from]}</span></button>`
+                     : `<button class="x" data-close aria-label="닫기">${ICON.x}</button>`;
+}
+function closeDrill(){
+  const from = X && X.from;
+  if (TTS.ok) speechSynthesis.cancel(); dr().hidden = true; document.body.style.overflow = ""; X = null; render();
+  if (from === "patterns") restoreList();
+}
 
 function stepsFor(s){
   const st = ["listen","shadow"];
@@ -734,8 +765,8 @@ function stepsFor(s){
   st.push("recall");
   return st;
 }
-function startLearn(cat, pos){
-  X = { mode:"learn", cat, pos, subSeen:new Set() };
+function startLearn(cat, pos, from){
+  X = { mode:"learn", cat, pos, subSeen:new Set(), from: from || null };
   openDrill(); goTo(pos);
 }
 function goTo(pos){
@@ -743,6 +774,7 @@ function goTo(pos){
   X.pos = clamp(pos, 0, list.length-1);
   const s = list[X.pos];
   X.steps = stepsFor(s); X.step = 0; X.round = 0; X.build = null; X.sw = null;
+  if (X.from === "patterns") openPat = { cat:X.cat, idx:s.pat.idx };
   drawStep();
 }
 function nextPatternIndex(){
@@ -755,9 +787,9 @@ function startReview(){
   X = { mode:"review", items:due, i:0 };
   openDrill(); drawReview();
 }
-function startSwapOnly(cat, patIdx){
+function startSwapOnly(cat, patIdx, from){
   const pat = DATA[cat].patterns[patIdx];
-  X = { mode:"swap", cat, pat };
+  X = { mode:"swap", cat, pat, from: from || null };
   openDrill(); drawSwap(pat);
 }
 const curS = () => X.mode === "learn" ? DATA[X.cat].list[X.pos] : X.mode === "review" ? X.items[X.i] : null;
@@ -787,13 +819,13 @@ function headerHTML(){
   if (X.mode === "learn"){
     const c = CATS.find(c=>c.key===X.cat), list = DATA[X.cat].list, n = S.settings.daily, tn = todayNew(X.cat);
     const np = nextPatternIndex();
-    return `<div class="row between"><button class="x" data-close aria-label="닫기">${ICON.x}</button>
+    return `<div class="row between">${closeBtn()}
       <span class="eyebrow" style="flex:1;text-align:center">${c.ko} · Day ${dayNo(X.cat)}</span>
       <span class="mono" style="font-weight:600;font-size:13px" title="오늘 새로 배운 문장">오늘 ${Math.min(tn,n)}/${n}</span></div>
       <div class="navrow">
-        <button class="nav" data-sheet>${ICON.list} 목록</button>
-        <button class="nav" data-prev ${X.pos<=0?'disabled':''}>${ICON.prev} 이전 문장</button>
-        <button class="nav" data-skip ${X.pos>=list.length-1?'disabled':''}>다음 문장 ${ICON.next}</button>
+        <button class="nav" data-sheet>${ICON.list} 전체 문장</button>
+        <button class="nav" data-prev ${X.pos<=0?'disabled':''}>${ICON.prev} 이전</button>
+        <button class="nav" data-skip ${X.pos>=list.length-1?'disabled':''}>다음 ${ICON.next}</button>
         <button class="nav pat-next" data-nextpat ${np<0?'disabled':''}>다음 패턴 ${ICON.skip}</button>
       </div>
       <div class="row between" style="font-size:12px"><span class="muted">${esc(list[X.pos].pat.p)}</span><span class="muted mono">${X.pos+1} / ${list.length}</span></div>
@@ -801,7 +833,7 @@ function headerHTML(){
   }
   const label = X.mode === "review" ? "복습" : "바꿔 말하기";
   const prog = X.mode === "review" ? `${X.i+1} / ${X.items.length}` : "";
-  return `<div class="row between"><button class="x" data-close aria-label="닫기">${ICON.x}</button>
+  return `<div class="row between">${closeBtn()}
     <span class="eyebrow" style="flex:1;text-align:center">${label}</span><span class="mono" style="font-weight:600">${prog}</span></div>
     ${X.mode === "review" ? `<div class="bar" style="height:6px"><i style="width:${X.i/X.items.length*100}%"></i></div>` : ''}`;
 }
@@ -871,7 +903,7 @@ function drawSwap(pat){
   const n = W.made.size, need = SWAP_MIN;
   const ok = n >= need;
   const footLearn = `<button class="btn ghost" data-adv>건너뛰기</button><button class="btn" data-adv ${ok?'':'disabled'}>${ok ? '회상으로' : `${need - n}개 더 만들어 말해 보기`}</button>`;
-  const footOnly = `<button class="btn block" data-close>${ok ? '완료' : '닫기'}</button>`;
+  const footOnly = `<button class="btn block" data-close>${X.from==="patterns" ? (ok ? '완료 · 목록으로' : '목록으로 돌아가기') : (ok ? '완료' : '닫기')}</button>`;
   frame(`${patChip(pat)}
     <span class="eyebrow">아래 단어를 눌러 바꾸고, 바뀐 문장을 소리 내어 말해 보세요</span>
     <div class="big" id="swEn">${c.en}</div><div class="ko-line" id="swKo">${c.ko}</div>
@@ -927,7 +959,7 @@ function drawClear(){
     <h2 style="font-size:22px;margin-top:10px">${c.ko} Day ${day} 완료</h2>
     <div class="muted">오늘 새 문장 ${todayNew(X.cat)}개 · 연속 ${st}일</div>
     <div class="hintbox">'애매'·'다시'로 채점한 문장은 내일 복습에 나와요. 더 하고 싶으면 이어서 학습할 수 있어요.</div></div></div></div>
-    <div class="dr-foot"><div class="in"><button class="btn ghost" data-close>홈으로</button><button class="btn" data-continue>이어서 학습</button></div></div>`;
+    <div class="dr-foot"><div class="in"><button class="btn ghost" data-close>${X.from ? FROM_LABEL[X.from]+'으로' : '홈으로'}</button><button class="btn" data-continue>이어서 학습</button></div></div>`;
 }
 
 function openSheet(){
