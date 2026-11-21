@@ -85,6 +85,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:13px 18px;font-weight:600;font-size:15px;background:var(--accent);color:var(--accent-ink);min-height:48px;transition:transform .08s}
 .btn:active{transform:scale(.98)}
 .btn.ghost{background:var(--sunken);color:var(--ink)}
+.btn svg{width:16px;height:16px;fill:currentColor;flex:none}
+.btn.soft{background:var(--accent-soft);color:var(--accent);box-shadow:inset 0 0 0 1.5px color-mix(in srgb, var(--accent) 35%, transparent)}
 .btn.line{background:transparent;box-shadow:inset 0 0 0 1.5px var(--line);color:var(--ink)}
 .btn.block{width:100%}
 .btn[disabled]{opacity:.45;pointer-events:none}
@@ -588,7 +590,7 @@ function viewPatterns(){
       if (!items.length) continue;
       block += `<details class="pat" ${q?'open':''}><summary><span class="pt">${esc(p.p)}</span><span class="dots">${p.items.map(s=>`<i class="${S.learned[s.id]?'on':''}"></i>`).join("")}</span><span class="pk">${esc(p.k)}</span></summary>
         ${p.tip?`<div class="muted" style="font-size:12px;margin:-4px 0 8px">${esc(p.tip)}</div>`:''}
-        <div class="pat-acts"><button class="btn sm" data-learnat="${p.items[0].idx}">이 패턴 학습</button>${p.ex&&p.ex.length?`<button class="btn sm ghost" data-exat="${p.idx}">예문 10개</button>`:''}${p.sw?`<button class="btn sm ghost" data-swapat="${p.idx}">바꿔 말하기</button>`:''}</div>
+        <div class="pat-acts"><button class="btn sm" data-learnat="${p.items[0].idx}">이 패턴 학습</button>${p.ex&&p.ex.length?`<button class="btn sm soft" data-exat="${p.idx}">예문 10개</button>`:''}${p.sw?`<button class="btn sm soft" data-swapat="${p.idx}">바꿔 말하기</button>`:''}</div>
         ${items.map(s=>`<div class="sent"><button class="play" data-say="${s.id}" aria-label="재생">${ICON.play}</button><span class="en">${esc(s.en)}</span><span class="ko">${esc(s.ko)}</span></div>`).join("")}</details>`;
     }
     if (block) body += `<div class="sec-title">${esc(sec.name)}</div><div>${block}</div>`;
@@ -817,7 +819,7 @@ function drawStep(){
   const s = curS(), key = X.steps[X.step];
   if (key === "listen"){
     frame(`${patChip(s.pat)}<div class="big">${highlight(s)}</div><div class="ko-line">${esc(s.ko)}</div>${audioRow()}
-      ${s.pat.ex && s.pat.ex.length ? `<div class="row"><button class="btn sm ghost" data-exsheet>이 패턴 예문 10개 보기</button></div>` : ''}
+      ${s.pat.ex && s.pat.ex.length ? `<div class="row"><button class="btn sm soft" data-exsheet>${ICON.book} 이 패턴 예문 10개 보기</button></div>` : ''}
       <div class="hintbox">밑줄 친 부분이 패턴이에요. 뜻을 떠올리며 두세 번 들어 보세요.</div>`,
       `<button class="btn block" data-adv>따라 말하기로</button>`);
     if (S.settings.auto) speak(s.en);
