@@ -1,0 +1,628 @@
+# 패턴별 다른 형태 예문 10개: @패턴번호(travel.txt의 ## 순서) 다음 줄부터 "형태 | 영어 | 한국어"
+@1 I'd like to ~
+긍정 | I'd like to book a room for tonight. | 오늘 밤 방을 예약하고 싶어요.
+긍정 | I'd like to buy two tickets. | 표 두 장 사고 싶어요.
+긍정 | I'd like to see the manager. | 매니저를 만나고 싶어요.
+긍정 | I'd like to pay now. | 지금 계산할게요.
+명사 | I'd like a glass of water. | 물 한 잔 주세요.
+명사 | I'd like a room with a balcony. | 발코니 있는 방으로 주세요.
+의문 | Would you like to check in now? | 지금 체크인하시겠어요?
+의문 | What would you like to do today? | 오늘 뭐 하고 싶어요?
+부정 | I'd rather not sit near the restroom. | 화장실 근처엔 앉고 싶지 않아요.
+want | I want to go to the beach. | 해변에 가고 싶어요.
+@2 Can I get ~?
+긍정 | Can I get a refill? | 리필해 주실 수 있어요?
+긍정 | Can I get a seat by the window? | 창가 자리 받을 수 있을까요?
+긍정 | Can I get some ice? | 얼음 좀 주실래요?
+긍정 | Can I get a smaller size? | 더 작은 사이즈로 주실래요?
+정중 | Could I have the bill, please? | 계산서 좀 주시겠어요?
+정중 | May I have your name, please? | 성함이 어떻게 되세요?
+have | Can I have one of these? | 이거 하나 주실래요?
+평서 | I'll take this one. | 이걸로 할게요.
+직원 | Can I get you anything else? | 다른 거 더 필요하세요?
+응답 | Sure, here you go. | 네, 여기 있어요.
+@3 Where can I ~?
+긍정 | Where can I buy a bus pass? | 버스 패스는 어디서 살 수 있어요?
+긍정 | Where can I find a good coffee shop? | 괜찮은 커피숍은 어디 있어요?
+긍정 | Where can I leave my luggage? | 짐은 어디에 맡길 수 있어요?
+긍정 | Where can I get a map? | 지도는 어디서 받을 수 있어요?
+where is | Where is the restroom? | 화장실이 어디예요?
+where is | Where's the nearest ATM? | 가장 가까운 ATM이 어디예요?
+where do | Where do I check in? | 체크인은 어디서 해요?
+should | Where should I wait? | 어디서 기다려야 해요?
+간접 의문 | Do you know where the station is? | 역이 어디 있는지 아세요?
+변형 | Is there somewhere I can sit? | 앉을 만한 곳이 있나요?
+@4 Is there ~?
+긍정 | Is there a supermarket around here? | 이 근처에 슈퍼마켓 있나요?
+긍정 | Is there a bus to the airport? | 공항 가는 버스 있나요?
+긍정 | Is there a dress code? | 복장 규정이 있나요?
+긍정 | Is there a fee for that? | 그건 요금이 있나요?
+복수 | Are there any restaurants open now? | 지금 문 연 식당 있나요?
+복수 | Are there any tickets for tonight? | 오늘 밤 표 있나요?
+평서 | There's a café across the street. | 길 건너에 카페가 있어요.
+부정 | There's no elevator in this building. | 이 건물엔 엘리베이터가 없어요.
+과거 | Was there a message for me? | 저한테 온 메시지 있었나요?
+have | Do you have Wi-Fi here? | 여기 와이파이 있어요?
+@5 Do I need to ~?
+긍정 | Do I need to make a reservation? | 예약해야 하나요?
+긍정 | Do I need to change trains? | 기차를 갈아타야 하나요?
+긍정 | Do I need to wear a mask? | 마스크를 써야 하나요?
+긍정 | Do I need to sign anything? | 어디에 서명해야 하나요?
+have to | Do I have to pay now? | 지금 계산해야 하나요?
+주어 변화 | Do we need tickets for the kids? | 아이들도 표가 필요한가요?
+의문사 | What do I need to bring? | 뭘 가져가야 해요?
+응답 | You don't need to. | 안 하셔도 돼요.
+응답 | You need to show your passport. | 여권을 보여 주셔야 해요.
+격식 | Is it necessary to book ahead? | 미리 예약해야 하나요?
+@6 I'm here for ~
+긍정 | I'm here for a week of vacation. | 일주일 휴가로 왔어요.
+긍정 | I'm here for a business meeting. | 업무 미팅 때문에 왔어요.
+to부정사 | I'm here to see a friend. | 친구 만나러 왔어요.
+on | I'm here on a working holiday. | 워킹홀리데이로 왔어요.
+주어 변화 | We're here on our honeymoon. | 저희는 신혼여행 왔어요.
+의문 | What brings you here? | 여기는 어쩐 일로 오셨어요?
+심사관 | What's the purpose of your visit? | 방문 목적이 뭔가요?
+의문 | Are you here on business? | 출장으로 오셨어요?
+응답 | Just for sightseeing. | 그냥 관광하러요.
+과거 | I was here five years ago. | 5년 전에 여기 왔었어요.
+@7 I'm staying ~
+긍정 | I'm staying at a hotel near the station. | 역 근처 호텔에 묵어요.
+긍정 | I'm staying here for three nights. | 여기서 3박 해요.
+주어 변화 | We're staying at my aunt's house. | 저희는 이모 댁에 머물러요.
+의문 | Where are you staying? | 어디에 묵으세요?
+의문 | How long are you staying? | 얼마나 머무세요?
+의문 | Are you staying nearby? | 근처에 묵으세요?
+미래 | I'll be staying until next Friday. | 다음 주 금요일까지 머물 거예요.
+요청 | I'd like to stay one more night. | 하룻밤 더 묵고 싶어요.
+과거 | I stayed at a great B&B. | 아주 좋은 민박에 묵었어요.
+부정 | I haven't booked a hotel yet. | 아직 호텔을 예약 안 했어요.
+@8 How long ~?
+긍정 | How long is the bus ride? | 버스로 얼마나 가요?
+긍정 | How long is the tour? | 투어는 얼마나 걸려요?
+긍정 | How long is the line? | 줄이 얼마나 길어요?
+take | How long does the ferry take? | 페리로 얼마나 걸려요?
+have to | How long do I have to wait? | 얼마나 기다려야 해요?
+미래 | How long will the flight be delayed? | 비행기가 얼마나 지연될까요?
+can | How long can I park here? | 여기 얼마 동안 주차할 수 있어요?
+기간 | How long is this ticket good for? | 이 표는 얼마 동안 쓸 수 있어요?
+응답 | It takes about thirty minutes. | 30분 정도 걸려요.
+응답 | Not long, about five minutes. | 오래 안 걸려요, 5분 정도요.
+@9 I have a reservation ~
+긍정 | I have a reservation for tonight. | 오늘 밤으로 예약했어요.
+긍정 | I have a reservation for three people. | 세 명 예약했어요.
+긍정 | I have a reservation at 7:30. | 7시 반에 예약했어요.
+과거 | I made a reservation last week. | 지난주에 예약했어요.
+과거 | I booked through a travel website. | 여행 사이트에서 예약했어요.
+의문 | Do you have a reservation? | 예약하셨어요?
+의문 | What name is the reservation under? | 누구 이름으로 예약하셨어요?
+부정 | I don't have a reservation. | 예약은 안 했어요.
+문제 | I can't find my reservation. | 예약 내역을 못 찾겠어요.
+요청 | Can I make a reservation for tomorrow? | 내일로 예약할 수 있을까요?
+@10 Could I ~?
+긍정 | Could I have a late checkout? | 늦게 체크아웃할 수 있을까요?
+긍정 | Could I see the menu? | 메뉴 좀 볼 수 있을까요?
+긍정 | Could I use your bathroom? | 화장실 좀 써도 될까요?
+긍정 | Could I get a receipt? | 영수증 받을 수 있을까요?
+긍정 | Could I leave my bags here? | 가방 여기 둬도 될까요?
+주어 변화 | Could you help me with this? | 이것 좀 도와주실래요?
+주어 변화 | Could we have another table? | 다른 테이블로 옮길 수 있을까요?
+may | May I come in? | 들어가도 될까요?
+possible | Is it possible to check in now? | 지금 체크인 가능한가요?
+응답 | Of course. | 물론이죠.
+@11 Is ~ included?
+긍정 | Is the tip included? | 팁 포함인가요?
+긍정 | Is lunch included in the tour? | 투어에 점심 포함인가요?
+긍정 | Is insurance included? | 보험 포함인가요?
+긍정 | Is the cleaning fee included? | 청소비 포함인가요?
+복수 | Are drinks included? | 음료 포함인가요?
+복수 | Are taxes included in the price? | 가격에 세금 포함인가요?
+의문사 | What does the price include? | 가격에 뭐가 포함돼요?
+평서 | Breakfast is included. | 조식 포함이에요.
+부정 | Parking is not included. | 주차는 포함 안 돼요.
+변형 | Is there an extra charge for Wi-Fi? | 와이파이는 추가 요금이 있나요?
+@12 The ~ isn't working
+긍정 | The lights aren't working. | 불이 안 켜져요.
+긍정 | The fridge isn't working. | 냉장고가 안 돼요.
+긍정 | The remote isn't working. | 리모컨이 안 돼요.
+주어 변화 | My card isn't working. | 제 카드가 안 돼요.
+변형 | The sink is clogged. | 세면대가 막혔어요.
+won't | The window won't open. | 창문이 안 열려요.
+won't | The door won't lock. | 문이 안 잠겨요.
+변형 | There's something wrong with the shower. | 샤워기에 문제가 있어요.
+과거 | The heater stopped working last night. | 어젯밤에 히터가 멈췄어요.
+요청 | Could someone take a look at it? | 누가 좀 봐 주실 수 있나요?
+@13 Could you ~?
+긍정 | Could you clean the room today? | 오늘 방 청소해 주시겠어요?
+긍정 | Could you bring us some plates? | 접시 좀 가져다주시겠어요?
+긍정 | Could you call me when it's ready? | 준비되면 전화해 주시겠어요?
+긍정 | Could you turn on the heating? | 난방 좀 켜 주시겠어요?
+긍정 | Could you tell me the Wi-Fi password? | 와이파이 비밀번호 알려 주시겠어요?
+긍정 | Could you give me directions? | 길 좀 알려 주시겠어요?
+can | Can you help me? | 좀 도와주실래요?
+would mind | Would you mind opening the door? | 문 좀 열어 주시겠어요?
+명령 | Please send someone up. | 사람 좀 올려 보내 주세요.
+응답 | I'll take care of it right away. | 바로 처리해 드릴게요.
+@14 What time is ~?
+긍정 | What time is dinner? | 저녁은 몇 시예요?
+긍정 | What time is the next tour? | 다음 투어는 몇 시예요?
+긍정 | What time is the show? | 공연은 몇 시예요?
+need to | What time do I need to be at the airport? | 공항에 몇 시까지 가야 해요?
+does | What time does the bar close? | 바는 몇 시에 닫아요?
+should | What time should we meet? | 몇 시에 만날까요?
+when | When is the last train? | 막차는 언제예요?
+until | Is it open until ten? | 10시까지 열어요?
+응답 | Checkout is at eleven. | 체크아웃은 11시예요.
+응답 | Breakfast is served from seven to ten. | 조식은 7시부터 10시까지예요.
+@15 Can I leave ~?
+긍정 | Can I leave my coat here? | 코트 여기 둬도 될까요?
+긍정 | Can I leave my bike outside? | 자전거를 밖에 둬도 될까요?
+긍정 | Can I leave a tip on the card? | 카드로 팁을 남겨도 되나요?
+긍정 | Can I leave a review? | 리뷰 남겨도 될까요?
+keep | Can I keep my bags here until tonight? | 오늘 밤까지 가방 맡겨도 될까요?
+변형 | Is there a locker I can use? | 쓸 수 있는 사물함 있나요?
+변형 | Where can I store my luggage? | 짐은 어디 보관할 수 있어요?
+과거 | I left my umbrella in the room. | 방에 우산을 두고 왔어요.
+과거 | I think I left my charger here. | 여기 충전기를 두고 간 것 같아요.
+응답 | Sure, I'll give you a tag. | 네, 번호표 드릴게요.
+@16 A table for ~
+긍정 | A table for five, please. | 다섯 명이요.
+짧게 | Just one, please. | 한 명이요.
+시간 | We'd like a table for two at eight. | 8시에 두 명 자리 원해요.
+의문 | Do you have a table for six? | 여섯 명 자리 있어요?
+의문 | Is there a table available now? | 지금 자리 있나요?
+의문 | Could we sit at the bar? | 바에 앉아도 될까요?
+의문 | Can we move to a bigger table? | 더 큰 테이블로 옮길 수 있을까요?
+변형 | Is this table free? | 이 테이블 비었어요?
+응답 | It'll be about fifteen minutes. | 15분 정도 걸릴 거예요.
+응답 | Right this way, please. | 이쪽으로 오세요.
+@17 I'll have ~
+긍정 | I'll have the chicken salad. | 치킨 샐러드로 할게요.
+긍정 | I'll have a beer. | 맥주 하나 주세요.
+긍정 | I'll have what she's having. | 저도 저분 거랑 같은 걸로 할게요.
+긍정 | I'll have the fish, please. | 생선 요리로 할게요.
+주어 변화 | We'll have two coffees. | 커피 두 잔 주세요.
+can | Can I have the steak, medium? | 스테이크 미디엄으로 주실래요?
+would like | I'd like the soup, please. | 수프로 주세요.
+의문 | What will you have? | 뭐 드실래요?
+직원 | Are you ready to order? | 주문하시겠어요?
+응답 | I need a few more minutes. | 조금만 더 볼게요.
+@18 Could I get ~ without ~?
+긍정 | Could I get a burger without pickles? | 피클 빼고 버거 주실 수 있어요?
+긍정 | Could I get it without sugar? | 설탕 빼고 주실 수 있어요?
+긍정 | Could I get the pizza without mushrooms? | 버섯 빼고 피자 주실 수 있어요?
+추가 | Could I get extra sauce? | 소스 추가해 주실 수 있어요?
+대신 | Could I get it with rice instead of fries? | 감자튀김 대신 밥으로 주실 수 있어요?
+추가 | Could I get a side of vegetables? | 채소 사이드 하나 주실 수 있어요?
+짧게 | No ice, please. | 얼음 빼 주세요.
+짧게 | Not too spicy, please. | 너무 맵지 않게 해 주세요.
+조절 | Can you make it a little sweeter? | 조금 더 달게 해 주실 수 있어요?
+굽기 | Well done, please. | 바싹 익혀 주세요.
+@19 What do you recommend?
+긍정 | What do you recommend for a first-timer? | 처음 온 사람한테는 뭘 추천하세요?
+would | What would you recommend? | 뭘 추천하시겠어요?
+변형 | What's your favorite dish here? | 여기서 제일 좋아하는 메뉴가 뭐예요?
+변형 | Which wine goes well with this? | 이거랑 어떤 와인이 어울려요?
+변형 | Is there anything you'd recommend? | 추천하실 만한 거 있어요?
+변형 | What's the local specialty? | 이 지역 특산 요리가 뭐예요?
+변형 | What's popular here? | 여기 뭐가 인기 있어요?
+조건 | Can you recommend something light? | 가벼운 걸로 추천해 주실래요?
+응답 | I recommend the seafood pasta. | 해산물 파스타를 추천해요.
+응답 | Most people get the ribs. | 대부분 립을 시켜요.
+@20 Does this come with ~?
+긍정 | Does this come with a side? | 이거 사이드 메뉴 같이 나와요?
+주어 변화 | Does the steak come with potatoes? | 스테이크에 감자가 같이 나와요?
+쇼핑 | Does this come with a warranty? | 이거 보증서 있어요?
+숙소 | Does the room come with a kitchen? | 방에 주방이 있어요?
+의문사 | What comes with this? | 이건 뭐랑 같이 나와요?
+served | Is it served with rice? | 밥이랑 같이 나와요?
+재료 | What's in this dish? | 이 요리에 뭐가 들어가요?
+양 | Is this enough for one person? | 이거 1인분으로 충분해요?
+응답 | It comes with salad and bread. | 샐러드와 빵이 같이 나와요.
+응답 | You can choose a side. | 사이드를 고르실 수 있어요.
+@21 I'm allergic to ~
+긍정 | I'm allergic to seafood. | 해산물 알레르기가 있어요.
+긍정 | I'm allergic to cats. | 고양이 알레르기가 있어요.
+주어 변화 | My son is allergic to eggs. | 제 아들은 달걀 알레르기가 있어요.
+확인 | Does this contain milk? | 이거 우유 들어 있어요?
+확인 | Is there any peanut oil in this? | 여기 땅콩기름 들어갔어요?
+직원 | Are you allergic to anything? | 알레르기 있으세요?
+변형 | I can't eat spicy food. | 매운 음식을 못 먹어요.
+변형 | I'm on a diet. | 다이어트 중이에요.
+변형 | I don't drink alcohol. | 술은 안 마셔요.
+요청 | Do you have a vegan menu? | 비건 메뉴 있어요?
+@22 Can I get the check?
+짧게 | Check, please. | 계산서 주세요.
+정중 | Could we have the bill, please? | 계산서 좀 주시겠어요?
+긍정 | Can I pay here? | 여기서 계산해도 돼요?
+긍정 | Can we split the bill? | 나눠서 계산해도 될까요?
+긍정 | Can I add a tip? | 팁을 추가해도 될까요?
+평서 | I'll get this. | 이건 제가 낼게요.
+평서 | It's on me. | 제가 살게요.
+제안 | Let's go Dutch. | 각자 내요.
+의문 | How much do I owe you? | 얼마 드리면 돼요?
+의문 | Do you accept credit cards? | 신용카드 받아요?
+@23 ~ to go
+긍정 | Two coffees to go, please. | 커피 두 잔 포장이요.
+긍정 | Can I get a sandwich to go? | 샌드위치 포장해 주실래요?
+변형 | Can I take this home? | 이거 집에 가져가도 돼요?
+변형 | Could you pack the leftovers? | 남은 거 싸 주시겠어요?
+직원 | For here or to go? | 드시고 가세요, 포장이세요?
+응답 | I'll eat here. | 여기서 먹을게요.
+배달 | Do you deliver? | 배달돼요?
+주문 | Can I order ahead? | 미리 주문할 수 있어요?
+요청 | Can I have a lid, please? | 뚜껑 하나 주실래요?
+요청 | Can I get a straw? | 빨대 하나 주실래요?
+@24 How do I get to ~?
+긍정 | How do I get to the city hall? | 시청에 어떻게 가요?
+긍정 | How do I get to the train station from here? | 여기서 기차역에 어떻게 가요?
+긍정 | How do I get to Gate 12? | 12번 게이트에 어떻게 가요?
+긍정 | How do I get to the top? | 꼭대기에 어떻게 올라가요?
+can | How can I get to the old town? | 구시가지에 어떻게 갈 수 있어요?
+정중 | Can you tell me the way to the museum? | 박물관 가는 길 좀 알려 주실래요?
+방향 | Which way is the exit? | 출구가 어느 쪽이에요?
+방향 | Is it this way? | 이쪽이에요?
+응답 | Go straight and turn left. | 직진하다가 왼쪽으로 도세요.
+응답 | It's on your right. | 오른쪽에 있어요.
+@25 Which ~ goes to ~?
+긍정 | Which bus goes to the beach? | 어느 버스가 해변에 가요?
+긍정 | Which train goes to the city center? | 어느 기차가 시내로 가요?
+긍정 | Which subway line goes to the stadium? | 지하철 몇 호선이 경기장에 가요?
+긍정 | Which road goes to the harbor? | 어느 길이 항구로 가요?
+번호 | What number bus should I take? | 몇 번 버스를 타야 해요?
+공항 | Which gate is my flight? | 제 비행기는 몇 번 게이트예요?
+공항 | Which terminal is it? | 몇 번 터미널이에요?
+비교 | Which one is faster? | 어느 게 더 빨라요?
+응답 | Take the number 5. | 5번 타세요.
+응답 | The blue line goes there. | 파란색 노선이 거기 가요.
+@26 Is this the right ~ for ~?
+긍정 | Is this the right line for the airport? | 공항 가는 노선 맞아요?
+긍정 | Is this the right exit for the museum? | 박물관 가는 출구 맞아요?
+긍정 | Is this the right stop for the hotel? | 호텔 가는 정류장 맞아요?
+긍정 | Is this the right direction? | 이 방향이 맞아요?
+does | Does this bus go downtown? | 이 버스 시내 가요?
+does | Does this train stop at Oxford? | 이 기차 옥스퍼드에 서요?
+주어 변화 | Am I on the right train? | 제가 맞는 기차 탔나요?
+변형 | Is this where I wait for the shuttle? | 셔틀 여기서 기다리면 돼요?
+응답 | No, you need the other side. | 아니요, 반대편으로 가셔야 해요.
+응답 | Yes, it's the third stop. | 네, 세 번째 정류장이에요.
+@27 How far is ~?
+긍정 | How far is the airport? | 공항까지 얼마나 멀어요?
+긍정 | How far is it to the next town? | 다음 마을까지 얼마나 멀어요?
+긍정 | How far is the hotel from the beach? | 호텔에서 해변까지 얼마나 멀어요?
+짧게 | Is it far? | 멀어요?
+도보 | Is it close enough to walk? | 걸어갈 만큼 가까워요?
+시간 | How many minutes is it by car? | 차로 몇 분이에요?
+거리 | How many kilometers is it? | 몇 킬로미터예요?
+응답 | It's about a ten-minute walk. | 걸어서 10분 정도예요.
+응답 | It's just around the corner. | 바로 모퉁이 돌면 있어요.
+응답 | It's too far to walk. | 걸어가기엔 너무 멀어요.
+@28 Please take me to ~
+긍정 | Take me to Central Station, please. | 중앙역으로 가 주세요.
+정중 | Could you take me to the hotel? | 호텔로 가 주시겠어요?
+can | Can you take me to the nearest pharmacy? | 가장 가까운 약국으로 가 주실래요?
+정차 | Please stop at the next corner. | 다음 모퉁이에서 세워 주세요.
+대기 | Could you wait here for a minute? | 여기서 잠깐 기다려 주시겠어요?
+속도 | Can you go a little faster? | 조금만 빨리 가 주실래요?
+속도 | Can you slow down, please? | 천천히 가 주세요.
+시간 | How long will it take to get there? | 거기까지 얼마나 걸려요?
+결제 | Can I pay by card in the taxi? | 택시에서 카드로 계산돼요?
+하차 | Here is fine, thank you. | 여기서 내릴게요, 감사합니다.
+@29 Where do I ~?
+긍정 | Where do I pick up my bags? | 짐은 어디서 찾아요?
+긍정 | Where do I get the shuttle? | 셔틀은 어디서 타요?
+긍정 | Where do I sign? | 어디에 서명해요?
+긍정 | Where do I put my trash? | 쓰레기는 어디에 버려요?
+should | Where should I go? | 어디로 가야 해요?
+where is | Where's the ticket machine? | 발매기가 어디예요?
+where is | Where's the taxi stand? | 택시 승강장이 어디예요?
+can | Where can I top up my card? | 카드 충전은 어디서 해요?
+need to | Where do I need to change? | 어디서 갈아타야 해요?
+응답 | At the next station. | 다음 역에서요.
+@30 When does the next ~ leave?
+긍정 | When does the next bus leave? | 다음 버스는 언제 출발해요?
+긍정 | When does the next boat leave for the island? | 섬으로 가는 다음 배는 언제 출발해요?
+first | When does the first train leave? | 첫차는 언제 출발해요?
+탑승 | When does the flight board? | 탑승은 언제 시작해요?
+시작 | When does the tour start? | 투어는 언제 시작해요?
+도착 | What time does the train get in? | 기차는 몇 시에 도착해요?
+지연 | Is the next train delayed? | 다음 기차 지연됐어요?
+빈도 | How often do the trains run? | 기차는 얼마나 자주 다녀요?
+응답 | It leaves in ten minutes. | 10분 후에 출발해요.
+응답 | Every fifteen minutes. | 15분마다요.
+@31 I'd like to rent ~
+긍정 | I'd like to rent a car for the weekend. | 주말 동안 차를 빌리고 싶어요.
+긍정 | I'd like to rent an automatic car. | 오토 차량을 빌리고 싶어요.
+긍정 | I'd like to rent two bikes. | 자전거 두 대 빌리고 싶어요.
+긍정 | I'd like to rent a beach umbrella. | 파라솔을 빌리고 싶어요.
+요금 | How much is it per day? | 하루에 얼마예요?
+서류 | Do you need my driver's license? | 운전면허증 필요하세요?
+보증금 | Is a deposit required? | 보증금이 필요한가요?
+운전자 | Can I add a second driver? | 운전자를 한 명 추가할 수 있나요?
+반납 | Can I return it late? | 늦게 반납해도 되나요?
+확인 | There's a scratch on the door. | 문에 긁힌 자국이 있어요.
+@32 I'm looking for ~
+긍정 | I'm looking for a gift for my wife. | 아내 선물을 찾고 있어요.
+긍정 | I'm looking for a pharmacy. | 약국을 찾고 있어요.
+긍정 | I'm looking for the bus stop. | 버스 정류장을 찾고 있어요.
+긍정 | I'm looking for something cheaper. | 좀 더 싼 걸 찾고 있어요.
+직원 | Are you looking for anything special? | 특별히 찾으시는 거 있으세요?
+직원 | Can I help you find something? | 찾으시는 거 도와드릴까요?
+have | Do you have any sunglasses? | 선글라스 있어요?
+sell | Do you sell batteries? | 배터리 팔아요?
+응답 | I'm just browsing. | 그냥 둘러보는 중이에요.
+과거 | I'm looking for a shirt I saw yesterday. | 어제 본 셔츠를 찾고 있어요.
+@33 Do you have this in ~?
+긍정 | Do you have this in red? | 이거 빨간색 있어요?
+긍정 | Do you have this in a size 10? | 이거 10 사이즈 있어요?
+재고 | Do you have this in stock? | 이거 재고 있어요?
+복수 | Do you have these in a smaller size? | 이거 더 작은 사이즈 있어요?
+come in | Does this come in other colors? | 이거 다른 색도 나와요?
+의문사 | What sizes do you have? | 어떤 사이즈 있어요?
+요청 | Can you check in the back? | 창고에 있는지 확인해 주실래요?
+요청 | Can you order it for me? | 주문해 주실 수 있어요?
+응답 | We're out of that size. | 그 사이즈는 다 나갔어요.
+응답 | This is the last one. | 이게 마지막 하나예요.
+@34 Can I try ~ on?
+긍정 | Can I try on this coat? | 이 코트 입어 봐도 돼요?
+신발 | Can I try these shoes in a 9? | 이 신발 9 사이즈로 신어 봐도 돼요?
+탈의실 | How many items can I take in? | 몇 벌까지 가지고 들어갈 수 있어요?
+의견 | How does it look? | 어때 보여요?
+칭찬 | It looks good on you. | 잘 어울려요.
+사이즈 | It's too long. | 너무 길어요.
+사이즈 | It's a bit too big. | 조금 커요.
+요청 | Do you have a mirror? | 거울 있어요?
+수선 | Can you shorten the sleeves? | 소매 줄여 주실 수 있어요?
+결정 | I'll think about it. | 좀 생각해 볼게요.
+@35 How much is ~?
+긍정 | How much is this one? | 이건 얼마예요?
+긍정 | How much is a ticket to London? | 런던행 표 얼마예요?
+긍정 | How much is the room per night? | 방이 1박에 얼마예요?
+긍정 | How much is the taxi to the airport? | 공항까지 택시비 얼마예요?
+복수 | How much are the strawberries? | 딸기 얼마예요?
+cost | How much does it cost? | 얼마예요?
+owe | How much do I owe you? | 얼마 드리면 돼요?
+총액 | What's the total? | 총 얼마예요?
+요청 | Can you write down the price? | 가격 좀 적어 주실래요?
+응답 | It's twenty dollars. | 20달러예요.
+@36 Is there a discount ~?
+긍정 | Is there a discount for children? | 어린이 할인 있어요?
+조건 | Is there a discount if I pay in cash? | 현금으로 내면 할인돼요?
+조건 | Is there a discount for buying three? | 세 개 사면 할인돼요?
+세일 | Is this on sale? | 이거 세일해요?
+흥정 | Can you lower the price a bit? | 가격 좀 깎아 주실 수 있어요?
+쿠폰 | Can I use this coupon? | 이 쿠폰 쓸 수 있어요?
+직원 | Do you have a membership card? | 멤버십 카드 있어요?
+흥정 | That's my best offer. | 그게 제가 드릴 수 있는 최선이에요.
+응답 | We can give you ten percent off. | 10% 할인해 드릴 수 있어요.
+응답 | Sorry, prices are fixed. | 죄송하지만 정찰제예요.
+@37 I'd like to return ~
+긍정 | I'd like to return these shoes. | 이 신발 반품하고 싶어요.
+교환 | I'd like to exchange this for a larger size. | 이거 더 큰 사이즈로 교환하고 싶어요.
+교환 | I'd like to exchange it for a different color. | 다른 색으로 교환하고 싶어요.
+이유 | It doesn't fit. | 사이즈가 안 맞아요.
+이유 | It's broken. | 고장 났어요.
+이유 | I changed my mind. | 마음이 바뀌었어요.
+과거 | I bought this yesterday. | 이거 어제 샀어요.
+의문 | Can I get my money back? | 환불받을 수 있어요?
+의문 | Do I need the receipt? | 영수증이 필요한가요?
+응답 | You can exchange it within 30 days. | 30일 이내에 교환 가능해요.
+@38 Can I pay with ~?
+긍정 | Can I pay with this card? | 이 카드로 계산할 수 있어요?
+긍정 | Can I pay with my phone? | 폰으로 결제해도 돼요?
+in | Can I pay in dollars? | 달러로 계산해도 돼요?
+take | Do you take cards? | 카드 받아요?
+짧게 | Cash only? | 현금만 돼요?
+나눠서 | Can I pay half in cash? | 반은 현금으로 내도 돼요?
+문제 | My card was declined. | 제 카드가 거절됐어요.
+문제 | Can I try another card? | 다른 카드로 해 볼게요.
+직원 | Please enter your PIN. | 비밀번호를 입력해 주세요.
+직원 | We only accept cash. | 현금만 받아요.
+@39 What's the best way to ~?
+긍정 | What's the best way to get downtown? | 시내 가는 가장 좋은 방법이 뭐예요?
+긍정 | What's the best way to see the island? | 섬을 둘러보는 가장 좋은 방법이 뭐예요?
+긍정 | What's the best way to pay here? | 여기선 뭘로 결제하는 게 제일 좋아요?
+cheapest | What's the cheapest way to get there? | 거기 가는 가장 싼 방법이 뭐예요?
+quickest | What's the quickest way to the station? | 역에 가는 가장 빠른 길이 뭐예요?
+선택 | Should I take a taxi or the bus? | 택시 탈까요, 버스 탈까요?
+비교 | Is it better to go in the morning? | 아침에 가는 게 나아요?
+시기 | When's the best time to go? | 언제 가는 게 제일 좋아요?
+응답 | The subway is the fastest. | 지하철이 제일 빨라요.
+응답 | I'd take a taxi. | 저라면 택시 탈래요.
+@40 Are there any ~ you'd recommend?
+긍정 | Are there any restaurants you'd recommend? | 추천해 주실 식당 있어요?
+긍정 | Are there any tours you'd recommend? | 추천해 주실 투어 있어요?
+긍정 | Are there any beaches you'd recommend? | 추천해 주실 해변 있어요?
+변형 | Is there anything fun to do tonight? | 오늘 밤에 재밌게 할 만한 거 있어요?
+변형 | What's worth seeing around here? | 이 근처에 볼 만한 게 뭐예요?
+변형 | Where's a good place to shop? | 쇼핑하기 좋은 곳이 어디예요?
+짧게 | Any good places for dinner? | 저녁 먹기 좋은 곳 있어요?
+가정 | Where would you go if you were me? | 저라면 어디 가실 거예요?
+응답 | You should check out the night market. | 야시장에 꼭 가 보세요.
+응답 | Don't miss the castle. | 성은 꼭 보세요.
+@41 Could you take a picture ~?
+긍정 | Could you take a picture of me here? | 여기서 제 사진 좀 찍어 주실래요?
+긍정 | Could you take a few more? | 몇 장 더 찍어 주실래요?
+요청 | Could you zoom in a little? | 조금 확대해서 찍어 주실래요?
+요청 | Can you get the whole building in? | 건물 전체가 나오게 찍어 주실래요?
+요청 | Could you take it from a lower angle? | 조금 아래에서 찍어 주실래요?
+제안 | Do you want me to take a picture for you? | 사진 찍어 드릴까요?
+허락 | Can I take a photo of you? | 사진 찍어 드려도 될까요?
+허락 | Can I take a picture with you? | 같이 사진 찍어도 될까요?
+구호 | Say cheese! | 김치!
+응답 | Thank you, it looks great. | 감사해요, 잘 나왔네요.
+@42 Is it possible to ~?
+긍정 | Is it possible to get a room with two beds? | 침대 두 개 있는 방이 가능한가요?
+긍정 | Is it possible to visit without a guide? | 가이드 없이 방문할 수 있나요?
+긍정 | Is it possible to walk there? | 거기 걸어갈 수 있나요?
+긍정 | Is it possible to swim here? | 여기서 수영할 수 있나요?
+can | Can I still get in? | 아직 들어갈 수 있나요?
+can | Can I bring food inside? | 음식 가지고 들어가도 되나요?
+가정 | Would it be possible to stay longer? | 더 오래 머무는 게 가능할까요?
+응답 | I'm afraid that's not possible. | 죄송하지만 그건 안 돼요.
+응답 | Yes, but there's an extra fee. | 네, 하지만 추가 요금이 있어요.
+응답 | Let me check for you. | 확인해 드릴게요.
+@43 What time does ~ open?
+긍정 | What time does the bakery open? | 빵집은 몇 시에 열어요?
+긍정 | What time does the pharmacy open? | 약국은 몇 시에 열어요?
+close | What time does the museum close? | 박물관은 몇 시에 닫아요?
+변형 | What are your opening hours? | 영업시간이 어떻게 되세요?
+요일 | Are you open on Sunday? | 일요일에도 여세요?
+변형 | Is it open all day? | 종일 열어요?
+reopen | When does it reopen? | 언제 다시 열어요?
+응답 | We open at nine. | 9시에 열어요.
+응답 | We're closed on Mondays. | 월요일엔 쉬어요.
+응답 | We're open 24 hours. | 24시간 영업해요.
+@44 How much is admission?
+긍정 | How much is the entrance fee? | 입장료가 얼마예요?
+긍정 | How much is a ticket for kids? | 어린이 표는 얼마예요?
+긍정 | How much is the guided tour? | 가이드 투어는 얼마예요?
+무료 | Is admission free? | 입장 무료예요?
+무료 | Is it free for children? | 어린이는 무료예요?
+구매 | Can I buy tickets online? | 표를 온라인으로 살 수 있어요?
+통합권 | Do you have any combo tickets? | 통합권 있어요?
+재입장 | Can I come back in with this ticket? | 이 표로 재입장할 수 있어요?
+응답 | It's free on the first Sunday. | 첫째 주 일요일은 무료예요.
+응답 | Kids under six get in free. | 6세 미만은 무료예요.
+@45 Where are you from?
+긍정 | Where are you from originally? | 원래 어디 출신이세요?
+긍정 | Which part of the country are you from? | 그 나라 어디 출신이세요?
+응답 | I'm from Korea, from Seoul. | 한국, 서울에서 왔어요.
+응답 | I live in Busan. | 부산에 살아요.
+의문 | Have you been to Korea? | 한국에 가 보셨어요?
+의문 | What do you do? | 무슨 일 하세요?
+의문 | How do you like it here? | 여기 어때요?
+응답 | I love it here. | 여기 정말 좋아요.
+인사 | Nice to meet you. | 만나서 반가워요.
+인사 | It was nice talking to you. | 얘기 나눠서 즐거웠어요.
+@46 Could you say that again?
+긍정 | Could you repeat that, please? | 다시 한번 말씀해 주시겠어요?
+짧게 | Sorry, what did you say? | 죄송해요, 뭐라고 하셨어요?
+요청 | Could you speak up a little? | 조금만 크게 말씀해 주실래요?
+요청 | Could you say it in a simpler way? | 좀 더 쉽게 말씀해 주실래요?
+평서 | I don't understand. | 이해가 안 돼요.
+의문 | What do you mean? | 무슨 뜻이에요?
+의문 | How do you say this in English? | 이거 영어로 뭐라고 해요?
+요청 | Can you type it on my phone? | 제 폰에 입력해 주실래요?
+평서 | I'm still learning English. | 영어를 아직 배우는 중이에요.
+응답 | Oh, I see. Thank you. | 아, 알겠어요. 감사해요.
+@47 I lost my ~
+긍정 | I lost my room key. | 방 키를 잃어버렸어요.
+긍정 | I lost my bag at the airport. | 공항에서 가방을 잃어버렸어요.
+긍정 | I lost my ticket. | 표를 잃어버렸어요.
+주어 변화 | My son lost his jacket. | 제 아들이 재킷을 잃어버렸어요.
+변형 | I can't find my passport. | 여권을 못 찾겠어요.
+추측 | I think I dropped my phone. | 폰을 떨어뜨린 것 같아요.
+사람 | I lost my friend in the crowd. | 사람들 속에서 친구를 잃어버렸어요.
+의문 | Has anyone found a wallet? | 혹시 지갑 주운 분 있나요?
+의문 | Where can I report a lost item? | 분실물 신고는 어디서 해요?
+설명 | It's a small black purse. | 작은 검은색 지갑이에요.
+@48 I missed my ~
+긍정 | I missed my bus. | 버스를 놓쳤어요.
+긍정 | I missed the ferry. | 페리를 놓쳤어요.
+긍정 | I missed the tour. | 투어를 놓쳤어요.
+주어 변화 | We missed our connecting flight. | 저희는 연결 항공편을 놓쳤어요.
+이유 | My first flight was late. | 첫 비행기가 늦게 도착했어요.
+의문 | When's the next one? | 다음 건 언제예요?
+의문 | Can I change my ticket? | 표를 바꿀 수 있나요?
+의문 | Is there a fee to rebook? | 재예약 수수료가 있나요?
+almost | I almost missed my flight. | 비행기를 놓칠 뻔했어요.
+부정 | I don't want to miss the last train. | 막차를 놓치고 싶지 않아요.
+@49 My ~ was delayed / canceled
+긍정 | My bus was canceled. | 버스가 취소됐어요.
+긍정 | My train was delayed by an hour. | 기차가 한 시간 지연됐어요.
+긍정 | My order was canceled by mistake. | 제 주문이 실수로 취소됐어요.
+주어 변화 | Our tour was canceled because of rain. | 저희 투어가 비 때문에 취소됐어요.
+의문 | Why was it canceled? | 왜 취소됐어요?
+의문 | Is my flight still on time? | 제 비행기 아직 정시 출발이에요?
+의문 | How long is the delay? | 얼마나 지연돼요?
+의문 | Can I get a refund? | 환불받을 수 있나요?
+의문 | What are my options? | 제가 어떻게 할 수 있나요?
+수하물 | My luggage was sent to the wrong city. | 제 짐이 다른 도시로 갔어요.
+@50 Someone stole ~
+긍정 | Someone stole my backpack. | 누가 제 배낭을 훔쳐 갔어요.
+긍정 | Someone stole my phone on the subway. | 지하철에서 누가 제 폰을 훔쳐 갔어요.
+수동 | My car was broken into. | 누가 제 차를 털어 갔어요.
+수동 | My passport was stolen. | 여권을 도난당했어요.
+수동 | I was pickpocketed. | 소매치기를 당했어요.
+추측 | I think someone took my bag. | 누가 제 가방을 가져간 것 같아요.
+시간 | It happened about an hour ago. | 한 시간 전쯤 일어났어요.
+요청 | I need a police report for insurance. | 보험 처리 때문에 경찰 신고서가 필요해요.
+경찰 | Did you see who took it? | 누가 가져갔는지 보셨어요?
+경찰 | What was in the bag? | 가방에 뭐가 들어 있었어요?
+@51 I need ~
+긍정 | I need a bandage. | 붕대가 필요해요.
+긍정 | I need some medicine for a headache. | 두통약이 필요해요.
+to부정사 | I need to see a doctor. | 진료를 받아야 해요.
+긍정 | I need a place to stay tonight. | 오늘 밤 묵을 곳이 필요해요.
+to부정사 | I need to charge my phone. | 폰을 충전해야 해요.
+주어 변화 | My friend needs help. | 제 친구가 도움이 필요해요.
+의문 | Do you need any help? | 도움이 필요하세요?
+의문 | What do you need? | 뭐가 필요하세요?
+긴급 | Help! | 도와주세요!
+긴급 | Call 911! | 911에 전화해 주세요!
+@52 I have a ~
+긍정 | I have a runny nose. | 콧물이 나요.
+긍정 | I have a bad cold. | 심한 감기에 걸렸어요.
+긍정 | I have a pain in my chest. | 가슴이 아파요.
+긍정 | I have diarrhea. | 설사를 해요.
+feel | I feel sick. | 속이 안 좋아요.
+과거 | I cut my finger. | 손가락을 베였어요.
+과거 | I hurt my ankle. | 발목을 다쳤어요.
+수동 | I was stung by a bee. | 벌에 쏘였어요.
+위치 | It hurts here. | 여기가 아파요.
+시점 | It started last night. | 어젯밤부터 그랬어요.
+@53 I think there's a mistake ~
+긍정 | I think there's a mistake on my receipt. | 영수증에 착오가 있는 것 같아요.
+긍정 | I think there's a mistake with the date. | 날짜에 착오가 있는 것 같아요.
+요금 | I think I was overcharged. | 돈을 더 많이 낸 것 같아요.
+주문 | This isn't my order. | 이거 제 주문이 아니에요.
+주문 | I ordered this without onions. | 양파 빼 달라고 주문했어요.
+계산 | We only had two drinks. | 저희 음료 두 잔만 마셨어요.
+카드 | This charge isn't mine. | 이 요금은 제 것이 아니에요.
+숙소 | I booked a sea-view room. | 바다 전망 방으로 예약했는데요.
+요청 | Could you explain this charge? | 이 요금 좀 설명해 주시겠어요?
+응답 | I'm sorry, let me fix that. | 죄송합니다, 바로 고쳐 드릴게요.
+@54 Can you call ~ for me?
+긍정 | Can you call the police for me? | 경찰 좀 불러 주실래요?
+긍정 | Can you call my hotel for me? | 제 호텔에 전화 좀 해 주실래요?
+긍정 | Can you call a locksmith? | 열쇠공 좀 불러 주실래요?
+get | Can you get me a taxi? | 택시 좀 잡아 주실래요?
+정중 | Could you call me a cab? | 택시 좀 불러 주시겠어요?
+허락 | Can I use your phone to make a call? | 전화 한 통 써도 될까요?
+상황 | My phone is dead. | 폰 배터리가 다 됐어요.
+의문 | Is there a phone I can use? | 쓸 수 있는 전화 있나요?
+의문 | What's the emergency number here? | 여기 긴급 전화번호가 뭐예요?
+응답 | Someone is on the way. | 사람이 가고 있어요.
+@55 Could you recommend ~?
+긍정 | Could you recommend a good place for dinner? | 저녁 먹기 좋은 곳 추천해 주시겠어요?
+긍정 | Could you recommend a good wine? | 좋은 와인 추천해 주시겠어요?
+긍정 | Could you recommend a walking route? | 산책 코스 추천해 주시겠어요?
+긍정 | Could you recommend a hotel near the station? | 역 근처 호텔 추천해 주시겠어요?
+suggest | Can you suggest somewhere quiet? | 조용한 곳 추천해 주실래요?
+suggest | What would you suggest for a rainy day? | 비 오는 날엔 뭘 하면 좋을까요?
+짧게 | Any recommendations? | 추천해 주실 거 있어요?
+의문 | Where do you usually eat? | 보통 어디서 드세요?
+응답 | I'd recommend the place next door. | 옆집을 추천해요.
+응답 | You can't go wrong with that. | 그거면 실패 없어요.
+@56 Can I get a ~ ticket?
+긍정 | Can I get a ticket for the next train? | 다음 기차 표 주실래요?
+긍정 | Can I get a weekly pass? | 일주일 패스 주실래요?
+긍정 | Can I get a student ticket? | 학생 표 주실래요?
+긍정 | Can I get two tickets for tomorrow? | 내일 표 두 장 주실래요?
+짧게 | One adult to Manchester, please. | 맨체스터행 성인 한 장 주세요.
+좌석 | Is this seat reserved? | 이 좌석 지정석이에요?
+좌석 | Can I get a window seat on the train? | 기차 창가 자리로 주실래요?
+직원 | Single or return? | 편도예요, 왕복이에요? (영국식)
+의문 | Is there a cheaper time to travel? | 더 싸게 갈 수 있는 시간대가 있나요?
+변경 | Can I change the time on my ticket? | 표 시간을 바꿀 수 있나요?
+@57 Could I ~ my reservation?
+긍정 | Could I cancel my reservation for tonight? | 오늘 밤 예약을 취소할 수 있을까요?
+긍정 | Could I change my reservation to 8 p.m.? | 예약을 저녁 8시로 바꿀 수 있을까요?
+긍정 | Could I extend my stay by two nights? | 이틀 더 연장할 수 있을까요?
+would like | I'd like to change the date of my booking. | 예약 날짜를 바꾸고 싶어요.
+need to | I need to cancel my booking. | 예약을 취소해야 해요.
+인원 | We'll be two more people. | 두 명이 더 올 거예요.
+지각 | We're going to be about 20 minutes late. | 20분 정도 늦을 것 같아요.
+의문 | Is it too late to cancel? | 취소하기엔 너무 늦었나요?
+의문 | Will I be charged for canceling? | 취소하면 요금이 부과되나요?
+응답 | Your reservation has been changed. | 예약이 변경되었습니다.

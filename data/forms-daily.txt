@@ -1,0 +1,661 @@
+# 패턴별 다른 형태 예문 10개: @패턴번호(daily.txt의 ## 순서) 다음 줄부터 "형태 | 영어 | 한국어"
+@1 I'm about to ~
+긍정 | I'm about to take a shower. | 막 샤워하려던 참이야.
+주어 변화 | He's about to fall asleep. | 그는 막 잠들려는 참이야.
+주어 변화 | They're about to close the store. | 그들은 막 가게 문을 닫으려는 참이야.
+과거 | I was about to text you. | 막 너한테 문자하려던 참이었어.
+과거 | We were about to give up. | 우리 막 포기하려던 참이었어.
+의문 | Are you about to leave? | 너 이제 막 나가려는 거야?
+의문 | What are you about to do? | 너 지금 뭐 하려는 거야?
+부정 | I'm not about to quit now. | 이제 와서 그만둘 생각은 없어.
+상황 | The bus is about to leave. | 버스가 곧 출발해.
+상황 | My phone is about to die. | 폰 배터리가 곧 꺼질 것 같아.
+@2 I'm trying to ~
+긍정 | I'm trying to read more books. | 책을 더 많이 읽으려고 노력 중이야.
+주어 변화 | She's trying to find a new job. | 그녀는 새 직장을 구하려고 하고 있어.
+주어 변화 | We're trying to get there by noon. | 우리 정오까지 거기 가려고 하고 있어.
+과거 | I was trying to call you. | 너한테 전화하려고 했었어.
+과거 | I tried to stop him. | 그를 말리려고 했어.
+의문 | What are you trying to do? | 뭘 하려는 거야?
+의문 | Are you trying to make me laugh? | 나 웃기려는 거야?
+부정 | I'm not trying to be rude. | 무례하게 굴려는 게 아니야.
+명령 | Try to get some rest. | 좀 쉬도록 해 봐.
+미래 | I'll try to be there on time. | 제시간에 가도록 해 볼게.
+@3 I was going to ~
+긍정 | I was going to cook dinner for you. | 너한테 저녁 해 주려고 했었어.
+주어 변화 | She was going to come with us. | 그녀도 우리랑 같이 가려고 했었어.
+주어 변화 | They were going to get married in May. | 그들은 5월에 결혼하려고 했었어.
+부정 | I wasn't going to say anything. | 아무 말도 안 하려고 했어.
+의문 | Were you going to tell me? | 나한테 말하려고 했어?
+의문 | What were you going to say? | 무슨 말 하려고 했어?
+이유 | I was going to call, but my phone died. | 전화하려고 했는데 폰이 꺼졌어.
+이유 | We were going to walk, but it started raining. | 걸어가려고 했는데 비가 오기 시작했어.
+현재 | I'm going to call you tonight. | 오늘 밤에 너한테 전화할 거야.
+의문 | Are you going to be home tomorrow? | 내일 집에 있을 거야?
+@4 I'm thinking of ~ing
+긍정 | I'm thinking of starting a blog. | 블로그를 시작해 볼까 생각 중이야.
+주어 변화 | She's thinking of going back to Canada. | 그녀는 캐나다로 돌아갈까 생각 중이야.
+주어 변화 | We're thinking of having a party. | 우리 파티를 열까 생각 중이야.
+의문 | What are you thinking of doing this weekend? | 이번 주말에 뭐 할 생각이야?
+의문 | Are you thinking of changing jobs? | 이직할 생각이야?
+과거 | I was thinking of calling you. | 너한테 전화할까 생각하고 있었어.
+부정 | I'm not thinking of moving anytime soon. | 당분간 이사할 생각은 없어.
+변형 | I'm thinking about it. | 생각 중이야.
+변형 | I'm thinking about buying a new laptop. | 새 노트북을 살까 생각 중이야.
+변형 | I was thinking we could eat out tonight. | 오늘 저녁 외식하면 어떨까 생각했어.
+@5 I feel like ~ing
+긍정 | I feel like having ice cream. | 아이스크림 먹고 싶어.
+의문 | Do you feel like going for a drive? | 드라이브 가고 싶지 않아?
+의문 | What do you feel like eating? | 뭐 먹고 싶어?
+부정 | I don't feel like going to work today. | 오늘은 출근하기 싫어.
+주어 변화 | She doesn't feel like talking right now. | 그녀는 지금 얘기하고 싶지 않대.
+과거 | I felt like crying. | 울고 싶은 기분이었어.
+과거 | I didn't feel like eating this morning. | 오늘 아침엔 먹고 싶지 않았어.
+변형 | I feel like a coffee. | 커피 한잔 마시고 싶다.
+다른 의미 | I feel like something's wrong. | 뭔가 잘못된 것 같은 느낌이야.
+다른 의미 | I feel like I've met you before. | 전에 만난 적 있는 것 같아.
+@6 I can't wait to ~
+긍정 | I can't wait to see the ocean. | 빨리 바다 보고 싶어.
+주어 변화 | She can't wait to meet the baby. | 그녀는 아기를 빨리 보고 싶어 해.
+주어 변화 | We can't wait to move into our new place. | 우리 빨리 새집으로 이사 가고 싶어.
+명사 | I can't wait for summer. | 여름이 너무 기다려져.
+명사 | I can't wait for your birthday party. | 네 생일 파티가 너무 기다려져.
+과거 | I couldn't wait to get home. | 빨리 집에 가고 싶었어.
+과거 | I couldn't wait to tell you. | 너한테 빨리 말하고 싶었어.
+의문 | Can't you wait a little longer? | 조금만 더 못 기다려?
+다른 의미 | It can wait. | 그건 나중에 해도 돼.
+다른 의미 | Dinner can wait. Come here first. | 저녁은 나중에 먹어도 돼. 일단 이리 와.
+@7 I'm supposed to ~
+긍정 | I'm supposed to call her back today. | 오늘 그녀에게 다시 전화하기로 했어.
+주어 변화 | He's supposed to arrive at noon. | 그는 정오에 도착하기로 되어 있어.
+주어 변화 | The package is supposed to come tomorrow. | 택배가 내일 오기로 되어 있어.
+과거 | I was supposed to meet him yesterday. | 어제 그를 만나기로 했었어.
+과거 | You were supposed to be here an hour ago. | 너 한 시간 전에 여기 왔어야 했잖아.
+부정 | You're not supposed to eat in here. | 여기서 음식 먹으면 안 돼.
+부정 | We weren't supposed to tell anyone. | 우리 아무한테도 말하면 안 되는 거였어.
+의문 | Where are we supposed to go? | 우리 어디로 가야 하는 거야?
+의문 | Wasn't she supposed to be here? | 그녀가 여기 오기로 하지 않았어?
+소문 | This movie is supposed to be really good. | 이 영화 정말 재밌대.
+@8 It's time to ~
+긍정 | It's time to leave for the airport. | 공항으로 출발할 시간이야.
+긍정 | It's time to take your medicine. | 약 먹을 시간이야.
+명사 | It's time for lunch. | 점심시간이야.
+명사 | It's time for a change. | 변화가 필요한 때야.
+강조 | It's about time. | 진작 그랬어야지.
+강조 | It's about time you called me. | 이제야 전화하는구나.
+부정 | It's not time to give up yet. | 아직 포기할 때가 아니야.
+의문 | Is it time to go already? | 벌써 갈 시간이야?
+의문 | What time is it? | 지금 몇 시야?
+제안 | Maybe it's time to take a vacation. | 이제 휴가 갈 때가 된 것 같아.
+@9 Do you want me to ~?
+긍정 | Do you want me to turn off the light? | 불 꺼 줄까?
+긍정 | Do you want me to drop you off? | 내려 줄까?
+부정 의문 | Don't you want me to come? | 나 안 갔으면 좋겠어?
+의문사 | What do you want me to do? | 내가 뭘 해 주면 좋겠어?
+의문사 | Where do you want me to put this? | 이거 어디에 둘까?
+의문사 | When do you want me to call? | 언제 전화할까?
+주어 변화 | Does she want me to wait? | 그녀가 나보고 기다리래?
+평서 | I want you to be happy. | 네가 행복했으면 좋겠어.
+부정 | I don't want you to worry. | 네가 걱정 안 했으면 좋겠어.
+구어 | Want me to grab you a coffee? | 커피 하나 사다 줄까?
+@10 Would you like to ~?
+긍정 | Would you like to see the menu? | 메뉴 보시겠어요?
+긍정 | Would you like to come to my party? | 제 파티에 오실래요?
+명사 | Would you like some more? | 좀 더 드실래요?
+명사 | Would you like a receipt? | 영수증 드릴까요?
+의문사 | Where would you like to sit? | 어디에 앉으실래요?
+의문사 | What would you like to drink? | 뭐 마시겠어요?
+의문사 | How would you like your eggs? | 달걀은 어떻게 해 드릴까요?
+평서 | I'd like to try this one. | 이걸로 해 볼게요.
+평서 | I'd like you to meet my sister. | 제 여동생을 소개할게요.
+응답 | Yes, I'd love to. | 네, 좋아요.
+@11 How about ~ing?
+긍정 | How about trying that Thai place? | 그 태국 음식점 가 보는 거 어때?
+긍정 | How about going to the beach this weekend? | 이번 주말에 바다 가는 거 어때?
+명사 | How about some tea? | 차 좀 마실래?
+명사 | How about next Friday? | 다음 주 금요일은 어때?
+명사 | How about you? | 너는 어때?
+문장 | How about we take a short break? | 우리 잠깐 쉬는 건 어때?
+명사 | How about this color instead? | 대신 이 색은 어때?
+변형 | What about tomorrow? | 내일은 어때?
+변형 | What about your sister? | 네 여동생은?
+문장 | How about I pick you up at eight? | 내가 8시에 데리러 가는 건 어때?
+@12 Why don't we ~?
+긍정 | Why don't we eat out tonight? | 오늘 밤 외식하는 게 어때?
+긍정 | Why don't we watch a movie at home? | 집에서 영화 보는 게 어때?
+긍정 | Why don't we meet in the middle? | 중간에서 만나는 게 어때?
+주어 변화 | Why don't you sit down? | 좀 앉지 그래?
+주어 변화 | Why don't you call him first? | 네가 먼저 그에게 전화해 보는 게 어때?
+주어 변화 | Why don't you try it on? | 한번 입어 보지 그래?
+주어 변화 | Why don't I drive today? | 오늘은 내가 운전할까?
+짧게 | Why not? | 왜 안 되겠어? (좋아.)
+짧게 | Why not ask her directly? | 그녀에게 직접 물어보는 게 어때?
+다른 의미 | Why don't you like it? | 왜 그거 싫어해?
+@13 Let me ~
+긍정 | Let me take a look. | 내가 한번 볼게.
+긍정 | Let me explain. | 내가 설명할게.
+긍정 | Let me carry that for you. | 그거 내가 들어 줄게.
+긍정 | Let me call you back. | 내가 다시 전화할게.
+긍정 | Let me ask my boss. | 상사한테 물어볼게.
+부탁 | Let me go. | 나 좀 놔줘.
+부탁 | Please let me know by Friday. | 금요일까지 알려 줘.
+부정 | Don't let me forget. | 내가 잊지 않게 해 줘.
+3인칭 | Let him finish. | 그가 말 끝내게 해 줘.
+3인칭 | Let them decide. | 그들이 결정하게 두자.
+@14 Let's ~ / Let's not ~
+긍정 | Let's go for a walk. | 산책 가자.
+긍정 | Let's eat out tonight. | 오늘 저녁 외식하자.
+긍정 | Let's take a break. | 좀 쉬자.
+긍정 | Let's do this again sometime. | 언제 또 이렇게 하자.
+부정 | Let's not be late. | 늦지 말자.
+부정 | Let's not tell anyone yet. | 아직 아무한테도 말하지 말자.
+부정 | Let's not make a big deal out of it. | 일 크게 만들지 말자.
+제안 | Let's go, shall we? | 가자, 응?
+관용 | Let's see what happens. | 어떻게 되나 보자.
+관용 | Let's just say I was busy. | 그냥 바빴다고 해 두자.
+@15 Can you help me ~?
+긍정 | Can you help me with these boxes? | 이 상자들 좀 도와줄래?
+긍정 | Can you help me choose a gift? | 선물 고르는 것 좀 도와줄래?
+긍정 | Can you help me fill out this form? | 이 양식 작성하는 것 좀 도와줄래?
+정중 | Could you help me with something? | 뭐 좀 도와주실 수 있어요?
+정중 | Would you mind helping me? | 좀 도와주시겠어요?
+평서 | I need some help with this. | 이거 도움이 좀 필요해.
+제안 | Let me help you with that. | 그거 내가 도와줄게.
+과거 | Thanks for helping me move. | 이사 도와줘서 고마워.
+부정 | I can't help you right now. | 지금은 못 도와줘.
+관용 | I can't help it. | 어쩔 수 없어.
+@16 Do you mind if I ~?
+긍정 | Do you mind if I take this chair? | 이 의자 가져가도 될까요?
+긍정 | Do you mind if I record this? | 이거 녹음해도 될까요?
+긍정 | Do you mind if I eat here? | 여기서 먹어도 될까요?
+긍정 | Do you mind if I call you tomorrow? | 내일 전화해도 될까요?
+가정 | Would you mind if I sat here? | 여기 앉아도 괜찮을까요?
+부탁 | Would you mind waiting a moment? | 잠시 기다려 주시겠어요?
+부탁 | Would you mind turning down the music? | 음악 소리 좀 줄여 주시겠어요?
+응답 | No, not at all. | 네, 그럼요. (전혀 상관없어요.)
+응답 | Actually, I'd rather you didn't. | 사실 안 그러셨으면 해요.
+평서 | I don't mind. | 난 상관없어.
+@17 Is it okay if I ~?
+긍정 | Is it okay if I sit next to you? | 옆에 앉아도 괜찮아?
+긍정 | Is it okay if I open this? | 이거 열어 봐도 괜찮아?
+긍정 | Is it okay if I pay by card? | 카드로 계산해도 괜찮아요?
+긍정 | Is it okay if I bring my kids? | 아이들 데려가도 괜찮아?
+변형 | Is it okay to take photos here? | 여기서 사진 찍어도 괜찮아요?
+변형 | Is that okay with you? | 너는 그래도 괜찮아?
+가정 | Would it be okay if we left early? | 우리 일찍 가도 괜찮을까요?
+응답 | Sure, go ahead. | 그럼, 그렇게 해.
+응답 | It's okay. Don't worry. | 괜찮아. 걱정 마.
+과거 | Was it okay that I called? | 내가 전화해도 괜찮았어?
+@18 I was wondering if ~
+긍정 | I was wondering if you could lend me some money. | 혹시 돈 좀 빌려줄 수 있을까 해서.
+긍정 | I was wondering if you were busy. | 혹시 바쁜가 해서.
+긍정 | I was wondering if you wanted to join us. | 혹시 우리랑 같이 할래 해서.
+긍정 | I was wondering if the room was still available. | 혹시 그 방이 아직 남아 있나 해서요.
+의문사 | I was wondering what you thought. | 네 생각은 어떤지 궁금했어.
+의문사 | I was wondering why you left early. | 너 왜 일찍 갔는지 궁금했어.
+의문사 | I was wondering when you'd be back. | 너 언제 돌아오나 궁금했어.
+현재 | I wonder if it'll rain tomorrow. | 내일 비가 올까.
+현재 | I wonder what he's doing now. | 그는 지금 뭐 하고 있을까.
+짧게 | I wonder why. | 왜 그럴까.
+@19 I'm looking forward to ~ing
+긍정 | I'm looking forward to my vacation. | 휴가가 기대돼.
+긍정 | I'm looking forward to meeting your parents. | 너희 부모님 뵙는 게 기대돼.
+주어 변화 | The kids are looking forward to Christmas. | 아이들이 크리스마스를 기다리고 있어.
+주어 변화 | We're looking forward to having you over. | 네가 우리 집에 오는 게 기대돼.
+과거 | I was looking forward to seeing you. | 너 보는 거 기대하고 있었어.
+부정 | I'm not looking forward to the exam. | 시험이 달갑지 않아.
+의문 | Are you looking forward to the trip? | 여행 기대돼?
+격식 | I look forward to hearing from you. | 연락 기다리겠습니다.
+격식 | We look forward to seeing you soon. | 곧 뵙기를 기대합니다.
+짧게 | Looking forward to it! | 기대할게!
+@20 I'm worried about ~
+긍정 | I'm worried about my exam results. | 시험 결과가 걱정돼.
+긍정 | I'm worried about my dad's health. | 아빠 건강이 걱정돼.
+주어 변화 | She's worried about her son. | 그녀는 아들이 걱정돼.
+주어 변화 | My mom is always worried about me. | 엄마는 항상 내 걱정을 해.
+과거 | I was worried about you. | 너 걱정했어.
+의문 | What are you worried about? | 뭐가 걱정이야?
+의문 | Are you worried about the interview? | 면접 걱정돼?
+부정 | I'm not worried about it at all. | 그건 전혀 걱정 안 해.
+명령 | Don't worry about me. | 내 걱정은 하지 마.
+문장 | I'm worried that we'll miss the train. | 기차 놓칠까 봐 걱정돼.
+@21 I'm tired of ~
+긍정 | I'm tired of doing the same thing every day. | 매일 같은 일 하는 게 지겨워.
+긍정 | I'm tired of hearing that. | 그 말 듣는 거 지겨워.
+주어 변화 | She's tired of living in the city. | 그녀는 도시 생활에 지쳤어.
+주어 변화 | We're tired of waiting for an answer. | 우리 답 기다리는 거 지쳤어.
+과거 | I got tired of it. | 그거 질렸어.
+의문 | Aren't you tired of this game? | 이 게임 안 질려?
+변형 | I'm sick of it. | 지긋지긋해.
+강조 | I'm sick and tired of the traffic. | 교통 체증에 진절머리가 나.
+다른 의미 | I'm tired. | 피곤해.
+다른 의미 | You look tired. | 피곤해 보여.
+@22 I'm into ~
+긍정 | I'm into photography these days. | 요즘 사진에 빠져 있어.
+긍정 | I'm really into this show. | 이 프로그램에 완전 빠졌어.
+주어 변화 | My son is into dinosaurs. | 우리 아들은 공룡을 정말 좋아해.
+주어 변화 | She's into running. | 그녀는 달리기에 빠져 있어.
+부정 | I'm not into horror movies. | 공포 영화는 별로야.
+부정 | He's not into sports at all. | 그는 스포츠에 전혀 관심 없어.
+의문 | Are you into K-pop? | 케이팝 좋아해?
+의문 | What are you into these days? | 요즘 뭐에 빠져 있어?
+과거 | I was really into comics as a kid. | 어릴 때 만화책에 푹 빠져 있었어.
+과거 | I got into yoga last year. | 작년에 요가에 빠지게 됐어.
+@23 I'm good at ~ / bad at ~
+긍정 | I'm good at fixing things. | 나 뭐 고치는 거 잘해.
+주어 변화 | She's good at languages. | 그녀는 언어에 소질이 있어.
+부정 | I'm not very good at cooking. | 나 요리 별로 못해.
+부정 | I'm bad at saying no. | 나 거절을 잘 못해.
+의문 | Are you good at swimming? | 수영 잘해?
+의문 | What's he good at? | 그는 뭘 잘해?
+과거 | I was good at math in school. | 학교 다닐 때 수학 잘했어.
+칭찬 | You're really good at this. | 너 이거 진짜 잘한다.
+변형 | He's good with computers. | 그는 컴퓨터를 잘 다뤄.
+변화 | I'm getting better at English. | 영어 실력이 늘고 있어.
+@24 I'm used to ~ing
+긍정 | I'm used to the noise. | 소음에 익숙해.
+긍정 | I'm used to working long hours. | 오래 일하는 데 익숙해.
+주어 변화 | She's used to driving on the left. | 그녀는 좌측 운전에 익숙해.
+부정 | I'm not used to this weather. | 이 날씨에 익숙하지 않아.
+부정 | I'm still not used to it. | 아직도 익숙하지 않아.
+의문 | Are you used to living here now? | 이제 여기 사는 거 익숙해?
+변화 | I'm getting used to the new system. | 새 시스템에 익숙해지는 중이야.
+변화 | You'll get used to it soon. | 곧 익숙해질 거야.
+과거 | I got used to it quickly. | 금방 익숙해졌어.
+비교 | I used to live in Seoul. | 예전에 서울에 살았어. (과거 습관 used to와 비교)
+@25 I used to ~
+긍정 | I used to go fishing with my dad. | 예전에 아빠랑 낚시 다녔어.
+긍정 | I used to work at a café. | 예전에 카페에서 일했어.
+주어 변화 | She used to be a teacher. | 그녀는 예전에 선생님이었어.
+주어 변화 | This building used to be a school. | 이 건물은 예전에 학교였어.
+부정 | I didn't use to like coffee. | 예전엔 커피를 안 좋아했어.
+의문 | Did you use to play an instrument? | 예전에 악기 연주했어?
+의문 | Where did you use to live? | 예전에 어디 살았어?
+대조 | I used to be shy, but not anymore. | 예전엔 수줍음이 많았는데 이젠 아니야.
+대조 | We used to talk every day. | 우리 예전엔 매일 얘기했었지.
+변형 | I would play outside all day as a kid. | 어릴 땐 하루 종일 밖에서 놀곤 했어.
+@26 I can't believe ~
+긍정 | I can't believe you remembered. | 네가 기억하다니.
+긍정 | I can't believe it's raining again. | 또 비가 오다니.
+긍정 | I can't believe how fast time flies. | 시간 정말 빨리 간다.
+긍정 | I can't believe she said yes. | 그녀가 승낙하다니 믿기지 않아.
+과거 | I couldn't believe my eyes. | 내 눈을 믿을 수가 없었어.
+과거 | I couldn't believe how big it was. | 그게 얼마나 큰지 믿기지 않았어.
+의문 | Can you believe it? | 이게 믿겨져?
+의문 | Can you believe this price? | 이 가격 믿겨져?
+명령 | Believe me. | 내 말 믿어.
+부정 | I don't believe you. | 네 말 못 믿겠어.
+@27 I wish I could ~
+긍정 | I wish I could play the guitar. | 기타를 칠 수 있으면 좋을 텐데.
+긍정 | I wish I could see you more often. | 너를 더 자주 볼 수 있으면 좋을 텐데.
+긍정 | I wish I could turn back time. | 시간을 되돌릴 수 있으면 좋을 텐데.
+be동사 | I wish I were taller. | 키가 더 크면 좋겠다.
+have | I wish I had a car. | 차가 있으면 좋겠다.
+상황 | I wish it were Friday. | 금요일이면 좋겠다.
+과거 후회 | I wish I had studied harder. | 공부를 더 열심히 했으면 좋았을걸.
+과거 후회 | I wish I hadn't said that. | 그 말 하지 말걸.
+주어 변화 | I wish you could stay. | 네가 있을 수 있으면 좋을 텐데.
+인사 | I wish you all the best. | 모든 일이 잘되길 바랄게.
+@28 I'm sorry to hear ~ / I'm sorry for ~
+위로 | I'm sorry to hear about your loss. | 상심이 크시겠어요.
+위로 | I'm sorry to hear you're sick. | 아프다니 안타깝다.
+위로 | I'm sorry to hear that you lost your job. | 일자리를 잃었다니 안타까워.
+사과 | I'm sorry for the trouble. | 번거롭게 해서 미안해.
+사과 | I'm sorry for what I said. | 내가 한 말 미안해.
+사과 | I'm sorry I'm late. | 늦어서 미안해.
+사과 | I'm sorry I couldn't make it. | 못 가서 미안해.
+과거 | I was sorry to hear the news. | 그 소식 듣고 마음이 안 좋았어.
+변형 | I feel sorry for him. | 그가 안됐어.
+응답 | No need to be sorry. | 미안해할 필요 없어.
+@29 Thank you for ~ing
+긍정 | Thank you for your time. | 시간 내 주셔서 감사합니다.
+긍정 | Thank you for listening. | 들어 줘서 고마워.
+긍정 | Thank you for having me. | 초대해 주셔서 감사해요.
+긍정 | Thank you for the lovely dinner. | 멋진 저녁 고마워.
+긍정 | Thank you for taking care of my dog. | 우리 강아지 돌봐 줘서 고마워.
+짧게 | Thanks for everything. | 다 고마워.
+짧게 | Thanks for asking. | 물어봐 줘서 고마워.
+강조 | Thank you so much for coming all this way. | 이렇게 먼 길 와 줘서 정말 고마워.
+미리 | Thanks in advance. | 미리 고마워.
+응답 | You're welcome. | 천만에.
+@30 I didn't mean to ~
+긍정 | I didn't mean to upset you. | 너를 속상하게 하려던 건 아니었어.
+긍정 | I didn't mean to keep you waiting. | 기다리게 하려던 건 아니었어.
+긍정 | I didn't mean to step on your foot. | 발을 밟으려던 건 아니었어.
+긍정 | I didn't mean to eat the whole thing. | 다 먹으려던 건 아니었어.
+주어 변화 | She didn't mean to hurt anyone. | 그녀는 누구에게도 상처 줄 생각은 없었어.
+변형 | I didn't mean it that way. | 그런 뜻으로 한 말 아니야.
+긍정형 | I meant to call you yesterday. | 어제 너한테 전화하려고 했었는데.
+현재완료 | I've been meaning to ask you. | 너한테 물어보려고 했었어.
+의문 | What do you mean? | 무슨 뜻이야?
+의문 | Did you mean to do that? | 일부러 그런 거야?
+@31 I should have ~
+긍정 | I should have gone to bed earlier. | 더 일찍 잤어야 했는데.
+긍정 | I should have asked for help. | 도움을 요청했어야 했는데.
+긍정 | I should have saved my work. | 작업한 걸 저장했어야 했는데.
+주어 변화 | You should have seen his face. | 그의 표정을 봤어야 했는데. (정말 볼만했어)
+주어 변화 | She should have called first. | 그녀가 먼저 전화했어야지.
+부정 | I shouldn't have eaten so much. | 그렇게 많이 먹지 말걸.
+부정 | You shouldn't have. | 이러지 않아도 되는데. (선물 받을 때)
+could have | We could have won. | 우리가 이길 수도 있었는데.
+would have | It would have been better to wait. | 기다리는 게 나았을 텐데.
+의문 | What should I have done? | 내가 어떻게 했어야 했어?
+@32 I'm not sure if ~
+긍정 | I'm not sure if she's awake. | 그녀가 깨어 있는지 모르겠어.
+긍정 | I'm not sure if I can finish on time. | 제시간에 끝낼 수 있을지 모르겠어.
+긍정 | I'm not sure if this is a good idea. | 이게 좋은 생각인지 모르겠어.
+whether | I'm not sure whether to stay or go. | 남을지 갈지 모르겠어.
+의문사 | I'm not sure how to say this. | 이걸 어떻게 말해야 할지 모르겠어.
+의문사 | I'm not sure what happened. | 무슨 일이 있었는지 잘 모르겠어.
+짧게 | I'm not sure yet. | 아직 잘 모르겠어.
+긍정 반대 | I'm sure you'll do great. | 넌 분명 잘할 거야.
+의문 | Are you sure? | 확실해?
+의문 | Are you sure about this? | 이거 확실해?
+@33 I have no idea ~
+긍정 | I have no idea what to do. | 뭘 해야 할지 전혀 모르겠어.
+긍정 | I have no idea how this works. | 이게 어떻게 돌아가는지 전혀 모르겠어.
+긍정 | I have no idea who he is. | 그가 누군지 전혀 몰라.
+과거 | I had no idea you could sing. | 네가 노래를 할 줄 아는 줄 전혀 몰랐어.
+과거 | I had no idea it was so late. | 이렇게 늦은 줄 전혀 몰랐어.
+주어 변화 | They have no idea we're here. | 그들은 우리가 여기 있는 걸 전혀 몰라.
+의문 | Do you have any idea where my keys are? | 내 열쇠 어디 있는지 혹시 알아?
+의문 | Any idea what time it starts? | 몇 시에 시작하는지 알아?
+변형 | I don't know. | 모르겠어.
+구어 | Beats me. | 난 모르지.
+@34 It seems like ~
+긍정 | It seems like everyone is here. | 다들 온 것 같아.
+긍정 | It seems like a nice place. | 괜찮은 곳 같아.
+look | It looks like it's going to rain. | 비가 올 것 같아.
+sound | It sounds like fun. | 재밌겠다.
+sound | It sounds like you had a great time. | 좋은 시간 보냈나 보네.
+주어 변화 | You seem tired today. | 오늘 피곤해 보이네.
+주어 변화 | She seems nice. | 그녀는 좋은 사람 같아.
+과거 | It seemed like a good idea at the time. | 그땐 좋은 생각 같았어.
+부정 | It doesn't seem right. | 옳지 않은 것 같아.
+의문 | Does it seem okay to you? | 네가 보기엔 괜찮아 보여?
+@35 What do you think of ~?
+긍정 | What do you think of this restaurant? | 이 식당 어때?
+긍정 | What do you think of the new office? | 새 사무실 어때?
+about | What do you think about working from home? | 재택근무에 대해 어떻게 생각해?
+문장 | What do you think we should do? | 우리 어떻게 해야 할 것 같아?
+문장 | What do you think he meant? | 그가 무슨 뜻으로 말한 것 같아?
+과거 | What did you think of the concert? | 콘서트 어땠어?
+주어 변화 | What does your mom think? | 너희 엄마는 어떻게 생각하셔?
+변형 | How do you like your new job? | 새 직장 어때?
+응답 | I think it's great. | 좋은 것 같아.
+응답 | I don't think so. | 난 그렇게 생각 안 해.
+@36 I'd rather ~
+긍정 | I'd rather stay in tonight. | 오늘 밤엔 차라리 집에 있을래.
+긍정 | I'd rather go by train. | 차라리 기차로 갈래.
+비교 | I'd rather walk than take a taxi. | 택시 타느니 걸을래.
+비교 | I'd rather have tea than coffee. | 커피보다는 차가 좋아.
+부정 | I'd rather not go out in this rain. | 이 비에 나가고 싶지 않아.
+부정 | I'd rather not answer that. | 그건 대답 안 하고 싶어.
+상대 | I'd rather you didn't smoke here. | 여기서 담배 안 피우셨으면 해요.
+의문 | Would you rather stay or go? | 남을래, 갈래?
+의문 | Where would you rather eat? | 어디서 먹는 게 좋아?
+변형 | I prefer cats to dogs. | 난 개보다 고양이가 좋아.
+@37 You'd better ~
+긍정 | You'd better leave now. | 지금 출발하는 게 좋을 거야.
+긍정 | You'd better ask first. | 먼저 물어보는 게 좋을 거야.
+긍정 | You'd better bring a jacket. | 재킷 챙기는 게 좋을 거야.
+부정 | You'd better not tell her. | 그녀한테 말 안 하는 게 좋을 거야.
+부정 | You'd better not forget. | 잊지 않는 게 좋을 거야.
+주어 변화 | I'd better get some sleep. | 나 좀 자야겠다.
+주어 변화 | We'd better hurry or we'll miss it. | 서두르지 않으면 놓칠 거야.
+부드럽게 | You should try it. | 한번 해 봐.
+부드럽게 | You should get some rest. | 좀 쉬는 게 좋겠어.
+부드럽게 | You might want to check again. | 다시 확인해 보는 게 좋을 거야.
+@38 It depends on ~
+긍정 | It depends on the situation. | 상황에 따라 달라.
+긍정 | It depends on who's coming. | 누가 오느냐에 따라 달라.
+긍정 | It depends on how much it costs. | 얼마냐에 따라 달라.
+긍정 | It depends on whether it rains. | 비가 오느냐에 달렸어.
+주어 변화 | The price depends on the size. | 가격은 크기에 따라 달라.
+주어 변화 | Our plan depends on your answer. | 우리 계획은 네 대답에 달렸어.
+의문 | What does it depend on? | 뭐에 따라 달라?
+변형 | It depends on you. | 너한테 달렸어.
+다른 의미 | You can depend on me. | 날 믿어도 돼.
+짧게 | That depends. | 그건 경우에 따라 달라.
+@39 It's worth ~ing
+긍정 | It's worth the trip. | 갈 만한 가치가 있어.
+긍정 | It's worth checking out. | 한번 가 볼 만해.
+주어 변화 | This book is worth reading twice. | 이 책은 두 번 읽을 만해.
+부정 | It's not worth the risk. | 위험을 감수할 가치는 없어.
+부정 | It's not worth waiting in line for. | 줄 서서 기다릴 만한 가치는 없어.
+의문 | Is it worth it? | 그럴 가치가 있어?
+의문 | Is the museum worth visiting? | 그 박물관 가 볼 만해?
+과거 | It was worth every penny. | 한 푼도 안 아까웠어.
+과거 | It was worth the wait. | 기다린 보람이 있었어.
+강조 | It's well worth a visit. | 꼭 가 볼 만해.
+@40 There's no need to ~
+긍정 | There's no need to get angry. | 화낼 필요 없어.
+긍정 | There's no need to thank me. | 고마워할 필요 없어.
+긍정 | There's no need to explain. | 설명할 필요 없어.
+긍정 | There's no need to book in advance. | 미리 예약할 필요 없어.
+need to | You don't need to come. | 안 와도 돼.
+have to | You don't have to pay. | 돈 안 내도 돼.
+have to | You don't have to decide now. | 지금 결정 안 해도 돼.
+과거 | You didn't have to do that. | 그렇게까지 안 해도 됐는데.
+의문 | Is there any need to hurry? | 서두를 필요가 있어?
+의문 | Do I need to bring anything? | 나 뭐 가져가야 해?
+@41 It's not that ~, it's just that ~
+긍정 | It's not that I don't want to help. | 돕기 싫다는 게 아니야.
+긍정 | It's not that I'm busy. It's just that I'm tired. | 바쁜 게 아니라 그냥 피곤해.
+긍정 | It's not that I don't trust you. | 널 못 믿는다는 게 아니야.
+긍정 | It's not that the food is bad. | 음식이 맛없다는 게 아니야.
+just that | It's just that I'm not ready. | 그냥 아직 준비가 안 됐을 뿐이야.
+just that | It's just that it's a bit far. | 그냥 좀 멀어서 그래.
+just that | It's just that I miss my family. | 그냥 가족이 보고 싶어서 그래.
+정도 | It's not that bad. | 그렇게 나쁘진 않아.
+정도 | It wasn't that expensive. | 그렇게 비싸진 않았어.
+정도 | It's not that far from here. | 여기서 그렇게 멀지 않아.
+@42 That's why ~
+긍정 | That's why I came here. | 그래서 여기 온 거야.
+긍정 | That's why I didn't call you. | 그래서 너한테 전화 안 한 거야.
+긍정 | That's why he's so tired. | 그래서 그가 그렇게 피곤한 거야.
+긍정 | That's why we need your help. | 그래서 네 도움이 필요한 거야.
+의문 | Is that why you're upset? | 그래서 너 속상한 거야?
+how | That's how I met my wife. | 그렇게 아내를 만났어.
+what | That's what I thought. | 내 생각도 그랬어.
+where | That's where I grew up. | 거기가 내가 자란 곳이야.
+because | That's because it's a holiday. | 그건 휴일이라서 그래.
+부정 | That's not why I'm here. | 그것 때문에 온 게 아니야.
+@43 No wonder ~
+긍정 | No wonder you're so good at it. | 어쩐지 그걸 그렇게 잘하더라.
+긍정 | No wonder the store is empty. | 어쩐지 가게가 텅 비었더라.
+긍정 | No wonder he didn't answer. | 어쩐지 그가 대답을 안 하더라.
+긍정 | No wonder it's so expensive. | 어쩐지 엄청 비싸더라.
+긍정 | No wonder you look so tired. | 어쩐지 너 엄청 피곤해 보이더라.
+긍정 | No wonder she's always smiling. | 어쩐지 그녀가 늘 웃더라.
+대화 | "He worked all night." "No wonder." | "그 사람 밤새 일했대." "어쩐지."
+변형 | It's no wonder people love this place. | 사람들이 이곳을 좋아하는 게 당연해.
+비슷한 말 | That explains it. | 그래서 그랬구나.
+비슷한 말 | Now I get it. | 이제 알겠다.
+@44 Have you ever ~?
+긍정 | Have you ever been to New York? | 뉴욕 가 본 적 있어?
+긍정 | Have you ever tried skiing? | 스키 타 본 적 있어?
+긍정 | Have you ever lost your wallet? | 지갑 잃어버린 적 있어?
+긍정 | Have you ever seen a ghost? | 귀신 본 적 있어?
+긍정 | Have you ever cooked Korean food? | 한국 음식 요리해 본 적 있어?
+주어 변화 | Has she ever been abroad? | 그녀는 해외에 가 본 적 있어?
+응답 | Yes, I have. | 응, 있어.
+응답 | No, I haven't. | 아니, 없어.
+응답 | Yes, twice. | 응, 두 번.
+변형 | Have you been there before? | 거기 전에 가 봤어?
+@45 I've never ~
+긍정 | I've never been on a plane. | 비행기를 타 본 적이 없어.
+긍정 | I've never heard that song. | 그 노래 들어 본 적 없어.
+긍정 | I've never met her parents. | 그녀 부모님을 뵌 적이 없어.
+긍정 | I've never tried Indian food. | 인도 음식 먹어 본 적 없어.
+주어 변화 | She's never been late. | 그녀는 늦은 적이 한 번도 없어.
+주어 변화 | We've never had a problem. | 우리 한 번도 문제가 없었어.
+강조 | I've never seen anything like it. | 그런 건 처음 봐.
+강조 | I've never been happier. | 지금이 제일 행복해.
+긍정 반대 | I've been there once. | 거기 한 번 가 봤어.
+already | I've already seen it. | 그거 이미 봤어.
+@46 I've been ~ing
+긍정 | I've been running every morning. | 매일 아침 달리고 있어.
+긍정 | I've been feeling tired lately. | 요즘 계속 피곤해.
+긍정 | I've been learning to cook. | 요리를 배우고 있어.
+긍정 | I've been waiting for this day. | 이날을 기다려 왔어.
+주어 변화 | It's been raining all week. | 일주일 내내 비가 오고 있어.
+주어 변화 | She's been working here for five years. | 그녀는 여기서 5년째 일하고 있어.
+의문 | How long have you been waiting? | 얼마나 기다렸어?
+의문 | Have you been crying? | 너 울었어?
+be동사 | I've been busy. | 계속 바빴어.
+의문 | Where have you been? | 어디 갔었어?
+@47 What if ~?
+걱정 | What if we get lost? | 길을 잃으면 어떡해?
+걱정 | What if she says no? | 그녀가 거절하면 어떡해?
+걱정 | What if the flight is canceled? | 비행기가 취소되면 어떡해?
+걱정 | What if I forget my lines? | 대사를 잊어버리면 어떡해?
+제안 | What if we leave a little earlier? | 조금 일찍 출발하면 어때?
+제안 | What if we ask him to join us? | 그에게 같이 하자고 하면 어때?
+과거 가정 | What if you had missed the train? | 기차를 놓쳤으면 어쩔 뻔했어?
+가정 | What would you do if you won the lottery? | 복권에 당첨되면 뭐 할 거야?
+변형 | What happens if I'm late? | 늦으면 어떻게 돼?
+관용 | Just in case. | 혹시 모르니까.
+@48 How come ~?
+긍정 | How come you're here so early? | 어째서 이렇게 일찍 왔어?
+긍정 | How come you never eat breakfast? | 왜 아침을 한 번도 안 먹어?
+긍정 | How come the store is closed? | 가게가 왜 닫혀 있지?
+긍정 | How come nobody told me? | 왜 아무도 나한테 말 안 해 줬어?
+긍정 | How come you look so happy today? | 오늘 왜 이렇게 기분 좋아 보여?
+과거 | How come you didn't come yesterday? | 어제 왜 안 왔어?
+과거 | How come she left so suddenly? | 그녀가 왜 그렇게 갑자기 떠났어?
+why 비교 | Why are you so late? | 왜 이렇게 늦었어?
+why 비교 | Why didn't you tell me? | 왜 말 안 했어?
+짧게 | How come? | 왜?
+@49 Why didn't you ~?
+긍정 | Why didn't you text me? | 왜 문자 안 했어?
+긍정 | Why didn't you take a taxi? | 왜 택시 안 탔어?
+긍정 | Why didn't you buy it? | 왜 그거 안 샀어?
+긍정 | Why didn't you say something? | 왜 아무 말 안 했어?
+주어 변화 | Why didn't he show up? | 그는 왜 안 나타났어?
+현재 | Why don't you ever listen? | 넌 왜 말을 안 들어?
+현재 | Why aren't you ready yet? | 왜 아직 준비 안 됐어?
+현재 | Why isn't it working? | 이거 왜 안 되지?
+제안 | Why don't you take the day off? | 하루 쉬는 게 어때?
+긍정형 | Why did you do that? | 왜 그랬어?
+@50 What's the point of ~?
+긍정 | What's the point of trying? | 해 봐서 뭐 해?
+긍정 | What's the point of saving money? | 돈 모아서 뭐 해?
+긍정 | What's the point of going if we're late? | 늦을 거면 가서 뭐 해?
+용도 | What's the point of this button? | 이 버튼은 뭐 하는 거야?
+no point | There's no point in arguing. | 싸워 봤자 소용없어.
+no point | There's no point in asking him. | 그에게 물어봐 봤자 소용없어.
+다른 의미 | I see your point. | 무슨 말인지 알겠어.
+다른 의미 | That's the point. | 바로 그거야.
+다른 의미 | That's not the point. | 요점은 그게 아니야.
+다른 의미 | Get to the point. | 본론만 말해.
+@51 How long does it take to ~?
+긍정 | How long does it take to get to work? | 출근하는 데 얼마나 걸려?
+긍정 | How long does it take to bake a cake? | 케이크 굽는 데 얼마나 걸려?
+수단 | How long does it take by subway? | 지하철로 얼마나 걸려?
+과거 | How long did it take to fix? | 고치는 데 얼마나 걸렸어?
+과거 | How long did it take you to learn English? | 영어 배우는 데 얼마나 걸렸어?
+미래 | How long will it take to get there? | 거기 가는 데 얼마나 걸릴까?
+변형 | How long is the movie? | 영화 몇 시간짜리야?
+변형 | How long will you be? | 얼마나 걸릴 거야?
+변형 | How much longer? | 얼마나 더 걸려?
+변형 | How soon can you come? | 얼마나 빨리 올 수 있어?
+@52 It takes ~ to ~
+긍정 | It takes an hour to get to work. | 출근하는 데 한 시간 걸려.
+긍정 | It takes three days to ship. | 배송하는 데 3일 걸려.
+필요 | It takes practice to get better. | 실력이 늘려면 연습이 필요해.
+필요 | It takes courage to say that. | 그 말을 하려면 용기가 필요해.
+과거 | It took us all day to clean the house. | 집 청소하는 데 하루 종일 걸렸어.
+과거 | It took me a long time to forget her. | 그녀를 잊는 데 오래 걸렸어.
+미래 | It'll take about ten minutes. | 10분 정도 걸릴 거야.
+부정 | It doesn't take long. | 오래 안 걸려.
+의문 | Does it take long? | 오래 걸려?
+관용 | Take your time. | 천천히 해.
+@53 I'm in the middle of ~
+긍정 | I'm in the middle of a workout. | 지금 운동하는 중이야.
+긍정 | I'm in the middle of writing an email. | 지금 이메일 쓰는 중이야.
+긍정 | I'm in the middle of a project. | 지금 프로젝트 중이야.
+주어 변화 | She's in the middle of a meeting. | 그녀는 지금 회의 중이에요.
+주어 변화 | We're in the middle of dinner. | 우리 지금 저녁 먹는 중이야.
+과거 | I was in the middle of a nap. | 낮잠 자던 중이었어.
+의문 | Am I interrupting something? | 내가 방해한 거야?
+장소 | The house is in the middle of nowhere. | 그 집은 외딴곳에 있어.
+시간 | My phone rang in the middle of the night. | 한밤중에 전화가 울렸어.
+비슷한 말 | I'm a little busy right now. | 지금 좀 바빠.
+@54 Don't forget to ~
+긍정 | Don't forget to buy bread. | 빵 사는 거 잊지 마.
+긍정 | Don't forget to set your alarm. | 알람 맞추는 거 잊지 마.
+긍정 | Don't forget to wear sunscreen. | 선크림 바르는 거 잊지 마.
+긍정 | Don't forget to say thank you. | 고맙다고 하는 거 잊지 마.
+명사 | Don't forget your keys. | 열쇠 잊지 마.
+remember | Remember to call me. | 나한테 전화하는 거 기억해.
+과거 | I forgot to bring my wallet. | 지갑 가져오는 걸 깜빡했어.
+과거 의문 | Did you forget to lock the door? | 문 잠그는 거 잊었어?
+약속 | I won't forget. | 안 잊을게.
+remind | Remind me later. | 나중에 다시 말해 줘.
+@55 Make sure ~
+긍정 | Make sure you turn off the stove. | 가스레인지 꼭 꺼.
+긍정 | Make sure you get there early. | 꼭 일찍 도착해.
+긍정 | Make sure the door is locked. | 문이 잠겼는지 꼭 확인해.
+to부정사 | Make sure to bring a pen. | 펜 꼭 챙겨 와.
+부정 | Make sure you don't forget anything. | 빠뜨린 거 없게 해.
+주어 변화 | I'll make sure it doesn't happen again. | 다시는 이런 일 없도록 할게.
+주어 변화 | Let me make sure I understand. | 내가 제대로 이해했는지 확인해 볼게.
+sure | Are you sure? | 확실해?
+sure | I'm not sure. | 잘 모르겠어.
+be sure | Be sure to write to me. | 꼭 편지해.
+@56 I ended up ~ing
+긍정 | I ended up working all weekend. | 결국 주말 내내 일했어.
+긍정 | I ended up spending too much money. | 결국 돈을 너무 많이 써 버렸어.
+긍정 | I ended up falling asleep on the couch. | 결국 소파에서 잠들어 버렸어.
+주어 변화 | We ended up getting lost. | 결국 우리 길을 잃었어.
+주어 변화 | He ended up moving to Busan. | 그는 결국 부산으로 이사 갔어.
+장소 | We ended up at a small bar. | 결국 작은 술집에 가게 됐어.
+being | It ended up being a great day. | 결국 멋진 하루가 됐어.
+미래 | You'll end up regretting it. | 결국 후회하게 될 거야.
+의문 | Where did you end up going? | 결국 어디 갔어?
+비슷한 말 | In the end, we stayed home. | 결국 우리는 집에 있었어.
+@57 I'm afraid ~
+긍정 | I'm afraid I'm busy tonight. | 미안하지만 오늘 밤엔 바빠.
+긍정 | I'm afraid we're closed. | 죄송하지만 영업 끝났어요.
+긍정 | I'm afraid I can't help you. | 죄송하지만 도와드릴 수가 없어요.
+긍정 | I'm afraid there's been a mistake. | 죄송하지만 착오가 있었던 것 같아요.
+과거 | I'm afraid I forgot. | 미안한데 깜빡했어.
+응답 | I'm afraid not. | 유감이지만 아니에요.
+응답 | I'm afraid so. | 유감이지만 그래요.
+다른 의미 | I'm afraid of dogs. | 나 개 무서워해.
+다른 의미 | Don't be afraid. | 무서워하지 마.
+다른 의미 | I'm afraid of making mistakes. | 실수할까 봐 두려워.
+@58 I need to ~
+긍정 | I need to take a break. | 좀 쉬어야겠어.
+긍정 | I need to find a new apartment. | 새 아파트를 구해야 해.
+긍정 | I need to get up early tomorrow. | 내일 일찍 일어나야 해.
+주어 변화 | You need to see a doctor. | 너 병원 가 봐야 해.
+주어 변화 | We need to talk. | 우리 얘기 좀 해.
+부정 | You don't need to worry. | 걱정 안 해도 돼.
+의문 | Do I need to bring my ID? | 신분증 가져가야 해?
+의문 | What do you need? | 뭐가 필요해?
+과거 | I needed to clear my head. | 머리를 좀 식혀야 했어.
+have to | I have to go now. | 이제 가야 해.
+@59 I don't want to ~
+긍정 | I don't want to wait any longer. | 더는 기다리기 싫어.
+긍정 | I don't want to make the same mistake. | 같은 실수를 하고 싶지 않아.
+긍정 | I don't want to go home yet. | 아직 집에 가기 싫어.
+긍정 | I don't want to cause any trouble. | 문제를 일으키고 싶지 않아.
+주어 변화 | She doesn't want to move. | 그녀는 이사하기 싫어해.
+과거 | I didn't want to hurt you. | 너한테 상처 주고 싶지 않았어.
+의문 | Don't you want to come? | 안 오고 싶어?
+의문 | Why don't you want to go? | 왜 가기 싫어?
+긍정 반대 | I want to learn how to dance. | 춤 배우고 싶어.
+상대 | I don't want you to go. | 네가 안 갔으면 좋겠어.
+@60 I'm glad ~
+긍정 | I'm glad you called. | 전화해 줘서 기뻐.
+긍정 | I'm glad you made it. | 와 줘서 다행이야.
+긍정 | I'm glad everything worked out. | 다 잘 풀려서 다행이야.
+긍정 | I'm glad I met you. | 너를 만나서 기뻐.
+to부정사 | I'm glad to be home. | 집에 오니 좋다.
+과거 | I was glad to hear that. | 그 말 들으니 기뻤어.
+주어 변화 | She'll be glad to see you. | 그녀가 널 보면 반가워할 거야.
+의문 | Aren't you glad you came? | 오길 잘했지?
+제안 | I'd be glad to help. | 기꺼이 도와줄게.
+짧게 | So glad to hear it. | 그 말 들으니 정말 좋다.
