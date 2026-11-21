@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#EEF1EC" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0D1210" media="(prefers-color-scheme: dark)">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}</style>
-<meta name="description" content="일상·여행·비즈니스 영어 회화 패턴 1,392문장을 듣기→따라 말하기→조립→바꿔 말하기→회상 단계로 반복 훈련하는 페이지">
+<meta name="description" content="일상·여행·비즈니스 영어 회화 패턴 1,552문장을 듣기→따라 말하기→조립→바꿔 말하기→회상 단계로 반복 훈련하는 페이지">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
@@ -187,6 +187,14 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 .dspace{width:36px}
 .movebtn{display:inline-flex;align-items:center;gap:4px;height:38px;padding:0 12px 0 10px;border-radius:19px;background:var(--surface);box-shadow:var(--shadow);font-weight:700;font-size:13px}
 .movebtn svg{width:16px;height:16px;fill:currentColor}
+.pagerrow{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px}
+.pbtn{display:inline-flex;align-items:center;gap:2px;height:38px;padding:0 10px;border-radius:10px;font-weight:700;font-size:14px;color:var(--ink);background:var(--surface);box-shadow:var(--shadow)}
+.pbtn:first-child{justify-self:start;padding-left:6px}
+.pbtn:last-child{justify-self:end;padding-right:6px}
+.pbtn svg{width:18px;height:18px;fill:currentColor}
+.pbtn[disabled]{opacity:.35;pointer-events:none}
+.pnum{font-size:14px;font-weight:600}
+.pnum small{color:var(--muted);font-weight:500}
 .steptag{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--accent)}
 .steptag b{font-family:var(--f-mono);font-size:12px;background:var(--accent-soft);border-radius:6px;padding:2px 7px}
 .steptag span{margin-left:auto;font-size:12px;color:var(--muted);font-weight:600}
@@ -871,7 +879,8 @@ const TOURS = {
   drill: [
     { sel:".dr-top .dtitle", t:"지금 배우는 패턴", b:"패턴 이름과 오늘 진도가 보여요." },
     { sel:".dr-top .steps", t:"5단계 반복", b:"듣기 → 따라 말하기 → 조립 → 바꿔 말하기 → 회상" },
-    { sel:"[data-sheet]", t:"문장 이동", b:"이전·다음 문장, 다음 패턴, 전체 목록은 여기서." },
+    { sel:".dr-top .pagerrow", t:"문장 넘기기", b:"이전·다음 문장으로 바로 넘어가요." },
+    { sel:"[data-sheet]", t:"목록", b:"다음 패턴으로 건너뛰거나 전체 문장에서 골라요." },
     { sel:".dr-body .audio-row", t:"듣기", b:"반복해서 듣고, 미국·영국 발음도 바꿀 수 있어요." },
     { sel:".dr-foot .btn", t:"다음 단계", b:"다 했으면 아래 버튼 하나로 넘어가요." }
   ]
@@ -1044,7 +1053,7 @@ window.addEventListener("popstate", () => {
   if ($("#sheet")) return closeSheet(true);
   if (!dr().hidden) return closeDrill(true);
 });
-const FROM_LABEL = { patterns:"목록", examples:"예문" };
+const FROM_LABEL = { patterns:"뒤로", examples:"예문" };
 function closeBtn(){
   return X && X.from ? `<button class="backbtn" data-close aria-label="${FROM_LABEL[X.from]}(으)로 돌아가기">${ICON.prev}<span>${FROM_LABEL[X.from]}</span></button>`
                      : `<button class="x" data-close aria-label="닫기">${ICON.x}</button>`;
@@ -1162,7 +1171,9 @@ function topRow(title, sub, right){
 function headerHTML(){
   if (X.mode === "learn"){
     const c = CATS.find(c=>c.key===X.cat), n = S.settings.daily, tn = todayNew(X.cat), s = DATA[X.cat].list[X.pos];
-    return topRow(esc(s.pat.p), `${c.ko} · 오늘 ${Math.min(tn,n)}/${n}`, `<button class="movebtn" data-sheet aria-label="문장 이동">${ICON.list}<span>이동</span></button>`) +
+    const last = DATA[X.cat].list.length - 1;
+    return topRow(esc(s.pat.p), `${c.ko} · 오늘 ${Math.min(tn,n)}/${n}`, `<button class="movebtn" data-sheet aria-label="다음 패턴·전체 목록">${ICON.list}<span>목록</span></button>`) +
+      `<div class="pagerrow"><button class="pbtn" data-prev ${X.pos<=0?'disabled':''}>${ICON.prev}<span>이전 문장</span></button><span class="pnum mono">${X.pos+1}<small> / ${last+1}</small></span><button class="pbtn" data-skip ${X.pos>=last?'disabled':''}><span>다음 문장</span>${ICON.next}</button></div>` +
       `<div class="steps" aria-label="단계 ${X.step+1}/${X.steps.length}">${X.steps.map((k,i)=>`<i class="${i===X.step?'on':i<X.step?'past':''}"></i>`).join("")}</div>`;
   }
   if (X.mode === "wrap"){
@@ -1342,7 +1353,7 @@ function drawClear(){
     <h2 style="font-size:22px;margin-top:10px">${c.ko} Day ${day} 완료</h2>
     <div class="muted">오늘 새 문장 ${todayNew(X.cat)}개 · 연속 ${st}일${X.wrapScore ? ` · 마무리 ${X.wrapScore}` : ''}</div>
     <div class="hintbox">헷갈린 문장은 내일 복습에 나와요</div></div></div></div>
-    <div class="dr-foot"><div class="in"><button class="btn ghost" data-close>${X.from ? FROM_LABEL[X.from]+'으로' : '홈으로'}</button><button class="btn" data-continue>이어서 학습</button></div></div>`;
+    <div class="dr-foot"><div class="in"><button class="btn ghost" data-close>${X.from === "examples" ? '예문으로' : X.from ? '목록으로' : '홈으로'}</button><button class="btn" data-continue>이어서 학습</button></div></div>`;
 }
 
 function openSheet(){
@@ -1355,10 +1366,8 @@ function openSheet(){
   const el = document.createElement("div");
   el.className = "sheet"; el.id = "sheet";
   const np = nextPatternIndex(), last = D.list.length - 1;
-  el.innerHTML = `<div class="sheet-in" role="dialog" aria-label="문장 이동"><div class="sheet-h"><div class="stack" style="gap:0"><b>문장 이동</b><span class="muted" style="font-size:12px">${CATS.find(c=>c.key===X.cat).ko} · ${X.pos+1} / ${D.list.length}번째 문장</span></div><button class="x" data-sheetclose aria-label="닫기">${ICON.x}</button></div>
+  el.innerHTML = `<div class="sheet-in" role="dialog" aria-label="목록"><div class="sheet-h"><div class="stack" style="gap:0"><b>목록</b><span class="muted" style="font-size:12px">${CATS.find(c=>c.key===X.cat).ko} · ${X.pos+1} / ${D.list.length}번째 문장</span></div><button class="x" data-sheetclose aria-label="닫기">${ICON.x}</button></div>
     <div class="sheet-b"><div class="movegrid">
-      <button class="btn ghost" data-prev ${X.pos<=0?'disabled':''}>${ICON.prev} 이전 문장</button>
-      <button class="btn ghost" data-skip ${X.pos>=last?'disabled':''}>다음 문장 ${ICON.next}</button>
       <button class="btn soft" data-nextpat ${np<0?'disabled':''}>다음 패턴으로 ${ICON.skip}</button></div>
       <div class="sec-title" style="margin-top:14px">전체 문장에서 고르기</div>${html}</div></div>`;
   dr().appendChild(el); pushLayer();

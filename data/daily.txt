@@ -340,7 +340,7 @@ It seems like you're tired. | 너 피곤해 보여.
 It seems like nobody's home. | 아무도 집에 없는 것 같아.
 It seems like yesterday. | 엊그제 같아.
 It looks like we're lost. | 우리 길 잃은 것 같아.
-It sounds like a plan. | 좋은 계획 같아. (좋아, 그렇게 하자.)
+It sounds like a good plan. | 좋은 계획 같아.
 
 ## What do you think of ~? | ~ 어떻게 생각해? | 의견 묻기
 What do you think of this? | 이거 어떻게 생각해?
@@ -603,3 +603,64 @@ I'm glad you're okay. | 네가 괜찮아서 다행이야.
 I'm so glad I came. | 오길 정말 잘했다.
 I'm glad we talked. | 얘기 나눠서 다행이야.
 Glad to see you again. | 다시 만나서 반가워.
+
+# 일상 문제 상황 (구어체)
+## My ~ is acting up | 내 ~가 말썽이야 | 기기나 몸이 말을 안 들을 때 (act up = 말썽 부리다)
+My phone's acting up again. | 폰이 또 말썽이야.
+My laptop keeps freezing. | 노트북이 자꾸 멈춰.
+The Wi-Fi's been really slow today. | 오늘 와이파이가 엄청 느려.
+My car won't start. | 차 시동이 안 걸려.
+The washing machine's making a weird noise. | 세탁기에서 이상한 소리가 나.
+My battery's about to die. | 배터리 곧 꺼져.
+The printer's jammed again. | 프린터에 또 종이 걸렸어.
+My screen just cracked. | 화면이 방금 깨졌어.
+
+## I'm running late | 나 좀 늦어 | 늦는다고 연락할 때
+I'm running late. Be there in ten. | 나 좀 늦어. 10분 뒤에 도착해.
+Sorry, I'm running a bit behind. | 미안, 좀 늦어지고 있어.
+I got held up at work. | 회사에서 일이 생겨서 늦었어.
+Traffic's crazy. I'm gonna be late. | 차가 엄청 막혀. 늦을 것 같아.
+Go ahead and start without me. | 나 없이 먼저 시작해.
+Can we push it back half an hour? | 30분만 미룰 수 있을까?
+I overslept. I'm so sorry. | 늦잠 잤어. 정말 미안.
+I'm on my way! | 가는 중이야!
+
+## I can't find my ~ | 내 ~를 못 찾겠어 | 물건을 잃어버렸을 때
+I can't find my keys anywhere. | 열쇠를 아무 데서도 못 찾겠어.
+Have you seen my phone? | 내 폰 봤어?
+I think I left my wallet at the café. | 카페에 지갑을 두고 온 것 같아.
+I locked myself out. | 열쇠를 안에 두고 문을 잠가 버렸어.
+I must've dropped it somewhere. | 어디서 떨어뜨렸나 봐.
+Can you call my phone? | 내 폰으로 전화 좀 걸어 줄래?
+It was right here a minute ago. | 방금까지 여기 있었는데.
+Found it! It was in my bag. | 찾았다! 가방에 있었어.
+
+## Sorry, I didn't catch ~ | 미안, ~ 못 들었어 | 못 알아들었거나 오해가 생겼을 때
+Sorry, I didn't catch that. | 미안, 못 들었어.
+Wait, what do you mean? | 잠깐, 무슨 말이야?
+Sorry, I think I misunderstood. | 미안, 내가 잘못 알아들었나 봐.
+That's not what I meant. | 그런 뜻이 아니었어.
+Let me put it another way. | 다르게 말해 볼게.
+I thought you said Friday. | 금요일이라고 한 줄 알았어.
+Hold on, are we talking about the same thing? | 잠깐, 우리 같은 얘기 하는 거 맞아?
+My bad. I got it wrong. | 내 실수야. 내가 잘못 알았어.
+
+## Could you ~ a little? | 조금만 ~해 줄 수 있어? | 이웃·옆 사람에게 부드럽게 부탁하거나 항의할 때
+Could you keep it down a little? | 조금만 조용히 해 줄 수 있어?
+Could you turn the music down a bit? | 음악 소리 좀 줄여 줄 수 있어?
+Could you move your car a little? | 차 좀 조금만 빼 줄 수 있어요?
+Could you scoot over a little? | 조금만 옆으로 가 줄 수 있어?
+Could you slow down a bit? | 좀 천천히 가 줄 수 있어?
+Would you mind not smoking here? | 여기서 담배는 좀 삼가 주실래요?
+Excuse me, I think you're in my seat. | 저기요, 제 자리에 앉으신 것 같아요.
+Sorry, but I was here first. | 죄송한데 제가 먼저 왔어요.
+
+## My order ~ | 주문한 게 ~ | 택배·배달 문제
+My package never showed up. | 택배가 아직도 안 왔어.
+They sent me the wrong size. | 사이즈를 잘못 보냈어.
+My order came damaged. | 주문한 게 망가져서 왔어.
+It says delivered, but it's not here. | 배송 완료라는데 안 왔어.
+I want to return this. | 이거 반품하고 싶어.
+I've been on hold for twenty minutes. | 20분째 상담 대기 중이야.
+I'll just ask for a refund. | 그냥 환불해 달라고 할래.
+They said it'll take another week. | 일주일 더 걸린대.

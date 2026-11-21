@@ -575,3 +575,84 @@ Is there a cancellation fee? | 취소 수수료가 있나요?
 Can I get a full refund? | 전액 환불 받을 수 있나요?
 Until when can I cancel for free? | 언제까지 무료 취소가 가능한가요?
 I'd like to keep my reservation, but change the time. | 예약은 유지하고 시간만 바꾸고 싶어요.
+
+# 문제 상황 대처 (구어체)
+## Sorry, but there's a problem with ~ | 저기, ~에 문제가 있는데요 | 불만을 부드럽게 꺼낼 때. Sorry로 시작하면 덜 공격적으로 들려요
+Sorry, but there's a problem with my room. | 저기, 제 방에 문제가 있는데요.
+Sorry, but there's a problem with my booking. | 저기, 제 예약에 문제가 있는데요.
+Sorry, but there's a problem with the bill. | 저기, 계산서에 문제가 있는데요.
+Hi, there's a problem with my card. | 안녕하세요, 제 카드에 문제가 있어요.
+Sorry, there's something wrong with the shower. | 죄송한데 샤워기가 좀 이상해요.
+Excuse me, I think there's a problem with my seat. | 저기요, 제 좌석에 문제가 있는 것 같아요.
+Hey, sorry, the key card stopped working. | 저기, 죄송한데 카드 키가 안 돼요.
+Sorry to bug you, but the Wi-Fi's down. | 귀찮게 해서 죄송한데 와이파이가 안 돼요.
+
+## I think I've been ~ | ~당한 것 같아요 | 바가지·이중 결제가 의심될 때. 단정하지 않고 I think로 부드럽게
+I think I've been overcharged. | 돈을 더 낸 것 같아요.
+I think I've been charged twice. | 두 번 결제된 것 같아요.
+I think I got ripped off. | 바가지 쓴 것 같아요.
+I think I've been given the wrong change. | 거스름돈을 잘못 받은 것 같아요.
+I think I've been double-booked. | 예약이 중복된 것 같아요.
+I think someone's taken my seat. | 누가 제 자리에 앉은 것 같아요.
+I think my bag got left behind. | 제 가방이 안 실린 것 같아요.
+I think I've been bitten by something. | 뭔가에 물린 것 같아요.
+
+## That's not what I ~ | 제가 ~한 건 그게 아니에요 | 주문·예약 내용과 다를 때
+That's not what I ordered. | 제가 주문한 건 그게 아니에요.
+That's not what I booked. | 제가 예약한 건 그게 아니에요.
+That's not what it said online. | 온라인엔 그렇게 안 나와 있었어요.
+That's not what you told me earlier. | 아까 말씀하신 거랑 다르잖아요.
+That's not the price on the menu. | 메뉴에 있는 가격이랑 달라요.
+This isn't the room I paid for. | 제가 돈 낸 방이 아니에요.
+Wait, this isn't right. | 잠깐만요, 이거 이상한데요.
+Hmm, I don't think that's right. | 음, 그게 맞는 것 같지 않은데요.
+
+## Is there any way ~? | 혹시 ~할 방법이 있을까요? | 안 된다고 할 때 한 번 더 부탁하기
+Is there any way you could help me out? | 혹시 좀 도와주실 방법이 있을까요?
+Is there any way I can get on an earlier flight? | 혹시 더 이른 비행기를 탈 방법이 있을까요?
+Is there any way to change rooms? | 혹시 방을 바꿀 방법이 있을까요?
+Is there any way to get a refund? | 혹시 환불받을 방법이 있을까요?
+Is there any way we could sit together? | 혹시 저희 같이 앉을 방법이 있을까요?
+Is there any way to get there tonight? | 혹시 오늘 밤에 거기 갈 방법이 있을까요?
+Is there any chance you have a room left? | 혹시 남은 방이 있을까요?
+Any chance I could check in early? | 혹시 일찍 체크인할 수 있을까요?
+
+## Can I talk to ~? | ~와 얘기할 수 있을까요? | 해결이 안 될 때 담당자 찾기
+Can I talk to the manager? | 매니저분이랑 얘기할 수 있을까요?
+Can I talk to someone who can help? | 도와주실 수 있는 분이랑 얘기할 수 있을까요?
+Can I talk to someone in charge? | 책임자분이랑 얘기할 수 있을까요?
+Is there anyone else I can talk to? | 다른 분이랑 얘기할 수 있을까요?
+Could you get your supervisor, please? | 상사분 좀 불러 주시겠어요?
+I'd like to make a complaint. | 정식으로 항의하고 싶어요.
+I've been waiting for over an hour. | 한 시간 넘게 기다렸어요.
+This is the third time I've asked. | 이게 벌써 세 번째 요청이에요.
+
+## What am I supposed to do ~? | 저 ~ 어떻게 해야 해요? | 결항·분실 등 막막할 때
+What am I supposed to do now? | 저 이제 어떻게 해야 해요?
+What am I supposed to do about my luggage? | 제 짐은 어떻게 해야 해요?
+What am I supposed to do if it doesn't arrive? | 안 오면 어떻게 해야 해요?
+Where am I supposed to go? | 저 어디로 가야 해요?
+Who am I supposed to call? | 누구한테 연락해야 해요?
+How am I supposed to get to the airport? | 공항엔 어떻게 가라는 거예요?
+So what are my options? | 그럼 제가 할 수 있는 게 뭐가 있죠?
+What happens next? | 그다음엔 어떻게 되는 거예요?
+
+## I'm stuck ~ | ~에서 꼼짝 못 하고 있어요 | 발이 묶이거나 갇혔을 때
+I'm stuck at the airport. | 공항에서 꼼짝 못 하고 있어요.
+I'm locked out of my room. | 방에 못 들어가고 있어요. (문이 잠겼어요)
+I'm stuck in traffic. | 차가 막혀서 꼼짝 못 하고 있어요.
+My phone's dead and I'm lost. | 폰은 꺼졌고 길을 잃었어요.
+I'm stuck in the elevator! | 엘리베이터에 갇혔어요!
+The last train's gone and I'm stuck here. | 막차가 끊겨서 여기 발이 묶였어요.
+We're stranded because of the strike. | 파업 때문에 오도 가도 못 하고 있어요.
+I'm running out of cash. | 현금이 다 떨어져 가요.
+
+## Sorry, I'm in a hurry | 제가 좀 급해서요 | 시간이 없을 때 양해 구하기
+Sorry, I'm in a bit of a hurry. | 죄송한데 제가 좀 급해서요.
+Could you hurry, please? My flight's in an hour. | 좀 서둘러 주시겠어요? 비행기가 한 시간 뒤예요.
+I really need to catch this train. | 이 기차 꼭 타야 해요.
+Is there a faster way? | 더 빠른 방법 있나요?
+Can I go ahead? My flight's boarding. | 먼저 해도 될까요? 지금 탑승 중이라서요.
+How long is this going to take? | 이거 얼마나 걸릴까요?
+I can't miss this connection. | 이 연결편은 놓치면 안 돼요.
+Could you call me a taxi right away? | 지금 바로 택시 좀 불러 주실래요?

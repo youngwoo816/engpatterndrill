@@ -626,3 +626,91 @@ need to | I need to cancel my booking. | 예약을 취소해야 해요.
 의문 | Is it too late to cancel? | 취소하기엔 너무 늦었나요?
 의문 | Will I be charged for canceling? | 취소하면 요금이 부과되나요?
 응답 | Your reservation has been changed. | 예약이 변경되었습니다.
+@58 Sorry, but there's a problem with ~
+긍정 | Sorry, but there's a problem with the heater. | 저기, 히터에 문제가 있는데요.
+긍정 | Sorry, but there's a problem with my order. | 저기, 제 주문에 문제가 있는데요.
+과거 | There was a problem with my last room, too. | 지난번 방에도 문제가 있었어요.
+의문 | Is there a problem with my card? | 제 카드에 문제 있나요?
+의문 | Is something wrong with the machine? | 기계에 무슨 문제 있나요?
+부정 | There's no hot water in my room. | 제 방에 온수가 안 나와요.
+부정 | The lights in the bathroom don't work. | 화장실 불이 안 켜져요.
+응답 | I'm so sorry about that. | 정말 죄송합니다.
+응답 | Let me take a look. | 제가 한번 볼게요.
+응답 | We'll send someone up right away. | 바로 사람을 올려 보낼게요.
+@59 I think I've been ~
+긍정 | I think I've been charged for something I didn't order. | 주문 안 한 게 계산된 것 같아요.
+긍정 | I think I've been given the wrong ticket. | 표를 잘못 받은 것 같아요.
+과거 | I think I paid too much. | 돈을 너무 많이 낸 것 같아요.
+의문 | Have I been charged for this? | 이거 계산된 건가요?
+의문 | Did you charge me twice? | 두 번 결제하셨어요?
+부정 | I don't think this is right. | 이거 맞지 않는 것 같아요.
+주어 변화 | I think we've been overcharged. | 저희가 돈을 더 낸 것 같아요.
+요청 | Could you check the receipt again? | 영수증 다시 확인해 주실래요?
+요청 | Can you show me the breakdown? | 내역 좀 보여 주실래요?
+응답 | You're right. I'll refund the difference. | 맞네요. 차액 환불해 드릴게요.
+@60 That's not what I ~
+긍정 | That's not what I asked for. | 제가 부탁한 게 아니에요.
+긍정 | That's not what I was told. | 저는 그렇게 안 들었어요.
+과거 | That's not what the website said. | 웹사이트엔 그렇게 안 나와 있었어요.
+의문 | Isn't this supposed to include breakfast? | 이거 조식 포함 아니었어요?
+의문 | Wasn't it twenty dollars? | 20달러 아니었어요?
+부정 | I didn't order this. | 이거 안 시켰어요.
+부정 | This isn't what I paid for. | 제가 돈 낸 게 이게 아니에요.
+요청 | Could you double-check my booking? | 제 예약 다시 확인해 주실래요?
+요청 | Can I see the menu again? | 메뉴 다시 볼 수 있을까요?
+응답 | Sorry, my mistake. | 죄송해요, 제 실수예요.
+@61 Is there any way ~?
+긍정 | Is there any way to fix it today? | 혹시 오늘 고칠 방법이 있을까요?
+긍정 | Is there any way I can leave my bags here? | 혹시 짐을 여기 둘 방법이 있을까요?
+부정 | Is there no way to get a refund? | 환불받을 방법이 아예 없나요?
+짧게 | Any chance? | 혹시 가능할까요?
+짧게 | Is there anything you can do? | 뭔가 해 주실 수 있는 게 있을까요?
+정중 | Would it be possible to waive the fee? | 수수료를 면제해 주실 수 있을까요?
+요청 | Could you make an exception just this once? | 이번 한 번만 예외로 해 주실 수 있을까요?
+요청 | Could you check again, please? | 한 번만 더 확인해 주시겠어요?
+응답 | Let me see what I can do. | 제가 방법을 알아볼게요.
+응답 | I'm afraid there's nothing I can do. | 죄송하지만 제가 해 드릴 수 있는 게 없어요.
+@62 Can I talk to ~?
+긍정 | Can I talk to the front desk manager? | 프런트 매니저분이랑 얘기할 수 있을까요?
+긍정 | Can I talk to someone who speaks Korean? | 한국어 하시는 분이랑 얘기할 수 있을까요?
+speak | Could I speak to someone in charge? | 책임자분과 얘기할 수 있을까요?
+의문 | Who can I talk to about this? | 이 건은 누구랑 얘기하면 돼요?
+의문 | Is the manager around? | 매니저분 계세요?
+요청 | Could you write down your name? | 성함 좀 적어 주실래요?
+요청 | Can I get that in writing? | 그걸 서면으로 받을 수 있을까요?
+감정 | I'm really not happy with this. | 이건 정말 만족스럽지 않아요.
+감정 | This is really frustrating. | 정말 답답하네요.
+응답 | I'll get the manager for you. | 매니저 불러 드릴게요.
+@63 What am I supposed to do ~?
+긍정 | What am I supposed to do with my bags? | 제 짐은 어떻게 하면 되죠?
+긍정 | What am I supposed to do tonight? | 오늘 밤엔 어떻게 하라는 거예요?
+의문사 | Where am I supposed to sleep? | 저 어디서 자라는 거예요?
+의문사 | When am I supposed to get my bag back? | 제 가방은 언제 돌려받는 거예요?
+의문사 | How am I supposed to pay without a card? | 카드 없이 어떻게 계산하라는 거예요?
+주어 변화 | What are we supposed to do now? | 저희 이제 어떻게 해야 해요?
+대안 | Can you suggest anything? | 뭐 제안해 주실 수 있는 거 있어요?
+대안 | Is there a hotel nearby? | 근처에 호텔 있나요?
+응답 | You can wait in the lounge. | 라운지에서 기다리시면 돼요.
+응답 | We'll put you up in a hotel. | 호텔을 잡아 드릴게요.
+@64 I'm stuck ~
+긍정 | I'm stuck at the train station. | 기차역에서 꼼짝 못 하고 있어요.
+긍정 | I'm stuck in a really long line. | 엄청 긴 줄에 서 있어요.
+주어 변화 | We're stuck on the highway. | 고속도로에서 꼼짝 못 하고 있어요.
+과거 | I got stuck at customs for two hours. | 세관에서 두 시간 동안 묶여 있었어요.
+과거 | I got locked out last night. | 어젯밤에 방에 못 들어갔어요.
+의문 | Can someone let me in? | 누가 문 좀 열어 줄 수 있어요?
+의문 | Is there a way out of here? | 여기서 나가는 길 있어요?
+요청 | Can you send someone to help? | 도와줄 사람 좀 보내 주실래요?
+상황 | My card got stuck in the machine. | 카드가 기계에 걸렸어요.
+상황 | The door's jammed. | 문이 꽉 끼어서 안 열려요.
+@65 Sorry, I'm in a hurry
+긍정 | Sorry, I'm in a hurry. | 죄송해요, 제가 급해서요.
+긍정 | I'm kind of in a rush. | 제가 좀 급해요.
+이유 | My flight leaves in forty minutes. | 비행기가 40분 뒤에 떠요.
+이유 | My bus is about to leave. | 제 버스가 곧 출발해요.
+요청 | Can you make it quick? | 빨리 해 주실 수 있어요?
+요청 | Can I pay now and go? | 지금 계산하고 가도 될까요?
+의문 | Will I make it in time? | 제시간에 갈 수 있을까요?
+의문 | What's the fastest way to Gate 20? | 20번 게이트로 가는 제일 빠른 길이 뭐예요?
+감사 | Thanks, you're a lifesaver! | 고마워요, 덕분에 살았어요!
+응답 | Go ahead, we'll take care of it. | 먼저 가세요, 저희가 처리할게요.

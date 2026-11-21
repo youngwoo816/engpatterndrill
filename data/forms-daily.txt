@@ -659,3 +659,69 @@ to부정사 | I'm glad to be home. | 집에 오니 좋다.
 의문 | Aren't you glad you came? | 오길 잘했지?
 제안 | I'd be glad to help. | 기꺼이 도와줄게.
 짧게 | So glad to hear it. | 그 말 들으니 정말 좋다.
+@61 My ~ is acting up
+긍정 | My TV's acting up. | TV가 말썽이야.
+긍정 | My knee's acting up again. | 무릎이 또 말썽이야.
+주어 변화 | The heater's been acting up all week. | 히터가 일주일 내내 말썽이야.
+과거 | My phone died in the middle of a call. | 통화하다가 폰이 꺼졌어.
+과거 | The power went out last night. | 어젯밤에 정전됐어.
+의문 | Is your Wi-Fi working? | 너네 와이파이 돼?
+의문 | Have you tried turning it off and on again? | 껐다 켜 봤어?
+부정 | It won't turn on. | 안 켜져.
+부정 | It doesn't charge anymore. | 이제 충전이 안 돼.
+해결 | I need to get it fixed. | 고쳐야 해.
+@62 I'm running late
+긍정 | I'm running a little late. | 나 조금 늦어.
+긍정 | I'm running ten minutes late. | 나 10분 늦어.
+주어 변화 | She's running late, too. | 그녀도 늦는대.
+과거 | I missed the bus. | 버스를 놓쳤어.
+과거 | Sorry I kept you waiting. | 기다리게 해서 미안해.
+의문 | Are you on your way? | 오는 중이야?
+의문 | Where are you now? | 지금 어디야?
+요청 | Can you wait five more minutes? | 5분만 더 기다려 줄래?
+요청 | Order for me, okay? | 내 것도 시켜 줘, 알았지?
+응답 | No worries, take your time. | 괜찮아, 천천히 와.
+@63 I can't find my ~
+긍정 | I can't find my glasses. | 안경을 못 찾겠어.
+긍정 | I can't find the remote. | 리모컨을 못 찾겠어.
+과거 | I lost my umbrella again. | 우산 또 잃어버렸어.
+과거 | I must've left it on the bus. | 버스에 두고 내렸나 봐.
+의문 | Did you see where I put my keys? | 내가 열쇠 어디 뒀는지 봤어?
+의문 | Where did I put it? | 내가 그걸 어디 뒀지?
+요청 | Can you help me look for it? | 찾는 것 좀 도와줄래?
+요청 | Check under the couch. | 소파 밑에 봐 봐.
+안도 | Oh, thank goodness. | 아, 다행이다.
+안도 | It was in my pocket the whole time. | 계속 주머니에 있었네.
+@64 Sorry, I didn't catch ~
+긍정 | Sorry, I didn't catch your name. | 미안, 이름 못 들었어.
+긍정 | Sorry, I didn't catch the last part. | 미안, 마지막 부분 못 들었어.
+요청 | Can you say that again? | 다시 말해 줄래?
+요청 | Could you speak up a bit? | 좀 크게 말해 줄래?
+의문 | Did you say Tuesday or Thursday? | 화요일이라고 했어, 목요일이라고 했어?
+의문 | What do you mean by that? | 그게 무슨 뜻이야?
+과거 | I misheard you. | 내가 잘못 들었어.
+해명 | That came out wrong. | 말이 이상하게 나왔네.
+해명 | I was just joking. | 그냥 농담이었어.
+확인 | So, just to be clear, we're meeting at six? | 그러니까 확실히 하자면, 6시에 만나는 거지?
+@65 Could you ~ a little?
+긍정 | Could you move over a little? | 조금만 옆으로 가 줄래?
+긍정 | Could you speak a little louder? | 조금만 크게 말해 줄래?
+정중 | Would you mind keeping it down? | 조금만 조용히 해 주실래요?
+정중 | Would you mind moving your bag? | 가방 좀 치워 주실래요?
+불만 | The music's a bit loud. | 음악이 좀 커요.
+불만 | It's getting kind of late. | 시간이 좀 늦었어요.
+의문 | Is this your car? | 이거 그쪽 차예요?
+의문 | Is anyone sitting here? | 여기 누구 앉아요?
+감사 | Thanks, I appreciate it. | 고마워요.
+응답 | Oh, sorry! I didn't realize. | 아, 죄송해요! 몰랐어요.
+@66 My order ~
+긍정 | My order still hasn't come. | 주문한 게 아직 안 왔어.
+긍정 | My order's missing an item. | 주문한 것 중에 하나가 빠졌어.
+과거 | They delivered it to the wrong address. | 다른 주소로 배달했어.
+과거 | I got someone else's order. | 다른 사람 주문이 왔어.
+의문 | Where's my package? | 내 택배 어디 있지?
+의문 | Can I track my order? | 주문 배송 조회할 수 있어요?
+요청 | Can you send me a new one? | 새 걸로 보내 주실 수 있어요?
+요청 | I'd like my money back. | 환불받고 싶어요.
+불만 | This is the second time this has happened. | 이런 일이 벌써 두 번째예요.
+응답 | We'll send a replacement today. | 오늘 교환품 보내 드릴게요.

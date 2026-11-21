@@ -60,3 +60,9 @@
 58 | I need to {1} {2}. | {2} {1}야 해. | 동사: finish this=이거 끝내 / go to the bank=은행에 가 / call my boss=상사한테 전화해 ;; 시간: today=오늘 / by noon=정오까지 / right now=지금 바로
 59 | I don't want to {1}. | {1} 싶지 않아. | 동사: go out tonight=오늘 밤엔 나가고 / talk about work=일 얘기하고 / lose this chance=이 기회를 놓치고 / wake him up=그를 깨우고 / be late again=또 늦고
 60 | I'm glad {1}. | {1} 다행이야. | 내용: you came=네가 와서 / it didn't rain=비가 안 와서 / we met=우리가 만나서 / you're safe=네가 무사해서 / it's Friday=금요일이라서
+61 | My {1} is acting up. | 내 {1} 말썽이야. | 명사: phone=폰이 / laptop=노트북이 / car=차가 / printer=프린터가 / back=허리가
+62 | I'm running {1} late. | 나 {1} 늦어. | 정도: a bit=좀 / a little=조금 / ten minutes=10분 / way=엄청
+63 | I can't find my {1} anywhere. | 내 {1} 아무 데서도 못 찾겠어. | 명사: keys=열쇠를 / phone=폰을 / wallet=지갑을 / glasses=안경을 / charger=충전기를
+64 | Sorry, I didn't catch {1}. | 미안, {1} 못 들었어. | 명사: that=방금 말 / your name=이름 / the last part=마지막 부분 / the address=주소
+65 | Could you {1} a little? | {1} 줄 수 있어? | 동사: keep it down=조금만 조용히 해 / move over=조금만 옆으로 가 / turn it down=소리 좀 줄여 / slow down=좀 천천히 가
+66 | My order {1}. | 주문한 게 {1}. | 상황: never showed up=아직도 안 왔어 / came damaged=망가져서 왔어 / is missing an item=하나 빠졌어 / went to the wrong address=다른 주소로 갔어

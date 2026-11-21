@@ -57,3 +57,11 @@
 55 | Could you recommend {1}? | {1} 추천해 주시겠어요? | 명사: a good hotel=괜찮은 호텔 / a local dish=현지 음식 / a nice beach=좋은 해변 / a tour=투어 / a cheap place to eat=싸게 먹을 수 있는 곳
 56 | Can I get a {1} ticket to {2}? | {2}행 {1} 표 주세요. | 종류: one-way=편도 / round-trip=왕복 ;; 장소: Paris=파리 / Rome=로마 / Madrid=마드리드
 57 | Could I {1} my reservation? | 예약을 {1} 수 있을까요? | 동사: cancel=취소할 / change=변경할 / extend=연장할 / confirm=확인할
+58 | Sorry, but there's a problem with {1}. | 저기, {1} 문제가 있는데요. | 명사: my room=제 방에 / the bill=계산서에 / my booking=제 예약에 / the air conditioner=에어컨에 / my card=제 카드에
+59 | I think I've been {1}. | {1} 같아요. | 상황: overcharged=돈을 더 낸 것 / charged twice=두 번 결제된 것 / given the wrong change=거스름돈을 잘못 받은 것 / double-booked=예약이 중복된 것
+60 | That's not what I {1}. | 제가 {1} 건 그게 아니에요. | 동사: ordered=주문한 / booked=예약한 / asked for=부탁한 / paid for=돈 낸
+61 | Is there any way {1}? | 혹시 {1} 방법이 있을까요? | 내용: to change rooms=방을 바꿀 / to get a refund=환불받을 / I can check in early=일찍 체크인할 / we could sit together=같이 앉을 / to get there tonight=오늘 밤에 거기 갈
+62 | Can I talk to {1}? | {1} 얘기할 수 있을까요? | 대상: the manager=매니저분이랑 / someone in charge=책임자분이랑 / someone who can help=도와주실 수 있는 분이랑 / someone who speaks Korean=한국어 하시는 분이랑
+63 | What am I supposed to do {1}? | {1} 어떻게 해야 해요? | 상황: now=저 이제 / about my luggage=제 짐은 / tonight=오늘 밤엔 / if it doesn't arrive=안 오면
+64 | I'm stuck {1}. | {1} 꼼짝 못 하고 있어요. | 장소: at the airport=공항에서 / in traffic=차가 막혀서 / at the station=역에서 / in the elevator=엘리베이터에 갇혀서
+65 | Sorry, I'm in a hurry. My {1} leaves in {2}. | 죄송해요, 제가 급해서요. {1} {2} 뒤에 떠요. | 교통: flight=비행기가 / train=기차가 / bus=버스가 ;; 시간: an hour=한 시간 / thirty minutes=30분 / ten minutes=10분

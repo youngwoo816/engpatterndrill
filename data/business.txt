@@ -571,3 +571,64 @@ How's your week going? | 이번 주 어떻게 보내고 계세요?
 Have a great weekend. | 주말 잘 보내세요.
 It was nice working with you. | 함께 일해서 좋았습니다.
 Let's grab coffee sometime. | 언제 커피 한잔해요.
+
+# 업무 문제 상황 (구어체)
+## Heads up, ~ | 미리 말해 두는데 ~ | 동료에게 미리 알릴 때 (heads-up = 사전 알림)
+Heads up, the meeting's been moved to three. | 미리 말해 두는데, 회의가 3시로 옮겨졌어요.
+Just a heads-up, the client's running late. | 참고로 고객이 좀 늦는대요.
+Quick heads-up, I'm out tomorrow. | 미리 말씀드리면 저 내일 쉬어요.
+Heads up, the server's going down tonight. | 미리 알려 드려요, 오늘 밤 서버 점검이에요.
+Heads up, the numbers look a bit off. | 미리 말씀드리는데 숫자가 좀 이상해요.
+FYI, I've updated the file. | 참고로 파일 업데이트했어요.
+Just so you know, the budget's tight. | 참고로 예산이 빠듯해요.
+Thought you should know, the deadline moved up. | 알고 계셔야 할 것 같아서요, 마감이 앞당겨졌어요.
+
+## I'm having trouble ~ | ~가 잘 안 돼요 | 로그인·화상회의 등 기술 문제
+I'm having trouble logging in. | 로그인이 잘 안 돼요.
+I'm having trouble with the VPN. | VPN이 잘 안 돼요.
+I'm having trouble opening the file. | 파일이 잘 안 열려요.
+I'm having trouble hearing you. | 소리가 잘 안 들려요.
+You're on mute. | 음소거 돼 있어요.
+Can you see my screen? | 제 화면 보이세요?
+Sorry, my internet's acting up. | 죄송해요, 인터넷이 불안정해요.
+I'll drop off and rejoin. | 나갔다가 다시 들어올게요.
+
+## I dropped the ball on ~ | ~를 제가 놓쳤어요 | 실수를 깔끔하게 인정할 때
+Sorry, I dropped the ball on that. | 죄송해요, 그건 제가 놓쳤어요.
+That's on me. | 그건 제 잘못이에요.
+I totally forgot to send it. | 보내는 걸 완전히 깜빡했어요.
+I'll fix it right away. | 바로 고칠게요.
+It slipped my mind. | 깜빡 잊었어요.
+I mixed up the dates. | 날짜를 헷갈렸어요.
+Let me make it right. | 제가 바로잡을게요.
+It won't happen again, I promise. | 다시는 안 그럴게요, 약속해요.
+
+## Can we sync up on ~? | ~ 관련해서 잠깐 맞춰 볼까요? | 짧게 얘기 나누자고 할 때
+Can we sync up on the project? | 프로젝트 관련해서 잠깐 맞춰 볼까요?
+Can we touch base later today? | 오늘 이따 잠깐 얘기 나눌까요?
+Let's hop on a quick call. | 잠깐 통화하죠.
+Got five minutes to chat? | 5분 정도 얘기할 수 있어요?
+Let's sync up after lunch. | 점심 먹고 맞춰 봐요.
+Can we go over this together? | 이거 같이 한번 볼까요?
+I just want to make sure we're aligned. | 우리 생각이 같은지 확인하고 싶어서요.
+Let's pick this up on Monday. | 월요일에 이어서 얘기해요.
+
+## I'm double-booked | 일정이 겹쳤어요 | 일정 충돌·변경 요청
+I'm double-booked at two. | 2시에 일정이 겹쳤어요.
+Something came up. Can we reschedule? | 일이 생겼는데 일정 다시 잡을 수 있을까요?
+I'm going to have to skip the meeting. | 회의에 못 갈 것 같아요.
+Can I join a little late? | 조금 늦게 들어가도 될까요?
+I need to leave a bit early today. | 오늘 조금 일찍 나가야 해요.
+Can we do Thursday instead? | 대신 목요일에 할까요?
+Sorry for the last-minute change. | 갑자기 바꿔서 죄송해요.
+Let me know what works for you. | 편한 시간 알려 주세요.
+
+## I'm not sure that'll work | 그건 좀 어려울 것 같아요 | 부드럽게 거절하거나 조율할 때
+I'm not sure that'll work for us. | 그건 저희한테 좀 어려울 것 같아요.
+That might be a stretch. | 그건 좀 무리일 수도 있어요.
+That's a tight deadline. | 마감이 빠듯하네요.
+Honestly, I don't think we can do that by Friday. | 솔직히 금요일까진 어려울 것 같아요.
+Can we meet halfway? | 중간에서 절충할까요?
+What if we did half now and half later? | 반은 지금, 반은 나중에 하면 어때요?
+Let me see what I can do. | 제가 할 수 있는 걸 알아볼게요.
+I hear you, but our hands are tied. | 무슨 말인지 알지만 저희도 어쩔 수 없어요.
