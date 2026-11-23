@@ -165,6 +165,9 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .set-row .t{font-weight:600}
 .set-row .d{font-size:12px;color:var(--muted)}
 .set-row .seg{flex:1 1 200px}
+.vhelp{font-size:13px;padding:10px 0;border-bottom:1px solid var(--line)}
+.vhelp summary{cursor:pointer;font-weight:600;color:var(--accent)}
+.vhelp ul{margin:8px 0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
 .set-sec{font-size:13px;font-weight:700;color:var(--muted);margin:10px 4px -4px;letter-spacing:.02em}
 .set-sec:first-child{margin-top:0}
 select{font:inherit;padding:8px 10px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);max-width:220px}
@@ -504,8 +507,17 @@ async function loadData(){
 /* ---------- speech (미국/영국 발음, 기계음 제외) ---------- */
 const ROBOTIC = /\b(Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Good News|Jester|Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox|Fred|Junior|Ralph|Kathy|Bruce|Agnes|Vicki|Victoria|Princess|Deranged|Hysterical|Grandma|Grandpa|Eddy|Flo|Reed|Rocko|Sandy|Shelley)\b|espeak|festival|mbrola|pico/i;
 const TTS = { ok: "speechSynthesis" in window, us:[], gb:[] };
+const vKey = v => v.voiceURI || (v.name + "|" + v.lang);
+function vLabel(v, list){
+  const base = v.name.replace(/^(Microsoft|Google)\s+/, "");
+  const dup = list.filter(w => w.name === v.name).length > 1;
+  if (!dup) return base;
+  const l = String(v.lang).toLowerCase();
+  return `${base} (${/network|online/.test(l) || v.localService === false ? "온라인" : /local/.test(l) || v.localService ? "기기 내장" : v.lang})`;
+}
 function vScore(v){
   let s = 0;
+  if (/network/i.test(v.lang) || v.localService === false) s += 2;
   if (/natural|neural|online/i.test(v.name)) s += 4;
   if (/enhanced|premium|siri/i.test(v.name)) s += 3;
   if (/google/i.test(v.name)) s += 2;
@@ -515,24 +527,31 @@ function vScore(v){
 function pickVoices(){
   if (!TTS.ok) return;
   const all = speechSynthesis.getVoices().filter(v => !ROBOTIC.test(v.name));
-  const of = tag => all.filter(v => v.lang.replace("_","-").toLowerCase() === tag).sort((a,b) => vScore(b) - vScore(a));
-  TTS.us = of("en-us"); TTS.gb = of("en-gb");
+  // 기기마다 언어 코드가 en-GB / en_GB / en-gb-x-gbb-local / en-UK 처럼 달라서 앞부분으로 판별
+  const tag = v => String(v.lang || "").toLowerCase().replace(/_/g, "-");
+  const isGB = v => /^en-(gb|uk)\b/.test(tag(v)) || (/^en\b/.test(tag(v)) && /\b(UK|British|United Kingdom|England)\b/i.test(v.name));
+  const isUS = v => /^en-us\b/.test(tag(v)) || (/^en\b/.test(tag(v)) && !isGB(v) && /\b(US|American|United States)\b/i.test(v.name));
+  const uniq = arr => arr.filter((v,i) => arr.findIndex(w => w.name === v.name && w.lang === v.lang) === i);
+  TTS.us = uniq(all.filter(isUS)).sort((a,b) => vScore(b) - vScore(a));
+  TTS.gb = uniq(all.filter(isGB)).sort((a,b) => vScore(b) - vScore(a));
 }
 if (TTS.ok){ pickVoices(); speechSynthesis.onvoiceschanged = () => { pickVoices(); if (route()==="more" && dr().hidden) render(); }; }
 function curVoice(){
   const acc = S.settings.accent, list = TTS[acc] || [];
   const want = acc === "gb" ? S.settings.voiceGB : S.settings.voiceUS;
-  return list.find(v => v.name === want) || list[0] || null;
+  return list.find(v => vKey(v) === want) || list.find(v => v.name === want) || list[0] || null;
 }
 function mkUtter(text, mult=1){
   const u = new SpeechSynthesisUtterance(text);
   u.lang = S.settings.accent === "gb" ? "en-GB" : "en-US";
   u.rate = clamp(S.settings.rate * mult, .5, 1.2);
-  const v = curVoice(); if (v) u.voice = v;
+  const v = curVoice();
+  if (v) { u.voice = v; u.lang = String(v.lang || u.lang).replace(/_/g, "-"); }   // 일부 안드로이드는 lang까지 맞춰야 음성이 적용됨
   return u;
 }
 function speak(text, mult=1){
   if (!TTS.ok) return;
+  warnNoVoice();
   try { speechSynthesis.cancel(); speechSynthesis.speak(mkUtter(text, mult)); } catch(e){}
 }
 function speakList(texts, onStart, onDone){
@@ -548,6 +567,12 @@ function speakList(texts, onStart, onDone){
   } catch(e){}
 }
 const accLabel = () => S.settings.accent === "gb" ? "영국 발음" : "미국 발음";
+let noVoiceWarned = false;
+function warnNoVoice(){
+  if (!TTS.ok || noVoiceWarned || S.settings.accent !== "gb" || TTS.gb.length) return;
+  noVoiceWarned = true;
+  toast(`이 기기에 ${accLabel()} 음성이 없어 기본 음성으로 읽어요. 설정 → 소리에서 설치 방법을 확인하세요`, 4500);
+}
 const accBtn = () => `${accLabel()} ${ICON.swap}`;
 
 /* ---------- progress logic ---------- */
@@ -801,9 +826,10 @@ function viewMore(){
   const st = S.settings;
   const list = TTS[st.accent] || [];
   const want = st.accent === "gb" ? st.voiceGB : st.voiceUS;
+  const cur = curVoice();
   const voiceDesc = !TTS.ok ? "이 브라우저는 음성 읽기를 지원하지 않아요"
-    : list.length ? `이 기기에서 쓸 수 있는 ${accLabel()} 음성 ${list.length}개 (기계음 제외)`
-    : `이 기기에 ${accLabel()} 음성이 없어요. 브라우저 기본 음성으로 읽어요`;
+    : list.length ? `지금 쓰는 음성: ${esc(cur.name)} (${esc(cur.lang)}) · 고를 수 있는 음성 ${list.length}개`
+    : `이 기기에 ${accLabel()} 음성이 없어요. 아래 방법으로 설치하면 바로 쓸 수 있어요`;
   let h = topBar("설정");
   h += `<div class="stack">
   <div class="set-sec">학습</div><div class="card">
@@ -819,7 +845,15 @@ function viewMore(){
     <div class="set-row"><div><div class="t">발음</div></div>
       <div class="seg" role="group"><button data-acc="us" aria-pressed="${st.accent==='us'}">미국 발음</button><button data-acc="gb" aria-pressed="${st.accent==='gb'}">영국 발음</button></div></div>
     <div class="set-row"><div><div class="t">목소리</div><div class="d">${voiceDesc}</div></div>
-      ${list.length ? `<select id="s-voice"><option value="">자동 (가장 자연스러운 음성)</option>${list.map(v=>`<option value="${esc(v.name)}" ${v.name===want?'selected':''}>${esc(v.name.replace(/^(Microsoft|Google)\s+/,''))}</option>`).join("")}</select>` : ''}</div>
+      ${list.length ? `<select id="s-voice"><option value="">자동 (가장 자연스러운 음성)</option>${list.map(v=>`<option value="${esc(vKey(v))}" ${vKey(v)===want||v.name===want?'selected':''}>${esc(vLabel(v, list))}</option>`).join("")}</select>` : ''}</div>
+    ${TTS.ok ? `<details class="vhelp" ${list.length ? '' : 'open'}><summary>${accLabel()} 음성이 안 나오거나 기계음 같을 때</summary>
+      <ul>
+        <li><b>iPhone·iPad</b>: 설정 → 손쉬운 사용 → 말하기 콘텐츠(Spoken Content) → 음성 → 영어 → <b>${S.settings.accent === "gb" ? "영국" : "미국"}</b> 음성 다운로드 (고품질/향상된 음성 권장)</li>
+        <li><b>Android</b>: 설정 → 텍스트 음성 변환(TTS) 출력 → Google 음성 엔진 설정 → 음성 데이터 설치 → English (${S.settings.accent === "gb" ? "United Kingdom" : "United States"})</li>
+        <li><b>Windows</b>: 설정 → 시간 및 언어 → 음성 → 음성 추가 → English (${S.settings.accent === "gb" ? "United Kingdom" : "United States"})</li>
+        <li><b>Mac</b>: 시스템 설정 → 손쉬운 사용 → 말하기 콘텐츠 → 시스템 음성 → 음성 관리</li>
+        <li>PC의 <b>Chrome·Edge</b>에서는 별도 설치 없이 Google·Microsoft 온라인 음성이 나와요.</li>
+      </ul><span class="muted">설치 후 이 페이지를 새로고침하세요.</span></details>` : ''}
     <div class="set-row"><div><div class="t">말하기 속도</div></div>
       <select id="s-rate">${[[.8,"느리게"],[.9,"조금 느리게"],[1,"보통"]].map(([v,l])=>`<option value="${v}" ${v===st.rate?'selected':''}>${l}</option>`).join("")}</select></div>
     <div class="set-row"><div><div class="t">자동 재생</div></div>
@@ -983,7 +1017,7 @@ function bind(r){
     else if ("exall" in d) { const p = exPat(), ex = p.ex || []; speakList(ex.map(e=>e.en), i => exMark(i), () => { exMark(-1); if (!S.exRead[exKey(p)] && route()==="examples" && exPat()===p) { markExRead(p); render(); toast("10개 전체를 들어서 읽음으로 표시했어요"); } }); }
     else if (d.exread) { markExRead(exPat(), d.exread === "1"); render(); }
     else if ("exstop" in d) { stopSpeech(); exMark(-1); }
-    else if ("exacc" in d) { S.settings.accent = S.settings.accent === "gb" ? "us" : "gb"; save(); b.innerHTML = accBtn(); }
+    else if ("exacc" in d) { S.settings.accent = S.settings.accent === "gb" ? "us" : "gb"; save(); b.innerHTML = accBtn(); noVoiceWarned = false; warnNoVoice(); }
     else if ("exprev" in d) { exIdx--; exCur = -1; stopSpeech(); render(); }
     else if ("exnext" in d) { exIdx++; exCur = -1; stopSpeech(); render(); }
     else if ("learnex" in d) { stopSpeech(); startLearn(exCat, exPat().items[0].idx, "examples"); }
@@ -1003,7 +1037,7 @@ function bind(r){
     else if (d.md) { S.settings.mode = d.md; save(); render(); toast(d.md === "quick" ? "빠른 모드: 조립·바꿔 말하기를 건너뛰어요" : "기본 모드: 5단계 전부 진행해요"); }
     else if (d.rt) { S.settings.reviewType = d.rt; save(); render(); }
     else if (d.th) { S.settings.theme = d.th; save(); applyTheme(); render(); }
-    else if (d.acc) { S.settings.accent = d.acc; save(); render(); speak("Hello! This is how I sound."); }
+    else if (d.acc) { S.settings.accent = d.acc; save(); render(); speak(d.acc === "gb" ? "Hello! This is what I sound like in British English." : "Hello! This is what I sound like in American English."); }
     else if ("test" in d) speak("Hi! I'm about to start my English practice.");
     else if ("backup" in d) {
       const code = btoa(unescape(encodeURIComponent(JSON.stringify(S))));
@@ -1420,7 +1454,7 @@ dr().addEventListener("click", e => {
     if (W.i >= W.items.length) { X.wrapScore = `${W.ok}/${W.items.length} 기억`; return endWrap(); }
     return drawWrap();
   }
-  if ("accflip" in d) { S.settings.accent = S.settings.accent === "gb" ? "us" : "gb"; save(); b.innerHTML = accBtn(); const t = X.mode==="swap"||X.steps?.[X.step]==="swap" ? swapCompose(X.sw.pat.sw, X.sw.sel).plainEn : s.en; return speak(t); }
+  if ("accflip" in d) { S.settings.accent = S.settings.accent === "gb" ? "us" : "gb"; save(); b.innerHTML = accBtn(); noVoiceWarned = false; warnNoVoice(); const t = X.mode==="swap"||X.steps?.[X.step]==="swap" ? swapCompose(X.sw.pat.sw, X.sw.sel).plainEn : s.en; return speak(t); }
   if ("rec" in d) { if (REC.on) recStop(); else recStart(); return; }
   if ("recplay" in d) { stopSpeech(); if (REC.url) new Audio(REC.url).play().catch(()=>{}); return; }
   if ("recnative" in d) return speak(s.en);
