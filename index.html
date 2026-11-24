@@ -298,6 +298,19 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 
 /* recording */
 .recbox{display:flex;gap:8px;flex-wrap:wrap}
+.pronbox{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.pill.pron{color:var(--accent);box-shadow:inset 0 0 0 1.5px color-mix(in srgb, var(--accent) 45%, transparent)}
+.pill.pron.on{background:var(--accent);color:#fff;animation:pronpulse 1.2s ease-in-out infinite}
+@keyframes pronpulse{50%{opacity:.7}}
+.pron-res{width:100%;background:var(--surface);border-radius:12px;box-shadow:inset 0 0 0 1.5px var(--line);padding:12px;display:flex;flex-direction:column;gap:8px;font-size:13px}
+.pron-top{display:flex;align-items:baseline;gap:10px;font-size:15px;font-weight:600}
+.pron-score{font-family:var(--f-mono);font-size:30px;line-height:1}
+.pron-score small{font-size:14px;margin-left:2px}
+.pron-score.good{color:var(--good)}.pron-score.warn{color:var(--warn)}.pron-score.bad{color:var(--bad)}
+.pron-words{font-family:var(--f-en);font-size:17px;font-weight:600;line-height:1.6}
+.pron-words .ok{color:var(--good)}
+.pron-words .miss{color:var(--bad);text-decoration:underline wavy;text-underline-offset:4px}
+.pron-heard{font-family:var(--f-en)}
 .pill.rec{color:var(--bad)}
 .pill.rec.on{background:var(--bad);color:#fff}
 
@@ -1150,15 +1163,92 @@ function recInner(){
   return `<button class="pill rec" data-rec>${ICON.mic} ${REC.url ? '다시 녹음' : '내 발음 녹음'}</button>` +
     (REC.url ? `<button class="pill" data-recplay>${ICON.play} 내 녹음</button><button class="pill" data-recnative>${ICON.play} 원어민</button>` : '');
 }
-const recHTML = () => REC.ok ? `<div class="recbox" id="recbox">${recInner()}</div>` : "";
+/* 발음 체크: 브라우저 음성 인식으로 내가 말한 문장을 받아 적고, 원문과 단어 단위로 비교 */
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+const PR = { ok: !!SR, on:false, rec:null, res:null, sid:null };
+const PR_NUM = ["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"];
+function pronWords(t){
+  t = String(t).toLowerCase().replace(/[‘’]/g, "'")
+    .replace(/\bcan't\b|\bcannot\b/g, "can not").replace(/\bwon't\b/g, "will not").replace(/\bshan't\b/g, "shall not")
+    .replace(/n't\b/g, " not").replace(/'m\b/g, " am").replace(/'re\b/g, " are").replace(/'ll\b/g, " will")
+    .replace(/'ve\b/g, " have").replace(/'d\b/g, " would").replace(/\b(it|that|what|there|here|he|she|who|where|how|let)'s\b/g, (m, a) => a === "let" ? "let us" : a + " is")
+    .replace(/\bgonna\b/g, "going to").replace(/\bwanna\b/g, "want to").replace(/\bgotta\b/g, "got to").replace(/\bok\b/g, "okay")
+    .replace(/\$(\d+)/g, "$1 dollars").replace(/%/g, " percent").replace(/&/g, " and ");
+  return t.split(/[^a-z0-9']+/).map(w => w.replace(/^'+|'+$/g, "").replace(/'s$/, "s")).filter(Boolean)
+    .flatMap(w => /^\d+$/.test(w) && +w <= 20 ? [PR_NUM[+w]] : [w]);
+}
+// 원문 단어 중 인식된 단어와 순서대로 일치한 것(LCS)을 표시
+function pronMatch(target, heard){
+  const a = pronWords(target), b = pronWords(heard), n = a.length, m = b.length;
+  const L = Array.from({ length:n+1 }, () => new Array(m+1).fill(0));
+  for (let i = n-1; i >= 0; i--) for (let j = m-1; j >= 0; j--) L[i][j] = a[i] === b[j] ? L[i+1][j+1] + 1 : Math.max(L[i+1][j], L[i][j+1]);
+  const hit = new Array(n).fill(false);
+  for (let i = 0, j = 0; i < n && j < m;) { if (a[i] === b[j]) { hit[i] = true; i++; j++; } else if (L[i+1][j] >= L[i][j+1]) i++; else j++; }
+  const extra = Math.max(0, m - L[0][0]);
+  const score = n ? Math.max(0, Math.round(100 * (L[0][0] - extra * 0.5) / n)) : 0;
+  // 화면에는 원문 단어 그대로(I'm 등) 보여주고, 펼친 단어가 모두 맞아야 초록
+  const toks = []; let k = 0;
+  for (const raw of String(target).split(/\s+/).filter(Boolean)) {
+    const c = pronWords(raw).length;
+    toks.push({ w: raw, ok: c === 0 || hit.slice(k, k + c).every(Boolean) }); k += c;
+  }
+  return { words:a, hit, toks, score, heard };
+}
+function pronResultHTML(){
+  const r = PR.res; if (!r) return "";
+  if (r.err) return `<div class="pron-res"><span class="muted">${esc(r.err)}</span></div>`;
+  const lv = r.score >= 90 ? ["good","훌륭해요"] : r.score >= 70 ? ["good","좋아요"] : r.score >= 50 ? ["warn","조금만 더"] : ["bad","다시 해 봐요"];
+  const best = (S.pron || {})[PR.sid];
+  return `<div class="pron-res">
+    <div class="pron-top"><b class="pron-score ${lv[0]}">${r.score}<small>점</small></b><span>${lv[1]}${best != null ? ` <span class="muted">· 최고 ${best}점</span>` : ''}</span></div>
+    <div class="pron-words">${r.toks.map(t => `<span class="${t.ok ? 'ok' : 'miss'}">${esc(t.w)}</span>`).join(" ")}</div>
+    <div class="muted pron-heard">들린 문장: “${esc(r.heard)}”</div>
+    ${r.hit.some(h => !h) ? `<div class="muted">빨간 단어가 다르게 들렸어요. 원어민 소리를 다시 듣고 그 단어에 집중해 보세요.</div>` : ''}
+  </div>`;
+}
+function pronRefresh(){ const b = $("#pronbox"); if (b) b.innerHTML = pronInner(); }
+function pronInner(){
+  return `<button class="pill pron ${PR.on ? 'on' : ''}" data-pron>${ICON.mic} ${PR.on ? '듣는 중… 문장을 말하세요' : PR.res && !PR.res.err ? '발음 다시 체크' : '발음 체크'}</button>${pronResultHTML()}`;
+}
+function pronStop(){ if (PR.rec) { try { PR.rec.abort(); } catch(e){} PR.rec = null; } PR.on = false; }
+function pronReset(){ pronStop(); PR.res = null; PR.sid = null; }
+function pronStart(s){
+  if (REC.on) recStop();
+  stopSpeech(); pronStop();
+  const rec = new SR();
+  rec.lang = S.settings.accent === "gb" ? "en-GB" : "en-US";
+  rec.interimResults = false; rec.maxAlternatives = 5; rec.continuous = false;
+  let got = false;
+  rec.onresult = e => {
+    got = true;
+    const alts = [...e.results[0]].map(a => a.transcript).filter(Boolean);
+    let best = null;
+    for (const t of alts) { const m = pronMatch(s.en, t); if (!best || m.score > best.score) best = m; }
+    PR.res = best || { err:"말소리를 알아듣지 못했어요. 조금 더 크게, 또박또박 말해 보세요." };
+    if (best) { S.pron = S.pron || {}; if (!(S.pron[s.id] >= best.score)) { S.pron[s.id] = best.score; save(); } }
+  };
+  rec.onerror = e => {
+    got = true;
+    PR.res = { err: e.error === "not-allowed" || e.error === "service-not-allowed" ? "마이크 또는 음성 인식 권한이 없어요. 브라우저 설정에서 허용해 주세요. (iPhone은 설정 → Siri에서 Siri를 켜야 동작해요)"
+      : e.error === "no-speech" ? "말소리가 들리지 않았어요. 버튼을 누른 뒤 바로 말해 보세요."
+      : e.error === "network" ? "음성 인식에는 인터넷 연결이 필요해요."
+      : e.error === "aborted" ? null : "음성 인식에 실패했어요. 다시 시도해 주세요." };
+    if (!PR.res.err) PR.res = null;
+  };
+  rec.onend = () => { PR.on = false; PR.rec = null; if (!got) PR.res = { err:"말소리가 들리지 않았어요. 버튼을 누른 뒤 바로 말해 보세요." }; pronRefresh(); };
+  PR.rec = rec; PR.sid = s.id; PR.res = null;
+  try { rec.start(); PR.on = true; } catch(e) { PR.res = { err:"음성 인식을 시작하지 못했어요. 잠시 후 다시 시도해 주세요." }; }
+  pronRefresh();
+}
+const recHTML = () => (PR.ok ? `<div class="pronbox" id="pronbox">${pronInner()}</div>` : "") + (REC.ok ? `<div class="recbox" id="recbox">${recInner()}</div>` : "");
 function recRefresh(){ const b = $("#recbox"); if (b) b.innerHTML = recInner(); }
 function recStop(discard){
   clearInterval(REC.tick);
   if (REC.on && REC.mr) { REC.discard = !!discard; REC.on = false; try { REC.mr.stop(); } catch(e){} }
 }
-function recReset(){ recStop(true); if (REC.url) { URL.revokeObjectURL(REC.url); REC.url = null; } }
+function recReset(){ recStop(true); pronReset(); if (REC.url) { URL.revokeObjectURL(REC.url); REC.url = null; } }
 async function recStart(){
-  stopSpeech();
+  stopSpeech(); if (PR.on) { pronStop(); pronRefresh(); }
   try { REC.stream = await navigator.mediaDevices.getUserMedia({ audio:true }); }
   catch(e){ toast("마이크를 쓸 수 없어요. 마이크 권한을 허용해 주세요. claude.ai 공유 링크에서는 GitHub Pages 주소로 이용하세요."); return; }
   const chunks = [];
@@ -1456,6 +1546,7 @@ dr().addEventListener("click", e => {
   }
   if ("accflip" in d) { S.settings.accent = S.settings.accent === "gb" ? "us" : "gb"; save(); b.innerHTML = accBtn(); noVoiceWarned = false; warnNoVoice(); const t = X.mode==="swap"||X.steps?.[X.step]==="swap" ? swapCompose(X.sw.pat.sw, X.sw.sel).plainEn : s.en; return speak(t); }
   if ("rec" in d) { if (REC.on) recStop(); else recStart(); return; }
+  if ("pron" in d) { if (PR.on) { pronStop(); pronRefresh(); } else pronStart(s); return; }
   if ("recplay" in d) { stopSpeech(); if (REC.url) new Audio(REC.url).play().catch(()=>{}); return; }
   if ("recnative" in d) return speak(s.en);
   if ("play" in d) return speak(s.en);
