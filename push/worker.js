@@ -12,7 +12,8 @@ const SLOT = 5; // 크론 주기(분)와 같아야 함
 export default {
   async fetch(req, env) {
     const cors = {
-      "Access-Control-Allow-Origin": env.ALLOW_ORIGIN || "*",
+      // ALLOW_ORIGIN 값 끝에 / 가 붙어 있어도 동작하도록 정리
+      "Access-Control-Allow-Origin": (env.ALLOW_ORIGIN || "*").trim().replace(/\/+$/, ""),
       "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
     };
@@ -20,6 +21,7 @@ export default {
     const json = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { ...cors, "Content-Type": "application/json" } });
     const path = new URL(req.url).pathname.replace(/\/+$/, "") || "/";
     try {
+      if (!env.SUBS) return json({ error: "KV 바인딩(SUBS)이 없어요. 워커 설정 → 바인딩에서 변수 이름 SUBS로 KV를 연결하세요" }, 500);
       if (req.method === "GET" && path === "/vapid") return json({ publicKey: (await vapid(env)).pub });
       if (req.method === "GET" && path === "/") return json({ ok: true, service: "rep-english-push" });
       if (req.method !== "POST") return json({ error: "not found" }, 404);

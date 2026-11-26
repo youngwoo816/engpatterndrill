@@ -1059,7 +1059,7 @@ function bind(r){
     else if (d.th) { S.settings.theme = d.th; save(); applyTheme(); render(); }
     else if (d.rday != null) { const r = RM(), i = +d.rday; if (r.days.includes(i)) { if (r.days.length === 1) return toast("최소 하루는 골라야 해요"); r.days = r.days.filter(x => x !== i); } else r.days = [...r.days, i].sort(); remindSave(); render(); }
     else if (d.rpush != null) {
-      if (d.rpush === "1") { b.disabled = true; remindOn().then(ok => { if (ok) { RM().on = true; save(); toast("푸시 알림을 켰어요"); } render(); }).catch(() => { toast("알림 서버에 연결하지 못했어요. 잠시 후 다시 시도해 주세요"); render(); }); }
+      if (d.rpush === "1") { b.disabled = true; remindOn().then(ok => { if (ok) { RM().on = true; save(); toast("푸시 알림을 켰어요"); } render(); }).catch(e => { toast(`알림을 켜지 못했어요 · ${e && e.message || e}`, 9000); render(); }); }
       else { RM().on = false; save(); remindOff(); toast("푸시 알림을 껐어요"); render(); }
     }
     else if ("rtest" in d) { pushSub(false).then(sub => sub ? pushPost("/test", { endpoint: sub.endpoint }) : Promise.reject()).then(() => toast("테스트 알림을 보냈어요. 몇 초 안에 도착해요")).catch(() => toast("테스트 알림을 보내지 못했어요. 푸시 알림을 껐다 켜 보세요")); }
@@ -1719,8 +1719,10 @@ function pushState(){
 const RM = () => S.settings.remind || (S.settings.remind = { on:false, time:"20:00", days:[0,1,2,3,4,5,6] });
 const tzName = () => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || "Asia/Seoul"; } catch(e){ return "Asia/Seoul"; } };
 async function pushPost(path, body){
-  const r = await fetch(PUSH_URL + path, { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(body) });
-  if (!r.ok) throw new Error("server " + r.status);
+  let r;
+  try { r = await fetch(PUSH_URL + path, { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(body) }); }
+  catch(e){ throw new Error(`서버 접속 실패 (${path})`); }
+  if (!r.ok) { const j = await r.json().catch(() => ({})); throw new Error(`서버 오류 ${r.status} (${path}) ${j.error || ""}`.trim()); }
   return r.json();
 }
 const b64uToBytes = s => { const b = atob(s.replace(/-/g, "+").replace(/_/g, "/") + "===".slice((s.length + 3) % 4)); return Uint8Array.from(b, c => c.charCodeAt(0)); };
@@ -1728,8 +1730,11 @@ async function pushSub(create){
   const reg = await navigator.serviceWorker.ready;
   let sub = await reg.pushManager.getSubscription();
   if (!sub && create) {
-    const { publicKey } = await (await fetch(PUSH_URL + "/vapid")).json();
-    sub = await reg.pushManager.subscribe({ userVisibleOnly:true, applicationServerKey: b64uToBytes(publicKey) });
+    let j;
+    try { j = await (await fetch(PUSH_URL + "/vapid")).json(); } catch(e){ throw new Error("서버 접속 실패 (/vapid)"); }
+    if (!j.publicKey) throw new Error(`서버 키 오류 (/vapid) ${j.error || ""}`.trim());
+    try { sub = await reg.pushManager.subscribe({ userVisibleOnly:true, applicationServerKey: b64uToBytes(j.publicKey) }); }
+    catch(e){ throw new Error(`기기 푸시 등록 실패: ${e.name || ""} ${e.message || ""}`.trim()); }
   }
   return sub;
 }
