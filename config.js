@@ -7,5 +7,5 @@
  */
 window.REP_CONFIG = {
   syncUrl: "",
-  pushUrl: ""
+  pushUrl: "https://rep-english-push.youngwoo816.workers.dev"
 };
