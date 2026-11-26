@@ -1,8 +1,8 @@
 /* Rep English 오프라인 캐시: 항상 네트워크를 먼저 쓰고(최신 반영), 실패할 때만 저장본 사용 */
-const CACHE = "rep-english-v8";
+const CACHE = "rep-english-v9";
 const CORE = [
   "./", "./index.html", "./config.js", "./manifest.webmanifest",
-  "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png",
+  "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png", "./icons/favicon-32.png",
   "./data/daily.txt", "./data/travel.txt", "./data/business.txt",
   "./data/swap-daily.txt", "./data/swap-travel.txt", "./data/swap-business.txt",
   "./data/forms-daily.txt", "./data/forms-travel.txt", "./data/forms-business.txt"
