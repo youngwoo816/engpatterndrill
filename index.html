@@ -168,6 +168,11 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .vhelp{font-size:13px;padding:10px 0;border-bottom:1px solid var(--line)}
 .vhelp summary{cursor:pointer;font-weight:600;color:var(--accent)}
 .vhelp ul{margin:8px 0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.daypick{display:flex;gap:4px}
+a.btn{text-decoration:none}
+.daypick button{width:32px;height:32px;border-radius:50%;font-size:13px;font-weight:700;color:var(--muted);box-shadow:inset 0 0 0 1.5px var(--line)}
+.daypick button[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
+input[type="time"]{font:inherit;font-weight:600;padding:6px 10px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink)}
 .set-sec{font-size:13px;font-weight:700;color:var(--muted);margin:10px 4px -4px;letter-spacing:.02em}
 .set-sec:first-child{margin-top:0}
 select{font:inherit;padding:8px 10px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);max-width:220px}
@@ -436,7 +441,7 @@ const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
 function toast(msg, ms=2200){ if (!msg) return; const t=$("#toast"); t.textContent=msg; t.hidden=false; clearTimeout(toast._t); toast._t=setTimeout(()=>t.hidden=true,ms); }
 
 /* ---------- storage ---------- */
-const DEFAULT = { v:2, settings:{ daily:10, rate:1, auto:true, accent:"us", voiceUS:"", voiceGB:"", theme:"system", reviewMax:20, reviewType:"mix", mode:"full" }, learned:{}, sessions:[], activity:{}, newBy:{}, revDone:{}, exRead:{}, onboarded:false, lastBackup:"", snooze:{}, tour:{}, profile:{ id:"", name:"" }, sync:{ on:true, last:"" } };
+const DEFAULT = { v:2, settings:{ daily:10, rate:1, auto:true, accent:"us", voiceUS:"", voiceGB:"", theme:"system", reviewMax:20, reviewType:"mix", mode:"full", remind:{ on:false, time:"20:00", days:[0,1,2,3,4,5,6] } }, learned:{}, sessions:[], activity:{}, newBy:{}, revDone:{}, exRead:{}, onboarded:false, lastBackup:"", snooze:{}, tour:{}, profile:{ id:"", name:"" }, sync:{ on:true, last:"" } };
 let S = load();
 function normalize(o){
   const s = { ...JSON.parse(JSON.stringify(DEFAULT)), ...o };
@@ -614,6 +619,7 @@ function addNew(cat){ const t = today(); S.newBy[t] = S.newBy[t] || {}; S.newBy[
 function checkClear(cat){
   if (doneToday(cat) || todayNew(cat) < S.settings.daily) return false;
   S.sessions.push({ date:today(), cat, day:S.sessions.filter(x=>x.cat===cat).length+1, n:todayNew(cat) });
+  if (typeof remindDone === "function") remindDone();
   return true;
 }
 function gradeMsg(id, g){
@@ -872,6 +878,7 @@ function viewMore(){
     <div class="set-row"><div><div class="t">자동 재생</div></div>
       <select id="s-auto"><option value="1" ${st.auto?'selected':''}>켜기</option><option value="0" ${!st.auto?'selected':''}>끄기</option></select></div>
     <div class="set-row"><span></span><button class="btn ghost" data-test>음성 테스트</button></div></div>
+  <div class="set-sec">학습 알림</div>${remindHTML()}
   <div class="set-sec">화면</div><div class="card">
     <div class="set-row"><div><div class="t">화면 모드</div></div>
       <div class="seg" role="group">${[["system","기기 설정"],["light","라이트"],["dark","다크"]].map(([v,l])=>`<button data-th="${v}" aria-pressed="${st.theme===v}">${l}</button>`).join("")}</div></div></div>
@@ -1050,6 +1057,13 @@ function bind(r){
     else if (d.md) { S.settings.mode = d.md; save(); render(); toast(d.md === "quick" ? "빠른 모드: 조립·바꿔 말하기를 건너뛰어요" : "기본 모드: 5단계 전부 진행해요"); }
     else if (d.rt) { S.settings.reviewType = d.rt; save(); render(); }
     else if (d.th) { S.settings.theme = d.th; save(); applyTheme(); render(); }
+    else if (d.rday != null) { const r = RM(), i = +d.rday; if (r.days.includes(i)) { if (r.days.length === 1) return toast("최소 하루는 골라야 해요"); r.days = r.days.filter(x => x !== i); } else r.days = [...r.days, i].sort(); remindSave(); render(); }
+    else if (d.rpush != null) {
+      if (d.rpush === "1") { b.disabled = true; remindOn().then(ok => { if (ok) { RM().on = true; save(); toast("푸시 알림을 켰어요"); } render(); }).catch(() => { toast("알림 서버에 연결하지 못했어요. 잠시 후 다시 시도해 주세요"); render(); }); }
+      else { RM().on = false; save(); remindOff(); toast("푸시 알림을 껐어요"); render(); }
+    }
+    else if ("rtest" in d) { pushSub(false).then(sub => sub ? pushPost("/test", { endpoint: sub.endpoint }) : Promise.reject()).then(() => toast("테스트 알림을 보냈어요. 몇 초 안에 도착해요")).catch(() => toast("테스트 알림을 보내지 못했어요. 푸시 알림을 껐다 켜 보세요")); }
+    else if ("rics" in d) downloadIcs();
     else if (d.acc) { S.settings.accent = d.acc; save(); render(); speak(d.acc === "gb" ? "Hello! This is what I sound like in British English." : "Hello! This is what I sound like in American English."); }
     else if ("test" in d) speak("Hi! I'm about to start my English practice.");
     else if ("backup" in d) {
@@ -1077,6 +1091,7 @@ function bind(r){
     $("#s-rate").onchange = e => { S.settings.rate = +e.target.value; save(); };
     $("#s-revmax").onchange = e => { S.settings.reviewMax = +e.target.value; save(); };
     $("#s-auto").onchange = e => { S.settings.auto = e.target.value==="1"; save(); };
+    $("#s-rtime").onchange = e => { if (/^\d\d:\d\d$/.test(e.target.value)) { const [h,m] = e.target.value.split(":").map(Number); RM().time = `${String(h).padStart(2,"0")}:${String(Math.round(m/5)*5 % 60).padStart(2,"0")}`; remindSave(); render(); } };
     const v = $("#s-voice"); if (v) v.onchange = e => { if (S.settings.accent==="gb") S.settings.voiceGB = e.target.value; else S.settings.voiceUS = e.target.value; save(); speak("This is my voice."); };
   }
 }
@@ -1115,8 +1130,8 @@ function closeDrill(fromPop){
 function stepsFor(s){
   const st = ["listen","shadow"];
   const quick = S.settings.mode === "quick";
-  if (!quick && s.en.split(" ").length >= 3) st.push("build");
-  if (!quick && s.pat.sw && !X.subSeen.has(s.pat)) st.push("swap");
+  if (!quick && s.en.split(" ").length >= 2) st.push("build");
+  if (!quick && s.pat.sw) st.push("swap");
   st.push("recall");
   return st;
 }
@@ -1165,7 +1180,8 @@ function recInner(){
 }
 /* 발음 체크: 브라우저 음성 인식으로 내가 말한 문장을 받아 적고, 원문과 단어 단위로 비교 */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-const PR = { ok: !!SR, on:false, rec:null, res:null, sid:null };
+const PRON_ENABLED = false;   // 발음 점수 기능 보류 중: true로 바꾸면 다시 표시
+const PR = { ok: PRON_ENABLED && !!SR, on:false, rec:null, res:null, sid:null };
 const PR_NUM = ["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"];
 function pronWords(t){
   t = String(t).toLowerCase().replace(/[‘’]/g, "'")
@@ -1353,7 +1369,7 @@ function drawStep(){
       <div class="hintbox" id="buildmsg">단어를 순서대로 누르세요</div>`,
       `<button class="btn ghost" data-clear>다시 놓기</button><button class="btn" data-adv>건너뛰기</button>`);
   } else if (key === "swap"){
-    drawSwap(s.pat);
+    drawSwap(s.pat, s.id);
   } else if (key === "recall"){
     const first = s.en.split(" ").map(w => w[0] + w.slice(1).replace(/[A-Za-z]/g,"·")).join(" ");
     frame(`${stepTag()}<div class="big" style="font-family:var(--f-ko);font-weight:700">${esc(s.ko)}</div>
@@ -1374,12 +1390,18 @@ function swapCompose(sw, sel){
   });
   return { en, ko, plainEn };
 }
-function drawSwap(pat){
-  if (!X.sw || X.sw.pat !== pat) X.sw = { pat, sel: pat.sw.slots.map(()=>0), made: new Map() };
+function drawSwap(pat, sid){
+  if (!X.sw || X.sw.pat !== pat) X.sw = { pat, sid, sel: pat.sw.slots.map(()=>0), made: new Map() };
+  else if (sid && X.sw.sid !== sid) {
+    // 같은 패턴의 다음 문장: 다른 조합에서 시작하고 2개만 새로 만들면 통과
+    const prev = X.sw.sel.join(",");
+    let sel; do { sel = pat.sw.slots.map(sl => Math.floor(Math.random() * sl.opts.length)); } while (sel.join(",") === prev && pat.sw.slots.some(sl => sl.opts.length > 1));
+    X.sw = { pat, sid, sel, made: new Map(), rep: true };
+  }
   const W = X.sw, sw = pat.sw;
   const c = swapCompose(sw, W.sel);
   W.made.set(W.sel.join(","), c.plainEn);
-  const n = W.made.size, need = SWAP_MIN;
+  const n = W.made.size, need = W.rep ? 2 : SWAP_MIN;
   const ok = n >= need;
   const footLearn = `<button class="btn ghost" data-adv>건너뛰기</button><button class="btn" data-adv ${ok?'':'disabled'}>${ok ? `다음 · ${STEP_LABEL.recall}` : `${need - n}개 더 만들기`}</button>`;
   const footOnly = `<button class="btn block" data-close>${X.from==="patterns" ? (ok ? '완료 · 목록으로' : '목록으로 돌아가기') : (ok ? '완료' : '닫기')}</button>`;
@@ -1679,6 +1701,113 @@ function syncCardHTML(){
     <div class="row"><input id="sync-name" class="search" style="flex:1;min-width:0" maxlength="40" placeholder="이름 또는 닉네임" autocomplete="name"><button class="btn sm" data-syncname>저장</button></div>
     <div class="row"><button class="btn sm ghost" data-syncoff>보내지 않을게요</button></div></div>`;
 }
+/* ---------- 학습 알림 ----------
+ * 1) 캘린더 알림: 서버 없이 구글 캘린더/기기 캘린더에 매일 반복 일정 추가
+ * 2) 푸시 알림: config.js의 pushUrl(Cloudflare 워커)이 있을 때만. 앱이 꺼져 있어도 정해진 시간에 도착
+ */
+const PUSH_URL = ((window.REP_CONFIG || {}).pushUrl || "").trim().replace(/\/+$/, "");
+const DAY_KO = ["일","월","화","수","목","금","토"], DAY_RR = ["SU","MO","TU","WE","TH","FR","SA"];
+const isIOS = () => /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+const swAllowed = () => "serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost") && !/claude\.(ai|site)|claudeusercontent/.test(location.hostname);
+function pushState(){
+  if (!PUSH_URL) return "noserver";
+  if (!swAllowed()) return "nosw";
+  if (!("PushManager" in window) || !("Notification" in window)) return isIOS() && !isStandalone() ? "ios-install" : "unsupported";
+  if (Notification.permission === "denied") return "denied";
+  return "ok";
+}
+const RM = () => S.settings.remind || (S.settings.remind = { on:false, time:"20:00", days:[0,1,2,3,4,5,6] });
+const tzName = () => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || "Asia/Seoul"; } catch(e){ return "Asia/Seoul"; } };
+async function pushPost(path, body){
+  const r = await fetch(PUSH_URL + path, { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(body) });
+  if (!r.ok) throw new Error("server " + r.status);
+  return r.json();
+}
+const b64uToBytes = s => { const b = atob(s.replace(/-/g, "+").replace(/_/g, "/") + "===".slice((s.length + 3) % 4)); return Uint8Array.from(b, c => c.charCodeAt(0)); };
+async function pushSub(create){
+  const reg = await navigator.serviceWorker.ready;
+  let sub = await reg.pushManager.getSubscription();
+  if (!sub && create) {
+    const { publicKey } = await (await fetch(PUSH_URL + "/vapid")).json();
+    sub = await reg.pushManager.subscribe({ userVisibleOnly:true, applicationServerKey: b64uToBytes(publicKey) });
+  }
+  return sub;
+}
+async function remindOn(){
+  const st = pushState();
+  if (st !== "ok") return false;
+  const perm = await Notification.requestPermission();
+  if (perm !== "granted") { toast("알림 권한이 허용되지 않았어요. 브라우저 설정에서 허용해 주세요", 3500); return false; }
+  const sub = await pushSub(true);
+  const r = RM();
+  await pushPost("/subscribe", { endpoint: sub.endpoint, time: r.time, days: r.days, tz: tzName() });
+  return true;
+}
+async function remindOff(){
+  try { const sub = await pushSub(false); if (sub) { await pushPost("/unsubscribe", { endpoint: sub.endpoint }).catch(()=>{}); await sub.unsubscribe(); } } catch(e){}
+}
+let remindT = null;
+function remindSave(){   // 시간·요일 변경은 잠깐 모았다가 서버에 반영
+  save(); clearTimeout(remindT);
+  if (!RM().on || pushState() !== "ok") return;
+  remindT = setTimeout(() => remindOn().catch(() => toast("알림 서버에 연결하지 못했어요. 잠시 후 다시 시도해 주세요")), 600);
+}
+function remindDone(){   // 오늘 Day를 마치면 오늘 알림은 건너뜀
+  if (!RM().on || pushState() !== "ok") return;
+  pushSub(false).then(sub => sub && pushPost("/done", { endpoint: sub.endpoint, date: today() })).catch(()=>{});
+}
+function calEventParts(){
+  const r = RM(), [h, m] = r.time.split(":").map(Number);
+  const d = new Date(); d.setHours(h, m, 0, 0); if (d < new Date()) d.setDate(d.getDate() + 1);
+  const p = n => String(n).padStart(2, "0");
+  const stamp = x => `${x.getFullYear()}${p(x.getMonth()+1)}${p(x.getDate())}T${p(x.getHours())}${p(x.getMinutes())}00`;
+  const end = new Date(d.getTime() + 15 * 60000);
+  const days = r.days.length ? r.days : [0,1,2,3,4,5,6];
+  const rule = `RRULE:FREQ=WEEKLY;BYDAY=${days.map(i => DAY_RR[i]).join(",")}`;
+  const url = location.href.split("#")[0];
+  return { start: stamp(d), end: stamp(end), rule, url, title: "Rep English 영어 연습", desc: `오늘의 영어 문장 연습 시간이에요. ${url}` };
+}
+function googleCalUrl(){
+  const c = calEventParts();
+  return "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+    `&text=${encodeURIComponent(c.title)}&dates=${c.start}/${c.end}&ctz=${encodeURIComponent(tzName())}` +
+    `&recur=${encodeURIComponent(c.rule)}&details=${encodeURIComponent(c.desc)}`;
+}
+const icsEsc = t => String(t).replace(/\\/g, "\\\\").replace(/[,;]/g, m => "\\" + m).replace(/\n/g, "\\n");
+function downloadIcs(){
+  const c = calEventParts();
+  const ics = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Rep English//KO","CALSCALE:GREGORIAN","BEGIN:VEVENT",
+    `UID:rep-english-${Date.now()}@rep-english`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").slice(0, 15)}Z`,
+    `DTSTART:${c.start}`, `DTEND:${c.end}`, c.rule, `SUMMARY:${icsEsc(c.title)}`, `DESCRIPTION:${icsEsc(c.desc)}`, `URL:${c.url}`,
+    "BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:영어 연습 시간이에요","TRIGGER:PT0M","END:VALARM",
+    "END:VEVENT","END:VCALENDAR"].join("\r\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([ics], { type: "text/calendar;charset=utf-8" }));
+  a.download = "rep-english-reminder.ics"; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+function remindHTML(){
+  const r = RM(), ps = pushState();
+  const pushMsg = {
+    noserver: "푸시 알림은 알림 서버가 연결되면 켤 수 있어요. 지금은 아래 캘린더 알림을 쓰세요.",
+    nosw: "이 주소에서는 푸시 알림을 쓸 수 없어요. GitHub Pages 주소로 열어 주세요.",
+    "ios-install": "iPhone은 Safari 공유 버튼 → <b>홈 화면에 추가</b>한 앱에서 열어야 푸시 알림을 켤 수 있어요 (iOS 16.4 이상).",
+    unsupported: "이 브라우저는 푸시 알림을 지원하지 않아요. 아래 캘린더 알림을 쓰세요.",
+    denied: "알림이 차단돼 있어요. 브라우저(또는 기기) 설정에서 이 사이트 알림을 허용해 주세요.",
+    ok: r.on ? `${r.days.length === 7 ? "매일" : "매주 " + r.days.map(i => DAY_KO[i]).join("·")} ${r.time}에 알려 드려요. 그날 분량을 마치면 건너뛰어요.` : "켜면 앱을 닫아 둬도 정해진 시간에 알림이 와요.",
+  }[ps];
+  return `<div class="card">
+    <div class="set-row"><div><div class="t">알림 시간</div></div>
+      <input id="s-rtime" type="time" step="300" value="${r.time}" aria-label="알림 시간"></div>
+    <div class="set-row"><div><div class="t">요일</div></div>
+      <div class="daypick" role="group" aria-label="알림 요일">${DAY_KO.map((d,i)=>`<button data-rday="${i}" aria-pressed="${r.days.includes(i)}">${d}</button>`).join("")}</div></div>
+    <div class="set-row"><div><div class="t">푸시 알림</div><div class="d">${pushMsg}</div></div>
+      ${ps === "ok" ? `<div class="seg" role="group"><button data-rpush="1" aria-pressed="${r.on}">켜기</button><button data-rpush="0" aria-pressed="${!r.on}">끄기</button></div>` : ''}</div>
+    ${ps === "ok" && r.on ? `<div class="set-row"><span></span><button class="btn ghost" data-rtest>알림 테스트</button></div>` : ''}
+    <div class="set-row"><div><div class="t">캘린더 알림</div><div class="d">서버 없이 어디서나 동작. 위 시간·요일로 반복 일정을 만들어요</div></div></div>
+    <div class="row" style="flex-wrap:wrap;gap:8px;padding:0 0 12px"><a class="btn sm soft" href="${esc(googleCalUrl())}" target="_blank" rel="noopener" data-rgcal>구글 캘린더에 추가</a><button class="btn sm soft" data-rics>iPhone·기타 캘린더 (.ics)</button></div>
+  </div>`;
+}
 function syncSettingsHTML(){
   if (!syncAvailable()) return "";
   return `<div class="card stack"><b>학습 기록 공유</b><span class="muted" style="font-size:13px">켜 두면 이름과 학습 진도 요약만 선생님 관리 페이지로 전송돼요.${S.sync.last ? ` 마지막 전송: ${new Date(S.sync.last).toLocaleString("ko-KR")}` : ''}</span>
@@ -1687,7 +1816,7 @@ function syncSettingsHTML(){
 }
 
 /* ---------- offline (PWA) ---------- */
-if ("serviceWorker" in navigator && location.protocol === "https:" && !/claude\.(ai|site)|claudeusercontent/.test(location.hostname)) {
+if (swAllowed() && !/claude\.(ai|site)|claudeusercontent/.test(location.hostname)) {
   window.addEventListener("load", () => { navigator.serviceWorker.register("sw.js").catch(() => {}); });
 }
 

@@ -1,5 +1,5 @@
 /* Rep English 오프라인 캐시: 항상 네트워크를 먼저 쓰고(최신 반영), 실패할 때만 저장본 사용 */
-const CACHE = "rep-english-v3";
+const CACHE = "rep-english-v4";
 const CORE = [
   "./", "./index.html", "./config.js", "./manifest.webmanifest",
   "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png",
@@ -25,4 +25,23 @@ self.addEventListener("fetch", e => {
       return res;
     }).catch(() => caches.match(req, { ignoreSearch: true }).then(r => r || caches.match("./index.html")))
   );
+});
+
+/* 학습 알림 푸시: 서버는 빈 본문만 보내고, 문구는 여기서 정함 */
+self.addEventListener("push", e => {
+  let d = {};
+  try { d = e.data ? e.data.json() : {}; } catch (_) {}
+  e.waitUntil(self.registration.showNotification(d.title || "Rep English", {
+    body: d.body || "오늘의 영어 문장 연습할 시간이에요. 10분이면 충분해요!",
+    icon: "icons/icon-192.png", badge: "icons/icon-192.png", tag: "rep-remind", renotify: true,
+    data: { url: d.url || self.registration.scope }
+  }));
+});
+self.addEventListener("notificationclick", e => {
+  e.notification.close();
+  const url = (e.notification.data && e.notification.data.url) || self.registration.scope;
+  e.waitUntil(self.clients.matchAll({ type: "window", includeUncontrolled: true }).then(list => {
+    for (const c of list) if (c.url.startsWith(self.registration.scope) && "focus" in c) return c.focus();
+    return self.clients.openWindow(url);
+  }));
 });
