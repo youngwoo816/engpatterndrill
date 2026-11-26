@@ -58,7 +58,7 @@ export default {
 };
 
 // 시간이 된 구독자에게 발송. 목록의 메타데이터만 읽으므로 KV 읽기 횟수를 거의 쓰지 않음
-export async function runDue(env, now) {
+async function runDue(env, now) {
   const jwtCache = new Map();
   let cursor, sent = 0, removed = 0;
   do {
@@ -79,7 +79,7 @@ export async function runDue(env, now) {
   return { sent, removed };
 }
 
-export function localParts(date, tz) {
+function localParts(date, tz) {
   const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", {
     timeZone: tz, hour12: false, year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", weekday: "short",
   }).formatToParts(date).map(x => [x.type, x.value]));
