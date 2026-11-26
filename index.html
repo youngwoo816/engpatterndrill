@@ -638,7 +638,7 @@ function grade(id, g){ // g: 0 다시, 1 애매, 2 완벽
 }
 
 /* ---------- routing ---------- */
-const TABS = [["learn","학습",ICON.learn],["examples","예문",ICON.book],["progress","진척도",ICON.chart],["patterns","문장 목록",ICON.list],["more","설정",ICON.gear]];
+const TABS = [["learn","학습",ICON.learn],["examples","예문",ICON.book],["patterns","문장 목록",ICON.list],["progress","진척도",ICON.chart],["more","설정",ICON.gear]];
 function route(){ const h = location.hash.slice(1); return TABS.some(t=>t[0]===h) ? h : "learn"; }
 window.addEventListener("hashchange", () => {
   const r = route();
