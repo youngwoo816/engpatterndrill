@@ -172,6 +172,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
 a.btn{text-decoration:none}
 .daypick button{width:32px;height:32px;border-radius:50%;font-size:13px;font-weight:700;color:var(--muted);box-shadow:inset 0 0 0 1.5px var(--line)}
 .daypick button[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
+.tpick{display:flex;gap:6px}
 input[type="time"]{font:inherit;font-weight:600;padding:6px 10px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink)}
 .set-sec{font-size:13px;font-weight:700;color:var(--muted);margin:10px 4px -4px;letter-spacing:.02em}
 .set-sec:first-child{margin-top:0}
@@ -1091,7 +1092,8 @@ function bind(r){
     $("#s-rate").onchange = e => { S.settings.rate = +e.target.value; save(); };
     $("#s-revmax").onchange = e => { S.settings.reviewMax = +e.target.value; save(); };
     $("#s-auto").onchange = e => { S.settings.auto = e.target.value==="1"; save(); };
-    $("#s-rtime").onchange = e => { if (/^\d\d:\d\d$/.test(e.target.value)) { const [h,m] = e.target.value.split(":").map(Number); RM().time = `${String(h).padStart(2,"0")}:${String(Math.round(m/5)*5 % 60).padStart(2,"0")}`; remindSave(); render(); } };
+    const setRT = () => { RM().time = `${String(+$("#s-rh").value).padStart(2,"0")}:${String(+$("#s-rm").value).padStart(2,"0")}`; remindSave(); render(); };
+    $("#s-rh").onchange = setRT; $("#s-rm").onchange = setRT;
     const v = $("#s-voice"); if (v) v.onchange = e => { if (S.settings.accent==="gb") S.settings.voiceGB = e.target.value; else S.settings.voiceUS = e.target.value; save(); speak("This is my voice."); };
   }
 }
@@ -1803,12 +1805,12 @@ function remindHTML(){
   }[ps];
   return `<div class="card">
     <div class="set-row"><div><div class="t">알림 시간</div></div>
-      <input id="s-rtime" type="time" step="300" value="${r.time}" aria-label="알림 시간"></div>
+      <div class="tpick"><select id="s-rh" aria-label="시">${Array.from({length:24},(_,h)=>`<option value="${h}" ${h===+r.time.slice(0,2)?'selected':''}>${h < 12 ? '오전' : '오후'} ${h % 12 || 12}시</option>`).join("")}</select>
+        <select id="s-rm" aria-label="분">${Array.from({length:12},(_,i)=>i*5).map(m=>`<option value="${m}" ${m===+r.time.slice(3)?'selected':''}>${String(m).padStart(2,"0")}분</option>`).join("")}</select></div></div>
     <div class="set-row"><div><div class="t">요일</div></div>
       <div class="daypick" role="group" aria-label="알림 요일">${DAY_KO.map((d,i)=>`<button data-rday="${i}" aria-pressed="${r.days.includes(i)}">${d}</button>`).join("")}</div></div>
     <div class="set-row"><div><div class="t">푸시 알림</div><div class="d">${pushMsg}</div></div>
       ${ps === "ok" ? `<div class="seg" role="group"><button data-rpush="1" aria-pressed="${r.on}">켜기</button><button data-rpush="0" aria-pressed="${!r.on}">끄기</button></div>` : ''}</div>
-    ${ps === "ok" && r.on ? `<div class="set-row"><span></span><button class="btn ghost" data-rtest>알림 테스트</button></div>` : ''}
     <div class="set-row"><div><div class="t">캘린더 알림</div><div class="d">서버 없이 어디서나 동작. 위 시간·요일로 반복 일정을 만들어요</div></div></div>
     <div class="row" style="flex-wrap:wrap;gap:8px;padding:0 0 12px"><a class="btn sm soft" href="${esc(googleCalUrl())}" target="_blank" rel="noopener" data-rgcal>구글 캘린더에 추가</a><button class="btn sm soft" data-rics>iPhone·기타 캘린더 (.ics)</button></div>
   </div>`;
