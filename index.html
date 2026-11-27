@@ -604,6 +604,30 @@ function mkUtter(text, mult=1){
   if (v) { u.voice = v; u.lang = String(v.lang || u.lang).replace(/_/g, "-"); }   // 일부 안드로이드는 lang까지 맞춰야 음성이 적용됨
   return u;
 }
+/* 무음 모드에서도 소리 (iPhone·iPad)
+ * - iOS 17+: navigator.audioSession.type = "playback" (음악 앱처럼 무음 스위치 무시)
+ * - 그 외: 소리 없는 오디오를 반복 재생해 오디오 모드를 '재생'으로 유지
+ * 터치가 있어야 재생할 수 있어서 첫 터치 때 시작, 앱이 가려지면 멈춤. 마이크 사용 중에는 잠시 해제 */
+const muteFix = { el:null };
+const muteFixOn = () => S.settings.ignoreMute !== false && typeof isIOS === "function" && isIOS();
+function audioSessionType(t){ try { if (navigator.audioSession) navigator.audioSession.type = t; } catch(e){} }
+function silentWavUrl(){
+  const n = 8000, b = new Uint8Array(44 + n), v = new DataView(b.buffer);
+  const w = (o, s) => { for (let i = 0; i < s.length; i++) b[o + i] = s.charCodeAt(i); };
+  w(0,"RIFF"); v.setUint32(4, 36 + n, true); w(8,"WAVE"); w(12,"fmt "); v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+  v.setUint32(24, 8000, true); v.setUint32(28, 8000, true); v.setUint16(32, 1, true); v.setUint16(34, 8, true); w(36,"data"); v.setUint32(40, n, true); b.fill(128, 44);
+  return URL.createObjectURL(new Blob([b], { type:"audio/wav" }));
+}
+function muteFixStart(){
+  if (!muteFixOn() || document.visibilityState !== "visible" || PR.stream) return;
+  audioSessionType("playback");
+  if (!muteFix.el) { const a = new Audio(silentWavUrl()); a.loop = true; a.setAttribute("playsinline", ""); a.preload = "auto"; muteFix.el = a; }
+  if (muteFix.el.paused) muteFix.el.play().catch(() => {});
+}
+function muteFixStop(){ if (muteFix.el && !muteFix.el.paused) muteFix.el.pause(); audioSessionType("auto"); }
+document.addEventListener("pointerdown", () => muteFixStart(), { capture:true, passive:true });
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") muteFixStop(); });
+
 let speakSeq = 0;
 function speak(text, mult=1){
   if (!TTS.ok) return;
@@ -942,6 +966,8 @@ function viewMore(){
       <select id="s-rate">${[[.8,"느리게"],[.9,"조금 느리게"],[1,"보통"]].map(([v,l])=>`<option value="${v}" ${v===st.rate?'selected':''}>${l}</option>`).join("")}</select></div>
     <div class="set-row"><div><div class="t">자동 재생</div></div>
       <select id="s-auto"><option value="1" ${st.auto?'selected':''}>켜기</option><option value="0" ${!st.auto?'selected':''}>끄기</option></select></div>
+    <div class="set-row"><div><div class="t">무음 모드에서도 소리 내기</div><div class="d">iPhone·iPad 무음 스위치를 켜 둬도 문장 소리가 나요. 잠금 화면에 재생 표시가 잠깐 보일 수 있어요</div></div>
+      <div class="seg" role="group"><button data-imute="1" aria-pressed="${st.ignoreMute !== false}">켜기</button><button data-imute="0" aria-pressed="${st.ignoreMute === false}">끄기</button></div></div>
     <div class="set-row"><span></span><button class="btn ghost" data-test>음성 테스트</button></div></div>
   <div class="set-sec">학습 알림</div>${remindHTML()}
   <div class="set-sec">화면</div><div class="card">
@@ -1155,6 +1181,7 @@ function bind(r){
     else if ("rics" in d) downloadIcs();
     else if (d.rlate != null) { RM().late = d.rlate === "1"; remindSave(); render(); }
     else if (d.acc) { S.settings.accent = d.acc; save(); render(); speak(d.acc === "gb" ? "Hello! This is what I sound like in British English." : "Hello! This is what I sound like in American English."); }
+    else if (d.imute != null) { S.settings.ignoreMute = d.imute === "1"; save(); if (S.settings.ignoreMute) muteFixStart(); else muteFixStop(); render(); toast(S.settings.ignoreMute ? "무음 모드에서도 소리가 나요 (iPhone)" : "무음 스위치를 따라요"); }
     else if ("test" in d) speak("Hi! I'm about to start my English practice.");
     else if ("backup" in d) {
       const code = btoa(unescape(encodeURIComponent(JSON.stringify(S))));
@@ -1359,7 +1386,12 @@ function pronSetPhase(ph){
   }
   pronRefresh();
 }
-function micRelease(){ if (PR.stream) { try { PR.stream.getTracks().forEach(t => t.stop()); } catch(e){} PR.stream = null; } }
+function micRelease(){
+  if (!PR.stream) return;
+  try { PR.stream.getTracks().forEach(t => t.stop()); } catch(e){}
+  PR.stream = null;
+  if (muteFixOn()) setTimeout(muteFixStart, 150);   // 마이크를 닫은 뒤 다시 '재생' 모드로
+}
 function pronStop(){ PR.run = null; clearInterval(PR.ct); PR.phase = ""; if (PR.rec) { try { PR.rec.abort(); } catch(e){} PR.rec = null; } micRelease(); PR.on = false; }
 function pronReset(){ pronStop(); PR.res = null; PR.sid = null; }
 /* Azure 발음 평가 (서버가 임시 토큰 발급). 안 되면 브라우저 음성 인식 간이 체크로 자동 전환 */
@@ -1421,8 +1453,10 @@ async function azAssess(s, my){
   try { sc.setProperty(sdk.PropertyId.SpeechServiceConnection_InitialSilenceTimeoutMs, "8000"); } catch(e){}
   // 마이크를 직접 열어 넘기고, 끝나면 직접 닫음 (iOS에서 마이크가 열려 있으면 문장 소리가 안 나는 문제 방지)
   let stream;
+  if (muteFix.el) muteFix.el.pause();
+  audioSessionType("play-and-record");
   try { stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation:true, noiseSuppression:true } }); }
-  catch(e){ throw { msg:"마이크 권한이 없어요. 브라우저(또는 기기) 설정에서 이 사이트의 마이크를 허용해 주세요." }; }
+  catch(e){ if (muteFixOn()) muteFixStart(); throw { msg:"마이크 권한이 없어요. 브라우저(또는 기기) 설정에서 이 사이트의 마이크를 허용해 주세요." }; }
   if (PR.run !== my) { stream.getTracks().forEach(t => t.stop()); return null; }
   PR.stream = stream;
   const ac = sdk.AudioConfig.fromStreamInput(stream);
@@ -1453,6 +1487,8 @@ async function azAssess(s, my){
 }
 function srStart(s, keepNote){
   if (!keepNote) PR.note = "";
+  if (muteFix.el) muteFix.el.pause();
+  audioSessionType("play-and-record");
   const rec = new SR();
   rec.lang = S.settings.accent === "gb" ? "en-GB" : "en-US";
   rec.interimResults = false; rec.maxAlternatives = 5; rec.continuous = false;
@@ -1475,7 +1511,7 @@ function srStart(s, keepNote){
   };
   rec.onstart = () => pronSetPhase("count");
   rec.onspeechend = () => pronSetPhase("analyze");
-  rec.onend = () => { clearInterval(PR.ct); PR.on = false; PR.phase = ""; PR.rec = null; if (!got) PR.res = { err:"말소리가 들리지 않았어요. 카운트다운이 끝나면 바로 말해 보세요." }; pronRefresh(); };
+  rec.onend = () => { if (muteFixOn()) setTimeout(muteFixStart, 150); clearInterval(PR.ct); PR.on = false; PR.phase = ""; PR.rec = null; if (!got) PR.res = { err:"말소리가 들리지 않았어요. 카운트다운이 끝나면 바로 말해 보세요." }; pronRefresh(); };
   PR.rec = rec; PR.sid = s.id; PR.res = null; PR.mode = "sr"; PR.run = null;
   try { rec.start(); PR.on = true; PR.phase = "prep"; } catch(e) { PR.res = { err:"음성 인식을 시작하지 못했어요. 잠시 후 다시 시도해 주세요." }; }
   pronRefresh();
