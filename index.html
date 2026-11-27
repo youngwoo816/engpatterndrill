@@ -170,6 +170,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .vhelp summary{cursor:pointer;font-weight:600;color:var(--accent)}
 .vhelp ul{margin:8px 0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
 .daypick{display:flex;gap:4px}
+.rcode{font-size:12.5px;word-break:break-all;background:var(--sunken);border-radius:10px;padding:10px 12px;user-select:all;-webkit-user-select:all}
+.mbackup summary{cursor:pointer;list-style-position:inside}
 a.btn{text-decoration:none}
 .daypick button{width:32px;height:32px;border-radius:50%;font-size:13px;font-weight:700;color:var(--muted);box-shadow:inset 0 0 0 1.5px var(--line)}
 .daypick button[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
@@ -622,6 +624,7 @@ function checkClear(cat){
   if (doneToday(cat) || todayNew(cat) < S.settings.daily) return false;
   S.sessions.push({ date:today(), cat, day:S.sessions.filter(x=>x.cat===cat).length+1, n:todayNew(cat) });
   if (typeof remindDone === "function") remindDone();
+  if (typeof sendSync === "function") setTimeout(() => sendSync(false), 300);
   return true;
 }
 function gradeMsg(id, g){
@@ -681,11 +684,16 @@ function noticesHTML(){
   const learned = Object.keys(S.learned).length;
   let h = "";
   if (!isStandalone() && learned >= 1 && !snoozed("a2hs")) {
-    h += `<div class="notice"><b>홈 화면에 추가하세요</b><p>앱처럼 열리고 기록이 더 안전해요.</p>
+    h += `<div class="notice"><b>홈 화면에 추가하세요</b><p>앱처럼 열리고 기록이 더 안전해요.${isIOS() && syncAvailable() ? ' iPhone은 홈 화면 앱에 기록이 따로 저장되니, 추가 후 <b>복구 코드</b>로 불러오세요.' : ''}</p>
       <div class="row">${installEvt ? `<button class="btn sm" data-install>앱 설치</button>` : `<button class="btn sm" data-a2hs>추가하는 방법</button>`}<button class="btn sm ghost" data-snooze="a2hs">나중에</button></div></div>`;
   }
+  if (syncAvailable() && learned === 0 && isStandalone() && !snoozed("migrate")) {
+    h += `<div class="notice"><b>다른 곳에서 하던 기록이 있나요?</b><p>Safari나 다른 기기의 설정 → 복구 코드를 복사해 오면 이어서 할 수 있어요.</p>
+      <div class="row"><button class="btn sm" data-gorestore>복구 코드로 불러오기</button><button class="btn sm ghost" data-snooze="migrate">처음이에요</button></div></div>`;
+  }
   const lb = S.lastBackup;
-  if (learned >= 20 && (!lb || addDays(lb, 7) <= today()) && !snoozed("backup")) {
+  const autoOk = syncAvailable() && S.sync.last && (Date.now() - new Date(S.sync.last).getTime()) < 3 * 864e5;
+  if (!autoOk && learned >= 20 && (!lb || addDays(lb, 7) <= today()) && !snoozed("backup")) {
     h += `<div class="notice warn"><b>${lb ? `마지막 백업 후 7일이 지났어요` : `아직 백업한 적이 없어요`}</b><p>기록은 이 브라우저에만 있어요. 백업 코드를 복사해 보관하세요.</p>
       <div class="row"><button class="btn sm" data-backup>백업 코드 복사</button><button class="btn sm ghost" data-snooze="backup">3일 뒤 알림</button></div></div>`;
   }
@@ -697,7 +705,7 @@ function showA2HS(){
   el.innerHTML = `<div class="onb-card" role="dialog" aria-modal="true" aria-label="홈 화면에 추가하는 방법"><h2>홈 화면에 추가하는 방법</h2>
     <div class="stack" style="gap:6px;font-size:14px"><b>iPhone (Safari)</b><ol><li>화면 아래 <b>공유</b> 버튼(네모에 위쪽 화살표)을 눌러요.</li><li><b>홈 화면에 추가</b>를 누르고 <b>추가</b>를 눌러요.</li></ol></div>
     <div class="stack" style="gap:6px;font-size:14px"><b>Android (Chrome)</b><ol><li>오른쪽 위 <b>⋮</b> 메뉴를 눌러요.</li><li><b>홈 화면에 추가</b> 또는 <b>앱 설치</b>를 눌러요.</li></ol></div>
-    <div class="hintbox">홈 화면 아이콘으로 열면 지금과 같은 주소로 열려서 진도가 그대로 이어져요.</div>
+    <div class="hintbox"><b>iPhone</b>: 홈 화면 앱은 Safari와 기록이 따로 저장돼요. ${syncAvailable() ? `지금 <b>설정 → 복구 코드</b>를 복사해 두었다가, 홈 화면 앱의 설정에서 불러오세요.` : `지금 <b>설정 → 백업 코드</b>를 복사해 두었다가, 홈 화면 앱의 설정에서 복원하세요.`}<br><b>Android</b>: 진도가 그대로 이어져요.</div>
     <button class="btn block" data-onbskip>확인</button></div>`;
   el.addEventListener("click", e => { if (e.target.closest("[data-onbskip]") || e.target === el) el.remove(); });
   document.body.appendChild(el);
@@ -886,10 +894,17 @@ function viewMore(){
       <div class="seg" role="group">${[["system","기기 설정"],["light","라이트"],["dark","다크"]].map(([v,l])=>`<button data-th="${v}" aria-pressed="${st.theme===v}">${l}</button>`).join("")}</div></div></div>
   ${syncSettingsHTML() ? `<div class="set-sec">기록 공유</div>` + syncSettingsHTML() : ""}
   <div class="set-sec">백업</div>
-  <div class="card stack"><b>백업 · 기기 옮기기</b><span class="muted" style="font-size:13px">코드를 복사해 보관하고, 다른 기기에서는 붙여 넣어 복원해요.${S.lastBackup ? ` (마지막 백업 ${S.lastBackup})` : ''}</span>
+  ${syncAvailable() ? `<div class="card stack" id="autobackup"><b>자동 백업 · 기기 옮기기</b>
+    <span class="muted" style="font-size:13px">학습 기록이 서버에 자동 저장돼요.${S.sync.last ? ` 마지막 저장: ${new Date(S.sync.last).toLocaleString("ko-KR", { month:"numeric", day:"numeric", hour:"numeric", minute:"2-digit" })}` : ' 아직 저장 전이에요.'}<br>다른 기기(또는 iPhone 홈 화면 앱)에서는 아래 <b>복구 코드</b>로 불러와요. 코드는 비밀번호처럼 보관하세요.</span>
+    <div class="rcode mono" id="rcode">${esc(recoveryCode())}</div>
+    <div class="row" style="flex-wrap:wrap"><button class="btn sm" data-rcopy>복구 코드 복사</button><button class="btn sm ghost" data-syncnow>지금 저장</button></div>
+    <input id="rcode-in" class="search mono" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="다른 기기의 복구 코드 붙여 넣기">
+    <button class="btn line" data-rload>복구 코드로 불러오기</button></div>` : ''}
+  <div class="card stack"><details class="mbackup" ${syncAvailable() ? '' : 'open'}><summary><b>${syncAvailable() ? '수동 백업 코드 (서버 없이)' : '백업 · 기기 옮기기'}</b></summary>
+    <div class="stack" style="margin-top:8px"><span class="muted" style="font-size:13px">코드를 복사해 보관하고, 다른 기기에서는 붙여 넣어 복원해요.${S.lastBackup ? ` (마지막 백업 ${S.lastBackup})` : ''}</span>
     <div class="row" style="flex-wrap:wrap"><button class="btn ghost" data-backup>백업 코드 복사</button></div>
     <textarea id="restore" rows="3" placeholder="여기에 백업 코드를 붙여 넣기"></textarea>
-    <button class="btn line" data-restore>백업 코드로 복원</button></div>
+    <button class="btn line" data-restore>백업 코드로 복원</button></div></details></div>
   <div class="set-sec">도움말</div>
   <div class="card row between"><span>처음 사용 안내</span><button class="btn sm soft" data-onbshow>다시 보기</button></div>
   <div class="set-sec">위험 구역</div>
@@ -1052,9 +1067,26 @@ function bind(r){
       if (!v) { toast("이름을 입력해 주세요"); return; }
       S.profile.name = v.slice(0, 40); S.sync.on = true; learnerId(); save(); sendSync(false); toast("저장했어요. 학습 기록이 선생님께 전송돼요"); render();
     }
+    else if ("rcopy" in d) { const c = recoveryCode(); try { navigator.clipboard.writeText(c).then(() => toast("복구 코드를 복사했어요. 메모 앱 등에 보관하세요"), () => { getSelection().selectAllChildren($("#rcode")); toast("코드를 길게 눌러 복사하세요"); }); } catch(e){ toast("코드를 길게 눌러 복사하세요"); } }
+    else if ("syncnow" in d) { b.disabled = true; sendSync(false).then(ok => { toast(ok ? "서버에 저장했어요" : "저장하지 못했어요. 인터넷 연결을 확인하세요"); render(); }); }
+    else if ("rload" in d) {
+      const code = ($("#rcode-in").value || "").trim();
+      if (!code) return toast("복구 코드를 붙여 넣어 주세요");
+      if (code === recoveryCode()) return toast("이 기기의 코드예요. 다른 기기의 코드를 넣어 주세요");
+      if (Object.keys(S.learned).length && !d.armed) { d.armed = "1"; b.textContent = "지금 기록을 덮어써요 · 한 번 더 누르기"; return; }
+      b.disabled = true;
+      restoreFromCode(code).then(j => {
+        const keepRemind = S.settings.remind;
+        S = normalize(j.backup); if (keepRemind) S.settings.remind = keepRemind;
+        save(); applyTheme(); toast(`불러왔어요 (${new Date(j.updatedAt).toLocaleString("ko-KR")} 기록)`, 3500);
+        if (RM().on && pushState() === "ok") remindSave();
+        render();
+      }).catch(e => { toast(e.message || "불러오지 못했어요", 4000); render(); });
+    }
     else if ("syncoff" in d) { S.sync.on = false; save(); toast("학습 기록을 보내지 않아요. 설정에서 바꿀 수 있어요"); render(); }
     else if (d.syncset) { S.sync.on = d.syncset === "on"; save(); if (S.sync.on && S.profile.name) sendSync(false); render(); }
     else if ("install" in d) { const ev = installEvt; installEvt = null; if (ev) { ev.prompt(); ev.userChoice.finally(() => render()); } }
+    else if ("gorestore" in d) { location.hash = "#more"; setTimeout(() => { const el = $("#autobackup"); if (el) { el.scrollIntoView({ block:"center" }); $("#rcode-in").focus(); } }, 80); }
     else if (d.snooze) { S.snooze[d.snooze] = addDays(today(), d.snooze === "backup" ? 3 : 14); save(); render(); }
     else if (d.md) { S.settings.mode = d.md; save(); render(); toast(d.md === "quick" ? "빠른 모드: 조립·바꿔 말하기를 건너뛰어요" : "기본 모드: 5단계 전부 진행해요"); }
     else if (d.rt) { S.settings.reviewType = d.rt; save(); render(); }
@@ -1066,6 +1098,7 @@ function bind(r){
     }
     else if ("rtest" in d) { pushSub(false).then(sub => sub ? pushPost("/test", { endpoint: sub.endpoint }) : Promise.reject()).then(() => toast("테스트 알림을 보냈어요. 몇 초 안에 도착해요")).catch(() => toast("테스트 알림을 보내지 못했어요. 푸시 알림을 껐다 켜 보세요")); }
     else if ("rics" in d) downloadIcs();
+    else if (d.rlate != null) { RM().late = d.rlate === "1"; remindSave(); render(); }
     else if (d.acc) { S.settings.accent = d.acc; save(); render(); speak(d.acc === "gb" ? "Hello! This is what I sound like in British English." : "Hello! This is what I sound like in American English."); }
     else if ("test" in d) speak("Hi! I'm about to start my English practice.");
     else if ("backup" in d) {
@@ -1649,11 +1682,26 @@ function drawAnswer(){
   }
 }
 
-/* ---------- 학습 기록 전송 (관리자 페이지용, config.js의 syncUrl이 있을 때만) ---------- */
-const SYNC_URL = ((window.REP_CONFIG || {}).syncUrl || "").trim();
+/* ---------- 서버 연동 (config.js의 serverUrl이 있을 때만) ---------- */
+/* ---------- 자동 백업 · 선생님께 진도 공유 (Cloudflare 워커 서버) ----------
+ * - 자동 백업: 서버가 있으면 기본으로 켜짐. 학습 기록 전체를 복구 코드(아이디.비밀값)로만 꺼낼 수 있게 저장
+ * - 진도 공유: 이름을 입력하고 동의한 경우에만 관리자 페이지에 요약이 보임
+ */
+const CFG = window.REP_CONFIG || {};
+const SERVER = (CFG.serverUrl || CFG.pushUrl || "").trim().replace(/\/+$/, "");
 const IN_ARTIFACT = /claude\.(ai|site)|claudeusercontent/.test(location.hostname);
-const syncAvailable = () => !!SYNC_URL && !IN_ARTIFACT && /^https:\/\/script\.google\.com\//.test(SYNC_URL);
-const syncActive = () => syncAvailable() && S.sync.on !== false && !!S.profile.name;
+const syncAvailable = () => !!SERVER && !IN_ARTIFACT;
+const syncActive = () => syncAvailable();
+const shareOn = () => S.sync.on !== false && !!S.profile.name;
+function learnerToken(){
+  if (!S.profile.token) {
+    const a = crypto.getRandomValues(new Uint8Array(18));
+    S.profile.token = btoa(String.fromCharCode(...a)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+    try { localStorage.setItem(LS_KEY, JSON.stringify(S)); } catch(e){}
+  }
+  return S.profile.token;
+}
+const recoveryCode = () => `${learnerId()}.${learnerToken()}`;
 function learnerId(){
   if (!S.profile.id) {
     S.profile.id = (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 12));
@@ -1674,41 +1722,59 @@ function syncPayload(){
     learned: Object.keys(S.learned).length, mastered: Object.values(S.learned).filter(isMastered).length,
     streak: streak(), daysDone: S.sessions.length, reviewDue: dueList().length,
     exRead: Object.keys(S.exRead).length, todayNew: CATS.reduce((a, c) => a + todayNew(c.key), 0),
-    week, cats, settings: { daily: S.settings.daily, mode: S.settings.mode, accent: S.settings.accent }
+    week, cats, settings: { daily: S.settings.daily, mode: S.settings.mode, accent: S.settings.accent },
+    errs: (S.errs || []).slice(-5), standalone: isStandalone(), push: !!(S.settings.remind && S.settings.remind.on)
   };
 }
 let syncTimer = null, syncLastAt = 0, syncDirty = false;
+const SYNC_GAP = 10 * 60000;   // 서버 저장은 최대 10분에 한 번 (무료 플랜 쓰기 한도 보호)
 function sendSync(beacon){
-  if (!syncActive()) return;
-  const p = syncPayload(); if (!p) return;
-  const body = JSON.stringify(p);
+  if (!syncActive()) return Promise.resolve(false);
+  const summary = syncPayload(); if (!summary) return Promise.resolve(false);
+  const share = shareOn();
+  const markOk = () => { S.sync.last = new Date().toISOString(); try { localStorage.setItem(LS_KEY, JSON.stringify(S)); } catch(e){} };
+  const body = JSON.stringify({ id: learnerId(), token: learnerToken(), share, name: share ? S.profile.name : "", summary, backup: S });
   syncDirty = false; syncLastAt = Date.now();
-  try {
-    if (beacon && navigator.sendBeacon) navigator.sendBeacon(SYNC_URL, new Blob([body], { type:"text/plain;charset=utf-8" }));
-    else fetch(SYNC_URL, { method:"POST", mode:"no-cors", headers:{ "Content-Type":"text/plain;charset=utf-8" }, body, keepalive:true }).catch(() => {});
-    S.sync.last = new Date().toISOString();
-    try { localStorage.setItem(LS_KEY, JSON.stringify(S)); } catch(e){}
-  } catch(e){}
+  const blob = new Blob([body], { type:"text/plain;charset=utf-8" });   // text/plain: 사전 요청(CORS preflight) 없이 전송
+  if (beacon && navigator.sendBeacon && body.length < 60000 && navigator.sendBeacon(SERVER + "/sync", blob)) { markOk(); return Promise.resolve(true); }
+  return fetch(SERVER + "/sync", { method:"POST", body: blob, keepalive: body.length < 60000 })
+    .then(r => { if (r.ok) markOk(); else syncDirty = true; return r.ok; })
+    .catch(() => { syncDirty = true; return false; });
 }
 function queueSync(){
   if (!syncActive()) return;
   syncDirty = true;
   clearTimeout(syncTimer);
-  const wait = Math.max(5000, 60000 - (Date.now() - syncLastAt));   // 최대 1분에 한 번
-  syncTimer = setTimeout(() => sendSync(false), wait);
+  syncTimer = setTimeout(() => sendSync(false), Math.max(5000, SYNC_GAP - (Date.now() - syncLastAt)));
 }
-document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden" && syncDirty) sendSync(true); });
+document.addEventListener("visibilitychange", () => {
+  // 앱을 닫거나 다른 앱으로 갈 때: 변경이 있고 마지막 저장 후 2분이 지났으면 저장
+  if (document.visibilityState === "hidden" && syncDirty && Date.now() - syncLastAt > 120000) sendSync(true);
+});
+// 오류 기록: 최근 5건만 보관해 다음 백업 때 관리자 페이지로 전달
+function logErr(m){
+  try { S.errs = [...(S.errs || []), { t: new Date().toISOString(), m: String(m).slice(0, 200) }].slice(-5); localStorage.setItem(LS_KEY, JSON.stringify(S)); } catch(e){}
+}
+window.addEventListener("error", e => logErr((e.message || "error") + (e.lineno ? ` @${e.lineno}` : "")));
+window.addEventListener("unhandledrejection", e => logErr("promise: " + (e.reason && e.reason.message || e.reason)));
+async function restoreFromCode(code){
+  const r = await fetch(SERVER + "/restore", { method:"POST", body: new Blob([JSON.stringify({ code })], { type:"text/plain;charset=utf-8" }) });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || !j.backup) throw new Error(r.status === 404 ? "코드에 맞는 기록이 없어요. 코드를 다시 확인하세요" : r.status === 400 ? "복구 코드 형식이 맞지 않아요" : "서버에 연결하지 못했어요");
+  return j;
+}
 function syncCardHTML(){
   if (!syncAvailable() || S.profile.name || S.sync.on === false) return "";
+  if (!Object.keys(S.learned).length && isStandalone() && !snoozed("migrate")) return "";   // 기록 불러오기 안내를 먼저
   return `<div class="notice"><b>선생님께 진도 보내기</b><p>이름과 학습 진도만 전송돼요. 설정에서 끌 수 있어요.</p>
     <div class="row"><input id="sync-name" class="search" style="flex:1;min-width:0" maxlength="40" placeholder="이름 또는 닉네임" autocomplete="name"><button class="btn sm" data-syncname>저장</button></div>
     <div class="row"><button class="btn sm ghost" data-syncoff>보내지 않을게요</button></div></div>`;
 }
 /* ---------- 학습 알림 ----------
  * 1) 캘린더 알림: 서버 없이 구글 캘린더/기기 캘린더에 매일 반복 일정 추가
- * 2) 푸시 알림: config.js의 pushUrl(Cloudflare 워커)이 있을 때만. 앱이 꺼져 있어도 정해진 시간에 도착
+ * 2) 푸시 알림: config.js의 serverUrl(Cloudflare 워커)이 있을 때만. 앱이 꺼져 있어도 정해진 시간에 도착
  */
-const PUSH_URL = ((window.REP_CONFIG || {}).pushUrl || "").trim().replace(/\/+$/, "");
+const PUSH_URL = SERVER;
 const DAY_KO = ["일","월","화","수","목","금","토"], DAY_RR = ["SU","MO","TU","WE","TH","FR","SA"];
 const isIOS = () => /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 const swAllowed = () => "serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost") && !/claude\.(ai|site)|claudeusercontent/.test(location.hostname);
@@ -1748,7 +1814,9 @@ async function remindOn(){
   if (perm !== "granted") { toast("알림 권한이 허용되지 않았어요. 브라우저 설정에서 허용해 주세요", 3500); return false; }
   const sub = await pushSub(true);
   const r = RM();
-  await pushPost("/subscribe", { endpoint: sub.endpoint, time: r.time, days: r.days, tz: tzName() });
+  const keys = (sub.toJSON && sub.toJSON().keys) || {};
+  await pushPost("/subscribe", { endpoint: sub.endpoint, keys, id: learnerId(), late: r.late !== false, time: r.time, days: r.days, tz: tzName() });
+  sendSync(false);   // 맞춤 알림 문구(복습 수·연속 학습일)에 쓰일 기록을 바로 저장
   return true;
 }
 async function remindOff(){
@@ -1802,7 +1870,7 @@ function remindHTML(){
     "ios-install": "iPhone은 Safari 공유 버튼 → <b>홈 화면에 추가</b>한 앱에서 열어야 푸시 알림을 켤 수 있어요 (iOS 16.4 이상).",
     unsupported: "이 브라우저는 푸시 알림을 지원하지 않아요. 아래 캘린더 알림을 쓰세요.",
     denied: "알림이 차단돼 있어요. 브라우저(또는 기기) 설정에서 이 사이트 알림을 허용해 주세요.",
-    ok: r.on ? `${r.days.length === 7 ? "매일" : "매주 " + r.days.map(i => DAY_KO[i]).join("·")} ${r.time}에 알려 드려요. 그날 분량을 마치면 건너뛰어요.` : "켜면 앱을 닫아 둬도 정해진 시간에 알림이 와요.",
+    ok: r.on ? `${r.days.length === 7 ? "매일" : "매주 " + r.days.map(i => DAY_KO[i]).join("·")} ${r.time}에 복습할 문장 수와 연속 학습일을 알려 드려요. 그날 분량을 마치면 건너뛰어요.` : "켜면 앱을 닫아 둬도 정해진 시간에 알림이 와요.",
   }[ps];
   return `<div class="card">
     <div class="set-row"><div><div class="t">알림 시간</div></div>
@@ -1812,13 +1880,15 @@ function remindHTML(){
       <div class="daypick" role="group" aria-label="알림 요일">${DAY_KO.map((d,i)=>`<button data-rday="${i}" aria-pressed="${r.days.includes(i)}">${d}</button>`).join("")}</div></div>
     <div class="set-row"><div><div class="t">푸시 알림</div><div class="d">${pushMsg}</div></div>
       ${ps === "ok" ? `<div class="seg" role="group"><button data-rpush="1" aria-pressed="${r.on}">켜기</button><button data-rpush="0" aria-pressed="${!r.on}">끄기</button></div>` : ''}</div>
+    ${ps === "ok" && r.on ? `<div class="set-row"><div><div class="t">밤 10시 한 번 더</div><div class="d">그날 학습 기록이 없으면 연속 학습일이 끊기기 전에 알려 드려요</div></div>
+      <div class="seg" role="group"><button data-rlate="1" aria-pressed="${r.late !== false}">켜기</button><button data-rlate="0" aria-pressed="${r.late === false}">끄기</button></div></div>` : ''}
     <div class="set-row"><div><div class="t">캘린더 알림</div><div class="d">서버 없이 어디서나 동작. 위 시간·요일로 반복 일정을 만들어요</div></div></div>
     <div class="row" style="flex-wrap:wrap;gap:8px;padding:0 0 12px"><a class="btn sm soft" href="${esc(googleCalUrl())}" target="_blank" rel="noopener" data-rgcal>구글 캘린더에 추가</a><button class="btn sm soft" data-rics>iPhone·기타 캘린더 (.ics)</button></div>
   </div>`;
 }
 function syncSettingsHTML(){
   if (!syncAvailable()) return "";
-  return `<div class="card stack"><b>학습 기록 공유</b><span class="muted" style="font-size:13px">켜 두면 이름과 학습 진도 요약만 선생님 관리 페이지로 전송돼요.${S.sync.last ? ` 마지막 전송: ${new Date(S.sync.last).toLocaleString("ko-KR")}` : ''}</span>
+  return `<div class="card stack"><b>선생님께 진도 공유</b><span class="muted" style="font-size:13px">켜 두면 이름과 학습 진도 요약이 선생님 관리 페이지에 보여요. 끄더라도 자동 백업은 계속돼요.</span>
     <div class="seg" role="group"><button data-syncset="on" aria-pressed="${S.sync.on !== false}">보내기</button><button data-syncset="off" aria-pressed="${S.sync.on === false}">보내지 않기</button></div>
     <div class="row"><input id="sync-name2" class="search" style="flex:1;min-width:0" maxlength="40" placeholder="이름 또는 닉네임" value="${esc(S.profile.name)}"><button class="btn sm" data-syncname2>저장</button></div></div>`;
 }
@@ -1831,7 +1901,14 @@ if (swAllowed() && !/claude\.(ai|site)|claudeusercontent/.test(location.hostname
 /* ---------- boot ---------- */
 (async () => {
   $("#app").innerHTML = `<div class="wrap"><div class="empty">문장 불러오는 중…</div></div>`;
-  try { await loadData(); render(); if (!S.tour.intro) showIntro(); }
+  try { await loadData(); render(); if (!S.tour.intro) showIntro();
+    setTimeout(() => {
+      if (syncAvailable() && Object.keys(S.learned).length && (!S.sync.last || Date.now() - new Date(S.sync.last).getTime() > 6 * 3600e3)) sendSync(false);
+      if (RM().on && pushState() === "ok" && Notification.permission === "granted" && S.sync.pushV !== 2) {
+        remindOn().then(ok => { if (ok) { S.sync.pushV = 2; save(); } }).catch(() => {});
+      }
+    }, 2500);
+  }
   catch(e){ $("#app").innerHTML = `<div class="wrap"><div class="card stack"><b>문장 데이터를 불러오지 못했어요</b><span class="muted">파일을 직접 열었다면 웹 서버(예: GitHub Pages)로 열어 주세요. 네트워크를 확인한 뒤 새로고침하세요.</span></div></div>`; }
 })();
 })();

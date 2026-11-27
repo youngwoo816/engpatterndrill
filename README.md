@@ -82,6 +82,11 @@ English sentence. | 한국어 해석
 
 ## 관리자 페이지 (학습자 진도 모아 보기)
 - 주소: `admin.html` (앱 화면에는 링크 없음) · 관리자 키를 아는 사람만 조회 가능
-- 저장소: 관리자 본인의 Google 스프레드시트 + Apps Script 웹 앱 (무료)
-- 설정 방법: [`admin/SETUP.md`](admin/SETUP.md) · Apps Script 코드: [`admin/apps-script.gs`](admin/apps-script.gs)
-- `config.js`의 `syncUrl`이 비어 있으면 전송 기능은 꺼져 있고 앱은 기존과 똑같이 동작합니다.
+- 서버: Cloudflare 워커 하나(`push/worker.js`)가 학습 알림 · 자동 백업 · 관리자 조회를 모두 처리 (무료 플랜)
+- 설정 방법: 서버 [`push/SETUP.md`](push/SETUP.md) · 관리자 키 [`admin/SETUP.md`](admin/SETUP.md)
+- `config.js`의 `serverUrl`이 비어 있으면 서버 기능은 꺼지고 앱은 기록을 그 기기에만 저장합니다.
+
+## 자동 백업 · 기기 옮기기
+- 서버가 연결돼 있으면 학습 기록이 자동 저장됩니다 (최대 10분에 한 번, Day 완료 시 즉시).
+- 설정 → 백업의 **복구 코드**로 다른 기기나 iPhone 홈 화면 앱에서 기록을 불러옵니다.
+- 서버 없이 쓰는 **수동 백업 코드**도 그대로 있습니다.
