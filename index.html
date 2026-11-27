@@ -322,6 +322,18 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 .pron-words .ok{color:var(--good)}
 .pron-words .miss{color:var(--bad);text-decoration:underline wavy;text-underline-offset:4px}
 .pron-heard{font-family:var(--f-en)}
+.pron-words .mid{color:var(--warn)}
+.pron-words .om{color:var(--muted);text-decoration:line-through}
+.pron-words .ins{color:var(--muted);font-style:italic}
+.pbars{display:grid;gap:6px}
+.pbar{display:grid;grid-template-columns:48px 1fr 28px;align-items:center;gap:8px;font-size:12.5px}
+.pbar i{height:6px;border-radius:3px;background:var(--sunken);overflow:hidden}
+.pbar i b{display:block;height:100%;border-radius:3px}
+.pbar b.good{background:var(--good)}.pbar b.warn{background:var(--warn)}.pbar b.bad{background:var(--bad)}
+.pbar em{font-style:normal;text-align:right}
+.pweak{display:grid;gap:4px;font-size:13px}
+.pweak b{font-family:var(--f-en)}
+.pweak .ph{font-family:var(--f-en);color:var(--bad)}
 .pill.rec{color:var(--bad)}
 .pill.rec.on{background:var(--bad);color:#fff}
 
@@ -1228,8 +1240,8 @@ function recInner(){
 }
 /* 발음 체크: 브라우저 음성 인식으로 내가 말한 문장을 받아 적고, 원문과 단어 단위로 비교 */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-const PRON_ENABLED = false;   // 발음 점수 기능 보류 중: true로 바꾸면 다시 표시
-const PR = { ok: PRON_ENABLED && !!SR, on:false, rec:null, res:null, sid:null };
+const PRON_ENABLED = true;
+const PR = { on:false, rec:null, res:null, sid:null };
 const PR_NUM = ["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"];
 function pronWords(t){
   t = String(t).toLowerCase().replace(/[‘’]/g, "'")
@@ -1258,27 +1270,122 @@ function pronMatch(target, heard){
   }
   return { words:a, hit, toks, score, heard };
 }
+const pronLv = v => v >= 90 ? ["good","훌륭해요"] : v >= 75 ? ["good","좋아요"] : v >= 60 ? ["warn","조금만 더"] : ["bad","다시 해 봐요"];
+function azResultHTML(r){
+  const lv = pronLv(r.total || 0), best = (S.pron || {})[PR.sid];
+  const bar = (l, v) => v == null ? "" : `<div class="pbar"><span>${l}</span><i><b class="${pronLv(v)[0]}" style="width:${v}%"></b></i><em class="mono">${v}</em></div>`;
+  const wcls = w => w.e === "Omission" ? "om" : w.e === "Insertion" ? "ins" : w.s == null ? "" : w.s >= 80 ? "ok" : w.s >= 60 ? "mid" : "miss";
+  const weak = r.words.filter(w => w.e !== "Insertion" && w.e !== "Omission" && w.s != null && w.s < 80).sort((a,b) => a.s - b.s).slice(0, 3);
+  const omit = r.words.filter(w => w.e === "Omission").map(w => w.w);
+  return `<div class="pron-res">
+    <div class="pron-top"><b class="pron-score ${lv[0]}">${r.total ?? "-"}<small>점</small></b><span>${lv[1]}${best != null ? ` <span class="muted">· 최고 ${best}점</span>` : ''}</span></div>
+    <div class="pbars">${bar("정확도", r.acc)}${bar("유창성", r.flu)}${bar("완성도", r.comp)}${bar("억양", r.pros)}</div>
+    <div class="pron-words">${r.words.map(w => `<span class="${wcls(w)}" title="${w.s ?? ''}">${w.e === "Insertion" ? "+" : ""}${esc(w.w)}</span>`).join(" ")}</div>
+    ${weak.length ? `<div class="pweak">${weak.map(w => `<div><b>${esc(w.w)}</b> <span class="mono muted">${w.s}점</span>${w.ph.length ? ` · ${w.ph.filter(p => p.s != null && p.s < 70).slice(0, 4).map(p => `<span class="ph">/${esc(p.p)}/ <span class="mono">${p.s}</span></span>`).join(" ") || '<span class="muted">소리는 대체로 괜찮아요</span>'}` : ''}</div>`).join("")}</div>` : ''}
+    ${omit.length ? `<div class="muted">빠뜨린 단어: ${omit.map(esc).join(", ")}</div>` : ''}
+    <div class="muted pron-heard">들린 문장: “${esc(r.heard)}”</div>
+    <div class="muted" style="font-size:12px">초록 80점 이상 · 주황 60~79 · 빨강 60 미만. 원어민 소리를 다시 듣고 약한 단어에 집중해 보세요.</div>
+  </div>`;
+}
 function pronResultHTML(){
-  const r = PR.res; if (!r) return "";
+  const r = PR.res; if (!r) return PR.note && PR.on ? `<div class="muted" style="font-size:12px">${esc(PR.note)}</div>` : "";
   if (r.err) return `<div class="pron-res"><span class="muted">${esc(r.err)}</span></div>`;
+  if (r.az) return azResultHTML(r);
   const lv = r.score >= 90 ? ["good","훌륭해요"] : r.score >= 70 ? ["good","좋아요"] : r.score >= 50 ? ["warn","조금만 더"] : ["bad","다시 해 봐요"];
-  const best = (S.pron || {})[PR.sid];
+  const best = (S.pronW || {})[PR.sid];
   return `<div class="pron-res">
     <div class="pron-top"><b class="pron-score ${lv[0]}">${r.score}<small>점</small></b><span>${lv[1]}${best != null ? ` <span class="muted">· 최고 ${best}점</span>` : ''}</span></div>
     <div class="pron-words">${r.toks.map(t => `<span class="${t.ok ? 'ok' : 'miss'}">${esc(t.w)}</span>`).join(" ")}</div>
     <div class="muted pron-heard">들린 문장: “${esc(r.heard)}”</div>
     ${r.hit.some(h => !h) ? `<div class="muted">빨간 단어가 다르게 들렸어요. 원어민 소리를 다시 듣고 그 단어에 집중해 보세요.</div>` : ''}
+    ${PR.note ? `<div class="muted" style="font-size:12px">${esc(PR.note)} (단어 단위 점수)</div>` : ''}
   </div>`;
 }
 function pronRefresh(){ const b = $("#pronbox"); if (b) b.innerHTML = pronInner(); }
 function pronInner(){
-  return `<button class="pill pron ${PR.on ? 'on' : ''}" data-pron>${ICON.mic} ${PR.on ? '듣는 중… 문장을 말하세요' : PR.res && !PR.res.err ? '발음 다시 체크' : '발음 체크'}</button>${pronResultHTML()}`;
+  return `<button class="pill pron ${PR.on ? 'on' : ''}" data-pron>${ICON.mic} ${PR.on ? (PR.mode === "az" && !PR.rec ? '준비 중…' : '듣는 중… 문장을 말하세요') : PR.res && !PR.res.err ? '발음 다시 체크' : '발음 체크'}</button>${pronResultHTML()}`;
 }
-function pronStop(){ if (PR.rec) { try { PR.rec.abort(); } catch(e){} PR.rec = null; } PR.on = false; }
+function pronStop(){ PR.run = null; if (PR.rec) { try { PR.rec.abort(); } catch(e){} PR.rec = null; } PR.on = false; }
 function pronReset(){ pronStop(); PR.res = null; PR.sid = null; }
+/* Azure 발음 평가 (서버가 임시 토큰 발급). 안 되면 브라우저 음성 인식 간이 체크로 자동 전환 */
+const AZ = { state:"unknown", tok:"", region:"", exp:0, sdk:null };
+const azPossible = () => typeof SERVER !== "undefined" && !!SERVER && !IN_ARTIFACT && !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) && AZ.state !== "off";
+const pronAvailable = () => PRON_ENABLED && (azPossible() || !!SR);
+async function azToken(retry = true){
+  if (AZ.tok && Date.now() < AZ.exp) return AZ;
+  let r;
+  try { r = await fetch(SERVER + "/speech-token", { method:"POST", body: new Blob([JSON.stringify({ id: learnerId(), token: learnerToken() })], { type:"text/plain;charset=utf-8" }) }); }
+  catch(e){ throw { fallback:true }; }
+  if (r.status === 501) { AZ.state = "off"; throw { fallback:true }; }            // 서버에 Azure 키 없음
+  if (r.status === 404 && retry) { await sendSync(false); return azToken(false); } // 백업 등록 전 학습자
+  if (!r.ok) throw { fallback:true };
+  const j = await r.json();
+  Object.assign(AZ, { tok: j.token, region: j.region, exp: Date.now() + 8 * 60000, state:"ok" });
+  return AZ;
+}
+function azSDK(){
+  if (window.SpeechSDK) return Promise.resolve(window.SpeechSDK);
+  if (AZ.sdk) return AZ.sdk;
+  return (AZ.sdk = new Promise((res, rej) => {
+    const sc = document.createElement("script"); sc.src = "vendor/speech-sdk-1.52.0.min.js";
+    sc.onload = () => window.SpeechSDK ? res(window.SpeechSDK) : rej(new Error("sdk"));
+    sc.onerror = () => { AZ.sdk = null; rej(new Error("sdk")); };
+    document.head.appendChild(sc);
+  }));
+}
 function pronStart(s){
   if (REC.on) recStop();
   stopSpeech(); pronStop();
+  PR.sid = s.id; PR.res = null; PR.note = "";
+  if (!azPossible()) return srStart(s);
+  PR.on = true; PR.mode = "az"; pronRefresh();
+  const my = PR.run = {};
+  azAssess(s, my).then(res => {
+    if (PR.run !== my) return;
+    PR.on = false; PR.rec = null; PR.res = res;
+    if (res && !res.err && res.total != null) { S.pron = S.pron || {}; if (!(S.pron[s.id] >= res.total)) { S.pron[s.id] = res.total; save(); } }
+    pronRefresh();
+  }).catch(e => {
+    if (PR.run !== my) return;
+    PR.on = false; PR.rec = null;
+    if (e && e.fallback && SR) { PR.note = "정밀 평가에 연결하지 못해 간이 체크로 확인해요"; return srStart(s, true); }
+    PR.res = { err: (e && e.msg) || "발음 평가에 실패했어요. 잠시 후 다시 시도해 주세요." };
+    pronRefresh();
+  });
+}
+async function azAssess(s, my){
+  const [az, sdk] = await Promise.all([azToken(), azSDK().catch(() => { throw { fallback:true }; })]);
+  if (PR.run !== my) return null;
+  const lang = S.settings.accent === "gb" ? "en-GB" : "en-US";
+  const sc = sdk.SpeechConfig.fromAuthorizationToken(az.tok, az.region);
+  sc.speechRecognitionLanguage = lang;
+  const pa = new sdk.PronunciationAssessmentConfig(s.en, sdk.PronunciationAssessmentGradingSystem.HundredMark, sdk.PronunciationAssessmentGranularity.Phoneme, true);
+  if (lang === "en-US") { try { pa.phonemeAlphabet = "IPA"; pa.enableProsodyAssessment = true; } catch(e){} }
+  const rec = new sdk.SpeechRecognizer(sc, sdk.AudioConfig.fromDefaultMicrophoneInput());
+  pa.applyTo(rec);
+  PR.rec = { abort: () => { try { rec.close(); } catch(e){} } };
+  const result = await new Promise((res, rej) => rec.recognizeOnceAsync(res, rej)).finally(() => { try { rec.close(); } catch(e){} });
+  if (PR.run !== my) return null;
+  if (result.reason === sdk.ResultReason.Canceled) {
+    const cd = sdk.CancellationDetails.fromResult(result);
+    const det = String(cd.errorDetails || "");
+    if (/microphone|permission|NotAllowed|getUserMedia/i.test(det)) throw { msg:"마이크 권한이 없어요. 브라우저(또는 기기) 설정에서 이 사이트의 마이크를 허용해 주세요." };
+    if (/401|403|token|auth/i.test(det)) { AZ.tok = ""; }
+    throw { fallback:true };
+  }
+  if (result.reason !== sdk.ResultReason.RecognizedSpeech) return { err:"말소리를 알아듣지 못했어요. 버튼을 누른 뒤 조금 더 크게, 또박또박 말해 보세요." };
+  const j = JSON.parse(result.properties.getProperty(sdk.PropertyId.SpeechServiceResponse_JsonResult) || "{}");
+  const nb = (j.NBest || [])[0] || {}, pa2 = nb.PronunciationAssessment || {};
+  const num = v => v == null ? null : Math.round(v);
+  return {
+    az: true, heard: j.DisplayText || nb.Display || "",
+    total: num(pa2.PronScore), acc: num(pa2.AccuracyScore), flu: num(pa2.FluencyScore), comp: num(pa2.CompletenessScore), pros: num(pa2.ProsodyScore),
+    words: (nb.Words || []).map(w => ({ w: w.Word, s: num((w.PronunciationAssessment || {}).AccuracyScore), e: (w.PronunciationAssessment || {}).ErrorType || "None",
+      ph: (w.Phonemes || []).map(p => ({ p: p.Phoneme, s: num((p.PronunciationAssessment || {}).AccuracyScore) })).filter(p => p.p) })),
+  };
+}
+function srStart(s, keepNote){
+  if (!keepNote) PR.note = "";
   const rec = new SR();
   rec.lang = S.settings.accent === "gb" ? "en-GB" : "en-US";
   rec.interimResults = false; rec.maxAlternatives = 5; rec.continuous = false;
@@ -1289,7 +1396,7 @@ function pronStart(s){
     let best = null;
     for (const t of alts) { const m = pronMatch(s.en, t); if (!best || m.score > best.score) best = m; }
     PR.res = best || { err:"말소리를 알아듣지 못했어요. 조금 더 크게, 또박또박 말해 보세요." };
-    if (best) { S.pron = S.pron || {}; if (!(S.pron[s.id] >= best.score)) { S.pron[s.id] = best.score; save(); } }
+    if (best) { S.pronW = S.pronW || {}; if (!(S.pronW[s.id] >= best.score)) { S.pronW[s.id] = best.score; save(); } }   // 간이 체크 점수는 따로 보관
   };
   rec.onerror = e => {
     got = true;
@@ -1300,11 +1407,11 @@ function pronStart(s){
     if (!PR.res.err) PR.res = null;
   };
   rec.onend = () => { PR.on = false; PR.rec = null; if (!got) PR.res = { err:"말소리가 들리지 않았어요. 버튼을 누른 뒤 바로 말해 보세요." }; pronRefresh(); };
-  PR.rec = rec; PR.sid = s.id; PR.res = null;
+  PR.rec = rec; PR.sid = s.id; PR.res = null; PR.mode = "sr"; PR.run = null;
   try { rec.start(); PR.on = true; } catch(e) { PR.res = { err:"음성 인식을 시작하지 못했어요. 잠시 후 다시 시도해 주세요." }; }
   pronRefresh();
 }
-const recHTML = () => (PR.ok ? `<div class="pronbox" id="pronbox">${pronInner()}</div>` : "") + (REC.ok ? `<div class="recbox" id="recbox">${recInner()}</div>` : "");
+const recHTML = () => (pronAvailable() ? `<div class="pronbox" id="pronbox">${pronInner()}</div>` : "") + (REC.ok ? `<div class="recbox" id="recbox">${recInner()}</div>` : "");
 function recRefresh(){ const b = $("#recbox"); if (b) b.innerHTML = recInner(); }
 function recStop(discard){
   clearInterval(REC.tick);

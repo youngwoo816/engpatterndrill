@@ -6,11 +6,13 @@
  *   - 밤 10시 알림(선택): 오늘 학습 기록이 없고 연속 학습일이 끊기기 직전이면 한 번 더 알림
  * [자동 백업]  앱이 학습 기록 전체를 저장(/sync)하고, 복구 코드로 다른 기기에서 불러옴(/restore)
  * [관리자]     /admin?key=관리자키 → "선생님께 진도 보내기"에 동의한 학습자 목록 (admin.html이 사용)
+ * [발음 평가]  /speech-token → Azure 음성 임시 토큰(10분) 발급. 백업이 등록된 학습자에게만 (무료 한도 보호)
  *
  * 필요한 설정
  *   - KV 바인딩 이름: SUBS
  *   - 크론 트리거: "*\/5 * * * *"
  *   - 비밀(Secret) ADMIN_KEY: 관리자 페이지 비밀번호 (관리자 페이지를 쓸 때만)
+ *   - 비밀(Secret) AZURE_SPEECH_KEY, AZURE_SPEECH_REGION: Azure 발음 평가 (쓸 때만, 예: koreacentral)
  * 선택 설정(변수): SUBJECT = 앱 주소(https://...) 또는 mailto:주소, ALLOW_ORIGIN = 앱 주소(기본 *)
  * VAPID 키는 첫 실행 때 자동으로 만들어 KV에 보관 (직접 만들거나 붙여 넣을 필요 없음)
  */
@@ -31,7 +33,7 @@ export default {
     const path = url.pathname.replace(/\/+$/, "") || "/";
     try {
       if (!env.SUBS) return json({ error: "KV 바인딩(SUBS)이 없어요. 워커 설정 → 바인딩에서 변수 이름 SUBS로 KV를 연결하세요" }, 500);
-      if (req.method === "GET" && path === "/") return json({ ok: true, service: "rep-english", version: 2 });
+      if (req.method === "GET" && path === "/") return json({ ok: true, service: "rep-english", version: 3, speech: !!(env.AZURE_SPEECH_KEY && env.AZURE_SPEECH_REGION) });
       if (req.method === "GET" && path === "/vapid") return json({ publicKey: (await vapid(env)).pub });
       if (req.method === "GET" && path === "/admin") return json(await admin(env, url.searchParams));
       if (req.method !== "POST") return json({ error: "not found" }, 404);
@@ -51,6 +53,14 @@ export default {
           updatedAt: new Date().toISOString(), summary: b.summary || null, backup: b.backup || (old && old.backup) || null,
         }));
         return json({ ok: true });
+      }
+      if (path === "/speech-token") {
+        if (!env.AZURE_SPEECH_KEY || !env.AZURE_SPEECH_REGION) return json({ error: "not configured" }, 501);
+        if (!validId(b.id) || !validToken(b.token)) return json({ error: "bad id" }, 400);
+        const rec = await env.SUBS.get("u:" + b.id, "json");
+        if (!rec) return json({ error: "unknown learner" }, 404);
+        if (rec.token !== b.token) return json({ error: "token mismatch" }, 403);
+        return json(await speechToken(env));
       }
       if (path === "/restore") {
         const m = String(b.code || "").trim().match(/^([a-zA-Z0-9-]{8,64})\.([a-zA-Z0-9_-]{16,64})$/);
@@ -101,6 +111,20 @@ export default {
     ctx.waitUntil(runDue(env, new Date(event.scheduledTime || Date.now())));
   },
 };
+
+// ---------- Azure 음성 토큰 (9분간 재사용) ----------
+async function speechToken(env) {
+  const region = String(env.AZURE_SPEECH_REGION).trim().toLowerCase().replace(/\s+/g, "");
+  const c = speechToken.c;
+  if (c && c.region === region && Date.now() < c.exp) return { token: c.token, region };
+  const r = await fetch(`https://${region}.api.cognitive.microsoft.com/sts/v1.0/issueToken`, {
+    method: "POST", headers: { "Ocp-Apim-Subscription-Key": String(env.AZURE_SPEECH_KEY).trim(), "Content-Length": "0" },
+  });
+  if (!r.ok) throw new Error(`azure token ${r.status}`);
+  const token = await r.text();
+  speechToken.c = { token, region, exp: Date.now() + 9 * 60000 };
+  return { token, region };
+}
 
 // ---------- 관리자 ----------
 async function admin(env, q) {
