@@ -50,6 +50,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-ko);font
 button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .wrap{max-width:640px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px calc(96px + env(safe-area-inset-bottom,0px))}
+.stickbar select{width:100%}
+.stickbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;flex-direction:column;gap:10px;background:var(--bg);margin:0 -16px;padding:10px 16px;border-bottom:1px solid transparent}
 .mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
 .en{font-family:var(--f-en)}
 h1,h2,h3{margin:0;text-wrap:balance}
@@ -352,6 +354,16 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 .tour-btns .btn{min-height:38px;padding:8px 14px;font-size:14px}
 
 /* onboarding */
+.namegate{position:fixed;inset:0;z-index:90;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:max(24px,env(safe-area-inset-top,0px)) 24px max(24px,env(safe-area-inset-bottom,0px));transition:opacity .25s}
+.namegate.out{opacity:0}
+.ng-in{width:100%;max-width:380px;display:flex;flex-direction:column;gap:14px}
+.ng-in .brand{font-size:22px;margin-bottom:18px}
+.ng-in h1{font-size:26px;line-height:1.3;margin:0}
+.ng-in p{margin:0 0 8px;color:var(--muted);font-size:15px;line-height:1.6}
+.ng-in input{font:inherit;font-size:18px;padding:14px 4px;border:0;border-bottom:2px solid var(--line);background:transparent;color:var(--ink);border-radius:0;outline:none}
+.ng-in input:focus{border-bottom-color:var(--accent)}
+.ng-in .btn{margin-top:10px}
+.ng-skip{background:none;color:var(--muted);font-size:14px;padding:6px;text-decoration:underline;text-underline-offset:3px}
 .onb{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .onb-card{background:var(--surface);border-radius:18px;max-width:420px;width:100%;padding:22px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--shadow)}
 .onb-card h2{font-size:21px}
@@ -779,8 +791,8 @@ function viewProgress(){
   const SHOW = 20;   // 남은 예상 Day가 많으면 앞 20칸만 보여 주고 나머지는 숫자로
   for (let i=0;i<Math.min(future, SHOW);i++){ k++; grid += `<span title="Day ${k} (예상)">${k}</span>`; }
   if (future > SHOW) grid += `<span class="more" title="남은 예상 Day ${future - SHOW}개 더">+${future - SHOW}</span>`;
-  h += `<div class="card stack"><div class="seg" role="group">${CATS.map(x=>`<button data-pc="${x.key}" aria-pressed="${x.key===progCat}">${x.ko}</button>`).join("")}</div>
-    <div class="row between"><b>Day 지도</b><span class="muted mono" style="font-size:12px">${learnedIn(c.key)} / ${D.list.length}</span></div>
+  h += `<div class="stickbar"><div class="seg" role="group">${CATS.map(x=>`<button data-pc="${x.key}" aria-pressed="${x.key===progCat}">${x.ko}</button>`).join("")}</div></div>
+    <div class="card stack"><div class="row between"><b>Day 지도</b><span class="muted mono" style="font-size:12px">${learnedIn(c.key)} / ${D.list.length}</span></div>
     <div class="daygrid">${grid}</div>
     <div class="row between" style="font-size:13px"><span>예문 10개를 읽은 패턴</span><span class="muted mono">${exReadIn(c.key)} / ${D.patterns.length}</span></div>
     <div class="legend"><span style="background:var(--accent)"></span> 완료 <span style="background:var(--accent-soft);margin-left:8px"></span> 진행 중 <span style="background:var(--sunken);margin-left:8px"></span> 남은 예상 Day · 하루 ${n}문장 기준</div>
@@ -798,8 +810,8 @@ function viewPatterns(){
   const D = DATA[patCat];
   const q = query.trim().toLowerCase();
   let h = topBar("문장 목록");
-  h += `<div class="stack"><div class="seg" role="group">${CATS.map(x=>`<button data-pt="${x.key}" aria-pressed="${x.key===patCat}">${x.ko}</button>`).join("")}</div>
-    <input id="q" class="search" type="search" placeholder="영어 또는 한국어로 검색 (예: look forward, 예약)" value="${esc(query)}" autocomplete="off">`;
+  h += `<div class="stack"><div class="stickbar"><div class="seg" role="group">${CATS.map(x=>`<button data-pt="${x.key}" aria-pressed="${x.key===patCat}">${x.ko}</button>`).join("")}</div>
+    <input id="q" class="search" type="search" placeholder="영어 또는 한국어로 검색 (예: look forward, 예약)" value="${esc(query)}" autocomplete="off"></div>`;
   let body = "";
   for (const sec of D.sections){
     let block = "";
@@ -836,8 +848,8 @@ function viewExamples(){
   const D = DATA[exCat], p = exPat(), ex = p.ex || [];
   let h = backTo ? `<button class="backbar" data-back>${ICON.prev}<span>문장 목록</span></button>` : "";
   h += topBar("예문 10");
-  h += `<div class="stack"><div class="seg" role="group">${CATS.map(x=>`<button data-ec="${x.key}" aria-pressed="${x.key===exCat}">${x.ko}</button>`).join("")}</div>
-    <select id="ex-pat" class="search" aria-label="패턴 선택">${D.sections.map(sec=>`<optgroup label="${esc(sec.name)}">${sec.patterns.map(q=>`<option value="${q.idx}" ${q===p?'selected':''}>${S.exRead[exKey(q)]?'✓ ':''}${q.idx+1}. ${esc(q.p)}</option>`).join("")}</optgroup>`).join("")}</select>
+  h += `<div class="stack"><div class="stickbar"><div class="seg" role="group">${CATS.map(x=>`<button data-ec="${x.key}" aria-pressed="${x.key===exCat}">${x.ko}</button>`).join("")}</div>
+    <select id="ex-pat" class="search" aria-label="패턴 선택">${D.sections.map(sec=>`<optgroup label="${esc(sec.name)}">${sec.patterns.map(q=>`<option value="${q.idx}" ${q===p?'selected':''}>${S.exRead[exKey(q)]?'✓ ':''}${q.idx+1}. ${esc(q.p)}</option>`).join("")}</optgroup>`).join("")}</select></div>
     <div class="card stack">${patChip(p)}
       ${TTS.ok ? `<div class="audio-row"><button class="pill on" data-exall>${ICON.play} 전체 듣기</button><button class="pill" data-exstop>${ICON.stop} 정지</button><button class="pill acc" data-exacc title="누르면 미국·영국 발음이 바뀌어요">${accBtn()}</button></div>` : ''}
       <div class="seg" role="group">${[["none","모두 보기"],["en","영어 가리기"],["ko","한국어 가리기"]].map(([v,l])=>`<button data-exh="${v}" aria-pressed="${exHide===v}">${l}</button>`).join("")}</div>
@@ -1736,7 +1748,8 @@ function sendSync(beacon){
   const body = JSON.stringify({ id: learnerId(), token: learnerToken(), share, name: share ? S.profile.name : "", summary, backup: S });
   syncDirty = false; syncLastAt = Date.now();
   const blob = new Blob([body], { type:"text/plain;charset=utf-8" });   // text/plain: 사전 요청(CORS preflight) 없이 전송
-  if (beacon && navigator.sendBeacon && body.length < 60000 && navigator.sendBeacon(SERVER + "/sync", blob)) { markOk(); return Promise.resolve(true); }
+  // 비콘은 전송 성공 여부를 알 수 없으므로 '마지막 저장' 시각은 바꾸지 않음
+  if (beacon && navigator.sendBeacon && body.length < 60000 && navigator.sendBeacon(SERVER + "/sync", blob)) return Promise.resolve(true);
   return fetch(SERVER + "/sync", { method:"POST", body: blob, keepalive: body.length < 60000 })
     .then(r => { if (r.ok) markOk(); else syncDirty = true; return r.ok; })
     .catch(() => { syncDirty = true; return false; });
@@ -1762,6 +1775,36 @@ async function restoreFromCode(code){
   const j = await r.json().catch(() => ({}));
   if (!r.ok || !j.backup) throw new Error(r.status === 404 ? "코드에 맞는 기록이 없어요. 코드를 다시 확인하세요" : r.status === 400 ? "복구 코드 형식이 맞지 않아요" : "서버에 연결하지 못했어요");
   return j;
+}
+/* 첫 실행 이름 입력 화면: 빈 바탕에 글과 입력칸만. 끝나면 본 화면으로 전환 */
+const needNameGate = () => syncAvailable() && !S.profile.name && S.sync.on !== false && !S.sync.asked;
+function showNameGate(next){
+  $("#namegate")?.remove();
+  const fresh = !Object.keys(S.learned).length && isStandalone();
+  const el = document.createElement("div"); el.className = "namegate"; el.id = "namegate";
+  el.innerHTML = `<form class="ng-in" autocomplete="on">
+    <div class="brand">Rep<b>.</b>English</div>
+    <h1>선생님께 진도 보내기</h1>
+    <p>이름을 적으면 학습 진도가 선생님께 전달돼요.<br>닉네임도 괜찮아요. 이메일·전화번호는 받지 않아요.</p>
+    <input id="ng-name" maxlength="40" placeholder="이름 또는 닉네임" autocomplete="name" enterkeyhint="done" aria-label="이름 또는 닉네임">
+    <button class="btn block" type="submit">시작하기</button>
+    <button class="ng-skip" type="button" data-ngskip>보내지 않고 시작</button>
+    ${fresh ? `<button class="ng-skip" type="button" data-ngrestore>예전에 쓰던 기록이 있어요 (복구 코드)</button>` : ''}
+  </form>`;
+  const close = () => { S.sync.asked = true; save(); el.classList.add("out"); setTimeout(() => { el.remove(); render(); next && next(); }, 260); };
+  el.querySelector("form").addEventListener("submit", e => {
+    e.preventDefault();
+    const v = $("#ng-name").value.trim();
+    if (!v) { toast("이름을 입력하거나, 아래 '보내지 않고 시작'을 눌러 주세요"); $("#ng-name").focus(); return; }
+    S.profile.name = v.slice(0, 40); S.sync.on = true; learnerId(); save(); sendSync(false);
+    $("#ng-name").blur(); close();
+  });
+  el.addEventListener("click", e => {
+    if (e.target.closest("[data-ngskip]")) { S.sync.on = false; close(); }
+    else if (e.target.closest("[data-ngrestore]")) { S.sync.asked = true; save(); el.remove(); location.hash = "#more"; setTimeout(() => { const a = $("#autobackup"); if (a) { a.scrollIntoView({ block:"center" }); $("#rcode-in").focus(); } }, 120); }
+  });
+  document.body.appendChild(el);
+  setTimeout(() => $("#ng-name")?.focus(), 120);
 }
 function syncCardHTML(){
   if (!syncAvailable() || S.profile.name || S.sync.on === false) return "";
@@ -1901,7 +1944,9 @@ if (swAllowed() && !/claude\.(ai|site)|claudeusercontent/.test(location.hostname
 /* ---------- boot ---------- */
 (async () => {
   $("#app").innerHTML = `<div class="wrap"><div class="empty">문장 불러오는 중…</div></div>`;
-  try { await loadData(); render(); if (!S.tour.intro) showIntro();
+  try { await loadData(); render();
+    const intro = () => { if (!S.tour.intro) showIntro(); };
+    if (needNameGate()) showNameGate(intro); else intro();
     setTimeout(() => {
       if (syncAvailable() && Object.keys(S.learned).length && (!S.sync.last || Date.now() - new Date(S.sync.last).getTime() > 6 * 3600e3)) sendSync(false);
       if (RM().on && pushState() === "ok" && Notification.permission === "granted" && S.sync.pushV !== 2) {
