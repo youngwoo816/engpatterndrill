@@ -431,7 +431,7 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
   --bg:#F7F8FA; --surface:rgba(255,255,255,.58); --solid:#FFFFFF; --sunken:rgba(20,24,40,.055);
   --ink:#15171C; --muted:#6A707C; --line:rgba(20,24,40,.09);
   --accent:#24408E; --accent-ink:#FFFFFF; --accent-soft:rgba(36,64,142,.10);
-  --navy-1:#2E4C9E; --navy-2:#1C2B4F;
+  --navy-1:#2E4C9E; --navy-2:#233D85;
   --good:#12875F; --good-soft:rgba(18,135,95,.10); --warn:#B87A00; --warn-soft:rgba(184,122,0,.10); --bad:#D23F45; --bad-soft:rgba(210,63,69,.10);
   --heat0:rgba(20,24,40,.06); --heat1:#C8D2EE; --heat2:#8FA3D8; --heat3:#4D68B4; --heat4:#24408E;
   --g-fill:linear-gradient(118deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,0) 42%),linear-gradient(145deg,rgba(255,255,255,.74) 0%,rgba(255,255,255,.40) 55%,rgba(255,255,255,.58) 100%);
@@ -453,7 +453,7 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
   --bg:#0B0C10; --surface:rgba(32,34,42,.52); --solid:#1A1C22; --sunken:rgba(255,255,255,.06);
   --ink:#ECEEF2; --muted:#9CA2AE; --line:rgba(255,255,255,.10);
   --accent:#9CB2F2; --accent-ink:#0B0C10; --accent-soft:rgba(156,178,242,.14);
-  --navy-1:#4565BE; --navy-2:#2A3F7A;
+  --navy-1:#4565BE; --navy-2:#3A55A6;
   --good:#46CF98; --good-soft:rgba(70,207,152,.13); --warn:#E9B840; --warn-soft:rgba(233,184,64,.13); --bad:#FF7C80; --bad-soft:rgba(255,124,128,.13);
   --heat0:rgba(255,255,255,.07); --heat1:#27325E; --heat2:#3A4C96; --heat3:#5C78F0; --heat4:#8EA2FF;
   --g-fill:linear-gradient(118deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 40%),linear-gradient(145deg,rgba(52,55,66,.62) 0%,rgba(28,30,37,.40) 55%,rgba(40,43,52,.52) 100%);
@@ -468,7 +468,7 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
   --bg:#0B0C10; --surface:rgba(32,34,42,.52); --solid:#1A1C22; --sunken:rgba(255,255,255,.06);
   --ink:#ECEEF2; --muted:#9CA2AE; --line:rgba(255,255,255,.10);
   --accent:#9CB2F2; --accent-ink:#0B0C10; --accent-soft:rgba(156,178,242,.14);
-  --navy-1:#4565BE; --navy-2:#2A3F7A;
+  --navy-1:#4565BE; --navy-2:#3A55A6;
   --good:#46CF98; --good-soft:rgba(70,207,152,.13); --warn:#E9B840; --warn-soft:rgba(233,184,64,.13); --bad:#FF7C80; --bad-soft:rgba(255,124,128,.13);
   --heat0:rgba(255,255,255,.07); --heat1:#27325E; --heat2:#3A4C96; --heat3:#5C78F0; --heat4:#8EA2FF;
   --g-fill:linear-gradient(118deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 40%),linear-gradient(145deg,rgba(52,55,66,.62) 0%,rgba(28,30,37,.40) 55%,rgba(40,43,52,.52) 100%);
@@ -511,16 +511,15 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:var(--bg-ar
 .seg button{border-radius:11px}
 .seg button[aria-pressed="true"]{background:var(--g-fill);-webkit-backdrop-filter:var(--g-blur);backdrop-filter:var(--g-blur);box-shadow:var(--g-edge),0 3px 10px -2px rgba(20,24,40,.14)}
 
-/* 버튼: 기본은 포인트 컬러(남색), 보조는 유리 */
-.btn{border-radius:14px;background:linear-gradient(180deg,var(--navy-1) 0%,var(--navy-2) 100%);color:#fff;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),inset 0 0 0 1px rgba(255,255,255,.06),0 8px 18px -8px color-mix(in srgb,var(--navy-2) 70%,transparent)}
+/* 버튼: 기본은 포인트 컬러(남색) 단색 — 유리 효과 없음, 보조 버튼만 유리 */
+.btn{border-radius:14px;background:var(--navy-2);color:#fff;box-shadow:none}
 .btn.ghost,.btn.line{background:var(--g-fill);-webkit-backdrop-filter:var(--g-blur);backdrop-filter:var(--g-blur);color:var(--ink);box-shadow:var(--g-edge),0 4px 14px -6px rgba(20,24,40,.18)}
-.btn.soft{background:var(--accent-soft);color:var(--accent);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 0 0 1px color-mix(in srgb,var(--accent) 22%,transparent)}
+.btn.soft{background:var(--accent-soft);color:var(--accent);box-shadow:none}
 .btn.sm{border-radius:12px}
 .pill{border-radius:999px}
-.pill.on{background:linear-gradient(180deg,var(--navy-1),var(--navy-2));color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 6px 16px -6px color-mix(in srgb,var(--navy-2) 70%,transparent)}
+.pill.on{background:var(--navy-2);color:#fff;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
 .pill.pron{color:var(--accent)}
-.pill.pron.on{background:linear-gradient(180deg,var(--navy-1),var(--navy-2));color:#fff}
+.pill.pron.on{background:var(--navy-2);color:#fff;box-shadow:none}
 .iconbtn{width:40px;height:40px}
 .streak{height:40px}
 
