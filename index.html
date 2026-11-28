@@ -331,6 +331,8 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 .pron-stage b{font-size:17px}
 .pron-stage.live{box-shadow:inset 0 0 0 2px var(--accent)}
 .pron-count{font-family:var(--f-mono);font-size:44px!important;line-height:1;color:var(--accent)}
+.lvl{width:min(220px,80%);height:6px;border-radius:3px;background:var(--sunken);overflow:hidden}
+.lvl i{display:block;height:100%;width:0;background:var(--good);border-radius:3px;transition:width .08s}
 .mic-dot{width:14px;height:14px;border-radius:50%;background:var(--bad);animation:pronpulse 1s ease-in-out infinite}
 .spin{width:22px;height:22px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--accent);animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -1508,8 +1510,8 @@ function pronRefresh(){ const b = $("#pronbox"); if (b) b.innerHTML = pronInner(
 function pronPhaseHTML(){
   const ph = PR.phase;
   if (ph === "prep") return `<div class="pron-stage"><span class="spin"></span><b>마이크 준비 중…</b><span class="muted">잠시만 기다려 주세요</span></div>`;
-  if (ph === "count") return `<div class="pron-stage"><b class="pron-count">${PR.count}</b><span class="muted">이 숫자가 끝나면 문장을 읽어 주세요</span></div>`;
-  if (ph === "listen") return `<div class="pron-stage live"><span class="mic-dot"></span><b>지금 말하세요</b><span class="muted">다 읽으면 잠시 멈춰 주세요. 자동으로 검사해요</span></div>`;
+  if (ph === "count") return `<div class="pron-stage"><b class="pron-count">${PR.count}</b><div class="lvl" aria-hidden="true"><i id="pronlvl"></i></div><span class="muted">이 숫자가 끝나면 문장을 읽어 주세요</span></div>`;
+  if (ph === "listen") return `<div class="pron-stage live"><span class="mic-dot"></span><b>지금 말하세요</b><div class="lvl" aria-hidden="true"><i id="pronlvl"></i></div><span class="muted">다 읽으면 잠시 멈춰 주세요. 자동으로 검사해요</span></div>`;
   if (ph === "analyze") return `<div class="pron-stage"><span class="spin"></span><b>발음 검사 중…</b><span class="muted">보통 2~5초 걸려요</span></div>`;
   return "";
 }
@@ -1531,8 +1533,33 @@ function pronSetPhase(ph){
   }
   pronRefresh();
 }
+/* 마이크 → 16kHz 16bit PCM 변환 (평균으로 줄여 잡음 감소) + 음량 막대 갱신 */
+function pcmCapture(stream, ctx, write){
+  const src = ctx.createMediaStreamSource(stream);
+  const proc = ctx.createScriptProcessor(4096, 1, 1);
+  const ratio = ctx.sampleRate / 16000;
+  proc.onaudioprocess = e => {
+    const inp = e.inputBuffer.getChannelData(0);
+    let sum = 0; for (let i = 0; i < inp.length; i++) sum += inp[i] * inp[i];
+    const lv = Math.sqrt(sum / inp.length); if (lv > PR.lvMax) PR.lvMax = lv;
+    const bar = document.getElementById("pronlvl"); if (bar) bar.style.width = Math.min(100, lv * 900) + "%";
+    const n = Math.floor(inp.length / ratio), out = new Int16Array(n);
+    for (let i = 0; i < n; i++) {
+      const a = Math.floor(i * ratio), b = Math.min(inp.length, Math.floor((i + 1) * ratio));
+      let v = 0; for (let k = a; k < b; k++) v += inp[k]; v /= Math.max(1, b - a);
+      out[i] = Math.max(-1, Math.min(1, v)) * 0x7fff;
+    }
+    write(out.buffer);
+  };
+  src.connect(proc); proc.connect(ctx.destination);   // 처리를 위해 연결 (출력은 무음)
+  return () => { try { proc.onaudioprocess = null; proc.disconnect(); src.disconnect(); } catch(e){} };
+}
+function capRelease(){
+  if (PR.capStop) { PR.capStop(); PR.capStop = null; }
+  if (PR.actx) { const c = PR.actx; PR.actx = null; setTimeout(() => { try { c.close(); } catch(e){} }, 50); }
+}
 function micRelease(){ if (PR.stream) { try { PR.stream.getTracks().forEach(t => t.stop()); } catch(e){} PR.stream = null; } }
-function pronStop(){ PR.run = null; clearInterval(PR.ct); PR.phase = ""; if (PR.rec) { try { PR.rec.abort(); } catch(e){} PR.rec = null; } micRelease(); PR.on = false; }
+function pronStop(){ PR.run = null; clearInterval(PR.ct); PR.phase = ""; capRelease(); if (PR.rec) { try { PR.rec.abort(); } catch(e){} PR.rec = null; } micRelease(); PR.on = false; }
 function pronReset(){ pronStop(); PR.res = null; PR.sid = null; }
 /* Azure 발음 평가 (서버가 임시 토큰 발급). 안 되면 브라우저 음성 인식 간이 체크로 자동 전환 */
 const AZ = { state:"unknown", tok:"", region:"", exp:0, sdk:null };
@@ -1565,17 +1592,23 @@ function pronStart(s){
   stopSpeech(); pronStop(); PR.t0 = Date.now();
   PR.sid = s.id; PR.res = null; PR.note = "";
   if (!azPossible()) return srStart(s);
+  try {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    PR.actx = AC ? new AC() : null;
+    if (PR.actx && PR.actx.state === "suspended") PR.actx.resume().catch(() => {});
+  } catch(e){ PR.actx = null; }
+  PR.lvMax = 0;
   PR.on = true; PR.mode = "az"; PR.phase = "prep"; pronRefresh();
   const my = PR.run = {};
   azAssess(s, my).then(res => {
     if (PR.run !== my) return;
-    micRelease(); clearInterval(PR.ct);
+    capRelease(); micRelease(); clearInterval(PR.ct);
     PR.on = false; PR.phase = ""; PR.rec = null; PR.res = res;
     if (res && !res.err && res.total != null) { S.pron = S.pron || {}; if (!(S.pron[s.id] >= res.total)) { S.pron[s.id] = res.total; save(); } }
     pronRefresh();
   }).catch(e => {
     if (PR.run !== my) return;
-    micRelease(); clearInterval(PR.ct);
+    capRelease(); micRelease(); clearInterval(PR.ct);
     PR.on = false; PR.phase = ""; PR.rec = null;
     if (e && e.fallback && SR) { PR.note = "정밀 평가에 연결하지 못해 간이 체크로 확인해요"; return srStart(s, true); }
     PR.res = { err: (e && e.msg) || "발음 평가에 실패했어요. 잠시 후 다시 시도해 주세요." };
@@ -1600,13 +1633,18 @@ async function azAssess(s, my){
   catch(e){ throw { msg:"마이크 권한이 없어요. 브라우저(또는 기기) 설정에서 이 사이트의 마이크를 허용해 주세요." }; }
   if (PR.run !== my) { stream.getTracks().forEach(t => t.stop()); return null; }
   PR.stream = stream;
-  const ac = sdk.AudioConfig.fromStreamInput(stream);
+  let ac, push = null;
+  if (PR.actx && sdk.AudioInputStream && sdk.AudioStreamFormat) {
+    push = sdk.AudioInputStream.createPushStream(sdk.AudioStreamFormat.getWaveFormatPCM(16000, 16, 1));
+    PR.capStop = pcmCapture(stream, PR.actx, buf => { try { push.write(buf); } catch(e){} });
+    ac = sdk.AudioConfig.fromStreamInput(push);
+  } else ac = sdk.AudioConfig.fromStreamInput(stream);   // 오디오 장치를 못 만든 경우 SDK 방식
   const rec = new sdk.SpeechRecognizer(sc, ac);
   pa.applyTo(rec);
-  rec.speechEndDetected = () => { if (PR.run === my) { micRelease(); pronSetPhase("analyze"); } };
+  rec.speechEndDetected = () => { if (PR.run === my) { capRelease(); try { push && push.close(); } catch(e){} micRelease(); pronSetPhase("analyze"); } };
   PR.rec = { abort: () => { try { rec.close(); } catch(e){} } };
   pronSetPhase("count");
-  const result = await new Promise((res, rej) => rec.recognizeOnceAsync(res, rej)).finally(() => { try { rec.close(); } catch(e){} try { ac.close(); } catch(e){} micRelease(); });
+  const result = await new Promise((res, rej) => rec.recognizeOnceAsync(res, rej)).finally(() => { capRelease(); try { push && push.close(); } catch(e){} try { rec.close(); } catch(e){} try { ac.close(); } catch(e){} micRelease(); });
   if (PR.run !== my) return null;
   if (result.reason === sdk.ResultReason.Canceled) {
     const cd = sdk.CancellationDetails.fromResult(result);
@@ -1615,7 +1653,11 @@ async function azAssess(s, my){
     if (/401|403|token|auth/i.test(det)) { AZ.tok = ""; }
     throw { fallback:true };
   }
-  if (result.reason !== sdk.ResultReason.RecognizedSpeech) return { err:"말소리를 알아듣지 못했어요. 버튼을 누른 뒤 조금 더 크게, 또박또박 말해 보세요." };
+  if (result.reason !== sdk.ResultReason.RecognizedSpeech) {
+    // 입력 음량으로 원인 구분: 마이크에 소리가 거의 안 들어온 경우 vs 소리는 들어왔지만 알아듣지 못한 경우
+    if (PR.actx && PR.lvMax < 0.015) return { err:"마이크에 소리가 거의 들어오지 않았어요. 폰을 입 가까이 대고, 다른 앱이 마이크를 쓰고 있지 않은지 확인해 주세요." };
+    return { err:"소리는 들렸지만 문장으로 알아듣지 못했어요. 카운트다운이 끝난 뒤 문장 전체를 끊지 말고 또박또박 읽어 주세요." };
+  }
   const j = JSON.parse(result.properties.getProperty(sdk.PropertyId.SpeechServiceResponse_JsonResult) || "{}");
   const nb = (j.NBest || [])[0] || {}, pa2 = nb.PronunciationAssessment || {};
   const num = v => v == null ? null : Math.round(v);
