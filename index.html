@@ -345,6 +345,9 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 .pweak{display:grid;gap:4px;font-size:13px}
 .pweak b{font-family:var(--f-en)}
 .pweak .ph{font-family:var(--f-en);color:var(--bad)}
+.pweak .ph b{font-weight:800}
+.pheard{display:grid;gap:4px;font-size:13px;background:var(--bad-soft);border-radius:10px;padding:8px 10px}
+.pheard b{font-family:var(--f-en)}
 .pill.rec{color:var(--bad)}
 .pill.rec.on{background:var(--bad);color:#fff}
 
@@ -1068,6 +1071,9 @@ function viewMore(){
       <select id="s-revmax">${[10,20,30,50].map(v=>`<option value="${v}" ${v===st.reviewMax?'selected':''}>${v}문장</option>`).join("")}</select></div>
     <div class="set-row"><div><div class="t">복습 방식</div></div>
       <div class="seg" role="group">${[["mix","섞어서"],["recall","한→영"],["dict","받아쓰기"]].map(([v,l])=>`<button data-rt="${v}" aria-pressed="${st.reviewType===v}">${l}</button>`).join("")}</div></div></div>
+  <div class="set-sec">발음 체크</div><div class="card">
+    <div class="set-row"><div><div class="t">난이도</div><div class="d">${(PRON_LEVELS[st.pronLevel] || PRON_LEVELS.normal).d}</div></div>
+      <div class="seg" role="group">${Object.entries(PRON_LEVELS).map(([k,v]) => `<button data-plv="${k}" aria-pressed="${(st.pronLevel || "normal") === k}">${v.l}</button>`).join("")}</div></div></div>
   <div class="set-sec">소리</div><div class="card">
     <div class="set-row"><div><div class="t">발음</div></div>
       <div class="seg" role="group"><button data-acc="us" aria-pressed="${st.accent==='us'}">미국 발음</button><button data-acc="gb" aria-pressed="${st.accent==='gb'}">영국 발음</button></div></div>
@@ -1304,6 +1310,7 @@ function bind(r){
     }
     else if ("rtest" in d) { pushSub(false).then(sub => sub ? pushPost("/test", { endpoint: sub.endpoint }) : Promise.reject()).then(() => toast("테스트 알림을 보냈어요. 몇 초 안에 도착해요")).catch(() => toast("테스트 알림을 보내지 못했어요. 푸시 알림을 껐다 켜 보세요")); }
     else if ("rics" in d) downloadIcs();
+    else if (d.plv) { S.settings.pronLevel = d.plv; save(); render(); toast(`발음 체크 난이도: ${PRON_LEVELS[d.plv].l}`); }
     else if (d.rlate != null) { RM().late = d.rlate === "1"; remindSave(); render(); }
     else if (d.acc) { S.settings.accent = d.acc; save(); render(); speak(d.acc === "gb" ? "Hello! This is what I sound like in British English." : "Hello! This is what I sound like in American English."); }
     else if ("test" in d) speak("Hi! I'm about to start my English practice.");
@@ -1452,21 +1459,35 @@ function pronMatch(target, heard){
   }
   return { words:a, hit, toks, score, heard };
 }
-const pronLv = v => v >= 90 ? ["good","훌륭해요"] : v >= 75 ? ["good","좋아요"] : v >= 60 ? ["warn","조금만 더"] : ["bad","다시 해 봐요"];
+/* 발음 체크 난이도: 점수는 Azure 그대로, 색과 평가 문구의 기준선만 다름. 쉬움은 빠뜨린·덧붙인 단어 감점도 끔 */
+const PRON_LEVELS = {
+  easy:   { l:"쉬움", ok:70, mid:50, top:[85,65,50], weakPh:60, miscue:false, d:"기준이 너그러워요. 빠뜨린 단어도 감점하지 않아요" },
+  normal: { l:"보통", ok:80, mid:60, top:[90,75,60], weakPh:70, miscue:true,  d:"기본 기준이에요" },
+  strict: { l:"엄격", ok:90, mid:75, top:[95,85,70], weakPh:80, miscue:true,  d:"원어민에 가까운 기준이에요" },
+};
+const PL = () => PRON_LEVELS[S.settings.pronLevel] || PRON_LEVELS.normal;
+const pronLv = v => { const t = PL().top; return v >= t[0] ? ["good","훌륭해요"] : v >= t[1] ? ["good","좋아요"] : v >= t[2] ? ["warn","조금만 더"] : ["bad","다시 해 봐요"]; };
 function azResultHTML(r){
   const lv = pronLv(r.total || 0), best = (S.pron || {})[PR.sid];
   const bar = (l, v) => v == null ? "" : `<div class="pbar"><span>${l}</span><i><b class="${pronLv(v)[0]}" style="width:${v}%"></b></i><em class="mono">${v}</em></div>`;
-  const wcls = w => w.e === "Omission" ? "om" : w.e === "Insertion" ? "ins" : w.s == null ? "" : w.s >= 80 ? "ok" : w.s >= 60 ? "mid" : "miss";
-  const weak = r.words.filter(w => w.e !== "Insertion" && w.e !== "Omission" && w.s != null && w.s < 80).sort((a,b) => a.s - b.s).slice(0, 3);
+  const L = PL();
+  const wcls = w => w.e === "Omission" ? "om" : w.e === "Insertion" ? "ins" : w.s == null ? "" : w.s >= L.ok ? "ok" : w.s >= L.mid ? "mid" : "miss";
+  const weak = r.words.filter(w => w.e !== "Insertion" && w.e !== "Omission" && w.s != null && w.s < L.ok).sort((a,b) => a.s - b.s).slice(0, 3);
+  // ① 실제로 들린 소리: 기대한 소리 대신 다른 소리가 더 높게 나온 경우 "/θ/ → /s/"
+  const heardAs = p => p.nb && p.nb[0] && p.nb[0].p && p.nb[0].p !== p.p ? p.nb[0].p : "";
+  const phHTML = p => { const h = heardAs(p); return `<span class="ph">/${esc(p.p)}/${h ? ` → <b>/${esc(h)}/</b>` : ''} <span class="mono">${p.s}</span></span>`; };
+  const tips = [];
+  r.words.forEach(w => w.ph.forEach(p => { const h = heardAs(p); if (h && p.s != null && p.s < L.weakPh && tips.length < 3 && !tips.some(t => t.p === p.p && t.h === h)) tips.push({ w:w.w, p:p.p, h }); }));
   const omit = r.words.filter(w => w.e === "Omission").map(w => w.w);
   return `<div class="pron-res">
     <div class="pron-top"><b class="pron-score ${lv[0]}">${r.total ?? "-"}<small>점</small></b><span>${lv[1]}${best != null ? ` <span class="muted">· 최고 ${best}점</span>` : ''}</span></div>
     <div class="pbars">${bar("정확도", r.acc)}${bar("유창성", r.flu)}${bar("완성도", r.comp)}${bar("억양", r.pros)}</div>
     <div class="pron-words">${r.words.map(w => `<span class="${wcls(w)}" title="${w.s ?? ''}">${w.e === "Insertion" ? "+" : ""}${esc(w.w)}</span>`).join(" ")}</div>
-    ${weak.length ? `<div class="pweak">${weak.map(w => `<div><b>${esc(w.w)}</b> <span class="mono muted">${w.s}점</span>${w.ph.length ? ` · ${w.ph.filter(p => p.s != null && p.s < 70).slice(0, 4).map(p => `<span class="ph">/${esc(p.p)}/ <span class="mono">${p.s}</span></span>`).join(" ") || '<span class="muted">소리는 대체로 괜찮아요</span>'}` : ''}</div>`).join("")}</div>` : ''}
+    ${weak.length ? `<div class="pweak">${weak.map(w => `<div><b>${esc(w.w)}</b> <span class="mono muted">${w.s}점</span>${w.ph.length ? ` · ${w.ph.filter(p => p.s != null && p.s < L.weakPh).slice(0, 4).map(phHTML).join(" ") || '<span class="muted">소리는 대체로 괜찮아요</span>'}` : ''}</div>`).join("")}</div>` : ''}
+    ${tips.length ? `<div class="pheard">${tips.map(t => `<div>🔊 <b>${esc(t.w)}</b>의 <b>/${esc(t.p)}/</b> 소리가 <b>/${esc(t.h)}/</b>처럼 들렸어요</div>`).join("")}</div>` : ''}
     ${omit.length ? `<div class="muted">빠뜨린 단어: ${omit.map(esc).join(", ")}</div>` : ''}
     <div class="muted pron-heard">들린 문장: “${esc(r.heard)}”</div>
-    <div class="muted" style="font-size:12px">초록 80점 이상 · 주황 60~79 · 빨강 60 미만. 원어민 소리를 다시 듣고 약한 단어에 집중해 보세요.</div>
+    <div class="muted" style="font-size:12px">난이도 ${L.l} · 초록 ${L.ok}점 이상 · 주황 ${L.mid}~${L.ok-1} · 빨강 ${L.mid} 미만. 원어민 소리를 다시 듣고 약한 단어에 집중해 보세요.</div>
   </div>`;
 }
 function pronResultHTML(){
@@ -1567,9 +1588,12 @@ async function azAssess(s, my){
   const lang = S.settings.accent === "gb" ? "en-GB" : "en-US";
   const sc = sdk.SpeechConfig.fromAuthorizationToken(az.tok, az.region);
   sc.speechRecognitionLanguage = lang;
-  const pa = new sdk.PronunciationAssessmentConfig(s.en, sdk.PronunciationAssessmentGradingSystem.HundredMark, sdk.PronunciationAssessmentGranularity.Phoneme, true);
-  if (lang === "en-US") { try { pa.phonemeAlphabet = "IPA"; pa.enableProsodyAssessment = true; } catch(e){} }
+  const pa = new sdk.PronunciationAssessmentConfig(s.en, sdk.PronunciationAssessmentGradingSystem.HundredMark, sdk.PronunciationAssessmentGranularity.Phoneme, PL().miscue);
+  // 실제로 들린 소리 후보(NBest)는 미국 발음(IPA)에서만 제공
+  if (lang === "en-US") { try { pa.phonemeAlphabet = "IPA"; pa.enableProsodyAssessment = true; pa.nbestPhonemeCount = 5; } catch(e){} }
   try { sc.setProperty(sdk.PropertyId.SpeechServiceConnection_InitialSilenceTimeoutMs, "8000"); } catch(e){}
+  // ② 말을 마친 뒤 1초 침묵이면 바로 평가 (기본값보다 빨리 결과가 나옴)
+  try { sc.setProperty(sdk.PropertyId.Speech_SegmentationSilenceTimeoutMs, "1000"); } catch(e){}
   // 마이크를 직접 열어 넘기고, 끝나면 직접 닫음 (iOS에서 마이크가 열려 있으면 문장 소리가 안 나는 문제 방지)
   let stream;
   try { stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation:true, noiseSuppression:true } }); }
@@ -1599,7 +1623,8 @@ async function azAssess(s, my){
     az: true, heard: j.DisplayText || nb.Display || "",
     total: num(pa2.PronScore), acc: num(pa2.AccuracyScore), flu: num(pa2.FluencyScore), comp: num(pa2.CompletenessScore), pros: num(pa2.ProsodyScore),
     words: (nb.Words || []).map(w => ({ w: w.Word, s: num((w.PronunciationAssessment || {}).AccuracyScore), e: (w.PronunciationAssessment || {}).ErrorType || "None",
-      ph: (w.Phonemes || []).map(p => ({ p: p.Phoneme, s: num((p.PronunciationAssessment || {}).AccuracyScore) })).filter(p => p.p) })),
+      ph: (w.Phonemes || []).map(p => ({ p: p.Phoneme, s: num((p.PronunciationAssessment || {}).AccuracyScore),
+        nb: ((p.PronunciationAssessment || {}).NBestPhonemes || []).map(n => ({ p: n.Phoneme, s: n.Score })) })).filter(p => p.p) })),
   };
 }
 function srStart(s, keepNote){
