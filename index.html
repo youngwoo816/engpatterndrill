@@ -429,6 +429,16 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 .done-hero .stamp span{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 .empty{text-align:center;padding:40px 0;color:var(--muted)}
+/* 로딩 화면: 로고·제목을 가운데 잠깐 보여 준 뒤 메인으로 */
+#splash{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;background:var(--bg-art),var(--bg);transition:opacity .45s ease,visibility .45s}
+#splash.out{opacity:0;visibility:hidden}
+.sp-in{display:flex;flex-direction:column;align-items:center;gap:12px;animation:spIn .7s cubic-bezier(.2,.8,.2,1) both}
+.sp-in img{border-radius:22px;box-shadow:0 14px 34px -12px rgba(28,43,79,.45)}
+.sp-brand{font-family:"Bricolage Grotesque",var(--f-en);font-weight:800;font-size:32px;letter-spacing:-.02em;color:var(--ink);margin-top:6px}
+.sp-brand b{color:var(--accent)}
+.sp-sub{font-size:13px;color:var(--muted);letter-spacing:.02em}
+@keyframes spIn{from{opacity:0;transform:translateY(10px) scale(.96)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.sp-in{animation:none}#splash{transition:none}}
 /* ===================== Liquid Glass 테마 =====================
  * 화이트 계열 · 배경 색감은 아주 약하게 · 유리(반투명+흐림+빛 반사) 효과는 강하게
  * 이 블록만 지우면 이전 디자인으로 돌아감 */
@@ -574,6 +584,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;background:var(--bg-ar
 </head>
 <body>
 <script src="config.js"></script>
+<div id="splash" aria-hidden="true"><div class="sp-in"><img src="icons/icon-192.png?v=3" alt="" width="84" height="84"><div class="sp-brand">Rep<b>.</b>English</div><div class="sp-sub">영어 패턴 반복 훈련</div></div></div>
 <div id="app"></div>
 <div id="drill" class="drill" hidden></div>
 <div id="toast" class="toast" hidden></div>
@@ -2336,9 +2347,15 @@ if (swAllowed() && !/claude\.(ai|site)|claudeusercontent/.test(location.hostname
 }
 
 /* ---------- boot ---------- */
+const SPLASH_T0 = Date.now();
+function hideSplash(){
+  const sp = $("#splash"); if (!sp) return Promise.resolve();
+  const wait = Math.max(0, 1100 - (Date.now() - SPLASH_T0));   // 너무 빨리 사라지지 않게 최소 1.1초
+  return new Promise(res => setTimeout(() => { sp.classList.add("out"); setTimeout(() => { sp.remove(); res(); }, 460); }, wait));
+}
 (async () => {
-  $("#app").innerHTML = `<div class="wrap"><div class="empty">문장 불러오는 중…</div></div>`;
   try { await loadData(); render();
+    await hideSplash();
     const intro = () => { if (!S.tour.intro) showIntro(); };
     if (needNameGate()) showNameGate(intro); else intro();
     setTimeout(() => {
@@ -2348,7 +2365,7 @@ if (swAllowed() && !/claude\.(ai|site)|claudeusercontent/.test(location.hostname
       }
     }, 2500);
   }
-  catch(e){ $("#app").innerHTML = `<div class="wrap"><div class="card stack"><b>문장 데이터를 불러오지 못했어요</b><span class="muted">파일을 직접 열었다면 웹 서버(예: GitHub Pages)로 열어 주세요. 네트워크를 확인한 뒤 새로고침하세요.</span></div></div>`; }
+  catch(e){ hideSplash(); $("#app").innerHTML = `<div class="wrap"><div class="card stack"><b>문장 데이터를 불러오지 못했어요</b><span class="muted">파일을 직접 열었다면 웹 서버(예: GitHub Pages)로 열어 주세요. 네트워크를 확인한 뒤 새로고침하세요.</span></div></div>`; }
 })();
 })();
 </script>
