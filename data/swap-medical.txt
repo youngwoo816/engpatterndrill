@@ -1,0 +1,62 @@
+# 바꿔 말하기 데이터: 패턴번호 | 영어 틀 | 한국어 틀 | 라벨: 영어=한국어 / ... ;; 라벨: ...
+# 패턴번호는 medical.txt의 ## 순서(1부터). 모든 조합이 문법적으로 맞도록 작성.
+1 | I'd like to see a doctor about {1}. | {1} 진료받고 싶어요. | 부위: my back=허리 때문에 / my knee=무릎 때문에 / a rash=발진 때문에 / my stomach=배 때문에 / my headaches=두통 때문에
+2 | I'm here {1}. | {1} 왔어요. | 목적: for my follow-up=재진 받으러 / for my test results=검사 결과 받으러 / for a checkup=검진 받으러 / for my vaccine=예방접종 하러
+3 | Do you take {1}? | {1} 돼요? | 대상: walk-ins=예약 없이 와도 / my insurance=제 보험 / credit cards=카드 결제 / international patients=외국인 환자도
+4 | How long will {1} take? | {1} 얼마나 걸려요? | 대상: the test=검사는 / the results=결과는 / the wait=대기는 / the surgery=수술은
+5 | I need to change my appointment to {1}. | 예약을 {1} 바꿔야 해요. | 시간: Friday=금요일로 / next week=다음 주로 / the afternoon=오후로 / a later time=더 늦은 시간으로
+6 | Are you taking any {1}? | 드시는 {1} 있으세요? | 종류: medication=약 / vitamins=비타민 / supplements=영양제 / painkillers=진통제
+7 | I'm allergic to {1}. | {1} 알레르기 있어요. | 원인: penicillin=페니실린 / peanuts=땅콩 / shellfish=갑각류 / pollen=꽃가루 / latex=라텍스
+8 | I'm taking {1}. | {1} 먹고 있어요. | 약: blood pressure medication=혈압약 / antibiotics=항생제 / vitamins=비타민 / allergy medicine=알레르기약
+9 | Can I get {1}? | {1} 받을 수 있을까요? | 서류: a copy of my results=검사 결과 사본 / a doctor's note=진단서 / a receipt=영수증 / my X-rays=엑스레이 사본
+10 | I have a {1}. | {1}. | 증상: headache=머리가 아파요 / fever=열이 있어요 / sore throat=목이 아파요 / cough=기침이 나요 / runny nose=콧물이 나요
+11 | My {1} hurts. | {1} 아파요. | 부위: back=허리가 / knee=무릎이 / chest=가슴이 / shoulder=어깨가 / stomach=배가
+12 | I feel {1}. | {1}. | 상태: dizzy=어지러워요 / nauseous=메스꺼워요 / weak=기운이 없어요 / tired all the time=항상 피곤해요 / much better=훨씬 나아졌어요
+13 | I've had {1} for {2}. | {2} {1}. | 증상: a cough=기침이 나요 / a fever=열이 있어요 / this pain=이렇게 아파요 ;; 기간: three days=사흘째 / a week=일주일째 / two weeks=2주째 / a month=한 달째
+14 | It's a {1} pain. | {1} 아파요. | 느낌: sharp=찌르는 듯이 / dull=묵직하게 / throbbing=욱신욱신 / constant=계속
+15 | It's worse {1}. | {1} 더 심해요. | 때: at night=밤에 / in the morning=아침에 / when I move=움직이면 / after I eat=먹고 나면
+16 | I can't {1}. | {1}. | 불편: sleep at night=밤에 잠을 못 자요 / move my arm=팔을 못 움직이겠어요 / stop coughing=기침이 안 멈춰요 / breathe through my nose=코로 숨을 못 쉬겠어요
+17 | I think I {1}. | {1} 것 같아요. | 추측: have a cold=감기 걸린 / have the flu=독감 걸린 / ate something bad=뭘 잘못 먹은 / sprained my ankle=발목 삔 / broke my finger=손가락이 부러진
+18 | I've been {1} all day. | 하루 종일 {1}. | 증상: throwing up=토하고 있어요 / sneezing=재채기해요 / coughing=기침해요 / feeling dizzy=어지러워요
+19 | I {1}. | {1}. | 사고: cut my finger=손가락을 베였어요 / burned my hand=손을 데었어요 / twisted my ankle=발목을 접질렸어요 / hit my head=머리를 부딪쳤어요 / got stung by a bee=벌에 쏘였어요
+20 | My {1} is swollen. | {1} 부었어요. | 부위: ankle=발목이 / knee=무릎이 / face=얼굴이 / finger=손가락이 / lip=입술이
+21 | I'm having trouble {1}. | {1} 힘들어요. | 기능: breathing=숨쉬기가 / swallowing=삼키기가 / walking=걷기가 / sleeping=잠들기가 / eating=먹기가
+22 | {1} | {1} | 질문: Is it serious?=심각한가요? / Is it contagious?=전염되나요? / Do I need surgery?=수술해야 하나요? / Can I still go to work?=출근해도 되나요? / How long will it take to heal?=낫는 데 얼마나 걸려요?
+23 | Can you {1}? | {1} 주시겠어요? | 요청: open your mouth=입 벌려 / take a deep breath=숨 크게 쉬어 / roll up your sleeve=소매 걷어 / lie down=누워 / show me where it hurts=어디가 아픈지 보여
+24 | We need to {1}. | {1} 해요. | 검사: take an X-ray=엑스레이 찍어야 / do a blood test=피검사 해야 / check your blood pressure=혈압 재야 / run some tests=몇 가지 검사를 해야
+25 | Can you check my {1}? | {1} 좀 봐 주시겠어요? | 대상: blood pressure=혈압 / ears=귀 / throat=목 / eyes=눈 / skin=피부
+26 | {1} | {1} | 걱정: Will it hurt?=아파요? / Is it safe?=안전한가요? / How long will it take?=얼마나 걸려요? / I'm scared of needles.=주사가 무서워요. / Could you go slowly?=천천히 해 주실래요?
+27 | It looks like {1}. | {1} 같네요. | 진단: a cold=감기 / a sprain=삔 것 / food poisoning=식중독 / an ear infection=귀 염증 / an allergic reaction=알레르기 반응
+28 | You should {1}. | {1}. | 조언: get some rest=좀 쉬세요 / drink plenty of water=물 많이 드세요 / stay home for a few days=며칠 집에 계세요 / avoid spicy food=매운 음식 피하세요 / see a specialist=전문의한테 가 보세요
+29 | I'll prescribe {1}. | {1} 처방해 드릴게요. | 약: some antibiotics=항생제 / a painkiller=진통제 / a cream=연고 / eye drops=안약 / cough syrup=기침 시럽
+30 | Do I need to {1}? | {1} 하나요? | 행동: come back=다시 와야 / take time off work=일 쉬어야 / see a specialist=전문의한테 가야 / change my diet=식단 바꿔야
+31 | Is my {1} normal? | 제 {1} 정상이에요? | 수치: blood pressure=혈압 / blood sugar=혈당 / cholesterol=콜레스테롤 / heart rate=심박수
+32 | What are the {1}? | {1} 뭐예요? | 항목: side effects=부작용이 / risks=위험한 점이 / other options=다른 방법이 / costs=비용이
+33 | Can I {1}? | {1} 될까요? | 요청: stay with her overnight=밤에 같이 있어도 / bring food for him=음식 가져와도 / visit after eight=8시 이후에 면회 와도 / take her home today=오늘 퇴원시켜도
+34 | I need something for {1}. | {1} 먹을 약이 필요해요. | 증상: a cold=감기에 / a headache=두통에 / an upset stomach=속 안 좋을 때 / allergies=알레르기에 / motion sickness=멀미할 때
+35 | I'm here to pick up {1}. | {1} 찾으러 왔어요. | 대상: a prescription=처방약 / my medicine=제 약 / my mother's medicine=어머니 약 / my refill=다시 받는 약
+36 | Should I take it {1}? | {1} 먹어요? | 때: with food=식후에 / on an empty stomach=빈속에 / before bed=자기 전에 / in the morning=아침에
+37 | Take {1} {2}. | {2} {1} 드세요. | 양: one tablet=한 알씩 / two pills=두 알씩 / one spoonful=한 숟가락씩 ;; 횟수: three times a day=하루 세 번 / twice a day=하루 두 번 / after every meal=매 식후에
+38 | Is it okay to {1} with this? | 이거 먹고 {1} 괜찮아요? | 행동: drink alcohol=술 마셔도 / drive=운전해도 / take my other medicine=다른 약 먹어도 / drink coffee=커피 마셔도
+39 | Do you have {1}? | {1} 있어요? | 물품: bandages=밴드 / pain relievers=진통제 / cough drops=목캔디 / a thermometer=체온계 / masks=마스크
+40 | Which one is {1}? | 어떤 게 {1}? | 비교: stronger=더 세요 / better for kids=아이한테 좋아요 / cheaper=더 싸요 / faster=더 빨리 들어요
+41 | Keep it {1}. | {1} 보관하세요. | 장소: in the fridge=냉장고에 / out of reach of children=아이 손이 닿지 않는 곳에 / in a cool, dry place=서늘하고 건조한 곳에 / away from sunlight=햇빛을 피해
+42 | How much will {1} cost? | {1} 얼마예요? | 항목: the visit=진료비 / the X-ray=엑스레이 / the blood test=피검사 / the medicine=약값
+43 | Does my insurance cover {1}? | 제 보험으로 {1} 돼요? | 항목: this=이거 / the X-ray=엑스레이 / dental care=치과 치료 / the hospital stay=입원비
+44 | Could you {1}? | {1} 주시겠어요? | 요청: fill out this form=이 양식 작성해 / sign here=여기 서명해 / print your name=이름을 정자로 써 / write your address=주소를 써
+45 | I'm here with my {1}. | {1} 같이 왔어요. | 가족: son=아들이랑 / daughter=딸이랑 / husband=남편이랑 / wife=아내랑 / mother=어머니랑
+46 | Can I get {1} for my trip? | 여행 때문에 {1} 받을 수 있을까요? | 대상: a vaccine=예방접종 / extra medicine=약 더 / a doctor's letter=소견서 / a fit-to-fly certificate=탑승 가능 확인서
+47 | Where is the {1}? | {1} 어디예요? | 장소: pharmacy=약국이 / emergency room=응급실이 / X-ray room=엑스레이실이 / restroom=화장실이 / cashier=수납 창구가
+48 | Call {1}! | {1}! | 대상: an ambulance=구급차 불러 주세요 / 911=911에 전화해 주세요 / the police=경찰 불러 주세요 / a doctor=의사 불러 주세요
+49 | {1} {2}! | {1} {2}! | 사람: He's=이 사람 / She's=이 사람 ;; 상태: not breathing=숨을 안 쉬어요 / unconscious=의식이 없어요 / bleeding badly=피를 많이 흘려요 / choking=목에 뭐가 걸렸어요 / having a seizure=발작해요
+50 | There's been {1}. | {1}. | 사고: an accident=사고가 났어요 / a car crash=교통사고가 났어요 / a fire=불이 났어요 / a fall=누가 넘어졌어요
+51 | {1} | {1} | 안내: Stay calm.=침착하세요. / Don't move him.=움직이지 마세요. / Keep pressure on it.=계속 눌러 주세요. / Help is on the way.=구조대가 오고 있어요. / Keep breathing slowly.=천천히 숨 쉬세요.
+52 | I need {1} right now. | 지금 당장 {1} 필요해요. | 대상: help=도움이 / a doctor=의사가 / my inhaler=흡입기가 / my EpiPen=에피펜이 / some water=물이
+53 | {1} {2}. | {1} {2}. | 사람: He has=이 사람 / She has=이 사람 ;; 병력: a heart condition=심장 질환이 있어요 / diabetes=당뇨가 있어요 / asthma=천식이 있어요 / epilepsy=뇌전증이 있어요 / a nut allergy=견과류 알레르기가 있어요
+54 | Is there {1} nearby? | 근처에 {1} 있어요? | 시설: a hospital=병원 / a 24-hour pharmacy=24시간 약국 / an emergency clinic=응급 진료소 / a dentist=치과
+55 | I've been waiting for {1}. | {1} 기다렸어요. | 시간: two hours=두 시간 동안 / over an hour=한 시간 넘게 / forty minutes=40분 동안 / ages=한참
+56 | Can you {1}? | {1} 주실 수 있어요? | 요청: write it down=적어 / speak more slowly=더 천천히 말씀해 / draw it for me=그림으로 그려 / say it in simpler words=쉬운 말로 말씀해
+57 | I lost my {1}. | {1} 잃어버렸어요. | 대상: medicine=약을 / prescription=처방전을 / insurance card=보험증을 / glasses=안경을
+58 | I think there's a mistake on my {1}. | {1} 잘못된 것 같아요. | 대상: bill=청구서가 / prescription=처방전이 / receipt=영수증이 / form=서류가
+59 | {1} makes me {2}. | {1} {2}. | 원인: The medicine=약 먹으면 / This pill=이 약 먹으면 / The cream=연고 바르면 ;; 증상: dizzy=어지러워요 / sleepy=졸려요 / itchy=가려워요 / feel sick=속이 안 좋아요
+60 | I'd rather not {1}. | {1} 안 했으면 해요. | 선택: get a shot=주사는 / stay overnight=입원은 / take strong medicine=센 약은 / have surgery=수술은

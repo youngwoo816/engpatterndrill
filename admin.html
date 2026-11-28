@@ -188,7 +188,7 @@ label{font-size:13px;font-weight:600;color:var(--muted)}
 (() => {
 "use strict";
 const LS = "rep-english-admin";
-const CAT = { daily:"일상 대화", travel:"여행 영어", business:"비즈니스 영어", phone:"전화·화상회의", smalltalk:"스몰토크·리액션" };
+const CAT = { daily:"일상 대화", travel:"여행 영어", business:"비즈니스 영어", phone:"전화·화상회의", smalltalk:"스몰토크·리액션", medical:"병원·약국·응급" };
 const TOTAL_DEFAULT = 1552;
 const totalOf = r => Object.values((r && r.cats) || {}).reduce((a,c) => a + (c.total||0), 0) || TOTAL_DEFAULT;
 const $ = s => document.querySelector(s);

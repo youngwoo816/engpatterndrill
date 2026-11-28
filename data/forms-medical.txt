@@ -1,0 +1,661 @@
+# 패턴별 다른 형태 예문 10개: @패턴번호(medical.txt의 ## 순서) 다음 줄부터 "형태 | 영어 | 한국어"
+@1 I'd like to see a doctor ~
+요청 | I need to see a doctor as soon as possible. | 최대한 빨리 진료받아야 해요.
+요청 | Can I see a doctor this afternoon? | 오늘 오후에 진료받을 수 있을까요?
+요청 | I'd like to see a dermatologist. | 피부과 진료받고 싶어요.
+요청 | I'd like to see an eye doctor. | 안과 진료받고 싶어요.
+요청 | Is the doctor in today? | 오늘 선생님 계세요?
+요청 | Is there a clinic for kids nearby? | 근처에 소아과 있어요?
+요청 | Can I see a doctor online? | 비대면 진료 받을 수 있어요?
+요청 | I need an urgent appointment. | 급하게 진료받아야 해요.
+요청 | Who's the best doctor for back pain? | 허리 통증은 어느 선생님이 제일 잘 보세요?
+요청 | Can I book a time with Dr. Kim? | 김 원장님 진료 시간 잡을 수 있을까요?
+@2 It's my first time here
+접수 | I'm a new patient. | 처음 온 환자예요.
+접수 | I've been here before. | 전에 와 본 적 있어요.
+접수 | My appointment is under Park. | 박으로 예약했어요.
+접수 | I'm here for a vaccination. | 예방접종 하러 왔어요.
+접수 | I'm here to see Dr. Choi. | 최 원장님 진료 보러 왔어요.
+접수 | Do I check in here? | 여기서 접수하면 돼요?
+접수 | Sorry, I'm a little early. | 죄송해요, 조금 일찍 왔어요.
+접수 | Sorry I'm late. | 늦어서 죄송해요.
+접수 | Here's my passport. | 여기 여권이요.
+접수 | I have my medical records with me. | 진료 기록 가져왔어요.
+@3 Do you take ~?
+확인 | Do you accept foreign insurance? | 외국 보험도 돼요?
+확인 | Do you take cash only? | 현금만 받아요?
+확인 | Do you treat sports injuries? | 운동하다 다친 것도 진료해요?
+확인 | Do you do blood tests here? | 여기서 피검사 해요?
+확인 | Do you have an English-speaking doctor? | 영어 하는 의사 선생님 계세요?
+확인 | Can I pay by phone? | 휴대폰으로 결제할 수 있어요?
+확인 | Do you need my residence card? | 외국인 등록증 필요해요?
+확인 | Do you have parking? | 주차 돼요?
+확인 | Do you do home visits? | 왕진도 해요?
+확인 | Do you have a children's waiting area? | 아이들 대기 공간 있어요?
+@4 How long do I have to ~?
+대기 | How many people are ahead of me? | 제 앞에 몇 명 있어요?
+대기 | Is it going to be a long wait? | 오래 기다려야 해요?
+대기 | Can I go out and come back? | 나갔다 와도 될까요?
+대기 | Will you text me when it's my turn? | 제 차례 되면 문자 주세요?
+대기 | How long does the procedure take? | 시술은 얼마나 걸려요?
+대기 | When do I need to stop eating? | 언제부터 금식해야 해요?
+대기 | Can I drink water before the test? | 검사 전에 물 마셔도 돼요?
+대기 | How soon can I get the results? | 결과 얼마나 빨리 받을 수 있어요?
+대기 | Will someone call me with the results? | 결과는 전화로 알려 주세요?
+대기 | Do I wait here or go back to reception? | 여기서 기다려요, 접수처로 가요?
+@5 I need to change my appointment ~
+변경 | Can I move my appointment to next Tuesday? | 예약을 다음 주 화요일로 옮길 수 있을까요?
+변경 | Something came up, so I can't make it. | 일이 생겨서 못 갈 것 같아요.
+변경 | Can I reschedule online? | 온라인으로 예약 변경할 수 있어요?
+변경 | Is there anything after work hours? | 퇴근 후 시간 있어요?
+변경 | I'm stuck in traffic. | 차가 막혀요.
+변경 | Can I still come in if I'm fifteen minutes late? | 15분 늦어도 갈 수 있을까요?
+변경 | I'd like to book my next appointment now. | 다음 예약 지금 잡고 싶어요.
+변경 | Can you send me a reminder? | 알림 보내 주실 수 있어요?
+변경 | Can my wife come instead of me? | 제 대신 아내가 가도 돼요?
+변경 | Thanks for fitting me in. | 시간 맞춰 주셔서 감사해요.
+@6 Do you have any ~?
+문진 | Have you had this before? | 전에도 이런 적 있으세요?
+문진 | Have you been vaccinated? | 예방접종 하셨어요?
+문진 | Are you allergic to any medicine? | 약 알레르기 있으세요?
+문진 | When was your last period? | 마지막 생리가 언제였어요?
+문진 | Have you traveled recently? | 최근에 여행 다녀오셨어요?
+문진 | Do you exercise regularly? | 운동 규칙적으로 하세요?
+문진 | How much do you drink in a week? | 일주일에 술 얼마나 드세요?
+문진 | Have you been under a lot of stress? | 스트레스 많이 받으셨어요?
+문진 | Any history of cancer in your family? | 가족 중에 암 병력 있으세요?
+문진 | How have you been sleeping? | 잠은 잘 주무세요?
+@7 I'm allergic to ~
+병력 | I'm allergic to aspirin. | 아스피린 알레르기 있어요.
+병력 | I'm allergic to cats. | 고양이 알레르기 있어요.
+병력 | I'm lactose intolerant. | 유당불내증이 있어요.
+병력 | I have a gluten allergy. | 글루텐 알레르기가 있어요.
+병력 | I get hay fever every spring. | 봄마다 꽃가루 알레르기가 있어요.
+병력 | I have a heart murmur. | 심장 잡음이 있어요.
+병력 | I had my appendix removed. | 맹장 수술했어요.
+병력 | I've had migraines since I was a kid. | 어릴 때부터 편두통이 있었어요.
+병력 | I broke my arm when I was ten. | 열 살 때 팔이 부러졌었어요.
+병력 | I'm not sure if I'm allergic to anything. | 알레르기가 있는지 잘 모르겠어요.
+@8 I'm on ~
+복용약 | I take this pill every morning. | 이 약 매일 아침 먹어요.
+복용약 | I'm on antidepressants. | 항우울제 먹고 있어요.
+복용약 | I use an inhaler for asthma. | 천식 때문에 흡입기 써요.
+복용약 | I take insulin. | 인슐린 맞아요.
+복용약 | I'm taking something for my cholesterol. | 콜레스테롤 약 먹고 있어요.
+복용약 | I take sleeping pills sometimes. | 가끔 수면제 먹어요.
+복용약 | I don't remember the name of it. | 약 이름이 기억이 안 나요.
+복용약 | Here's a picture of the box. | 여기 약 상자 사진이요.
+복용약 | I took two painkillers this morning. | 오늘 아침에 진통제 두 알 먹었어요.
+복용약 | Should I keep taking it? | 계속 먹어도 될까요?
+@9 Can I have a copy of ~?
+서류 | Can I get my medical records? | 제 진료 기록 받을 수 있을까요?
+서류 | I need a sick note for school. | 학교 제출용 진단서가 필요해요.
+서류 | Can you write it in English? | 영어로 써 주실 수 있어요?
+서류 | Can I get a vaccination certificate? | 예방접종 증명서 받을 수 있을까요?
+서류 | I need a copy of my prescription. | 처방전 사본이 필요해요.
+서류 | Can I get the receipt with the doctor's stamp? | 의사 도장 찍힌 영수증 받을 수 있을까요?
+서류 | Can you fax it to my insurance company? | 보험사로 팩스 보내 주실 수 있어요?
+서류 | How much is a medical certificate? | 진단서 얼마예요?
+서류 | Can I download it from the app? | 앱에서 다운받을 수 있어요?
+서류 | Please make two copies. | 두 부 부탁드려요.
+@10 I have a ~
+증상 | I have a bad cold. | 감기가 심해요.
+증상 | I have a high fever. | 고열이 있어요.
+증상 | I have a stuffy nose. | 코가 막혔어요.
+증상 | I have a backache. | 허리가 아파요.
+증상 | I have an earache. | 귀가 아파요.
+증상 | I have a migraine. | 편두통이 있어요.
+증상 | I have diarrhea. | 설사를 해요.
+증상 | I have heartburn. | 속이 쓰려요.
+증상 | I have a cut that won't stop bleeding. | 피가 안 멈추는 상처가 있어요.
+증상 | I have a blister on my foot. | 발에 물집이 생겼어요.
+@11 My ~ hurts
+부위 | My head is killing me. | 머리가 깨질 것 같아요.
+부위 | My neck is stiff. | 목이 뻣뻣해요.
+부위 | My wrist hurts when I type. | 타자 칠 때 손목이 아파요.
+부위 | My lower back is really sore. | 허리 아래쪽이 많이 아파요.
+부위 | My whole body aches. | 온몸이 쑤셔요.
+부위 | My feet hurt from walking. | 걸어서 발이 아파요.
+부위 | My gums are bleeding. | 잇몸에서 피가 나요.
+부위 | It hurts on the left side. | 왼쪽이 아파요.
+부위 | It hurts when I bend over. | 숙이면 아파요.
+부위 | It doesn't hurt anymore. | 이제 안 아파요.
+@12 I feel ~
+상태 | I feel lightheaded. | 머리가 띵해요.
+상태 | I feel short of breath. | 숨이 차요.
+상태 | I feel cold, but I'm sweating. | 추운데 땀이 나요.
+상태 | I feel like I'm going to throw up. | 토할 것 같아요.
+상태 | I feel bloated. | 배가 더부룩해요.
+상태 | I feel achy all over. | 온몸이 쑤셔요.
+상태 | I feel like something's wrong. | 뭔가 잘못된 것 같아요.
+상태 | I feel exhausted after climbing stairs. | 계단 오르면 너무 지쳐요.
+상태 | I don't feel like eating. | 입맛이 없어요.
+상태 | I feel fine now. | 이제 괜찮아요.
+@13 I've had ~ for ~
+기간 | I've had a headache all day. | 하루 종일 머리가 아파요.
+기간 | I've had stomach problems for weeks. | 몇 주째 배가 안 좋아요.
+기간 | I've had this rash since Monday. | 월요일부터 발진이 있어요.
+기간 | I've had trouble sleeping for months. | 몇 달째 잠을 잘 못 자요.
+기간 | It started after I ate lunch. | 점심 먹고 나서 시작됐어요.
+기간 | It happened last night. | 어젯밤에 그랬어요.
+기간 | It's been about a week. | 일주일쯤 됐어요.
+기간 | This is the third time this month. | 이번 달에 세 번째예요.
+기간 | It usually lasts about an hour. | 보통 한 시간 정도 가요.
+기간 | It started getting better yesterday. | 어제부터 나아지기 시작했어요.
+@14 It's a ~ pain
+통증 | It feels like a stabbing pain. | 칼로 찌르는 것 같아요.
+통증 | It's a cramping pain. | 쥐어짜듯이 아파요.
+통증 | It's an aching pain. | 쑤시는 통증이에요.
+통증 | It feels tight. | 조이는 느낌이에요.
+통증 | It's sore to the touch. | 만지면 아파요.
+통증 | It stings. | 쓰라려요.
+통증 | It feels like pins and needles. | 바늘로 찌르는 듯 저려요.
+통증 | It's more uncomfortable than painful. | 아프다기보다 불편해요.
+통증 | The pain spreads down my arm. | 통증이 팔 아래로 퍼져요.
+통증 | It's a pain I've never had before. | 처음 느껴 보는 통증이에요.
+@15 On a scale of 1 to 10, it's ~
+정도 | It's about a 5. | 5 정도예요.
+정도 | It's the worst pain I've ever had. | 살면서 제일 아파요.
+정도 | It's manageable. | 참을 만해요.
+정도 | It gets really bad at night. | 밤에 엄청 심해져요.
+정도 | It hurts less when I lie down. | 누우면 덜 아파요.
+정도 | It's not as bad as yesterday. | 어제만큼은 아니에요.
+정도 | Painkillers help a little. | 진통제 먹으면 조금 나아요.
+정도 | Painkillers don't help at all. | 진통제가 전혀 안 들어요.
+정도 | It's getting worse every day. | 날마다 심해져요.
+정도 | It's a constant pain. | 계속 아파요.
+@16 I can't ~
+불편 | I can't bend my knee. | 무릎을 못 구부리겠어요.
+불편 | I can't turn my head. | 고개를 못 돌리겠어요.
+불편 | I can't eat anything. | 아무것도 못 먹겠어요.
+불편 | I can't stay awake. | 계속 졸려요.
+불편 | I can't lift my arm above my head. | 팔을 머리 위로 못 올리겠어요.
+불편 | I can't taste anything. | 맛이 안 느껴져요.
+불편 | I can't smell anything. | 냄새를 못 맡겠어요.
+불편 | I can't stop shaking. | 몸이 계속 떨려요.
+불편 | I can't see clearly. | 잘 안 보여요.
+불편 | I can't go to work like this. | 이 상태로는 출근 못 해요.
+@17 I think I ~
+추측 | I think I pulled a muscle. | 근육이 놀란 것 같아요.
+추측 | I think I have an ear infection. | 귀에 염증이 생긴 것 같아요.
+추측 | I think I have a fever. | 열이 있는 것 같아요.
+추측 | I think it's food poisoning. | 식중독 같아요.
+추측 | I think I'm getting sick. | 아프려는 것 같아요.
+추측 | I think it's from the new medicine. | 새로 먹은 약 때문인 것 같아요.
+추측 | I think I'm pregnant. | 임신한 것 같아요.
+추측 | I think something's stuck in my eye. | 눈에 뭐가 들어간 것 같아요.
+추측 | I think I hurt it at the gym. | 헬스장에서 다친 것 같아요.
+추측 | I'm not sure what caused it. | 원인을 잘 모르겠어요.
+@18 I've been ~ing
+반복 | I've been feeling tired for weeks. | 몇 주째 피곤해요.
+반복 | I've been getting nosebleeds. | 코피가 자꾸 나요.
+반복 | I've been losing hair. | 머리가 계속 빠져요.
+반복 | I've been feeling very thirsty. | 계속 목이 말라요.
+반복 | I've been going to the bathroom a lot. | 화장실을 자주 가요.
+반복 | I've been having chest pains. | 가슴 통증이 계속 있어요.
+반복 | I've been throwing up since this morning. | 아침부터 계속 토해요.
+반복 | I've been feeling down lately. | 요즘 계속 우울해요.
+반복 | I've been grinding my teeth at night. | 밤에 이를 갈아요.
+반복 | I've been snoring a lot. | 코를 많이 골아요.
+@19 I cut / burned / hurt my ~
+부상 | I sprained my wrist. | 손목을 삐었어요.
+부상 | I slipped on the ice. | 빙판에서 미끄러졌어요.
+부상 | I got hit by a ball. | 공에 맞았어요.
+부상 | I touched a hot pan. | 뜨거운 팬을 만졌어요.
+부상 | I stepped on some glass. | 유리를 밟았어요.
+부상 | I got something in my eye. | 눈에 뭐가 들어갔어요.
+부상 | I cut myself while cooking. | 요리하다가 베였어요.
+부상 | I hurt my back moving boxes. | 상자 옮기다가 허리를 다쳤어요.
+부상 | I got bitten by a mosquito, and it's swollen. | 모기에 물렸는데 부었어요.
+부상 | I fell off my bike. | 자전거에서 넘어졌어요.
+@20 My ~ is swollen
+외관 | My face is puffy. | 얼굴이 부었어요.
+외관 | My throat looks red. | 목이 빨개요.
+외관 | My eye is twitching. | 눈이 떨려요.
+외관 | My skin is peeling. | 피부가 벗겨져요.
+외관 | There's a red spot here. | 여기 빨간 점이 있어요.
+외관 | The cut is still open. | 상처가 아직 벌어져 있어요.
+외관 | It's turning purple. | 보라색으로 변하고 있어요.
+외관 | There's some pus. | 고름이 나요.
+외관 | My hands are shaking. | 손이 떨려요.
+외관 | The swelling has gone down a bit. | 붓기가 조금 빠졌어요.
+@21 I'm having trouble ~ing
+기능 | I'm having trouble catching my breath. | 숨을 잘 못 쉬겠어요.
+기능 | I'm having trouble staying asleep. | 자다가 자꾸 깨요.
+기능 | I'm having trouble hearing. | 잘 안 들려요.
+기능 | I'm having trouble climbing stairs. | 계단 오르기가 힘들어요.
+기능 | I'm having trouble focusing my eyes. | 초점이 잘 안 맞아요.
+기능 | I'm having trouble digesting food. | 소화가 잘 안 돼요.
+기능 | I'm having trouble standing up. | 일어서기가 힘들어요.
+기능 | I'm having trouble talking. | 말하기가 힘들어요.
+기능 | It's hard to open my mouth. | 입 벌리기가 힘들어요.
+기능 | It's hard to get out of bed. | 침대에서 일어나기가 힘들어요.
+@22 Is it serious?
+질문 | Should I be worried? | 걱정해야 하나요?
+질문 | Is it going to leave a scar? | 흉터가 남을까요?
+질문 | Will it come back? | 다시 재발해요?
+질문 | Can I exercise? | 운동해도 되나요?
+질문 | Can I eat normally? | 평소처럼 먹어도 되나요?
+질문 | Is it okay to fly next week? | 다음 주에 비행기 타도 괜찮아요?
+질문 | Do I need to stay in bed? | 누워 있어야 하나요?
+질문 | Can I be around my kids? | 아이들이랑 같이 있어도 되나요?
+질문 | What caused it? | 원인이 뭐예요?
+질문 | How can I prevent it? | 어떻게 예방해요?
+@23 Can you ~?
+요청 | Can you say "ah"? | "아" 해 보세요.
+요청 | Can you breathe in and out slowly? | 천천히 숨 들이쉬고 내쉬어 보세요.
+요청 | Can you bend your knee? | 무릎 구부려 보시겠어요?
+요청 | Can you squeeze my hand? | 제 손 꽉 잡아 보시겠어요?
+요청 | Can you step on the scale? | 체중계에 올라가 보시겠어요?
+요청 | Can you take off your shoes? | 신발 벗어 주시겠어요?
+요청 | Can you lie on your side? | 옆으로 누워 주시겠어요?
+요청 | Can you tell me if this hurts? | 아프면 말씀해 주시겠어요?
+요청 | Can you read the letters on the chart? | 시력표 글자 읽어 보시겠어요?
+요청 | Relax your arm, please. | 팔에 힘 빼세요.
+@24 We need to ~
+검사 | We need to do a CT scan. | CT 찍어야 해요.
+검사 | We need to take a sample. | 검체를 채취해야 해요.
+검사 | We need to clean the wound. | 상처를 소독해야 해요.
+검사 | You'll need a few stitches. | 몇 바늘 꿰매야 해요.
+검사 | We need to put a cast on it. | 깁스해야 해요.
+검사 | We're going to give you an IV. | 수액 놔 드릴게요.
+검사 | We need to monitor you for a few hours. | 몇 시간 지켜봐야 해요.
+검사 | We need to check your heart. | 심장을 검사해야 해요.
+검사 | We'll need your consent first. | 먼저 동의가 필요해요.
+검사 | This won't take long. | 오래 안 걸려요.
+@25 Can you check my ~?
+검진 | Can you check my cholesterol? | 콜레스테롤 수치 봐 주시겠어요?
+검진 | Can you look at my knee? | 무릎 좀 봐 주시겠어요?
+검진 | I'd like to get my hearing tested. | 청력 검사 받고 싶어요.
+검진 | Could you check this lump? | 이 혹 좀 봐 주시겠어요?
+검진 | Can you check if it's broken? | 부러졌는지 봐 주시겠어요?
+검진 | I'd like a dental cleaning. | 스케일링 받고 싶어요.
+검진 | Can I get an allergy test? | 알레르기 검사 받을 수 있을까요?
+검진 | Do I need a flu shot? | 독감 주사 맞아야 해요?
+검진 | How often should I get checked? | 얼마나 자주 검사받아야 해요?
+검진 | Is it time for my annual checkup? | 정기 검진 받을 때 됐나요?
+@26 Will it hurt?
+걱정 | Is it going to be painful? | 아플까요?
+걱정 | Do I need anesthesia? | 마취해야 해요?
+걱정 | Will I be awake? | 깨어 있는 상태예요?
+걱정 | Can I eat after the procedure? | 시술 후에 먹어도 돼요?
+걱정 | I'm a little nervous. | 조금 긴장돼요.
+걱정 | Please tell me before you start. | 시작하기 전에 말씀해 주세요.
+걱정 | Can I hold my mom's hand? | 엄마 손 잡고 있어도 돼요?
+걱정 | I feel faint when I see blood. | 피 보면 어지러워요.
+걱정 | Is there anything I should do to prepare? | 준비해야 할 게 있나요?
+걱정 | That wasn't so bad. | 생각보다 괜찮았어요.
+@27 It looks like ~
+진단 | It looks like you have the flu. | 독감 같네요.
+진단 | It looks like a pulled muscle. | 근육이 놀란 것 같네요.
+진단 | It's a viral infection. | 바이러스 감염이에요.
+진단 | It's a bacterial infection. | 세균 감염이에요.
+진단 | You have a slight fracture. | 약간 금이 갔어요.
+진단 | Your blood pressure is a bit high. | 혈압이 조금 높아요.
+진단 | It's probably just stress. | 아마 스트레스일 거예요.
+진단 | It's nothing to worry about. | 걱정할 거 없어요.
+진단 | We'll know more after the test. | 검사해 봐야 더 알 수 있어요.
+진단 | It's too early to tell. | 아직 판단하기 일러요.
+@28 You should ~
+조언 | You should rest for a couple of days. | 이틀 정도 쉬세요.
+조언 | You should keep it elevated. | 다리를 높게 두세요.
+조언 | You should avoid alcohol. | 술은 피하세요.
+조언 | You should eat light meals. | 가볍게 드세요.
+조언 | You should get more sleep. | 잠을 더 주무세요.
+조언 | You should keep the bandage dry. | 붕대는 젖지 않게 하세요.
+조언 | You should cut down on salt. | 소금을 줄이세요.
+조언 | Try not to scratch it. | 긁지 마세요.
+조언 | Don't go back to work until Monday. | 월요일까지는 출근하지 마세요.
+조언 | Come back in a week. | 일주일 뒤에 다시 오세요.
+@29 I'll prescribe ~
+처방 | I'll prescribe something for the cough. | 기침약 처방해 드릴게요.
+처방 | I'll give you a week's worth of medicine. | 일주일 치 약 드릴게요.
+처방 | I'll give you a prescription for eye drops. | 안약 처방해 드릴게요.
+처방 | This medicine might make you drowsy. | 이 약 먹으면 졸릴 수 있어요.
+처방 | Take it until it's all gone. | 다 떨어질 때까지 드세요.
+처방 | You can buy this over the counter. | 이건 처방 없이 살 수 있어요.
+처방 | I'll give you a stronger dose. | 더 센 용량으로 드릴게요.
+처방 | Let's try a different medicine. | 다른 약으로 바꿔 보죠.
+처방 | Call me if you have any side effects. | 부작용 있으면 연락 주세요.
+처방 | Here's your prescription. | 처방전 여기 있어요.
+@30 Do I need to ~?
+다음단계 | Do I need to come back for the results? | 결과 들으러 다시 와야 하나요?
+다음단계 | Do I need to stay in the hospital? | 입원해야 하나요?
+다음단계 | Do I need to wear a mask? | 마스크 써야 하나요?
+다음단계 | Do I need to stop drinking coffee? | 커피 끊어야 하나요?
+다음단계 | When should I take the bandage off? | 붕대는 언제 풀어요?
+다음단계 | When will the stitches come out? | 실밥은 언제 빼요?
+다음단계 | Can I drive home? | 운전해서 집에 가도 되나요?
+다음단계 | How long should I rest? | 얼마나 쉬어야 해요?
+다음단계 | Is there anything I shouldn't eat? | 먹으면 안 되는 거 있어요?
+다음단계 | Should I make another appointment? | 다음 예약 잡아야 해요?
+@31 What do the results show?
+결과 | Are the results back yet? | 결과 나왔어요?
+결과 | Is everything okay? | 다 괜찮아요?
+결과 | What does "positive" mean here? | 여기서 "양성"은 무슨 뜻이에요?
+결과 | Is this number too high? | 이 수치 너무 높아요?
+결과 | Everything looks normal. | 다 정상이에요.
+결과 | We found something we'd like to check further. | 더 확인해 보고 싶은 게 있어요.
+결과 | Your iron levels are low. | 철분 수치가 낮아요.
+결과 | Do I need more tests? | 검사 더 해야 해요?
+결과 | Can I get a copy of this? | 이거 사본 받을 수 있을까요?
+결과 | That's a relief. | 다행이에요.
+@32 I'd like a second opinion
+요청 | Can I see a different doctor? | 다른 선생님께 진료받을 수 있을까요?
+요청 | Is surgery the only option? | 수술밖에 방법이 없나요?
+요청 | What happens if I don't treat it? | 치료 안 하면 어떻게 돼요?
+요청 | How successful is this treatment? | 이 치료 성공률이 어때요?
+요청 | How long is the recovery? | 회복은 얼마나 걸려요?
+요청 | Can I try medicine first? | 약부터 먼저 써 볼 수 있을까요?
+요청 | Are there natural treatments? | 자연 요법도 있나요?
+요청 | Can you recommend a specialist? | 전문의 추천해 주실 수 있어요?
+요청 | I need some time to decide. | 결정할 시간이 좀 필요해요.
+요청 | I'd like to know all my options. | 가능한 방법을 다 알고 싶어요.
+@33 Visiting hours are ~
+면회 | When are visiting hours? | 면회 시간이 언제예요?
+면회 | How many visitors are allowed? | 면회는 몇 명까지 돼요?
+면회 | Can children visit? | 아이들도 면회 돼요?
+면회 | Can I bring flowers? | 꽃 가져가도 돼요?
+면회 | Is he allowed to eat? | 먹어도 된대요?
+면회 | Can I talk to his doctor? | 담당 의사 선생님과 얘기할 수 있을까요?
+면회 | Is she in pain? | 아파하나요?
+면회 | When is she being discharged? | 언제 퇴원해요?
+면회 | What should we bring for her? | 뭘 챙겨 가면 될까요?
+면회 | Thank you for taking care of him. | 돌봐 주셔서 감사해요.
+@34 I need something for ~
+약국 | I need something for a stuffy nose. | 코 막혔을 때 먹는 약이 필요해요.
+약국 | What do you have for a sunburn? | 햇볕에 탄 데 바르는 거 있어요?
+약국 | Do you have something for a hangover? | 숙취 해소제 있어요?
+약국 | I need something for heartburn. | 속쓰림 약이 필요해요.
+약국 | Do you have anything for itchy eyes? | 눈 가려울 때 쓰는 거 있어요?
+약국 | What's good for a dry cough? | 마른기침엔 뭐가 좋아요?
+약국 | I need something to help me sleep. | 잠 잘 오게 하는 거 필요해요.
+약국 | Do you have anything for a fever? | 해열제 있어요?
+약국 | Something for period pain, please. | 생리통 약 주세요.
+약국 | Is there anything for a child's cold? | 아이 감기약 있어요?
+@35 I'd like to fill this prescription
+처방약 | Can you fill this for me? | 이 처방전 약 지어 주시겠어요?
+처방약 | Is my prescription ready? | 제 약 준비됐어요?
+처방약 | Can I wait here? | 여기서 기다려도 돼요?
+처방약 | Can I come back for it later? | 나중에 찾으러 와도 돼요?
+처방약 | Do you have it in stock? | 재고 있어요?
+처방약 | Can you order it for me? | 주문해 주실 수 있어요?
+처방약 | Can I get it in liquid form? | 물약으로 받을 수 있어요?
+처방약 | Is it the same as what I had before? | 전에 먹던 거랑 같은 거예요?
+처방약 | Could you explain how to use it? | 사용법 설명해 주시겠어요?
+처방약 | Thanks, I'll take it now. | 감사해요, 지금 가져갈게요.
+@36 How often should I take ~?
+복용법 | How many times a day? | 하루에 몇 번이요?
+복용법 | Before or after meals? | 식전이에요, 식후예요?
+복용법 | Can I cut the pill in half? | 알약 반으로 잘라도 돼요?
+복용법 | Do I take it every day? | 매일 먹어요?
+복용법 | What time of day is best? | 하루 중 언제가 제일 좋아요?
+복용법 | How many days do I take it? | 며칠 동안 먹어요?
+복용법 | Can I take two if the pain is bad? | 많이 아프면 두 알 먹어도 돼요?
+복용법 | How long does it take to work? | 효과 나타나는 데 얼마나 걸려요?
+복용법 | How much should I give my son? | 아들한테는 얼마나 먹여요?
+복용법 | Should I take it with milk? | 우유랑 먹어요?
+@37 Take ~
+안내 | Take one every eight hours. | 여덟 시간마다 한 알씩 드세요.
+안내 | Take it thirty minutes after eating. | 식후 30분에 드세요.
+안내 | Take it before going to bed. | 주무시기 전에 드세요.
+안내 | Take it with a full glass of water. | 물 한 컵 가득이랑 드세요.
+안내 | Don't take it on an empty stomach. | 빈속에 드시지 마세요.
+안내 | Let it dissolve under your tongue. | 혀 밑에서 녹여 드세요.
+안내 | Rub a small amount on the rash. | 발진 부위에 조금 바르세요.
+안내 | Use one spray in each nostril. | 양쪽 콧구멍에 한 번씩 뿌리세요.
+안내 | Take half a tablet for children. | 아이는 반 알 먹이세요.
+안내 | Stop when you feel better. | 나아지면 그만 드세요.
+@38 Is it okay to ~?
+주의 | Is it okay to take this with coffee? | 이거 커피랑 먹어도 괜찮아요?
+주의 | Can I take it if I have high blood pressure? | 고혈압 있어도 먹어도 돼요?
+주의 | Is it safe for kids under five? | 다섯 살 미만도 괜찮아요?
+주의 | Can I take it with ibuprofen? | 이부프로펜이랑 같이 먹어도 돼요?
+주의 | Does it have any caffeine? | 카페인 들어 있어요?
+주의 | Is it okay to take it every day? | 매일 먹어도 괜찮아요?
+주의 | Will it upset my stomach? | 속 쓰리진 않아요?
+주의 | Is it habit-forming? | 중독성 있어요?
+주의 | Can I take it before exercising? | 운동 전에 먹어도 돼요?
+주의 | Is there anything I should avoid eating? | 먹으면 안 되는 음식 있어요?
+@39 Do you have ~?
+물품 | Do you have antiseptic wipes? | 소독 티슈 있어요?
+물품 | Do you have a knee brace? | 무릎 보호대 있어요?
+물품 | Do you have pregnancy tests? | 임신 테스트기 있어요?
+물품 | Do you have saline solution? | 식염수 있어요?
+물품 | Do you have heat patches? | 핫팩 있어요?
+물품 | Do you have anything for blisters? | 물집에 쓰는 거 있어요?
+물품 | Where can I find vitamins? | 비타민은 어디 있어요?
+물품 | Do you sell contact lens solution? | 렌즈 세척액 팔아요?
+물품 | Do you have travel-size bottles? | 여행용 작은 거 있어요?
+물품 | Can I get a bag, please? | 봉투 주세요.
+@40 Which one is ~?
+비교 | Which one lasts longer? | 어떤 게 더 오래가요?
+비교 | Which one is gentler on the stomach? | 어떤 게 위에 부담이 덜해요?
+비교 | Which one do most people buy? | 사람들이 제일 많이 사는 게 뭐예요?
+비교 | Is there a non-drowsy version? | 안 졸린 버전 있어요?
+비교 | Do these have the same ingredients? | 이거 성분 같아요?
+비교 | Which one has fewer side effects? | 어떤 게 부작용이 적어요?
+비교 | Is the brand name better? | 브랜드 제품이 더 좋아요?
+비교 | Which is better for a dry cough? | 마른기침엔 어떤 게 나아요?
+비교 | I'll take the one you recommend. | 추천해 주시는 걸로 할게요.
+비교 | Is there a children's version? | 어린이용 있어요?
+@41 Keep it ~
+보관 | Keep it at room temperature. | 실온에 보관하세요.
+보관 | Don't freeze it. | 얼리지 마세요.
+보관 | Once opened, use it within a month. | 개봉 후 한 달 안에 쓰세요.
+보관 | Keep the cap tightly closed. | 뚜껑을 꽉 닫아 두세요.
+보관 | Don't share your medicine with others. | 다른 사람과 약을 나눠 먹지 마세요.
+보관 | Check the expiration date. | 유통기한 확인하세요.
+보관 | Keep it in its original box. | 원래 상자에 보관하세요.
+보관 | Don't leave it in a hot car. | 더운 차 안에 두지 마세요.
+보관 | Wash your hands before applying. | 바르기 전에 손 씻으세요.
+보관 | Bring it back to the pharmacy to dispose of it. | 버릴 땐 약국에 가져오세요.
+@42 How much will ~ cost?
+비용 | How much is the consultation fee? | 진료비 얼마예요?
+비용 | What's the total? | 총 얼마예요?
+비용 | Is the medicine included? | 약값도 포함이에요?
+비용 | Do I have to pay a deposit? | 보증금 내야 해요?
+비용 | Can I pay with a foreign card? | 해외 카드로 결제할 수 있어요?
+비용 | Is there a cheaper alternative? | 더 저렴한 대안 있어요?
+비용 | Why was I charged for this? | 이건 왜 청구됐어요?
+비용 | Can I get a discount if I pay in cash? | 현금으로 내면 할인돼요?
+비용 | How much would it be without insurance? | 보험 없으면 얼마예요?
+비용 | Can I get a payment plan? | 분할 납부 가능해요?
+@43 Does my insurance cover ~?
+보험 | Is this covered by my plan? | 제 보험 플랜으로 돼요?
+보험 | Do I need pre-approval? | 사전 승인 필요해요?
+보험 | Can you check my coverage? | 보장 범위 확인해 주시겠어요?
+보험 | What's my copay? | 본인 부담금이 얼마예요?
+보험 | I'll pay now and claim it later. | 지금 내고 나중에 청구할게요.
+보험 | Can I get the documents in English? | 서류 영어로 받을 수 있어요?
+보험 | My insurance card is in my bag. | 보험증은 가방에 있어요.
+보험 | I bought travel insurance before I came. | 오기 전에 여행자 보험 들었어요.
+보험 | They said it's not covered. | 보장 안 된대요.
+보험 | Who do I call about my claim? | 보험금 청구는 어디에 전화해요?
+@44 Could you fill out ~?
+서류 | Please fill out both pages. | 두 장 다 작성해 주세요.
+서류 | Write your date of birth here. | 여기 생년월일 쓰세요.
+서류 | Put your initials here. | 여기 이니셜 써 주세요.
+서류 | Do I need to fill this out again? | 이거 또 써야 해요?
+서류 | What does "occupation" mean? | "직업"란은 뭘 쓰는 거예요?
+서류 | I'm not sure what to write here. | 여기 뭘 써야 할지 모르겠어요.
+서류 | Can I use a Korean address? | 한국 주소 써도 돼요?
+서류 | Is this the consent form? | 이게 동의서예요?
+서류 | Can I take a photo of this form? | 이 서류 사진 찍어도 돼요?
+서류 | I've finished. Where should I put it? | 다 썼어요. 어디 두면 돼요?
+@45 I'm here with my ~
+보호자 | She's my daughter. She's seven. | 제 딸이에요. 일곱 살이에요.
+보호자 | He's had a cough for three days. | 사흘째 기침해요.
+보호자 | She threw up twice this morning. | 아침에 두 번 토했어요.
+보호자 | He won't stop crying. | 계속 울어요.
+보호자 | She's had all her vaccines. | 예방접종은 다 했어요.
+보호자 | Can I stay with him during the test? | 검사하는 동안 같이 있어도 돼요?
+보호자 | How much medicine should I give her? | 약을 얼마나 먹여야 해요?
+보호자 | He's afraid of doctors. | 병원을 무서워해요.
+보호자 | When can she go back to daycare? | 어린이집은 언제 다시 보내도 돼요?
+보호자 | I'm here with my elderly father. | 연세 드신 아버지랑 왔어요.
+@46 Can I get a ~ for my trip?
+여행 | What vaccines do I need for Africa? | 아프리카 가려면 어떤 예방접종 해야 해요?
+여행 | Can I get malaria pills? | 말라리아 약 받을 수 있을까요?
+여행 | How early should I get vaccinated? | 예방접종은 얼마나 일찍 맞아야 해요?
+여행 | Can I bring this medicine through customs? | 이 약 세관 통과할 수 있어요?
+여행 | Do I need a doctor's note for my syringes? | 주사기 때문에 소견서 필요해요?
+여행 | What should I do if I get sick abroad? | 해외에서 아프면 어떻게 해요?
+여행 | Can I get enough medicine for three months? | 석 달 치 약 받을 수 있을까요?
+여행 | Is it safe to fly while pregnant? | 임신 중에 비행기 타도 안전해요?
+여행 | What can I take for altitude sickness? | 고산병엔 뭘 먹어요?
+여행 | I'm going to a country with dengue fever. | 뎅기열 있는 나라에 가요.
+@47 Where is the ~?
+위치 | Which way to the lab? | 검사실은 어느 쪽이에요?
+위치 | Where's the waiting room? | 대기실이 어디예요?
+위치 | Is the pharmacy on the first floor? | 약국 1층에 있어요?
+위치 | Where can I get my blood taken? | 채혈은 어디서 해요?
+위치 | How do I get to Building B? | B동은 어떻게 가요?
+위치 | Is there a cafeteria here? | 여기 구내식당 있어요?
+위치 | Where's the exit? | 출구가 어디예요?
+위치 | Where do I pick up my results? | 결과는 어디서 받아요?
+위치 | Can you show me on the map? | 지도로 보여 주실래요?
+위치 | Is it far from here? | 여기서 멀어요?
+@48 Call ~!
+긴급 | Someone call an ambulance! | 누가 구급차 좀 불러 주세요!
+긴급 | Please call for help! | 도움 좀 요청해 주세요!
+긴급 | Does anyone know first aid? | 응급처치 할 줄 아는 분?
+긴급 | Get the defibrillator! | 제세동기 가져와요!
+긴급 | Can you call his family? | 이 사람 가족한테 연락해 주실래요?
+긴급 | I'm calling 119 now. | 지금 119에 전화할게요.
+긴급 | Is anyone a nurse? | 간호사이신 분 계세요?
+긴급 | Hurry, it's an emergency! | 빨리요, 응급이에요!
+긴급 | Tell them to come quickly. | 빨리 와 달라고 해 주세요.
+긴급 | Stay on the line with them. | 끊지 말고 계속 통화하세요.
+@49 He's ~!
+위급 | He collapsed! | 쓰러졌어요!
+위급 | She's not responding! | 반응이 없어요!
+위급 | He can't breathe! | 숨을 못 쉬어요!
+위급 | She's turning blue! | 얼굴이 파래지고 있어요!
+위급 | He's having an allergic reaction! | 알레르기 반응이 왔어요!
+위급 | She hit her head and passed out. | 머리를 부딪치고 기절했어요.
+위급 | He's very confused. | 정신이 혼미해요.
+위급 | She's burning up. | 열이 펄펄 끓어요.
+위급 | He's in a lot of pain. | 엄청 아파해요.
+위급 | She's awake now. | 이제 깼어요.
+@50 There's been ~
+사고 | A car hit a cyclist. | 차가 자전거 탄 사람을 쳤어요.
+사고 | Someone fell from a ladder. | 누가 사다리에서 떨어졌어요.
+사고 | A child is hurt. | 아이가 다쳤어요.
+사고 | There's smoke coming from the building. | 건물에서 연기가 나요.
+사고 | Nobody's hurt, but the car is damaged. | 다친 사람은 없는데 차가 부서졌어요.
+사고 | I saw the whole thing. | 다 봤어요.
+사고 | I'm at the park near the river. | 강 근처 공원에 있어요.
+사고 | The address is 12 Garden Road. | 주소는 가든로 12번지예요.
+사고 | I'll wait here until help arrives. | 구조대 올 때까지 여기 있을게요.
+사고 | Is everyone okay? | 다들 괜찮아요?
+@51 Stay ~
+안내 | Don't panic. | 당황하지 마세요.
+안내 | Try to stay still. | 움직이지 말아 보세요.
+안내 | Look at me. | 저를 보세요.
+안내 | You're going to be okay. | 괜찮아질 거예요.
+안내 | Tell me your name. | 이름 말해 보세요.
+안내 | Don't give her any water. | 물 주지 마세요.
+안내 | Turn him on his side. | 옆으로 눕혀 주세요.
+안내 | Press here and don't let go. | 여기 누르고 놓지 마세요.
+안내 | The ambulance is almost here. | 구급차 거의 다 왔어요.
+안내 | Stay awake for me. | 정신 놓지 마세요.
+@52 I need ~ right now
+다급 | I need to sit down. | 앉아야겠어요.
+다급 | I need some air. | 바람 좀 쐬어야겠어요.
+다급 | I need my medication. It's in my bag. | 약이 필요해요. 가방에 있어요.
+다급 | I need an interpreter. | 통역이 필요해요.
+다급 | I need to call my family. | 가족한테 전화해야 해요.
+다급 | Please help me. | 도와주세요.
+다급 | I can't breathe properly. | 숨을 제대로 못 쉬겠어요.
+다급 | I'm going to pass out. | 기절할 것 같아요.
+다급 | Can you stay with me? | 옆에 있어 주실래요?
+다급 | I need to go to the bathroom. | 화장실 가야 해요.
+@53 He has ~
+병력전달 | He's on heart medication. | 심장약을 먹어요.
+병력전달 | She's allergic to bees. | 벌 알레르기가 있어요.
+병력전달 | He had a stroke last year. | 작년에 뇌졸중이 있었어요.
+병력전달 | She just had surgery. | 얼마 전에 수술했어요.
+병력전달 | He has low blood sugar. | 저혈당이 있어요.
+병력전달 | She's twelve weeks pregnant. | 임신 12주예요.
+병력전달 | He has a pacemaker. | 심장박동기를 달고 있어요.
+병력전달 | Her medicine is in her purse. | 약은 핸드백에 있어요.
+병력전달 | He doesn't speak English. | 영어를 못 해요.
+병력전달 | I'm his friend, not his family. | 저는 가족이 아니라 친구예요.
+@54 Is there a ~ nearby?
+시설 | Where's the closest emergency room? | 제일 가까운 응급실이 어디예요?
+시설 | Is there a pharmacy open late? | 늦게까지 하는 약국 있어요?
+시설 | Is there a clinic that's open on Sunday? | 일요일에 여는 병원 있어요?
+시설 | Is there a hospital with English-speaking staff? | 영어 하는 직원 있는 병원 있어요?
+시설 | Can you call a taxi to the hospital? | 병원 가는 택시 불러 주실래요?
+시설 | Should I call an ambulance or take a taxi? | 구급차 불러요, 택시 타요?
+시설 | Is it walking distance? | 걸어갈 만해요?
+시설 | Which hospital is the best? | 어느 병원이 제일 좋아요?
+시설 | Is there an eye clinic nearby? | 근처에 안과 있어요?
+시설 | Can you write down the address? | 주소 좀 적어 주실래요?
+@55 I've been waiting for ~
+대기불만 | It's been over an hour. | 한 시간이 넘었어요.
+대기불만 | When is it my turn? | 제 차례 언제예요?
+대기불만 | People who came after me already went in. | 저보다 늦게 온 사람들이 먼저 들어갔어요.
+대기불만 | Is the doctor running late? | 선생님 진료가 밀렸나요?
+대기불만 | I need to leave soon. | 곧 가 봐야 해요.
+대기불만 | Can I come back another day? | 다른 날 다시 와도 될까요?
+대기불만 | My child is getting worse. | 아이 상태가 나빠지고 있어요.
+대기불만 | Could you check where I am in the line? | 제 순서가 어디쯤인지 확인해 주실래요?
+대기불만 | Thanks for letting me know. | 알려 주셔서 감사해요.
+대기불만 | Sorry, I don't mean to be pushy. | 죄송해요, 재촉하려는 건 아니에요.
+@56 I don't understand ~
+소통 | I don't understand the medical terms. | 의학 용어를 모르겠어요.
+소통 | Could you explain it again slowly? | 천천히 다시 설명해 주실래요?
+소통 | Can you show me on this picture? | 이 그림으로 보여 주실래요?
+소통 | What does this mean in plain English? | 쉬운 말로 무슨 뜻이에요?
+소통 | Can I record what you're saying? | 말씀하시는 거 녹음해도 될까요?
+소통 | Is there a translated version? | 번역된 거 있어요?
+소통 | My friend will translate for me. | 제 친구가 통역해 줄 거예요.
+소통 | Sorry, my English isn't very good. | 죄송해요, 영어를 잘 못해요.
+소통 | Let me look up this word. | 이 단어 찾아볼게요.
+소통 | Okay, now I understand. | 네, 이제 이해했어요.
+@57 I lost my ~
+분실 | I lost my inhaler. | 흡입기를 잃어버렸어요.
+분실 | My medicine got stolen. | 약을 도난당했어요.
+분실 | I forgot to pack my pills. | 약 챙기는 걸 깜빡했어요.
+분실 | I only have two days left. | 이틀 치밖에 안 남았어요.
+분실 | Can I get an emergency supply? | 비상용으로 조금 받을 수 있을까요?
+분실 | Do you have the same medicine here? | 여기도 같은 약 있어요?
+분실 | What's the local name for this drug? | 이 약 여기선 뭐라고 해요?
+분실 | My doctor can email the prescription. | 제 주치의가 처방전 이메일로 보내 줄 수 있어요.
+분실 | Can a local doctor prescribe it? | 여기 의사가 처방해 줄 수 있어요?
+분실 | I'll need a new prescription. | 새 처방전이 필요해요.
+@58 I think there's a mistake ~
+오류 | This amount doesn't look right. | 이 금액이 이상해요.
+오류 | I already paid for this. | 이건 이미 냈어요.
+오류 | This isn't the dose the doctor said. | 의사 선생님이 말한 용량이 아니에요.
+오류 | My birthday is wrong on the form. | 서류에 생일이 잘못돼 있어요.
+오류 | I think you gave me someone else's results. | 다른 사람 결과를 주신 것 같아요.
+오류 | The doctor said I'd get a refund. | 의사 선생님이 환불된다고 하셨어요.
+오류 | I wasn't told about this fee. | 이 비용은 안내받지 못했어요.
+오류 | Could you check with the doctor? | 의사 선생님께 확인해 주시겠어요?
+오류 | I'd like to speak to someone about my bill. | 청구서 관련해서 담당자와 얘기하고 싶어요.
+오류 | Thanks for fixing it. | 고쳐 주셔서 감사해요.
+@59 I feel worse after ~
+부작용 | I feel sick after taking it. | 먹고 나면 속이 안 좋아요.
+부작용 | My skin got itchy after the cream. | 연고 바르고 가려워졌어요.
+부작용 | I can't sleep since I started it. | 먹기 시작하고 잠을 못 자요.
+부작용 | My heart is racing. | 심장이 빨리 뛰어요.
+부작용 | I feel really sleepy all day. | 하루 종일 너무 졸려요.
+부작용 | My mouth is very dry. | 입이 너무 말라요.
+부작용 | I broke out in hives. | 두드러기가 났어요.
+부작용 | Is this normal? | 이거 정상이에요?
+부작용 | Can I switch to something else? | 다른 걸로 바꿀 수 있을까요?
+부작용 | It hasn't helped at all. | 전혀 효과가 없어요.
+@60 I'd rather not ~
+선택 | I'd prefer to take pills instead. | 차라리 알약으로 먹을게요.
+선택 | I don't want a general anesthetic. | 전신 마취는 싫어요.
+선택 | Can we try physical therapy first? | 물리치료부터 해 볼 수 있을까요?
+선택 | I'd like to wait until I'm back home. | 집에 돌아갈 때까지 기다리고 싶어요.
+선택 | I don't want to stay in the hospital. | 입원하고 싶지 않아요.
+선택 | Is it okay if I refuse? | 거절해도 괜찮아요?
+선택 | I'd like to talk it over with my family. | 가족이랑 상의해 보고 싶어요.
+선택 | Can I sign out early? | 일찍 퇴원해도 될까요?
+선택 | Please explain what happens if I wait. | 기다리면 어떻게 되는지 설명해 주세요.
+선택 | Okay, let's do it. | 네, 할게요.
