@@ -1,0 +1,14 @@
+{
+  "name": "ai-hub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Claude Code와 Codex(구독 CLI) 작업을 한 화면에서 보고 지시하는 로컬 허브",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "verify": "node scripts/verify.mjs",
+    "verify:quick": "node scripts/verify.mjs --no-run",
+    "test": "node test/smoke.mjs"
+  }
+}
