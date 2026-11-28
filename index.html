@@ -430,32 +430,33 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 .empty{text-align:center;padding:40px 0;color:var(--muted)}
 /* 홈: 오늘 진행도(원형) + 카드 지갑 */
-.rings{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:18px 8px}
+.rings{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:14px 8px;margin-bottom:18px}
 .ring-b{display:flex;flex-direction:column;align-items:center;gap:6px;padding:4px 0;border-radius:16px}
 .ring-b:active{transform:scale(.97)}
-.ring-w{position:relative;width:76px;height:76px}
+.ring-w{position:relative;width:68px;height:68px}
 .ring-w > svg{position:absolute;inset:0}
-.ring-i{position:absolute;inset:9px;border-radius:50%;background:var(--tint);display:grid;place-items:center}
+.ring-i{position:absolute;inset:8px;border-radius:50%;background:var(--tint);display:grid;place-items:center}
 .ring-b b{font-size:13px}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .ring-i{background:var(--accent-soft)}}
 :root[data-theme="dark"] .ring-i{background:var(--accent-soft)}
 .ring-b .mono{font-size:12px;color:var(--muted)}
 .wstack{position:relative;touch-action:pan-x;user-select:none;-webkit-user-select:none}
-.wcard{position:absolute;left:0;right:0;height:252px;border-radius:24px;color:#fff;overflow:hidden;display:flex;flex-direction:column;
+.wcard{position:absolute;left:0;right:0;height:212px;border-radius:24px;color:#fff;overflow:hidden;display:flex;flex-direction:column;
   box-shadow:0 -8px 22px -12px rgba(15,22,50,.35),0 18px 34px -18px rgba(28,43,79,.75),inset 0 1px 0 rgba(255,255,255,.18);
   transition:top .42s cubic-bezier(.2,.8,.2,1),transform .42s cubic-bezier(.2,.8,.2,1),filter .3s}
 .wcard.cat{gap:0}
-.wcard:not(.front){filter:saturate(.9) brightness(.97)}
+.wcard:not(.front){filter:saturate(.55) brightness(.82)}
+.wcard:not(.front) .whead{opacity:.85}
 .wcard:not(.front) .wbody{visibility:hidden}
-.wmark{position:absolute;right:-26px;top:22px;opacity:.12;pointer-events:none}
-.whead{display:flex;align-items:center;justify-content:space-between;gap:10px;height:58px;padding:0 20px;color:#fff;text-align:left;flex:none}
+.wmark{position:absolute;right:-30px;top:18px;transform:scale(.85);transform-origin:top right;opacity:.12;pointer-events:none}
+.whead{display:flex;align-items:center;justify-content:space-between;gap:10px;height:50px;padding:0 18px;color:#fff;text-align:left;flex:none}
 .wname{display:flex;align-items:center;gap:10px;min-width:0}
-.wname b{font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wname b{font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .wday{font-size:12px;font-weight:700;opacity:.85;white-space:nowrap;font-family:var(--f-mono)}
 .wcard.front .whead{cursor:default}
-.wbody{display:flex;flex-direction:column;gap:8px;padding:0 20px 20px;flex:1;position:relative}
+.wbody{display:flex;flex-direction:column;gap:6px;padding:0 18px 16px;flex:1;position:relative}
 .wlab{font-size:12px;font-weight:700;opacity:.75}
-.wpat{font-size:25px;line-height:1.2;letter-spacing:-.02em;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wpat{font-size:22px;line-height:1.2;letter-spacing:-.02em;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .wko{font-size:13px;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .wbar{height:6px;margin-top:auto;background:rgba(255,255,255,.2);box-shadow:none}
 .wbar i{background:#fff!important}
@@ -980,7 +981,7 @@ function wOrder(){
   const rot = keys.slice(i + 1).concat(keys.slice(0, i));   // 앞 카드 다음 순서가 바로 뒤에 보이게
   return rot.reverse().concat(front);
 }
-const W_PEEK = 58;
+const W_PEEK = 50, W_H = 212;
 function viewLearn(){
   const n = S.settings.daily;
   const due = dueList().length;
@@ -989,14 +990,14 @@ function viewLearn(){
   h += `<div class="card rings" role="group" aria-label="오늘 진행도">${CATS.map(c => {
     const tn = Math.min(todayNew(c.key), n), dn = doneToday(c.key), r = 34, C = 2 * Math.PI * r, f = dn ? 1 : tn / n;
     return `<button class="ring-b" data-front="${c.key}" aria-label="${c.ko} 오늘 ${tn}/${n}">
-      <span class="ring-w"><svg width="76" height="76" viewBox="0 0 76 76"><circle cx="38" cy="38" r="${r}" fill="none" stroke="var(--sunken)" stroke-width="4"/>
+      <span class="ring-w"><svg width="68" height="68" viewBox="0 0 76 76"><circle cx="38" cy="38" r="${r}" fill="none" stroke="var(--sunken)" stroke-width="4"/>
         <circle cx="38" cy="38" r="${r}" fill="none" stroke="${dn ? 'var(--good)' : 'var(--accent)'}" stroke-width="4" stroke-linecap="round" stroke-dasharray="${C * Math.max(f, f ? .04 : 0)} ${C}" transform="rotate(-90 38 38)"/></svg>
         <span class="ring-i" style="--tint:${CAT_UI[c.key].tint}">${dn ? `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--good)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg>` : catIcon(c.key, 24, "var(--accent)")}</span></span>
       <b>${c.ko}</b><span class="mono">${dn ? '완료' : `${tn}/${n}`}</span></button>`; }).join("")}</div>`;
   h += `<div class="stack">${syncCardHTML()}`;
   // 카드 지갑: 위아래로 밀거나 위에 살짝 보이는 카드를 누르면 앞으로
   const order = wOrder(), N = order.length;
-  h += `<div class="wstack" style="height:${(N - 1) * W_PEEK + 252}px" aria-label="카테고리 카드. 위아래로 밀어서 넘겨요">${order.map((k, pos) => {
+  h += `<div class="wstack" style="height:${(N - 1) * W_PEEK + W_H}px" aria-label="카테고리 카드. 위아래로 밀어서 넘겨요">${order.map((k, pos) => {
     const c = CATS.find(x => x.key === k), D = DATA[k], L = learnedIn(k), M = masteredIn(k), pct = Math.round(L / D.list.length * 100);
     const dn = doneToday(k), day = dayNo(k), tn = todayNew(k), allDone = L >= D.list.length;
     const nextS = D.list[firstUnlearned(k)];
