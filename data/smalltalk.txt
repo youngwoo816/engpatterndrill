@@ -1,0 +1,606 @@
+# 인사·근황
+## How's it going? | 잘 지내? | 가볍게 안부 묻기
+How's it going? | 잘 지내?
+How are you doing? | 어떻게 지내요?
+How's your day going? | 오늘 하루 어때요?
+How have you been? | 그동안 어떻게 지냈어?
+What's new with you? | 요즘 별일 없어?
+How's everything? | 다 잘되고 있어?
+How was your weekend? | 주말 어땠어?
+How's work these days? | 요즘 일은 어때?
+
+## Not bad, ~ | 나쁘지 않아, ~ | 안부에 답하기
+Not bad, thanks. You? | 나쁘지 않아, 고마워. 너는?
+Pretty good, actually. | 사실 꽤 괜찮아.
+Can't complain. | 그럭저럭 괜찮아.
+Same old, same old. | 늘 똑같지 뭐.
+Busy, but good. | 바쁘지만 좋아.
+I've been better, honestly. | 솔직히 별로야.
+Hanging in there. | 그럭저럭 버티고 있어.
+Never better! | 최고야!
+
+## Long time no see | 오랜만이야 | 오랜만에 만났을 때
+Long time no see! | 오랜만이야!
+It's been ages! | 진짜 오랜만이다!
+I haven't seen you in forever. | 너 본 지 엄청 오래됐다.
+You haven't changed a bit. | 하나도 안 변했네.
+What have you been up to? | 그동안 뭐 하고 지냈어?
+Good to see you again. | 다시 보니 반가워.
+I almost didn't recognize you! | 하마터면 못 알아볼 뻔했어!
+We should catch up soon. | 조만간 만나서 얘기 좀 하자.
+
+## Nice to meet you | 만나서 반가워요 | 처음 만났을 때
+Nice to meet you. | 만나서 반가워요.
+I've heard so much about you. | 얘기 많이 들었어요.
+Sorry, what was your name again? | 죄송한데 성함이 뭐였죠?
+How do you know Sarah? | 사라랑은 어떻게 아는 사이예요?
+I don't think we've met. I'm Hana. | 처음 뵙는 것 같아요. 하나예요.
+So, what do you do? | 그래서 무슨 일 하세요?
+Where are you from originally? | 원래 어디 출신이세요?
+How long have you lived here? | 여기 산 지 얼마나 됐어요?
+
+## Nice weather today, ~ | 오늘 날씨 좋네요, ~ | 날씨로 말 걸기
+Nice weather today, isn't it? | 오늘 날씨 좋네요, 그렇죠?
+It's freezing out there! | 밖에 엄청 추워요!
+Can you believe this heat? | 이 더위 말이 돼요?
+Looks like it's going to rain. | 비 올 것 같네요.
+I heard it's going to snow this weekend. | 이번 주말에 눈 온대요.
+What a gorgeous day! | 날씨 진짜 좋다!
+This weather is perfect for a walk. | 산책하기 딱 좋은 날씨네요.
+I'm so ready for spring. | 빨리 봄이 왔으면 좋겠어요.
+
+## Any plans for ~? | ~ 계획 있어? | 계획 묻기
+Any plans for the weekend? | 주말에 계획 있어?
+Any plans for tonight? | 오늘 밤에 뭐 해?
+Doing anything fun this summer? | 이번 여름에 재밌는 거 해?
+Are you going anywhere for the holidays? | 연휴에 어디 가?
+What are you up to later? | 이따 뭐 해?
+Got any big plans for your birthday? | 생일에 특별한 계획 있어?
+Are you taking any time off soon? | 조만간 휴가 써?
+What did you end up doing last night? | 어젯밤에 결국 뭐 했어?
+
+## I've been ~ing lately | 요즘 ~하고 있어 | 근황 말하기
+I've been really busy lately. | 요즘 진짜 바빴어.
+I've been working out lately. | 요즘 운동하고 있어.
+I've been trying to eat healthier. | 요즘 건강하게 먹으려고 해.
+I've been binge-watching a new show. | 요즘 새 드라마 정주행하고 있어.
+I've been learning to cook. | 요즘 요리 배우고 있어.
+I've been getting into hiking. | 요즘 등산에 빠졌어.
+I've been staying home a lot. | 요즘 집에 많이 있어.
+I've been thinking about changing jobs. | 요즘 이직 생각 중이야.
+
+## Did you hear about ~? | ~ 소식 들었어? | 소식 꺼내기
+Did you hear about the new café? | 새로 생긴 카페 얘기 들었어?
+Did you hear about Jake's promotion? | 제이크 승진한 거 들었어?
+Did you see the game last night? | 어젯밤 경기 봤어?
+Have you heard the news? | 소식 들었어?
+Guess what happened today. | 오늘 무슨 일 있었는지 맞혀 봐.
+You'll never guess who I ran into. | 내가 누굴 마주쳤는지 상상도 못 할걸.
+Did you know they're closing the gym? | 헬스장 문 닫는다는 거 알았어?
+I just found out something crazy. | 방금 대박인 거 알았어.
+
+
+## What brings you here? | 여긴 어쩐 일이에요? | 모임·장소에서 말 걸기
+What brings you here? | 여긴 어쩐 일이에요?
+What brings you to Seoul? | 서울엔 어쩐 일로 오셨어요?
+Are you here for work or for fun? | 일 때문에 오셨어요, 놀러 오셨어요?
+Is this your first time here? | 여기 처음이세요?
+How did you hear about this event? | 이 행사는 어떻게 알게 됐어요?
+Do you come here often? | 여기 자주 와요?
+Who do you know here? | 여기 아는 사람 있어요?
+Are you a friend of the bride or the groom? | 신부 쪽 친구예요, 신랑 쪽 친구예요?
+# 맞장구·리액션
+## Really? | 진짜? | 놀람·관심 표현
+Really? | 진짜?
+No way! | 말도 안 돼!
+Are you serious? | 진심이야?
+You're kidding! | 농담이지!
+Seriously? | 정말?
+Get out of here! | 말도 안 돼!
+Wait, what? | 잠깐, 뭐라고?
+I had no idea! | 전혀 몰랐어!
+
+## That's ~! | 그거 ~하다! | 감정 반응하기
+That's amazing! | 대박이다!
+That's so cool! | 완전 멋지다!
+That's awesome news! | 진짜 좋은 소식이다!
+That's hilarious. | 너무 웃기다.
+That's terrible. | 끔찍하다.
+That's a shame. | 아쉽다.
+That's so sweet of him. | 그 사람 진짜 다정하다.
+That's wild. | 진짜 황당하다.
+
+## I know, right? | 그러니까! | 강한 동의
+I know, right? | 그러니까!
+Tell me about it. | 내 말이.
+Exactly! | 바로 그거야!
+Totally. | 완전.
+You can say that again. | 그 말이 딱 맞아.
+Same here. | 나도 그래.
+I couldn't agree more. | 완전 동의해.
+That's what I'm saying! | 내 말이 그 말이야!
+
+## Oh no, ~ | 어머, ~ | 걱정·위로 반응
+Oh no, what happened? | 어머, 무슨 일이야?
+Oh no, are you okay? | 어떡해, 괜찮아?
+I'm so sorry to hear that. | 그런 일이 있었다니 정말 안됐다.
+That must have been hard. | 힘들었겠다.
+That sounds stressful. | 스트레스 많이 받았겠다.
+I hope you feel better soon. | 빨리 나았으면 좋겠다.
+Is there anything I can do? | 내가 뭐 도와줄 거 있어?
+Hang in there. | 힘내.
+
+## Good for you! | 잘됐다! | 축하·응원 반응
+Good for you! | 잘됐다!
+Congrats! | 축하해!
+You deserve it. | 넌 그럴 자격 있어.
+I'm so happy for you. | 진짜 잘됐다.
+That's huge! | 엄청난 일이다!
+I knew you could do it. | 네가 해낼 줄 알았어.
+I'm proud of you. | 네가 자랑스러워.
+Way to go! | 잘했어!
+
+## Uh-huh / I see | 응응 / 그렇구나 | 듣고 있다는 신호
+Uh-huh. | 응응.
+I see. | 그렇구나.
+Oh, okay. | 아, 그렇구나.
+Right. | 맞아.
+Makes sense. | 그럴 만하네.
+Gotcha. | 알겠어.
+Oh, that explains it. | 아, 그래서 그랬구나.
+Mm-hmm, go on. | 응, 계속해.
+
+## I bet ~ | ~겠다 | 상대 마음 짐작해 주기
+I bet you're tired. | 피곤하겠다.
+I bet that was fun. | 재밌었겠다.
+I bet she was surprised. | 그 사람 놀랐겠다.
+I bet it was delicious. | 맛있었겠다.
+I bet you can't wait. | 엄청 기대되겠다.
+I bet that was awkward. | 어색했겠다.
+I bet your parents are proud. | 부모님이 자랑스러워하시겠다.
+I bet that took forever. | 엄청 오래 걸렸겠다.
+
+## Sounds like ~ | ~인 것 같네 | 들은 내용에 반응
+Sounds like fun! | 재밌겠다!
+Sounds like a plan. | 좋아, 그렇게 하자.
+Sounds like you had a busy week. | 바쁜 한 주였나 보네.
+Sounds like a lot of work. | 일이 많겠네.
+Sounds good to me. | 난 좋아.
+Sounds like he's really nice. | 그 사람 진짜 좋은 사람 같네.
+That sounds like a nightmare. | 악몽 같았겠다.
+Sounds like you need a break. | 너 좀 쉬어야겠다.
+
+## No wonder ~ | 어쩐지 ~ | 이유를 알았을 때
+No wonder you're tired. | 어쩐지 피곤해 보이더라.
+No wonder it was so crowded. | 어쩐지 사람이 많더라.
+No wonder he was in a good mood. | 어쩐지 기분 좋아 보이더라.
+No wonder I couldn't find it. | 어쩐지 못 찾겠더라.
+That explains why it was closed. | 그래서 문을 닫았구나.
+So that's why you were late! | 그래서 늦었구나!
+Ah, that makes sense now. | 아, 이제 이해가 되네.
+No wonder you look so happy. | 어쩐지 행복해 보이더라.
+
+## Me too / Me neither | 나도 / 나도 아니야 | 공감 표현
+Me too! | 나도!
+Me neither. | 나도 아니야.
+So do I. | 나도 그래.
+Neither do I. | 나도 안 그래.
+Same! | 나도!
+I feel the same way. | 나도 같은 마음이야.
+I'm the same way. | 나도 그런 편이야.
+Join the club. | 너도 그렇구나.
+
+
+## Fair enough | 그럴 만하네 | 수긍하기
+Fair enough. | 그럴 만하네.
+That's fair. | 그건 맞아.
+Can't argue with that. | 반박할 수가 없네.
+Good point. | 좋은 지적이야.
+Okay, that makes sense. | 응, 이해돼.
+I guess you're right. | 네 말이 맞는 것 같아.
+True. | 맞아.
+Point taken. | 무슨 말인지 알겠어.
+# 대화 이어가기·질문
+## What about you? | 너는? | 질문 되돌리기
+What about you? | 너는?
+How about you? | 넌 어때?
+And you? | 너는?
+What do you think? | 넌 어떻게 생각해?
+Have you ever tried it? | 넌 해 본 적 있어?
+What's your favorite? | 넌 뭐가 제일 좋아?
+Do you feel the same? | 너도 그렇게 느껴?
+How was yours? | 네 건 어땠어?
+
+## So, ~? | 그래서 ~? | 이야기 더 끌어내기
+So, what happened next? | 그래서 다음에 어떻게 됐어?
+So, how did it go? | 그래서 어떻게 됐어?
+So, did you end up going? | 그래서 결국 갔어?
+Then what? | 그다음엔?
+And how did that make you feel? | 그래서 기분이 어땠어?
+Wait, tell me more. | 잠깐, 더 얘기해 봐.
+How did that happen? | 어쩌다 그렇게 됐어?
+What did she say? | 그 사람이 뭐래?
+
+## Have you ever ~? | ~해 본 적 있어? | 경험 묻기
+Have you ever been to Japan? | 일본 가 본 적 있어?
+Have you ever tried Korean food? | 한국 음식 먹어 본 적 있어?
+Have you ever met anyone famous? | 유명한 사람 만나 본 적 있어?
+Have you ever lived abroad? | 외국에서 살아 본 적 있어?
+Have you ever gone camping? | 캠핑 가 본 적 있어?
+Have you seen that movie? | 그 영화 봤어?
+Have you been there before? | 거기 전에 가 봤어?
+Have you ever thought about moving? | 이사 생각해 본 적 있어?
+
+## Are you into ~? | ~ 좋아해? | 취미·관심사 묻기
+Are you into sports? | 스포츠 좋아해?
+Are you into K-pop? | 케이팝 좋아해?
+What kind of music are you into? | 어떤 음악 좋아해?
+What do you do for fun? | 재미로 뭐 해?
+Do you have any hobbies? | 취미 있어?
+Are you a morning person? | 아침형 인간이야?
+Are you more of a cat or a dog person? | 고양이파야, 강아지파야?
+What are you into these days? | 요즘 뭐에 빠져 있어?
+
+## What do you like about ~? | ~의 뭐가 좋아? | 이유 묻기
+What do you like about your job? | 일의 뭐가 좋아?
+What do you like most about living here? | 여기 사는 게 뭐가 제일 좋아?
+What got you into photography? | 어쩌다 사진에 빠졌어?
+Why did you pick that school? | 왜 그 학교를 골랐어?
+What made you decide to move? | 왜 이사하기로 했어?
+How did you get into that? | 어쩌다 그걸 시작했어?
+What's the best part about it? | 그게 제일 좋은 점이 뭐야?
+Is it as fun as it sounds? | 들리는 것만큼 재밌어?
+
+## Speaking of ~ | ~ 얘기가 나와서 말인데 | 자연스럽게 화제 잇기
+Speaking of food, are you hungry? | 음식 얘기 나와서 말인데, 배고파?
+Speaking of travel, where are you going next? | 여행 얘기 나와서 말인데, 다음엔 어디 가?
+Speaking of which, how's your sister? | 그 얘기 나와서 말인데, 동생은 잘 지내?
+That reminds me, I saw Tom yesterday. | 그러고 보니 어제 톰 봤어.
+Oh, that reminds me of a funny story. | 아, 그러니까 웃긴 얘기 하나 생각난다.
+On that note, let's grab coffee. | 그런 의미에서 커피 마시러 가자.
+By the way, did you get my message? | 그나저나 내 메시지 받았어?
+Funny you mention that. | 그 얘기를 하다니 신기하다.
+
+## What's ~ like? | ~는 어때? | 묘사 부탁하기
+What's your new job like? | 새 직장은 어때?
+What's your hometown like? | 고향은 어떤 곳이야?
+What's your boss like? | 상사는 어떤 사람이야?
+What's the weather like there? | 거기 날씨는 어때?
+What's living alone like? | 혼자 사는 건 어때?
+What's the food like in Vietnam? | 베트남 음식은 어때?
+What was the concert like? | 콘서트는 어땠어?
+What's he like as a person? | 그 사람은 성격이 어때?
+
+## How long have you ~? | ~한 지 얼마나 됐어? | 기간 묻기
+How long have you been here? | 여기 온 지 얼마나 됐어?
+How long have you worked there? | 거기서 일한 지 얼마나 됐어?
+How long have you two been together? | 둘이 사귄 지 얼마나 됐어?
+How long have you been learning English? | 영어 배운 지 얼마나 됐어?
+How long have you known each other? | 서로 안 지 얼마나 됐어?
+How long have you had your dog? | 강아지 키운 지 얼마나 됐어?
+How long did it take you to get here? | 여기 오는 데 얼마나 걸렸어?
+How long are you staying? | 얼마나 있을 거야?
+
+## Do you know any good ~? | 괜찮은 ~ 알아? | 추천 부탁
+Do you know any good restaurants around here? | 이 근처에 괜찮은 식당 알아?
+Do you know any good shows to watch? | 볼 만한 드라마 알아?
+Can you recommend a good book? | 좋은 책 추천해 줄래?
+Any good coffee places nearby? | 근처에 괜찮은 카페 있어?
+Where's the best place to get pizza? | 피자는 어디가 제일 맛있어?
+What should I see while I'm here? | 여기 있는 동안 뭘 봐야 해?
+Do you have a go-to spot for lunch? | 점심 먹는 단골집 있어?
+Know any good podcasts? | 괜찮은 팟캐스트 알아?
+
+## I was wondering, ~ | 궁금했는데, ~ | 조심스럽게 묻기
+I was wondering, are you free on Saturday? | 궁금했는데, 토요일에 시간 돼?
+I was wondering where you got that jacket. | 그 재킷 어디서 샀는지 궁금했어.
+I was wondering how you two met. | 둘이 어떻게 만났는지 궁금했어.
+Can I ask you something? | 뭐 하나 물어봐도 돼?
+Do you mind if I ask how old you are? | 나이 물어봐도 괜찮아?
+I've always wanted to ask you this. | 이거 항상 물어보고 싶었어.
+Just curious, where do you live? | 그냥 궁금해서 그러는데, 어디 살아?
+If you don't mind me asking, | 실례가 안 된다면,
+
+
+## I've always wanted to ~ | 항상 ~해 보고 싶었어 | 바람·관심 나누기
+I've always wanted to go to Iceland. | 항상 아이슬란드 가 보고 싶었어.
+I've always wanted to learn the guitar. | 항상 기타 배워 보고 싶었어.
+I've always wanted to try surfing. | 항상 서핑 해 보고 싶었어.
+I've always wanted a dog. | 항상 강아지 키우고 싶었어.
+It's on my bucket list. | 그거 내 버킷리스트에 있어.
+I'd love to do that someday. | 언젠가 꼭 해 보고 싶어.
+One day I want to live by the beach. | 언젠가 바닷가에 살고 싶어.
+I've never done it, but I want to. | 해 본 적은 없는데 해 보고 싶어.
+# 칭찬·감사·축하
+## I love your ~ | 네 ~ 너무 좋다 | 칭찬하기
+I love your shoes! | 신발 너무 예쁘다!
+I love your haircut. | 머리 스타일 너무 좋다.
+I love your place. | 집 너무 좋다.
+I really like your style. | 네 스타일 진짜 좋아.
+That color looks great on you. | 그 색 너한테 진짜 잘 어울린다.
+Your English is really good. | 영어 진짜 잘한다.
+You have a great laugh. | 웃음소리가 너무 좋아.
+Where did you get that bag? | 그 가방 어디서 샀어?
+
+## You look ~ | ~해 보여 | 외모·상태 칭찬
+You look great! | 좋아 보인다!
+You look really happy today. | 오늘 진짜 행복해 보인다.
+You look so relaxed. | 엄청 편안해 보인다.
+You look like you've lost weight. | 살 빠진 것 같아.
+You look well-rested. | 푹 쉰 얼굴이다.
+You look different. Did you do something new? | 뭔가 달라 보인다. 뭐 바꿨어?
+You look amazing in that dress. | 그 원피스 입으니까 진짜 예쁘다.
+You haven't aged a day. | 하나도 안 늙었네.
+
+## You're so good at ~ | 너 ~ 진짜 잘한다 | 능력 칭찬
+You're so good at cooking. | 너 요리 진짜 잘한다.
+You're really good at explaining things. | 너 설명 진짜 잘한다.
+You're so good with kids. | 너 애들이랑 진짜 잘 지낸다.
+You're a natural! | 타고났네!
+How did you get so good at this? | 어떻게 이렇게 잘하게 됐어?
+You make it look easy. | 너는 쉬워 보이게 한다.
+You've really improved. | 진짜 많이 늘었다.
+I could never do that. | 난 절대 못 할 거야.
+
+## Thanks for ~ | ~해 줘서 고마워 | 감사 표현
+Thanks for having me. | 초대해 줘서 고마워.
+Thanks for the ride. | 태워 줘서 고마워.
+Thanks for listening. | 들어 줘서 고마워.
+Thanks for the advice. | 조언 고마워.
+Thanks for thinking of me. | 나 생각해 줘서 고마워.
+I owe you one. | 신세 졌다.
+You're a lifesaver. | 네가 살렸다.
+I really appreciate it. | 정말 고마워.
+
+## No problem / Anytime | 별말을 / 언제든 | 감사에 답하기
+No problem. | 별말을.
+Anytime! | 언제든지!
+Don't mention it. | 뭘 그런 걸로.
+It was nothing. | 별거 아니었어.
+Happy to help. | 도움이 돼서 좋아.
+My pleasure. | 내가 좋아서 한 거야.
+You'd do the same for me. | 너도 나한테 그랬을 거잖아.
+That's what friends are for. | 친구 좋다는 게 뭐야.
+
+## Congratulations on ~! | ~ 축하해! | 축하하기
+Congratulations on your new job! | 새 직장 축하해!
+Congrats on the baby! | 출산 축하해!
+Congratulations on your engagement! | 약혼 축하해!
+Congrats on graduating! | 졸업 축하해!
+Happy birthday! Any big plans? | 생일 축하해! 특별한 계획 있어?
+Happy anniversary, you two! | 둘이 기념일 축하해!
+Cheers to that! | 그거 축하하자!
+Let's celebrate! | 축하하자!
+
+## That's so nice of you | 정말 친절하다 | 호의에 반응
+That's so nice of you. | 정말 친절하다.
+You didn't have to do that. | 안 그래도 됐는데.
+That's really thoughtful. | 정말 세심하다.
+You're too kind. | 너무 친절하다.
+Aw, you shouldn't have! | 어머, 뭘 이런 걸!
+That means a lot to me. | 그게 나한테 정말 큰 의미야.
+You made my day. | 덕분에 하루가 행복해졌어.
+I'm touched. | 감동이다.
+
+## Thanks, ~ | 고마워, ~ | 칭찬에 답하기
+Thanks, I appreciate that. | 고마워, 그렇게 말해 줘서.
+Oh, thanks! I just got it. | 아, 고마워! 이거 새로 산 거야.
+Thanks, you're sweet. | 고마워, 다정하네.
+Aw, that's nice to hear. | 아, 그런 말 들으니 좋다.
+Thanks, I worked really hard on it. | 고마워, 진짜 열심히 했어.
+Really? I wasn't sure about it. | 진짜? 긴가민가했는데.
+Thanks! It was on sale. | 고마워! 세일할 때 샀어.
+You're making me blush. | 부끄럽다.
+
+
+## You must be ~ | 정말 ~하겠다 | 상대 입장 헤아리기
+You must be so proud. | 정말 뿌듯하겠다.
+You must be exhausted. | 정말 지쳤겠다.
+You must be excited about the trip. | 여행 정말 기대되겠다.
+You must be relieved. | 정말 한시름 놓았겠다.
+You must be really busy these days. | 요즘 정말 바쁘겠다.
+You must have been worried. | 정말 걱정했겠다.
+That must have been scary. | 정말 무서웠겠다.
+That must be nice. | 좋겠다.
+# 의견·공감
+## I think ~ | 내 생각엔 ~ | 가볍게 의견 말하기
+I think it's a great idea. | 좋은 생각인 것 같아.
+I think you're right. | 네 말이 맞는 것 같아.
+I think it's going to rain. | 비 올 것 같아.
+I don't think it's worth it. | 그럴 가치 없는 것 같아.
+I feel like it's too expensive. | 너무 비싼 것 같아.
+In my opinion, the first one is better. | 내 생각엔 첫 번째가 더 나아.
+Personally, I'd go with the blue one. | 나라면 파란 걸로 할래.
+If you ask me, it's overrated. | 내가 보기엔 과대평가된 것 같아.
+
+## I'm not sure ~ | ~ 잘 모르겠어 | 애매하게 답하기
+I'm not sure about that. | 그건 잘 모르겠어.
+I'm not sure I agree. | 동의하는지 잘 모르겠어.
+I'm not sure yet. | 아직 잘 모르겠어.
+It depends. | 상황에 따라 달라.
+Maybe, maybe not. | 그럴 수도, 아닐 수도.
+I could go either way. | 어느 쪽이든 괜찮아.
+I haven't really thought about it. | 별로 생각해 본 적 없어.
+Hard to say. | 뭐라 말하기 어렵네.
+
+## I see your point, but ~ | 무슨 말인지 알겠는데 ~ | 부드럽게 반대하기
+I see your point, but I'm not convinced. | 무슨 말인지 알겠는데 잘 모르겠어.
+I get what you're saying, but it's risky. | 무슨 말인지 아는데 위험해.
+That's true, but it's also really expensive. | 맞는 말인데 엄청 비싸기도 해.
+Maybe, but have you thought about the time? | 그럴 수도 있는데 시간은 생각해 봤어?
+I'm not so sure about that. | 그건 좀 아닌 것 같은데.
+I kind of see it differently. | 난 좀 다르게 봐.
+Fair enough, but I still like mine better. | 그렇긴 한데 난 그래도 내 게 더 좋아.
+Let's agree to disagree. | 서로 생각이 다른 걸로 하자.
+
+## I totally get it | 완전 이해해 | 깊은 공감
+I totally get it. | 완전 이해해.
+I know how you feel. | 네 기분 알아.
+I've been there. | 나도 겪어 봤어.
+That makes total sense. | 완전 이해돼.
+Anyone would feel that way. | 누구라도 그렇게 느낄 거야.
+It's not your fault. | 네 잘못 아니야.
+You're not alone. | 너만 그런 거 아니야.
+I'd be upset too. | 나라도 속상했을 거야.
+
+## It could be worse | 더 나빴을 수도 있어 | 긍정적으로 위로
+It could be worse. | 더 나빴을 수도 있어.
+Look on the bright side. | 좋은 쪽으로 생각해.
+At least nobody got hurt. | 그래도 다친 사람은 없잖아.
+Things will get better. | 다 나아질 거야.
+It's not the end of the world. | 세상 끝난 거 아니야.
+These things happen. | 그런 일도 있는 거지.
+Everything happens for a reason. | 다 이유가 있을 거야.
+You'll figure it out. | 넌 잘 해낼 거야.
+
+## I'm a big fan of ~ | 나 ~ 엄청 좋아해 | 좋아하는 것 말하기
+I'm a big fan of Italian food. | 나 이탈리아 음식 엄청 좋아해.
+I'm a big fan of that band. | 그 밴드 엄청 좋아해.
+I'm obsessed with this song. | 이 노래에 완전 빠졌어.
+I'm really into running these days. | 요즘 달리기에 푹 빠졌어.
+I can't get enough of it. | 아무리 해도 질리지 않아.
+I'm not a big fan of horror movies. | 공포 영화는 별로 안 좋아해.
+It's not really my thing. | 내 스타일은 아니야.
+I could eat this every day. | 이거 매일 먹을 수 있어.
+
+## It's kind of ~ | 좀 ~해 | 완곡하게 말하기
+It's kind of weird. | 좀 이상해.
+It's kind of expensive. | 좀 비싸.
+It's kind of far from here. | 여기서 좀 멀어.
+I'm kind of tired today. | 오늘 좀 피곤해.
+It was kind of boring, to be honest. | 솔직히 좀 지루했어.
+I'm sort of busy right now. | 지금 좀 바빠.
+It's a little too sweet for me. | 나한텐 좀 너무 달아.
+It's not bad, just not great. | 나쁘진 않은데 그렇게 좋지도 않아.
+
+## To be honest, ~ | 솔직히 ~ | 솔직하게 말하기
+To be honest, I forgot. | 솔직히 깜빡했어.
+To be honest, I'm a little nervous. | 솔직히 좀 긴장돼.
+Honestly, it wasn't that good. | 솔직히 그렇게 좋진 않았어.
+I'll be honest with you. | 솔직하게 말할게.
+Truth is, I've never been there. | 사실 거기 가 본 적 없어.
+Not gonna lie, I loved it. | 솔직히 엄청 좋았어.
+Between you and me, I don't like him. | 우리끼리 얘긴데, 나 그 사람 별로야.
+I have to admit, you were right. | 인정할게, 네 말이 맞았어.
+
+# 화제 바꾸기·대화 마무리
+## Anyway, ~ | 아무튼 ~ | 화제 전환
+Anyway, how's your family? | 아무튼 가족들은 잘 지내?
+Anyway, enough about me. | 아무튼 내 얘기는 그만하고.
+Anyway, what were we talking about? | 아무튼 우리 무슨 얘기 하고 있었지?
+On a different note, | 다른 얘기인데,
+Oh, before I forget, | 아, 잊어버리기 전에,
+Changing the subject, | 화제를 바꿔서,
+Not to change the subject, but | 말 돌리려는 건 아닌데,
+Where was I? | 내가 어디까지 얘기했지?
+
+## I should get going | 이제 가 봐야겠다 | 대화 끝내기
+I should get going. | 이제 가 봐야겠다.
+I'd better head out. | 슬슬 나가 봐야겠어.
+I've got to run. | 나 가야 해.
+Look at the time! | 시간 좀 봐!
+I don't want to keep you. | 더 붙잡으면 안 되겠다.
+I'll let you get back to it. | 하던 거 마저 해.
+It was great catching up. | 오랜만에 얘기해서 좋았어.
+Let's do this again soon. | 조만간 또 보자.
+
+## Let's ~ sometime | 언제 한번 ~하자 | 다음 약속 제안
+Let's grab coffee sometime. | 언제 커피 한잔하자.
+Let's get lunch sometime this week. | 이번 주에 점심 한번 먹자.
+Let's hang out soon. | 조만간 놀자.
+We should get together more often. | 더 자주 만나야겠다.
+Let me know when you're free. | 시간 될 때 알려 줘.
+Let's keep in touch. | 연락하고 지내자.
+I'll text you about Saturday. | 토요일 일은 문자할게.
+Next time's on me. | 다음엔 내가 살게.
+
+## Say hi to ~ for me | ~한테 안부 전해 줘 | 안부 부탁
+Say hi to your mom for me. | 어머니께 안부 전해 줘.
+Tell Jenny I said hi. | 제니한테 안부 전해 줘.
+Give my best to your family. | 가족들께 안부 전해 줘.
+Send my love to the kids. | 애들한테 사랑한다고 전해 줘.
+Tell him congratulations from me. | 내가 축하한다고 전해 줘.
+Say hello to everyone at work. | 회사 사람들한테 안부 전해 줘.
+Remember me to your parents. | 부모님께 안부 전해 드려.
+I'll pass that along. | 전해 줄게.
+
+## Take care / See you ~ | 잘 지내 / ~에 보자 | 작별 인사
+Take care! | 잘 지내!
+See you later! | 이따 봐!
+See you around. | 또 보자.
+See you next week. | 다음 주에 봐.
+Have a good one! | 좋은 하루 보내!
+Get home safe. | 조심히 들어가.
+Catch you later. | 나중에 보자.
+It was nice talking to you. | 얘기 나눠서 즐거웠어.
+
+## Let's not talk about ~ | ~ 얘기는 하지 말자 | 민감한 화제 피하기
+Let's not talk about work tonight. | 오늘 밤엔 일 얘기 하지 말자.
+Can we talk about something else? | 다른 얘기 하면 안 될까?
+I'd rather not get into that. | 그 얘긴 안 하고 싶어.
+That's a long story. | 얘기하자면 길어.
+I'll tell you another time. | 다음에 얘기해 줄게.
+Let's keep it light. | 가볍게 얘기하자.
+I don't really talk about politics. | 정치 얘기는 잘 안 해.
+Let's just say it didn't go well. | 그냥 잘 안 됐다고만 해 두자.
+
+# 어색한 상황 (구어체)
+## Sorry, I'm terrible with names | 미안, 내가 이름을 잘 못 외워 | 이름이 기억 안 날 때
+Sorry, I'm terrible with names. | 미안, 내가 이름을 잘 못 외워.
+Remind me of your name again? | 이름 다시 알려 줄래?
+I know your face, but I forgot your name. | 얼굴은 아는데 이름이 기억 안 나.
+Have we met before? | 우리 전에 만난 적 있죠?
+You look really familiar. | 진짜 낯이 익어요.
+I'm sorry, I'm blanking on your name. | 미안, 이름이 갑자기 생각이 안 나.
+Wait, don't tell me. It's Chris, right? | 잠깐, 말하지 마. 크리스 맞지?
+I think you're mixing me up with someone else. | 다른 사람이랑 착각하시는 것 같아요.
+
+## Sorry, I didn't mean to ~ | 미안, ~하려던 건 아니었어 | 실수했을 때
+Sorry, I didn't mean to interrupt. | 미안, 말 끊으려던 건 아니었어.
+Sorry, I didn't mean it that way. | 미안, 그런 뜻으로 한 말 아니었어.
+Sorry, I didn't mean to be rude. | 미안, 무례하게 굴려던 건 아니었어.
+Oops, my bad. | 앗, 내 실수.
+That came out wrong. | 말이 이상하게 나왔네.
+I put my foot in my mouth. | 내가 말실수했네.
+No offense. | 기분 나쁘라고 한 말 아니야.
+None taken. | 기분 안 나빠.
+
+## That's awkward | 좀 어색하네 | 어색함을 풀 때
+Well, that's awkward. | 음, 좀 어색하네.
+This is a little embarrassing. | 좀 민망하다.
+Let's pretend that didn't happen. | 아무 일도 없었던 걸로 하자.
+I have no idea what to say. | 무슨 말을 해야 할지 모르겠어.
+Sorry, I'm a bit shy at first. | 미안, 처음엔 좀 낯을 가려.
+I'm not great at small talk. | 나 스몰토크 잘 못해.
+Did I say something wrong? | 내가 말 잘못했어?
+Okay, moving on! | 자, 넘어가자!
+
+## I didn't catch that, ~ | 못 알아들었어, ~ | 대화 중 못 알아들었을 때
+Sorry, I didn't catch that. | 미안, 못 알아들었어.
+It's so loud in here. | 여기 너무 시끄럽다.
+Can we go somewhere quieter? | 좀 조용한 데로 갈까?
+Sorry, what did you say? | 미안, 뭐라고 했어?
+I'm not sure I understood. | 잘 이해했는지 모르겠어.
+What does that mean? | 그게 무슨 뜻이야?
+Is that a joke? I don't get it. | 그거 농담이야? 이해가 안 돼.
+Could you explain that slang? | 그 속어 설명해 줄래?
+
+## I'm just looking, thanks | 그냥 구경 중이에요 | 원치 않는 대화 정중히 끝내기
+I'm just looking, thanks. | 그냥 구경 중이에요, 감사해요.
+Sorry, I'm in a bit of a hurry. | 죄송해요, 좀 바빠서요.
+I'm meeting someone, actually. | 사실 누구 만나기로 했어요.
+I'd love to chat, but I have to go. | 얘기 더 하고 싶은데 가 봐야 해요.
+Excuse me, I need to find my friend. | 실례해요, 친구 찾으러 가야 해서요.
+It was nice meeting you, but I should mingle. | 만나서 반가웠어요, 다른 분들이랑도 인사해야 해서요.
+I'll catch up with you later. | 나중에 또 얘기해요.
+Sorry, I'm not really in the mood to talk. | 미안, 지금 얘기할 기분이 아니야.
+
+## Do you mind if I join you? | 같이 있어도 될까요? | 대화에 끼어들기
+Do you mind if I join you? | 같이 있어도 될까요?
+Is this seat taken? | 이 자리 주인 있어요?
+Mind if I sit here? | 여기 앉아도 될까요?
+Sorry, are you waiting for someone? | 죄송한데 누구 기다리세요?
+I couldn't help overhearing. | 우연히 들었어요.
+You're talking about Busan? I'm from there! | 부산 얘기하세요? 저 거기 출신이에요!
+Can I jump in? | 저도 껴도 돼요?
+Hi, mind if I say hello? | 안녕하세요, 인사해도 될까요?

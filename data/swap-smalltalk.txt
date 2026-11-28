@@ -1,0 +1,62 @@
+# 바꿔 말하기 데이터: 패턴번호 | 영어 틀 | 한국어 틀 | 라벨: 영어=한국어 / ... ;; 라벨: ...
+# 패턴번호는 smalltalk.txt의 ## 순서(1부터). 모든 조합이 문법적으로 맞도록 작성.
+1 | How's {1} going? | {1} 어때? | 대상: it=요즘 / your day=오늘 하루 / work=일은 / school=학교는 / the new job=새 일은
+2 | {1} | {1} | 대답: Not bad, thanks.=나쁘지 않아, 고마워. / Pretty good.=꽤 좋아. / Can't complain.=그럭저럭 괜찮아. / Busy, but good.=바쁘지만 좋아. / Hanging in there.=그럭저럭 버티고 있어.
+3 | I haven't seen you in {1}! | {1} 못 봤다! | 기간: ages=엄청 오래 / forever=진짜 오래 / years=몇 년 동안 / months=몇 달 동안
+4 | How do you know {1}? | {1} 어떻게 아는 사이예요? | 사람: Sarah=사라랑은 / the host=주최자랑은 / Jake=제이크랑은 / everyone here=여기 사람들이랑은
+5 | It's so {1} today. | 오늘 진짜 {1}. | 날씨: hot=덥다 / cold=춥다 / windy=바람 분다 / humid=습하다 / nice out=날씨 좋다
+6 | Any plans for {1}? | {1} 계획 있어? | 때: the weekend=주말에 / tonight=오늘 밤에 / the holidays=연휴에 / your birthday=생일에 / summer=여름에
+7 | I've been {1} lately. | 요즘 {1}. | 근황: really busy=진짜 바빴어 / working out=운동하고 있어 / learning to cook=요리 배우고 있어 / staying home a lot=집에 많이 있어 / getting into hiking=등산에 빠졌어
+8 | Did you hear about {1}? | {1} 얘기 들었어? | 소식: the new café=새로 생긴 카페 / Jake's promotion=제이크 승진한 거 / the concert=그 콘서트 / the storm=그 태풍
+9 | What brings you to {1}? | {1} 어쩐 일로 오셨어요? | 장소: Seoul=서울엔 / this party=이 파티엔 / the office=사무실엔 / our neighborhood=이 동네엔
+10 | {1} | {1} | 반응: Really?=진짜? / No way!=말도 안 돼! / Are you serious?=진심이야? / You're kidding!=농담이지! / I had no idea!=전혀 몰랐어!
+11 | That's {1}! | {1}! | 반응: amazing=대박이다 / so cool=완전 멋지다 / hilarious=너무 웃기다 / terrible=끔찍하다 / a shame=아쉽다
+12 | {1} | {1} | 동의: I know, right?=그러니까! / Tell me about it.=내 말이. / Exactly!=바로 그거야! / Same here.=나도 그래. / I couldn't agree more.=완전 동의해.
+13 | Oh no, {1}? | 어머, {1}? | 질문: what happened=무슨 일이야 / are you okay=괜찮아 / is it serious=심각해 / did you get hurt=다쳤어
+14 | {1} | {1} | 축하: Good for you!=잘됐다! / Congrats!=축하해! / You deserve it.=넌 그럴 자격 있어. / I'm so happy for you.=진짜 잘됐다. / Way to go!=잘했어!
+15 | {1} | {1} | 맞장구: Uh-huh.=응응. / I see.=그렇구나. / Makes sense.=그럴 만하네. / Gotcha.=알겠어. / Right.=맞아.
+16 | I bet {1}. | {1}. | 짐작: you're tired=피곤하겠다 / that was fun=재밌었겠다 / she was surprised=그 사람 놀랐겠다 / you can't wait=엄청 기대되겠다 / that was awkward=어색했겠다
+17 | Sounds like {1}. | {1}. | 반응: fun=재밌겠다 / a plan=좋아, 그렇게 하자 / a lot of work=일이 많겠네 / you need a break=너 좀 쉬어야겠다 / you had a great time=즐거운 시간 보냈나 보네
+18 | No wonder {1}. | 어쩐지 {1}. | 이유: you're tired=피곤해 보이더라 / it was so crowded=사람이 많더라 / he was in a good mood=기분 좋아 보이더라 / I couldn't find it=못 찾겠더라
+19 | {1} | {1} | 공감: Me too!=나도! / Me neither.=나도 아니야. / So do I.=나도 그래. / Neither do I.=나도 안 그래. / Same!=나도!
+20 | {1} | {1} | 수긍: Fair enough.=그럴 만하네. / Good point.=좋은 지적이야. / True.=맞아. / Can't argue with that.=반박할 수가 없네. / Point taken.=무슨 말인지 알겠어.
+21 | What about you? {1} | 너는? {1} | 질문: Have you tried it?=해 봤어? / What do you think?=어떻게 생각해? / What's your favorite?=뭐가 제일 좋아? / How was yours?=네 건 어땠어?
+22 | So, {1}? | 그래서 {1}? | 질문: what happened next=다음에 어떻게 됐어 / how did it go=어떻게 됐어 / did you end up going=결국 갔어 / what did she say=그 사람이 뭐래
+23 | Have you ever {1}? | {1} 적 있어? | 경험: been to Japan=일본 가 본 / tried Korean food=한국 음식 먹어 본 / lived abroad=외국에서 살아 본 / gone camping=캠핑 가 본 / met anyone famous=유명한 사람 만나 본
+24 | Are you into {1}? | {1} 좋아해? | 관심사: sports=스포츠 / K-pop=케이팝 / video games=게임 / cooking=요리 / board games=보드게임
+25 | What do you like about {1}? | {1} 뭐가 좋아? | 대상: your job=일의 / living here=여기 사는 게 / your school=학교의 / that show=그 드라마의
+26 | Speaking of {1}, {2}? | {1} 얘기 나와서 말인데, {2}? | 화제: food=음식 / travel=여행 / work=일 ;; 질문: are you free this weekend=이번 주말에 시간 돼 / have you heard from Mina=미나한테 연락 왔어 / what are you doing next month=다음 달에 뭐 해
+27 | What's {1} like? | {1} 어때? | 대상: your new job=새 직장은 / your hometown=고향은 / your boss=상사는 / the weather there=거기 날씨는 / living alone=혼자 사는 건
+28 | How long have you {1}? | {1} 지 얼마나 됐어? | 기간: been here=여기 온 / worked there=거기서 일한 / lived in Busan=부산에 산 / been learning English=영어 배운 / known each other=서로 안
+29 | Do you know any good {1} around here? | 이 근처에 괜찮은 {1} 알아? | 장소: restaurants=식당 / cafés=카페 / bars=술집 / gyms=헬스장 / parks=공원
+30 | I was wondering {1}. | {1} 궁금했어. | 내용: where you got that jacket=그 재킷 어디서 샀는지 / how you two met=둘이 어떻게 만났는지 / what you do for fun=너는 뭐 하고 노는지 / if you're free on Saturday=토요일에 시간 되는지
+31 | I've always wanted to {1}. | 항상 {1} 싶었어. | 바람: go to Iceland=아이슬란드 가 보고 / learn the guitar=기타 배워 보고 / try surfing=서핑 해 보고 / run a marathon=마라톤 뛰어 보고 / live abroad=외국에서 살아 보고
+32 | I love your {1}! | {1} 너무 좋다! | 대상: shoes=신발 / haircut=머리 스타일 / place=집 / jacket=재킷 / glasses=안경
+33 | You look {1}. | {1} 보인다. | 상태: great=좋아 / really happy=진짜 행복해 / so relaxed=엄청 편안해 / well-rested=푹 쉰 것 같아 / different=뭔가 달라
+34 | You're so good at {1}. | 너 {1} 진짜 잘한다. | 능력: cooking=요리 / explaining things=설명 / singing=노래 / drawing=그림 / making people laugh=사람 웃기는 거
+35 | Thanks for {1}. | {1} 고마워. | 이유: having me=초대해 줘서 / the ride=태워 줘서 / listening=들어 줘서 / the advice=조언 / thinking of me=나 생각해 줘서
+36 | {1} | {1} | 대답: No problem.=별말을. / Anytime!=언제든지! / Don't mention it.=뭘 그런 걸로. / Happy to help.=도움이 돼서 좋아. / My pleasure.=내가 좋아서 한 거야.
+37 | Congratulations on {1}! | {1} 축하해! | 일: your new job=새 직장 / the baby=출산 / your engagement=약혼 / graduating=졸업 / your promotion=승진
+38 | That's so {1} of you. | 정말 {1}. | 성격: nice=친절하다 / sweet=다정하다 / thoughtful=세심하다 / generous=너그럽다 / kind=고맙다
+39 | Thanks, {1}. | 고마워, {1}. | 덧붙임: I appreciate that=그렇게 말해 줘서 / I just got it=이거 새로 산 거야 / it was on sale=세일할 때 샀어 / you're sweet=다정하네 / I worked hard on it=열심히 했어
+40 | You must be {1}. | 정말 {1}. | 짐작: so proud=뿌듯하겠다 / exhausted=지쳤겠다 / relieved=한시름 놓았겠다 / excited=기대되겠다 / really busy=바쁘겠다
+41 | I think {1}. | 내 생각엔 {1}. | 의견: it's a great idea=좋은 생각인 것 같아 / you're right=네 말이 맞는 것 같아 / it's too expensive=너무 비싼 것 같아 / we should wait=기다려야 할 것 같아
+42 | I'm not sure {1}. | {1} 잘 모르겠어. | 대상: about that=그건 / yet=아직 / if I can make it=갈 수 있을지 / what to say=무슨 말을 해야 할지
+43 | I see your point, but {1}. | 무슨 말인지 알겠는데 {1}. | 반론: it's risky=위험해 / it's really expensive=엄청 비싸 / I'm not convinced=잘 모르겠어 / I see it differently=난 좀 다르게 봐
+44 | {1} | {1} | 공감: I totally get it.=완전 이해해. / I know how you feel.=네 기분 알아. / I've been there.=나도 겪어 봤어. / It's not your fault.=네 잘못 아니야. / You're not alone.=너만 그런 거 아니야.
+45 | {1} | {1} | 위로: It could be worse.=더 나빴을 수도 있어. / Look on the bright side.=좋은 쪽으로 생각해. / Things will get better.=다 나아질 거야. / It's not the end of the world.=세상 끝난 거 아니야.
+46 | I'm a big fan of {1}. | 나 {1} 엄청 좋아해. | 대상: Italian food=이탈리아 음식 / that band=그 밴드 / spicy food=매운 음식 / old movies=옛날 영화 / this café=이 카페
+47 | It's kind of {1}. | 좀 {1}. | 느낌: weird=이상해 / expensive=비싸 / far from here=여기서 멀어 / boring=지루해 / complicated=복잡해
+48 | To be honest, {1}. | 솔직히 {1}. | 고백: I forgot=깜빡했어 / I'm a little nervous=좀 긴장돼 / it wasn't that good=그렇게 좋진 않았어 / I've never been there=거기 가 본 적 없어
+49 | Anyway, {1}? | 아무튼 {1}? | 질문: how's your family=가족들은 잘 지내 / what were we talking about=우리 무슨 얘기 하고 있었지 / how was your trip=여행은 어땠어 / are you hungry=배고파
+50 | I should {1}. | 이제 {1}. | 행동: get going=가 봐야겠다 / head out=나가 봐야겠다 / get back to work=일하러 가 봐야겠다 / let you go=보내 줘야겠다
+51 | Let's {1} sometime. | 언제 {1}. | 제안: grab coffee=커피 한잔하자 / get lunch=점심 먹자 / hang out=놀자 / go hiking=등산 가자 / see a movie=영화 보자
+52 | Say hi to {1} for me. | {1} 안부 전해 줘. | 사람: your mom=어머니께 / Jenny=제니한테 / your family=가족들께 / everyone at work=회사 사람들한테
+53 | {1} | {1} | 인사: Take care!=잘 지내! / See you later!=이따 봐! / Have a good one!=좋은 하루 보내! / Get home safe.=조심히 들어가. / Catch you later.=나중에 보자.
+54 | Let's not talk about {1}. | {1} 얘기는 하지 말자. | 화제: work tonight=오늘 밤엔 일 / politics=정치 / my ex=내 전 애인 / money=돈
+55 | {1} | {1} | 상황: Sorry, I'm terrible with names.=미안, 이름을 잘 못 외워. / Remind me of your name?=이름 다시 알려 줄래? / You look really familiar.=진짜 낯이 익어요. / Have we met before?=전에 만난 적 있죠?
+56 | Sorry, I didn't mean to {1}. | 미안, {1}. | 실수: interrupt=말 끊으려던 건 아니었어 / be rude=무례하게 굴려던 건 아니었어 / upset you=기분 상하게 하려던 건 아니었어 / take so long=이렇게 오래 걸리려던 건 아니었어
+57 | {1} | {1} | 상황: Well, that's awkward.=음, 좀 어색하네. / This is a little embarrassing.=좀 민망하다. / Okay, moving on!=자, 넘어가자! / Let's pretend that didn't happen.=없었던 일로 하자.
+58 | Sorry, {1}? | 미안, {1}? | 질문: what did you say=뭐라고 했어 / what does that mean=그게 무슨 뜻이야 / can you say that again=다시 말해 줄래 / can we go somewhere quieter=좀 조용한 데로 갈까
+59 | Sorry, {1}. | 죄송해요, {1}. | 이유: I'm just looking=그냥 구경 중이에요 / I'm in a bit of a hurry=좀 바빠서요 / I'm meeting someone=누구 만나기로 했어요 / I have to go=가 봐야 해요
+60 | {1} | {1} | 질문: Do you mind if I join you?=같이 있어도 될까요? / Is this seat taken?=이 자리 주인 있어요? / Mind if I sit here?=여기 앉아도 될까요? / Can I jump in?=저도 껴도 돼요?
