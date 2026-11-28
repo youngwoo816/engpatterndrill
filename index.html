@@ -429,8 +429,17 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 .done-hero .stamp span{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 .empty{text-align:center;padding:40px 0;color:var(--muted)}
+.cattabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:2px 16px}
+.cattabs::-webkit-scrollbar{display:none}
+.cattabs button{flex:none;display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:999px;font-size:13px;font-weight:700;color:var(--muted);white-space:nowrap;
+  background:var(--g-fill);-webkit-backdrop-filter:var(--g-blur);backdrop-filter:var(--g-blur);box-shadow:var(--g-edge),0 2px 8px -4px rgba(20,24,40,.15)}
+.cattabs button[aria-pressed="true"]{background:var(--navy-2);color:#fff;box-shadow:none}
 /* 홈: 오늘 진행도(원형) + 카드 지갑 */
 .rings{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:14px 8px;margin-bottom:18px}
+.rings.many{display:flex;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;padding:14px 6px}
+.rings.many::-webkit-scrollbar{display:none}
+.rings.many .ring-b{flex:0 0 92px;scroll-snap-align:start}
+.ring-b b{white-space:nowrap}
 .ring-b{display:flex;flex-direction:column;align-items:center;gap:6px;padding:4px 0;border-radius:16px}
 .ring-b:active{transform:scale(.97)}
 .ring-w{position:relative;width:68px;height:68px}
@@ -456,7 +465,7 @@ textarea{width:100%;font-family:var(--f-mono);font-size:12px;padding:10px;border
 :root[data-theme="dark"] .wcard:not(.front){background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03)),#1A1D27;box-shadow:0 -6px 18px -12px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.1),inset 0 0 0 1px rgba(255,255,255,.06)}
 .wcard:not(.front) .wbody{visibility:hidden}
 .wmark{position:absolute;right:-30px;top:18px;transform:scale(.85);transform-origin:top right;transition:opacity .3s;opacity:.12;pointer-events:none}
-.whead{display:flex;align-items:center;justify-content:space-between;gap:10px;height:50px;padding:0 18px;color:#fff;text-align:left;flex:none}
+.whead{display:flex;align-items:center;justify-content:space-between;gap:10px;height:50px;padding:0 18px;flex-shrink:0;color:#fff;text-align:left;flex:none}
 .wname{display:flex;align-items:center;gap:10px;min-width:0}
 .wname b{font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .wday{font-size:12px;font-weight:700;opacity:.85;white-space:nowrap;font-family:var(--f-mono)}
@@ -641,6 +650,7 @@ const CATS = [
   { key:"daily",    file:"data/daily.txt",    swap:"data/swap-daily.txt", forms:"data/forms-daily.txt",    ko:"일상 대화",     en:"Everyday Talk",  pre:"d" },
   { key:"travel",   file:"data/travel.txt",   swap:"data/swap-travel.txt", forms:"data/forms-travel.txt",   ko:"여행 영어",     en:"Travel English", pre:"t" },
   { key:"business", file:"data/business.txt", swap:"data/swap-business.txt", forms:"data/forms-business.txt", ko:"비즈니스 영어", en:"Work & Office",  pre:"b" },
+  { key:"phone", file:"data/phone.txt", swap:"data/swap-phone.txt", forms:"data/forms-phone.txt", ko:"전화·화상회의", en:"Calls & Video", pre:"p" },
 ];
 const NEXT_LABEL = { build:"조립으로", swap:"바꿔 말하기로", recall:"회상으로" };
 const STEP_LABEL = { listen:"듣기", shadow:"따라 말하기", build:"조립", swap:"바꿔 말하기", recall:"회상" };
@@ -969,11 +979,18 @@ function showA2HS(){
   document.body.appendChild(el);
 }
 
+/* 카테고리 칩 줄: 가로로 밀어서 선택, 선택한 칩이 보이게 자동 스크롤 */
+const catTabs = (attr, cur) => `<div class="cattabs" role="group" aria-label="카테고리">${CATS.map(x => `<button data-${attr}="${x.key}" aria-pressed="${x.key===cur}">${catIcon(x.key, 16, "currentColor", 1.9)}${x.ko}</button>`).join("")}</div>`;
+function centerCatTab(){ document.querySelectorAll('.cattabs button[aria-pressed="true"]').forEach(b => { const w = b.parentElement; w.scrollLeft = b.offsetLeft - (w.clientWidth - b.offsetWidth) / 2; }); }
 /* 카테고리 선형 아이콘 · 카드 색 (남색 계열로 카테고리마다 다르게) */
 const CAT_UI = {
   daily:    { ic:'<path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 20.5l1.6-5.2A8.4 8.4 0 1 1 21 11.5z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/>', g:"linear-gradient(150deg,#3A55B8 0%,#24408E 55%,#1C2B4F 100%)", tint:"#E3EEFB" },
   travel:   { ic:'<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>', g:"linear-gradient(150deg,#5156C4 0%,#36398F 55%,#23255C 100%)", tint:"#ECE8FB" },
   business: { ic:'<rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M8.5 7V5.5A2 2 0 0 1 10.5 3.5h3a2 2 0 0 1 2 2V7M3 13h18M11 13v2h2v-2"/>', g:"linear-gradient(150deg,#2F6DA6 0%,#1F4E79 55%,#15314E 100%)", tint:"#E2EEF6" },
+  phone:    { ic:'<path d="M21 16.4v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.6 2 2 0 0 1 3.1 1.4h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L7.1 9.1a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/>', g:"linear-gradient(150deg,#2F87A8 0%,#1E5F80 55%,#153F57 100%)", tint:"#E0F1F6" },
+  smalltalk:{ ic:'<path d="M14 9a2 2 0 0 1-2 2H6l-3 3V4a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2z"/><path d="M18 9h1a2 2 0 0 1 2 2v10l-3-3h-6a2 2 0 0 1-2-2v-1"/>', g:"linear-gradient(150deg,#4A6BD6 0%,#2E48A0 55%,#1F2F6B 100%)", tint:"#E6EBFC" },
+  medical:  { ic:'<path d="M11 2v2M5 2v2M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/>', g:"linear-gradient(150deg,#2E9488 0%,#1F6B66 55%,#164A49 100%)", tint:"#DFF3EF" },
+  career:   { ic:'<rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="9" cy="11" r="2.5"/><path d="M5.5 17c.6-1.8 2-2.8 3.5-2.8s2.9 1 3.5 2.8M15 9h3M15 12.5h3"/>', g:"linear-gradient(150deg,#6B55C2 0%,#4A3790 55%,#30245F 100%)", tint:"#EEEAFB" },
 };
 const catIcon = (k, sz=22, col="currentColor", sw=1.7) => `<svg width="${sz}" height="${sz}" viewBox="0 0 24 24" fill="none" stroke="${col}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${(CAT_UI[k]||CAT_UI.daily).ic}</svg>`;
 // 카드 순서: 마지막이 맨 앞 카드. 기본 앞 카드 = 최근에 학습한 카테고리
@@ -988,13 +1005,14 @@ function wOrder(){
   const rot = keys.slice(i + 1).concat(keys.slice(0, i));   // 앞 카드 다음 순서가 바로 뒤에 보이게
   return rot.reverse().concat(front);
 }
-const W_PEEK = 50, W_H = 212;
+const W_H = 212;
+let W_PEEK = 50;
 function viewLearn(){
   const n = S.settings.daily;
   const due = dueList().length;
   let h = topBar(new Date().toLocaleDateString("ko-KR",{month:"long",day:"numeric",weekday:"short"}));
   // 오늘 진행도: 카테고리별 원형 (누르면 그 카드가 앞으로)
-  h += `<div class="card rings" role="group" aria-label="오늘 진행도">${CATS.map(c => {
+  h += `<div class="card rings ${CATS.length > 3 ? 'many' : ''}" role="group" aria-label="오늘 진행도">${CATS.map(c => {
     const tn = Math.min(todayNew(c.key), n), dn = doneToday(c.key), r = 34, C = 2 * Math.PI * r, f = dn ? 1 : tn / n;
     return `<button class="ring-b" data-front="${c.key}" aria-label="${c.ko} 오늘 ${tn}/${n}">
       <span class="ring-w"><svg width="68" height="68" viewBox="0 0 76 76"><circle cx="38" cy="38" r="${r}" fill="none" stroke="var(--sunken)" stroke-width="4"/>
@@ -1004,6 +1022,7 @@ function viewLearn(){
   h += `<div class="stack">${syncCardHTML()}`;
   // 카드 지갑: 위아래로 밀거나 위에 살짝 보이는 카드를 누르면 앞으로
   const order = wOrder(), N = order.length;
+  W_PEEK = N > 4 ? 44 : 50;
   h += `<div class="wstack" style="height:${(N - 1) * W_PEEK + W_H}px" aria-label="카테고리 카드. 위아래로 밀어서 넘겨요">${order.map((k, pos) => {
     const c = CATS.find(x => x.key === k), D = DATA[k], L = learnedIn(k), M = masteredIn(k), pct = Math.round(L / D.list.length * 100);
     const dn = doneToday(k), day = dayNo(k), tn = todayNew(k), allDone = L >= D.list.length;
@@ -1086,7 +1105,7 @@ function viewProgress(){
   const SHOW = 20;   // 남은 예상 Day가 많으면 앞 20칸만 보여 주고 나머지는 숫자로
   for (let i=0;i<Math.min(future, SHOW);i++){ k++; grid += `<span title="Day ${k} (예상)">${k}</span>`; }
   if (future > SHOW) grid += `<span class="more" title="남은 예상 Day ${future - SHOW}개 더">+${future - SHOW}</span>`;
-  h += `<div class="stickbar"><div class="seg" role="group">${CATS.map(x=>`<button data-pc="${x.key}" aria-pressed="${x.key===progCat}">${x.ko}</button>`).join("")}</div></div>
+  h += `<div class="stickbar">${catTabs("pc", progCat)}</div>
     <div class="card stack"><div class="row between"><b>Day 지도</b><span class="muted mono" style="font-size:12px">${learnedIn(c.key)} / ${D.list.length}</span></div>
     <div class="daygrid">${grid}</div>
     <div class="row between" style="font-size:13px"><span>예문 10개를 읽은 패턴</span><span class="muted mono">${exReadIn(c.key)} / ${D.patterns.length}</span></div>
@@ -1105,7 +1124,7 @@ function viewPatterns(){
   const D = DATA[patCat];
   const q = query.trim().toLowerCase();
   let h = topBar("문장 목록");
-  h += `<div class="stack"><div class="stickbar"><div class="seg" role="group">${CATS.map(x=>`<button data-pt="${x.key}" aria-pressed="${x.key===patCat}">${x.ko}</button>`).join("")}</div>
+  h += `<div class="stack"><div class="stickbar">${catTabs("pt", patCat)}
     <input id="q" class="search" type="search" placeholder="영어 또는 한국어로 검색 (예: look forward, 예약)" value="${esc(query)}" autocomplete="off"></div>`;
   let body = "";
   for (const sec of D.sections){
@@ -1143,7 +1162,7 @@ function viewExamples(){
   const D = DATA[exCat], p = exPat(), ex = p.ex || [];
   let h = backTo ? `<button class="backbar" data-back>${ICON.prev}<span>문장 목록</span></button>` : "";
   h += topBar("예문 10");
-  h += `<div class="stack"><div class="stickbar"><div class="seg" role="group">${CATS.map(x=>`<button data-ec="${x.key}" aria-pressed="${x.key===exCat}">${x.ko}</button>`).join("")}</div>
+  h += `<div class="stack"><div class="stickbar">${catTabs("ec", exCat)}
     <select id="ex-pat" class="search" aria-label="패턴 선택">${D.sections.map(sec=>`<optgroup label="${esc(sec.name)}">${sec.patterns.map(q=>`<option value="${q.idx}" ${q===p?'selected':''}>${S.exRead[exKey(q)]?'✓ ':''}${q.idx+1}. ${esc(q.p)}</option>`).join("")}</optgroup>`).join("")}</select></div>
     <div class="card stack">${patChip(p)}
       ${TTS.ok ? `<div class="audio-row"><button class="pill on" data-exall>${ICON.play} 전체 듣기</button><button class="pill" data-exstop>${ICON.stop} 정지</button><button class="pill acc" data-exacc title="누르면 미국·영국 발음이 바뀌어요">${accBtn()}</button></div>` : ''}
@@ -1279,7 +1298,7 @@ function showIntro(){
     <div class="intro-top"><div class="brand" style="font-size:22px">Rep<b>.</b>English</div><button class="intro-skip" data-iskip>건너뛰기</button></div>
     <h1>패턴 하나를<br>여러 문장으로 반복해요</h1>
     <div class="intro-steps">
-      <div class="intro-step"><span class="no">1</span><b>카테고리를 골라 시작</b><p>일상 · 여행 · 비즈니스</p></div>
+      <div class="intro-step"><span class="no">1</span><b>카테고리를 골라 시작</b><p>${CATS.map(c => c.ko.replace(/ (영어|대화)$/, "")).join(" · ")}</p></div>
       <div class="intro-step"><span class="no">2</span><b>한 문장을 5단계로</b>
         <div class="flow" style="grid-column:2"><span>듣기</span><i>›</i><span>따라 말하기</span><i>›</i><span>조립</span><i>›</i><span>바꿔 말하기</span><i>›</i><span>회상</span></div></div>
       <div class="intro-step"><span class="no">3</span><b>하루 분량을 마치면 Day 완료</b><p>헷갈린 문장은 복습으로 다시 나와요</p></div>
@@ -1439,6 +1458,7 @@ function bind(r){
     }
   };
   if (r==="learn") bindWallet();
+  centerCatTab();
   if (r==="patterns") app.querySelectorAll("details.pat").forEach(el => el.addEventListener("toggle", () => { if (el.open) openPat = { cat:patCat, idx:+el.dataset.pi }; }));
   if (r==="examples"){ const sel = $("#ex-pat"); sel.onchange = () => { exIdx = +sel.value; exCur = -1; stopSpeech(); render(); }; }
   if (r==="patterns"){ const q = $("#q"); q.oninput = () => { query = q.value; const pos = q.selectionStart; render(); const nq = $("#q"); nq.focus(); nq.setSelectionRange(pos,pos); }; }

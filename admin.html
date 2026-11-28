@@ -188,8 +188,9 @@ label{font-size:13px;font-weight:600;color:var(--muted)}
 (() => {
 "use strict";
 const LS = "rep-english-admin";
-const CAT = { daily:"일상 대화", travel:"여행 영어", business:"비즈니스 영어" };
-const TOTAL = 1552;
+const CAT = { daily:"일상 대화", travel:"여행 영어", business:"비즈니스 영어", phone:"전화·화상회의" };
+const TOTAL_DEFAULT = 1552;
+const totalOf = r => Object.values((r && r.cats) || {}).reduce((a,c) => a + (c.total||0), 0) || TOTAL_DEFAULT;
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const pad = n => String(n).padStart(2,"0");
@@ -335,7 +336,7 @@ function viewDash(){
     ${stat("전체 학습자", n, "명", "공유에 동의한 학습자", "users", "navy")}
     ${stat("오늘 학습", today, "명", n ? `전체의 ${Math.round(today/n*100)}%` : "-", "today", "good")}
     ${stat("최근 7일 활동", week, "명", n ? `${n - week}명은 일주일 이상 쉼` : "-", "pulse", "violet")}
-    ${stat("평균 학습 문장", avg, "개", `전체 ${TOTAL.toLocaleString()}문장 중 · 밀린 복습 ${dueSum}개`, "book", "amber")}
+    ${stat("평균 학습 문장", avg, "개", `전체 ${totalOf(rows[0]).toLocaleString()}문장 중 · 밀린 복습 ${dueSum}개`, "book", "amber")}
   </div>
   <div class="grid">
     <div class="card c7"><div class="card-h"><b>${I("today")}오늘 학습한 학습자</b><a href="#learners" data-filter="today">전체 보기</a></div>
@@ -389,7 +390,7 @@ function viewLearner(id){
   return `<a class="back" href="#learners">${I("left")}학습자 목록</a>
   <div class="card prof">${avatar(r)}<div style="flex:1;min-width:0"><h2>${esc(r.name||"(이름 없음)")}</h2><div class="sub">처음 학습 ${esc(r.firstStudy||"-")} · 마지막 전송 ${r.updatedAt ? new Date(r.updatedAt).toLocaleString("ko-KR") : "-"}</div></div><span class="pill ${c}">${t}</span></div>
   <div class="stats">
-    <div class="card stat"><div><div class="l">학습한 문장</div><div class="n">${r.learned||0}<small>/ ${TOTAL}</small></div><div class="s">익힌 문장 ${r.mastered||0}개</div></div><span class="ico navy">${I("book")}</span></div>
+    <div class="card stat"><div><div class="l">학습한 문장</div><div class="n">${r.learned||0}<small>/ ${totalOf(r)}</small></div><div class="s">익힌 문장 ${r.mastered||0}개</div></div><span class="ico navy">${I("book")}</span></div>
     <div class="card stat"><div><div class="l">연속 학습</div><div class="n">${r.streak||0}<small>일</small></div><div class="s">학습한 날 누적 ${r.activeDays||0}일</div></div><span class="ico amber">🔥</span></div>
     <div class="card stat"><div><div class="l">완료한 Day</div><div class="n">${r.daysDone||0}</div><div class="s">오늘 새 문장 ${r.todayNew||0}개</div></div><span class="ico good">${I("today")}</span></div>
     <div class="card stat"><div><div class="l">밀린 복습</div><div class="n">${r.reviewDue||0}<small>개</small></div><div class="s">예문 읽은 패턴 ${r.exRead||0}개</div></div><span class="ico violet">${I("refresh")}</span></div>

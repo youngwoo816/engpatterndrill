@@ -1,0 +1,62 @@
+# 바꿔 말하기 데이터: 패턴번호 | 영어 틀 | 한국어 틀 | 라벨: 영어=한국어 / ... ;; 라벨: ...
+# 패턴번호는 phone.txt의 ## 순서(1부터). 모든 조합이 문법적으로 맞도록 작성.
+1 | Hi, this is {1} from {2}. | 안녕하세요, {2} {1}입니다. | 이름: Mina=미나 / Jake=제이크 / Sora=소라 ;; 소속: accounting=회계팀 / the bank=은행 / ABC Company=ABC 회사 / the front desk=프런트
+2 | Is this {1}? | {1} 맞나요? | 대상: the front desk=프런트 / customer service=고객센터 / the dental clinic=치과 / Ms. Lee=이 선생님
+3 | Can I speak to {1}? | {1} 통화할 수 있을까요? | 대상: Mr. Park=박 선생님과 / someone in sales=영업팀 분과 / the manager=매니저님과 / a real person=상담원이랑
+4 | I'm calling about {1}. | {1} 때문에 전화드렸어요. | 용건: my order=주문 건 / the job opening=채용 공고 / tomorrow's meeting=내일 회의 / my bill=요금 청구서 / the apartment=집
+5 | Yes, this is {1}. | 네, {1}입니다. | 이름: Mark=마크 / Jenny=제니 / Dr. Kim=김 원장 / the front desk=프런트
+6 | Can I ask {1}? | {1} 여쭤봐도 될까요? | 질문: who's calling=누구신지 / what it's about=무슨 용건이신지 / where you're calling from=어디서 전화하셨는지
+7 | Hold on, {1}. | 잠깐만요, {1}. | 이유: let me check=확인해 볼게요 / someone's at the door=누가 왔어요 / I'm grabbing a pen=펜 가져올게요 / I need to find it=찾아볼게요
+8 | Let me transfer you to {1}. | {1} 돌려 드릴게요. | 부서: billing=결제 담당으로 / our manager=매니저님께 / technical support=기술 지원팀으로 / the right department=담당 부서로
+9 | {1} is {2} right now. | {1} 지금 {2}. | 사람: He=그분은 / She=그분은 / My boss=제 상사는 ;; 상태: in a meeting=회의 중이세요 / on another call=다른 전화 받고 계세요 / out of the office=외근 중이세요 / out for lunch=점심 드시러 나가셨어요
+10 | Thanks for {1}. | {1} 감사해요. | 이유: calling=전화 주셔서 / getting back to me=다시 연락 주셔서 / your help=도와주셔서 / waiting=기다려 주셔서
+11 | Could you repeat {1}? | {1} 다시 말씀해 주시겠어요? | 부분: the last part=마지막 부분 / the number=번호 / the address=주소 / your name=성함
+12 | Could you speak a little {1}? | 조금 {1} 말씀해 주시겠어요? | 방식: slower=천천히 / louder=크게 / more clearly=또렷하게
+13 | {1} | {1} | 상태: You're breaking up.=소리가 끊겨요. / The line's really bad.=연결 상태가 너무 안 좋아요. / There's a lot of noise.=잡음이 많아요. / I'm losing you.=소리가 점점 안 들려요.
+14 | Just to confirm, {1}, right? | 확인차 여쭤보면 {1} 맞죠? | 내용: Friday at three=금요일 세 시 / the total is ninety dollars=총 90달러 / your last name is Kim=성이 김씨 / it's the second floor=2층
+15 | Can I get your {1}, please? | {1} 좀 알려 주시겠어요? | 정보: name=성함 / phone number=전화번호 / email address=이메일 주소 / order number=주문 번호 / date of birth=생년월일
+16 | That's {1}. | {1}예요. | 철자: B as in boy=보이(boy)의 B / J as in Juliet=줄리엣의 J / M as in Mike=마이크의 M / S as in Sam=샘의 S
+17 | Let me check {1}. | {1} 확인해 볼게요. | 대상: my calendar=일정 좀 / with my boss=상사한테 / the system=시스템 좀 / your account=계정 좀
+18 | Sorry, I didn't catch {1}. | 죄송한데 {1} 못 들었어요. | 부분: your name=성함을 / the last part=마지막 부분을 / the time=시간을 / the street name=길 이름을
+19 | What do you mean by {1}? | {1} 무슨 뜻이에요? | 말: "soon"="곧"이 / "next week"="다음 주"가 / "processing"="처리 중"이 / "pending"="보류"가
+20 | Sorry, {1}. | 죄송해요, {1}. | 상황: go ahead=먼저 말씀하세요 / I cut you off=말 끊었네요 / there's a delay=소리가 늦게 와요 / we talked over each other=말이 겹쳤네요
+21 | Could you tell {1} {2}? | {1} {2} 전해 주시겠어요? | 사람: him=그분께 / her=그분께 / your manager=매니저님께 ;; 내용: I called=제가 전화했다고 / it's urgent=급한 일이라고 / I'll be late=제가 늦는다고 / to call me back=다시 전화 달라고
+22 | I'll let {1} know {2}. | {1} {2} 전해 드릴게요. | 사람: him=그분께 / her=그분께 / the team=팀에 ;; 내용: you called=전화 오셨다고 / it's urgent=급한 일이라고 / you'll call back=다시 거신다고
+23 | I'll call you back {1}. | {1} 다시 전화할게요. | 시간: in five minutes=5분 있다가 / after lunch=점심 먹고 / when I get home=집에 가서 / tomorrow morning=내일 아침에
+24 | Sorry, I was {1}. | 미안해요, {1}. | 이유: in a meeting=회의 중이었어요 / driving=운전 중이었어요 / in the shower=샤워 중이었어요 / on another call=다른 통화 중이었어요
+25 | You've reached {1}. Please leave a message. | {1}입니다. 메시지 남겨 주세요. | 대상: Mina=미나 / the front desk=프런트 / Lee & Partners=리앤파트너스 / Dr. Han's office=한 원장님 사무실
+26 | I'm returning {1} call. | {1} 전화에 회신드려요. | 대상: Ms. Han's=한 선생님 / your=주신 / the manager's=매니저님 / Jason's=제이슨
+27 | Could you text me {1}? | {1} 문자로 보내 줄래요? | 내용: the address=주소 / the details=자세한 내용 / your number=번호 / the time=시간
+28 | What's a good time to {1}? | 언제 {1} 좋을까요? | 행동: call you=전화드리면 / talk=통화하면 / set up a call=통화 일정 잡으면 / stop by=들르면
+29 | I'd like to book {1} for {2}. | {2} {1} 예약하고 싶어요. | 대상: a table=자리 / an appointment=진료 / a haircut=커트 / a room=방 ;; 시간: tonight=오늘 저녁으로 / tomorrow=내일로 / next Monday=다음 주 월요일로 / this weekend=이번 주말로
+30 | Do you have anything {1}? | {1} 있어요? | 시간: earlier=더 이른 시간 / later=더 늦은 시간 / this week=이번 주에 빈 시간 / on Saturday=토요일에 빈 시간
+31 | Does {1} work for you? | {1} 괜찮으세요? | 시간: Tuesday=화요일 / two o'clock=두 시 / next week=다음 주 / Friday morning=금요일 오전
+32 | Can we move it to {1}? | {1} 옮길 수 있을까요? | 시간: Thursday=목요일로 / next week=다음 주로 / the afternoon=오후로 / 3:30=3시 반으로
+33 | I need to cancel {1}. | {1} 취소해야 해요. | 대상: my appointment=예약 / my reservation=예약 / the order=주문 / my subscription=구독
+34 | Just calling to confirm {1}. | {1} 확인차 전화드렸어요. | 대상: your appointment=예약 / the time=시간 / the address=주소 / the booking=예약 내용
+35 | How much does it cost to {1}? | {1} 얼마예요? | 행동: fix the screen=액정 고치는 데 / deliver it=배달하는 데 / change the date=날짜 바꾸는 데 / ship it overseas=해외로 보내는 데
+36 | What time do you {1}? | 몇 시에 {1}? | 행동: open=문 열어요 / close=문 닫아요 / start taking orders=주문 받기 시작해요 / stop seating people=마지막 입장이에요
+37 | Can everyone {1}? | 다들 {1}? | 확인: hear me=제 목소리 들리세요 / see my screen=제 화면 보이세요 / see the slides=슬라이드 보이세요 / hear the video=영상 소리 들리세요
+38 | {1} | {1} | 상황: You're on mute.=음소거 되어 있어요. / You're still muted.=아직 음소거예요. / Sorry, I was on mute.=죄송해요, 음소거였어요. / Could you mute, please?=음소거 부탁드려요.
+39 | Your {1}. | {1}. | 문제: video is frozen=화면이 멈췄어요 / camera is off=카메라가 꺼져 있어요 / screen is a bit dark=화면이 좀 어두워요 / audio is out of sync=소리가 영상이랑 안 맞아요
+40 | Let me share {1}. | {1} 공유할게요. | 대상: my screen=제 화면 / the slides=슬라이드 / the spreadsheet=스프레드시트 / the report=보고서
+41 | I'll drop {1} in the chat. | {1} 채팅창에 올릴게요. | 대상: the link=링크 / the agenda=안건 / the file=파일 / my email=제 이메일
+42 | I'm having trouble {1}. | {1} 잘 안 돼요. | 문제: connecting=접속이 / with my audio=소리가 / joining the meeting=회의 참가가 / sharing my screen=화면 공유가
+43 | Let me try {1}. | {1} 볼게요. | 방법: rejoining=다시 들어와 / restarting the app=앱을 다시 켜 / using my phone=폰으로 접속해 / switching headphones=헤드폰을 바꿔
+44 | Sorry, I {1}. | 죄송해요, {1}. | 상황: got disconnected=연결이 끊겼어요 / dropped off=잠깐 나갔었어요 / lost the connection=연결이 끊겼어요 / missed that part=그 부분 놓쳤어요
+45 | Sorry, {1}. | 죄송해요, {1}. | 이유: I'm in a noisy place=제가 시끄러운 곳에 있어요 / my dog is barking=강아지가 짖어서요 / I'm on the train=기차 안이에요 / there's construction next door=옆집이 공사 중이에요
+46 | I have to drop off {1}. | {1} 먼저 나가 봐야 해요. | 시간: in five minutes=5분 뒤에 / a bit early=조금 일찍 / at two=두 시에 / before the end=끝나기 전에
+47 | Let's give it {1}. | {1} 기다려 보죠. | 시간: a few more minutes=몇 분만 더 / two minutes=2분만 / until ten past=10분까지 / a little longer=조금만 더
+48 | Could you go over {1} again? | {1} 다시 짚어 주실래요? | 대상: that=그거 / the numbers=숫자 / the timeline=일정 / the last slide=이전 슬라이드
+49 | Does anyone have {1}? | 혹시 {1} 있는 분? | 대상: any questions=질문 / anything to add=덧붙일 말씀 / any concerns=걱정되는 점 / the file=그 파일
+50 | I'd like to {1}. | {1} 싶어요. | 행동: add something=하나 덧붙이고 / ask a question=질문하고 / go back to the budget=예산 얘기로 돌아가고 / share an idea=아이디어를 말하고
+51 | We only have {1} left. | {1}밖에 안 남았어요. | 시간: five minutes=5분 / ten minutes=10분 / a couple of minutes=2분 / half an hour=30분
+52 | To sum up, {1}. | 정리하자면 {1}. | 내용: we'll launch in May=5월에 출시해요 / Jenny will send the report=제니가 보고서를 보내요 / we meet again on Monday=월요일에 다시 만나요 / the budget is approved=예산은 승인됐어요
+53 | Can you see {1} on your end? | 그쪽에서 {1} 보이세요? | 대상: the document=문서 / my screen=제 화면 / the chat=채팅창 / the slides=슬라이드
+54 | Could we turn on cameras {1}? | {1} 카메라 켜 주실 수 있을까요? | 때: for the intro=소개할 때 / for a minute=잠깐만 / for the group photo=단체 사진 찍게 / for the Q&A=질문 시간에
+55 | {1} | {1} | 상황: I think you have the wrong number.=전화 잘못 거신 것 같아요. / There's no one here by that name.=그런 사람 여기 없어요. / Sorry, wrong number.=죄송해요, 잘못 걸었네요. / I must have misdialed.=번호를 잘못 눌렀나 봐요.
+56 | I've been on hold for {1}. | {1} 동안 대기했어요. | 시간: twenty minutes=20분 / half an hour=30분 / almost an hour=거의 한 시간 / ages=한참
+57 | {1} | {1} | 거절: I'm not interested, thanks.=관심 없어요, 감사합니다. / Please take me off your list.=연락 목록에서 빼 주세요. / Please don't call again.=다시 전화하지 마세요. / I'm busy right now.=지금 바빠요.
+58 | {1} | {1} | 상황: My battery's about to die.=배터리가 곧 꺼질 것 같아. / I'm going into a tunnel.=터널 들어가. / I've got really bad signal.=신호가 너무 안 좋아. / I'm almost out of data.=데이터가 거의 없어.
+59 | Sorry, I have to {1}. | 미안, {1}. | 행동: take this=이 전화 받아야 해 / answer this=이거 받아야 해 / call you back=다시 걸어야 해 / go=가 봐야 해
+60 | {1} | {1} | 상황: Did the call drop?=전화 끊겼어? / Are you still there?=아직 듣고 있어? / I think we got cut off.=끊겼던 것 같아. / You disappeared for a second.=잠깐 소리가 안 들렸어.

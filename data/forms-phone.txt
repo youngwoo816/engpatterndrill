@@ -1,0 +1,661 @@
+# 패턴별 다른 형태 예문 10개: @패턴번호(phone.txt의 ## 순서) 다음 줄부터 "형태 | 영어 | 한국어"
+@1 Hi, this is ~
+소개 | Hi, this is Yuna from the travel agency. | 안녕하세요, 여행사 유나입니다.
+소개 | Good morning, this is Peter in IT. | 좋은 아침이에요, IT팀 피터예요.
+친구 | Hey, it's Jin. Got a minute? | 나 진이야. 잠깐 시간 돼?
+직장 | Hi, this is Ms. Cho's assistant. | 안녕하세요, 조 선생님 비서입니다.
+회신 | Hi, this is Leo. You left me a message. | 안녕하세요, 레오예요. 메시지 남기셨더라고요.
+소개 | Hello, this is the delivery driver. | 여보세요, 배달 기사입니다.
+고객 | Hi, this is a customer of yours. | 안녕하세요, 고객인데요.
+가족 | Hi, it's Mom. Call me when you can. | 엄마야. 시간 될 때 전화해.
+업체 | Hi, this is Green Cleaning calling about your booking. | 안녕하세요, 그린클리닝인데 예약 건으로 전화드렸어요.
+학교 | Hello, this is Minho's teacher. | 안녕하세요, 민호 담임입니다.
+@2 Is this ~?
+확인 | Is this the reception desk? | 접수처 맞나요?
+확인 | Is this Kevin's phone? | 케빈 폰 맞아요?
+확인 | Is this the number for reservations? | 예약 번호 맞나요?
+시간 | Is now a bad time? | 지금 곤란하세요?
+시간 | Is this a good time, or should I call back? | 지금 괜찮으세요, 아니면 다시 걸까요?
+확인 | Is this the main office? | 본사 맞나요?
+확인 | Is this Park Ji-won? | 박지원 씨 맞으세요?
+의심 | Is this really the bank? | 정말 은행 맞아요?
+확인 | Am I calling the right place? | 제대로 건 거 맞나요?
+확인 | Is this where I report a lost card? | 분실 카드 신고하는 곳 맞나요?
+@3 Can I speak to ~?
+요청 | Can I speak to the person in charge? | 담당자분과 통화할 수 있을까요?
+요청 | Could I speak to your supervisor? | 상사분과 통화할 수 있을까요?
+요청 | May I speak with Dr. Lee? | 이 원장님과 통화할 수 있을까요?
+친구 | Is Hana home? | 하나 집에 있어?
+요청 | I'd like to speak to someone in billing. | 결제 담당자와 통화하고 싶어요.
+요청 | Can you connect me to the front desk? | 프런트 연결해 주실래요?
+요청 | Is there someone who speaks Korean? | 한국어 하시는 분 있어요?
+요청 | Could I talk to whoever handled my case? | 제 건 맡으셨던 분과 통화할 수 있을까요?
+요청 | Can I get the manager on the line? | 매니저님 좀 바꿔 주실래요?
+요청 | I need to speak to someone right away. | 지금 바로 담당자와 통화해야 해요.
+@4 I'm calling about ~
+용건 | I'm calling about the invoice you sent. | 보내 주신 청구서 건으로 전화드렸어요.
+용건 | I'm calling about my lost luggage. | 분실 수하물 때문에 전화드렸어요.
+용건 | I'm calling about the ad on your website. | 홈페이지 광고 보고 전화드렸어요.
+용건 | I'm calling to ask about your prices. | 가격 문의하려고 전화드렸어요.
+용건 | I'm calling to follow up on my application. | 지원서 진행 상황 확인하려고 전화드렸어요.
+용건 | I'm calling to report a problem. | 문제가 있어서 신고하려고 전화드렸어요.
+친구 | I'm just calling to see how you're doing. | 그냥 잘 지내나 해서 전화했어.
+용건 | I'm calling to change my address. | 주소 변경하려고 전화드렸어요.
+용건 | I'm calling on behalf of my mother. | 어머니 대신 전화드렸어요.
+용건 | The reason I'm calling is the leak in my kitchen. | 부엌에 물이 새서 전화드렸어요.
+@5 Speaking. / This is ~
+본인 | Yes, speaking. | 네, 전데요.
+본인 | This is Jiho speaking. | 지호입니다.
+업체 | Good afternoon, Sunny Bakery. | 안녕하세요, 써니 베이커리입니다.
+업체 | Thank you for calling Blue Hotel. | 블루 호텔에 전화 주셔서 감사합니다.
+본인 | You're speaking to her. | 제가 그 사람인데요.
+본인 | Yes, it's me. Who's this? | 네, 전데요. 누구세요?
+업체 | Customer service, Ellie speaking. | 고객센터 엘리입니다.
+친구 | Yo, what's up? | 어, 무슨 일이야?
+업체 | Front desk, how may I help you? | 프런트입니다, 무엇을 도와드릴까요?
+본인 | Hi, this is Sam. Go ahead. | 네, 샘이에요. 말씀하세요.
+@6 Who's calling, please?
+확인 | Who am I speaking with? | 누구신가요?
+확인 | Could I have your name, please? | 성함 좀 알려 주시겠어요?
+확인 | What company are you with? | 어느 회사세요?
+확인 | Do you have an account with us? | 저희 쪽에 계정 있으세요?
+확인 | Is he expecting your call? | 전화하신다고 미리 말씀하셨나요?
+확인 | How did you get this number? | 이 번호는 어떻게 아셨어요?
+확인 | Sorry, who is this? | 죄송한데 누구세요?
+친구 | Who's this? New number? | 누구야? 번호 바꿨어?
+확인 | And what is this concerning? | 어떤 일 때문이세요?
+확인 | Can I tell her what it's about? | 무슨 일인지 전해 드릴까요?
+@7 Hold on a second
+대기 | Hold on, let me get my notebook. | 잠깐만요, 수첩 좀 가져올게요.
+대기 | Can you hang on for a minute? | 잠깐만 기다려 줄래요?
+대기 | One sec, I'm checking. | 잠깐만, 확인 중이야.
+대기 | Please stay on the line. | 끊지 말고 기다려 주세요.
+대기 | Hang on, I'll ask my wife. | 잠깐, 아내한테 물어볼게.
+대기 | Would you mind holding? | 잠시 기다려 주실 수 있나요?
+대기 | Hold on, I'm walking into the office. | 잠깐만, 사무실 들어가는 중이야.
+대기 | Just a moment while I find your file. | 파일 찾는 동안 잠시만요.
+감사 | Thanks for waiting. | 기다려 줘서 고마워요.
+감사 | Sorry about the wait. | 기다리게 해서 미안해요.
+@8 I'll put you through to ~
+연결 | I'll put you through to the sales team. | 영업팀으로 연결해 드릴게요.
+연결 | Let me connect you to the right person. | 담당자분께 연결해 드릴게요.
+연결 | I'm transferring your call now. | 지금 연결해 드리고 있어요.
+연결 | Hold on while I transfer you. | 연결해 드리는 동안 잠시만요.
+연결 | I'll put you on hold and transfer you. | 대기시켰다가 연결해 드릴게요.
+연결 | His extension is 204. | 그분 내선 번호는 204번이에요.
+연결 | Her line is busy. Would you like to wait? | 그분 통화 중이세요. 기다리시겠어요?
+연결 | Nobody's answering in that department. | 그 부서가 전화를 안 받네요.
+연결 | Can I transfer you to her voicemail? | 그분 음성 사서함으로 연결해 드릴까요?
+연결 | You'll be connected in just a moment. | 곧 연결됩니다.
+@9 He's not available right now
+부재 | I'm afraid she's not available. | 죄송하지만 지금 통화가 어려우세요.
+부재 | He's away from his desk. | 자리에 안 계세요.
+부재 | She's on vacation until Monday. | 월요일까지 휴가세요.
+부재 | He's tied up at the moment. | 지금 좀 바쁘세요.
+부재 | She's at lunch right now. | 지금 점심 드시러 가셨어요.
+부재 | He's working from home today. | 오늘 재택근무하세요.
+부재 | She doesn't work here anymore. | 그분 이제 여기 안 계세요.
+예정 | He'll be back around three. | 세 시쯤 돌아오실 거예요.
+제안 | Would you like her email instead? | 대신 이메일 주소 알려 드릴까요?
+제안 | Can someone else help you? | 다른 분이 도와드려도 될까요?
+@10 Thanks for calling
+마무리 | Thanks so much for your help. | 도와주셔서 정말 감사해요.
+마무리 | I really appreciate your time. | 시간 내 주셔서 감사해요.
+마무리 | Okay, I'll talk to you soon. | 그럼 곧 또 연락해요.
+마무리 | Take care. | 잘 지내.
+마무리 | Call me if anything comes up. | 무슨 일 생기면 전화해.
+마무리 | Thanks for the heads-up. | 미리 알려 줘서 고마워.
+마무리 | Okay, I'll let you get back to work. | 그럼 일 보세요.
+마무리 | Nice chatting with you. | 얘기 즐거웠어.
+마무리 | Have a great weekend. | 주말 잘 보내세요.
+마무리 | Bye, talk soon! | 안녕, 또 통화해!
+@11 Sorry, could you say that again?
+재요청 | Sorry, could you repeat that? | 죄송한데 다시 말씀해 주시겠어요?
+재요청 | Pardon? | 네?
+재요청 | Sorry, I didn't get that. | 죄송해요, 못 알아들었어요.
+재요청 | One more time, please. | 한 번만 더 부탁드려요.
+재요청 | Could you say the time again? | 시간 다시 말씀해 주실래요?
+재요청 | What was the name of the hotel? | 호텔 이름이 뭐였죠?
+재요청 | Sorry, I didn't hear the last number. | 죄송한데 마지막 숫자를 못 들었어요.
+재요청 | Can you say that a different way? | 다른 말로 말씀해 주실래요?
+친구 | Wait, what? | 잠깐, 뭐라고?
+재요청 | Sorry, it's a bit noisy. Say it again? | 미안, 좀 시끄러워서. 다시 말해 줄래?
+@12 Could you speak a little slower?
+부탁 | Could you speak more slowly, please? | 좀 더 천천히 말씀해 주시겠어요?
+부탁 | Would you mind speaking louder? | 좀 크게 말씀해 주실 수 있을까요?
+부탁 | Could you speak a bit more clearly? | 좀 더 또렷하게 말씀해 주시겠어요?
+부탁 | Sorry, I'm still learning English. | 죄송해요, 아직 영어를 배우는 중이라서요.
+부탁 | Can you use simpler words? | 쉬운 단어로 말해 줄 수 있어요?
+부탁 | Please give me a moment to write it down. | 적을 시간 좀 주세요.
+부탁 | Could you move the phone closer? | 폰을 좀 더 가까이 대 주실래요?
+부탁 | You're very quiet. Can you speak up? | 소리가 너무 작아요. 크게 말해 줄래요?
+부탁 | Can you say the numbers one by one? | 숫자를 하나씩 말해 줄래요?
+부탁 | Could you email me instead? | 대신 이메일로 보내 주실래요?
+@13 I can't hear you very well
+연결 | The connection is really bad. | 연결이 너무 안 좋아요.
+연결 | I can barely hear you. | 거의 안 들려요.
+연결 | There's an echo on the line. | 소리가 울려요.
+연결 | You sound like a robot. | 목소리가 로봇처럼 들려요.
+연결 | There's a delay on the line. | 소리가 늦게 와요.
+연결 | I can hear you, but it's choppy. | 들리긴 하는데 뚝뚝 끊겨요.
+연결 | Can you move somewhere with better signal? | 신호 좋은 데로 옮겨 줄래요?
+연결 | Let me call you back on a better line. | 연결 좋은 걸로 다시 걸게요.
+연결 | I think it's my phone. | 제 폰 문제인 것 같아요.
+연결 | Okay, that's much better. | 이제 훨씬 낫네요.
+@14 Let me make sure I got that right
+확인 | Let me repeat that back. | 다시 말씀드려 볼게요.
+확인 | So that's two adults and one child? | 그럼 어른 둘, 아이 하나죠?
+확인 | You said the third, not the thirteenth, right? | 13일이 아니라 3일이라고 하셨죠?
+확인 | Is that a.m. or p.m.? | 오전이에요, 오후예요?
+확인 | Did you say Main Street or Maple Street? | 메인 스트리트예요, 메이플 스트리트예요?
+확인 | Just so I'm clear, I don't need to bring anything? | 정확히 하자면 가져갈 건 없는 거죠?
+확인 | And the code is 4-0-7-1? | 그리고 코드가 4071이죠?
+확인 | So I'll get a refund within a week? | 그럼 일주일 안에 환불되는 거죠?
+확인 | Got it. Let me just write that down. | 알겠어요. 적어 둘게요.
+확인 | Perfect, that's all correct. | 좋아요, 다 맞아요.
+@15 Can I get your ~?
+정보 | Could I get your full name? | 성함 전체 알려 주시겠어요?
+정보 | Can I get your account number? | 계좌 번호 알려 주시겠어요?
+정보 | What's your booking reference? | 예약 번호가 뭐예요?
+정보 | Can I get the last four digits of your card? | 카드 끝 네 자리 알려 주시겠어요?
+정보 | Can I have your zip code? | 우편번호 알려 주시겠어요?
+정보 | What's your extension? | 내선 번호가 어떻게 되세요?
+정보 | Can I get a contact number? | 연락처 좀 알려 주시겠어요?
+정보 | Is this the best number to reach you? | 이 번호로 연락드리면 될까요?
+정보 | What name is the reservation under? | 예약자 성함이 뭐예요?
+정보 | Do you have your tracking number handy? | 운송장 번호 지금 갖고 계세요?
+@16 It's ~ (번호·철자 말하기)
+철자 | It's spelled C-H-O-I. | 철자는 C-H-O-I예요.
+번호 | My number is 010-8765-4321. | 제 번호는 010-8765-4321이에요.
+이메일 | It's my name plus "88" at naver dot com. | 제 이름 뒤에 88 붙이고 naver.com이에요.
+철자 | That's P as in Peter. | 피터의 P예요.
+철자 | The second letter is a capital A. | 두 번째 글자는 대문자 A예요.
+번호 | It's zero, not the letter O. | 영문 O가 아니라 숫자 0이에요.
+철자 | Two Ns, not one. | N이 하나가 아니라 두 개예요.
+번호 | The extension is 3-1-2. | 내선은 312예요.
+이메일 | There's a dot between the first and last name. | 이름이랑 성 사이에 점이 있어요.
+번호 | I'll text it to you to be safe. | 확실하게 문자로 보내 드릴게요.
+@17 Let me check ~
+확인 | Let me check if he's in. | 계신지 확인해 볼게요.
+확인 | Let me double-check the address. | 주소 다시 확인해 볼게요.
+확인 | Let me see if there's anything available. | 가능한 게 있는지 볼게요.
+확인 | I'll check and call you back. | 확인하고 다시 전화드릴게요.
+확인 | Let me ask my manager. | 매니저님께 여쭤볼게요.
+확인 | I need to check something first. | 먼저 뭐 좀 확인해야 해요.
+확인 | Let me find your order. | 주문 내역 찾아볼게요.
+확인 | Let me check the schedule for that day. | 그날 일정 확인해 볼게요.
+확인 | It looks like your payment went through. | 결제는 된 것 같네요.
+확인 | I can't find it in the system. | 시스템에서 안 찾아지네요.
+@18 I'm sorry, I didn't catch ~
+놓침 | Sorry, I didn't catch the price. | 죄송한데 가격을 못 들었어요.
+놓침 | I didn't catch which day you said. | 무슨 요일이라고 하셨는지 못 들었어요.
+놓침 | Sorry, I missed the company name. | 죄송해요, 회사 이름을 놓쳤어요.
+놓침 | I didn't quite get the last part. | 마지막 부분을 잘 못 들었어요.
+놓침 | Sorry, you cut out for a second. | 죄송해요, 잠깐 소리가 끊겼어요.
+놓침 | I missed everything after "Tuesday." | "화요일" 다음부터 못 들었어요.
+놓침 | Was that the second or third floor? | 2층이었어요, 3층이었어요?
+놓침 | Sorry, could you spell the name? | 죄송한데 이름 철자 좀 불러 주실래요?
+놓침 | I think I missed something. | 제가 뭘 놓친 것 같아요.
+놓침 | Sorry, my mind wandered for a second. | 죄송해요, 잠깐 딴생각했어요.
+@19 What do you mean by ~?
+의미 | What exactly do you mean? | 정확히 무슨 말씀이세요?
+의미 | What does "out of stock" mean here? | 여기서 "재고 없음"이 무슨 뜻이에요?
+의미 | Do you mean today or tomorrow? | 오늘이요, 내일이요?
+의미 | Are you saying it's free? | 무료라는 말씀이에요?
+의미 | So does that mean I need to come in? | 그럼 제가 직접 가야 한다는 거예요?
+의미 | What do you mean it's not covered? | 보장이 안 된다니 무슨 말이에요?
+의미 | Could you give me an example? | 예를 들어 주실래요?
+의미 | When you say "business days," is Saturday included? | "영업일"이라면 토요일도 포함이에요?
+의미 | I'm not sure I follow. | 잘 이해가 안 돼요.
+의미 | Oh, I see what you mean now. | 아, 이제 무슨 말인지 알겠어요.
+@20 Sorry, go ahead
+겹침 | Oh, sorry. You were saying? | 아, 죄송해요. 뭐라고 하셨죠?
+겹침 | Go on, I'm listening. | 계속하세요, 듣고 있어요.
+겹침 | Sorry, after you. | 죄송해요, 먼저 하세요.
+겹침 | We both started talking at once. | 둘이 동시에 말했네요.
+겹침 | Sorry, I thought you were done. | 죄송해요, 말씀 끝나신 줄 알았어요.
+겹침 | Let me finish, and then you can jump in. | 제 말 끝나면 말씀하세요.
+겹침 | Sorry, there's a lag on my end. | 죄송해요, 제 쪽이 좀 늦게 들려요.
+겹침 | Please, you first. | 먼저 하세요.
+겹침 | Sorry, I didn't mean to interrupt. | 죄송해요, 말 끊으려던 건 아니었어요.
+겹침 | Okay, I'll wait until you're finished. | 네, 말씀 끝나실 때까지 기다릴게요.
+@21 Can I leave a message?
+메시지 | Could you give him a message for me? | 그분께 메시지 좀 전해 주시겠어요?
+메시지 | Please tell her the meeting is canceled. | 회의 취소됐다고 전해 주세요.
+메시지 | Can you tell him to check his email? | 이메일 확인하라고 전해 주실래요?
+메시지 | Could you ask him to call me before five? | 다섯 시 전에 전화 달라고 해 주실래요?
+메시지 | Just say Kevin called. | 케빈이 전화했다고만 해 주세요.
+메시지 | Can you pass on my new number? | 제 새 번호 좀 전해 주실래요?
+메시지 | Please let her know it's about the contract. | 계약 건이라고 전해 주세요.
+메시지 | I'll leave a voicemail instead. | 대신 음성 메시지 남길게요.
+메시지 | It's not urgent, so no rush. | 급한 거 아니니까 천천히 하셔도 돼요.
+메시지 | Thanks, I'll wait for his call. | 감사해요, 전화 기다릴게요.
+@22 Can I take a message?
+메시지 | Would you like me to take a message? | 메시지 남겨 드릴까요?
+메시지 | Can I tell him what this is about? | 무슨 일인지 전해 드릴까요?
+메시지 | How do you spell your name? | 성함 철자가 어떻게 되세요?
+메시지 | And your number? | 그리고 번호는요?
+메시지 | I'll have him call you back. | 다시 전화드리라고 할게요.
+메시지 | I'll leave a note on her desk. | 책상에 메모 남겨 둘게요.
+메시지 | Is there a good time for him to call? | 언제 전화드리면 될까요?
+메시지 | I'll pass that on. | 전해 드릴게요.
+메시지 | Let me read that back to you. | 다시 읽어 드릴게요.
+메시지 | She'll get back to you as soon as she can. | 최대한 빨리 연락드릴 거예요.
+@23 I'll call you back ~
+회신 | I'll call you back in ten minutes. | 10분 뒤에 다시 전화할게요.
+회신 | Can I call you back tonight? | 오늘 밤에 다시 전화해도 될까?
+회신 | I'll ring you back after my meeting. | 회의 끝나고 다시 전화할게요.
+회신 | Let me call you back once I check. | 확인하고 다시 전화할게요.
+회신 | I'm in the middle of something. Call you back? | 지금 뭐 하는 중이라. 다시 걸어도 돼?
+회신 | I'll try you again tomorrow. | 내일 다시 걸어 볼게요.
+회신 | When should I call you back? | 언제 다시 전화하면 될까요?
+회신 | Call me back when you're free. | 시간 날 때 다시 전화 줘.
+회신 | I'll call you back from my desk. | 자리에 가서 다시 걸게요.
+회신 | I'll call you back, I promise. | 꼭 다시 전화할게.
+@24 Sorry I missed your call
+부재중 | Sorry, I was driving. | 미안, 운전 중이었어.
+부재중 | Sorry, I didn't hear my phone. | 미안, 전화 소리를 못 들었어.
+부재중 | I was at the gym. What's up? | 헬스장에 있었어. 무슨 일이야?
+부재중 | Sorry, I just saw your missed call. | 미안, 부재중 전화 이제 봤어.
+부재중 | My phone died. Sorry about that. | 폰이 꺼졌었어. 미안.
+부재중 | Sorry, I was in class. | 미안, 수업 중이었어.
+부재중 | You called? | 전화했었어?
+부재중 | I saw you called three times. Is everything okay? | 세 번이나 전화했던데, 별일 없지?
+부재중 | Sorry for not picking up earlier. | 아까 못 받아서 미안해.
+부재중 | I got your text. I'll call now. | 문자 봤어. 지금 전화할게.
+@25 You've reached ~
+자동응답 | Hi, you've reached Ben. Leave a message. | 벤입니다. 메시지 남겨 주세요.
+자동응답 | Sorry I missed you. | 전화 못 받아서 죄송해요.
+자동응답 | Please leave a message after the tone. | 신호음 후에 메시지 남겨 주세요.
+자동응답 | Our office hours are nine to six. | 업무 시간은 9시부터 6시까지입니다.
+자동응답 | Your call is important to us. | 고객님의 전화는 소중합니다.
+자동응답 | Please stay on the line for the next available agent. | 상담원 연결까지 기다려 주세요.
+자동응답 | The mailbox is full. | 음성 사서함이 가득 찼습니다.
+자동응답 | Press two to repeat this menu. | 이 메뉴를 다시 들으려면 2번을 누르세요.
+자동응답 | Your estimated wait time is five minutes. | 예상 대기 시간은 5분입니다.
+자동응답 | This call may be recorded. | 이 통화는 녹음될 수 있습니다.
+@26 I'm returning ~'s call
+회신 | Hi, I'm returning your call from yesterday. | 안녕하세요, 어제 주신 전화에 회신드려요.
+회신 | I'm calling back about the job interview. | 면접 건으로 다시 연락드려요.
+회신 | You left me a voicemail about my car. | 제 차 관련해서 음성 메시지 남기셨죠.
+회신 | I had a missed call from this office. | 이 사무실에서 부재중 전화가 왔더라고요.
+회신 | I was asked to call Mr. Yoon. | 윤 선생님께 전화하라고 하셔서요.
+회신 | Sorry, I'm only now getting back to you. | 이제야 연락드려서 죄송해요.
+회신 | I'm returning your email by phone. | 이메일 주신 거 전화로 답드려요.
+회신 | I think someone here called me. | 여기서 누가 저한테 전화하신 것 같아요.
+회신 | Can you tell me who called from this number? | 이 번호로 누가 전화했는지 알 수 있을까요?
+회신 | Thanks for reaching out earlier. | 아까 연락 주셔서 감사해요.
+@27 Could you text me ~?
+문자 | Could you text me the link? | 링크 문자로 보내 줄래요?
+문자 | Text me when you're on your way. | 출발할 때 문자 줘.
+문자 | I'll send you a text with the code. | 코드 문자로 보내 드릴게요.
+문자 | Can you send me a picture of it? | 사진 찍어서 보내 줄래요?
+문자 | Can you email me the confirmation? | 확인서 이메일로 보내 주실래요?
+문자 | Send me your location. | 위치 보내 줘.
+문자 | Did you get my text? | 내 문자 받았어?
+문자 | I'll message you on WhatsApp. | 왓츠앱으로 메시지할게.
+문자 | Can you put it in writing? | 그거 글로 남겨 주실래요?
+문자 | I'll text you back in a bit. | 좀 있다가 답장할게.
+@28 What's a good time to ~?
+시간 | When would be a good time to call? | 언제 전화드리면 좋을까요?
+시간 | Are you around this afternoon? | 오늘 오후에 시간 돼?
+시간 | Can we hop on a call later? | 이따 잠깐 통화할 수 있어?
+시간 | Do you have ten minutes for a quick call? | 잠깐 10분 통화 가능해?
+시간 | What time works best for you? | 몇 시가 제일 좋으세요?
+시간 | I'm three hours ahead of you. | 제가 세 시간 빨라요.
+시간 | Is morning or evening better for you? | 아침이 좋아요, 저녁이 좋아요?
+시간 | Let's find a time that works for both of us. | 둘 다 되는 시간을 찾아보죠.
+시간 | I'll send you a few options. | 가능한 시간 몇 개 보내 드릴게요.
+시간 | Ping me when you're free. | 시간 되면 연락 줘.
+@29 I'd like to make an appointment ~
+예약 | I'd like to make an appointment with Dr. Lim. | 임 원장님 진료 예약하고 싶어요.
+예약 | Can I book an appointment for my son? | 아들 진료 예약할 수 있을까요?
+예약 | I'd like to reserve a room for two nights. | 이틀 밤 묵을 방 예약하고 싶어요.
+예약 | Is it possible to book online? | 온라인으로도 예약할 수 있어요?
+예약 | Do I need to book in advance? | 미리 예약해야 하나요?
+예약 | I'd like a table by the window, if possible. | 가능하면 창가 자리로 주세요.
+예약 | I'd like to book a consultation. | 상담 예약하고 싶어요.
+예약 | It's my first visit. | 처음 방문이에요.
+예약 | Can I book for a group of ten? | 열 명 단체 예약 돼요?
+예약 | Please put it under the name Park. | 박으로 예약해 주세요.
+@30 Do you have anything ~?
+시간 | Do you have any openings tomorrow? | 내일 빈 시간 있어요?
+시간 | Is anything available before noon? | 정오 전에 가능한 시간 있어요?
+시간 | Do you have anything on the weekend? | 주말에 가능한 시간 있어요?
+시간 | What's the next available slot? | 다음 가능한 시간이 언제예요?
+시간 | Is there a waitlist? | 대기 명단 있어요?
+시간 | Could you put me on the waitlist? | 대기 명단에 올려 주실래요?
+시간 | Do you have anything after work hours? | 퇴근 시간 이후에 가능한 시간 있어요?
+시간 | That's a bit too late for me. | 저한텐 좀 너무 늦어요.
+시간 | Anything a little earlier? | 조금 더 이른 시간은요?
+시간 | I'll take the earliest one. | 제일 빠른 걸로 할게요.
+@31 Does ~ work for you?
+제안 | Does tomorrow work for you? | 내일 괜찮으세요?
+제안 | Would ten thirty suit you? | 열 시 반 괜찮으세요?
+제안 | Is Monday any good? | 월요일은 어때요?
+제안 | Does next week work better? | 다음 주가 더 나아요?
+답변 | That works perfectly. | 딱 좋아요.
+답변 | Tuesday's not great for me. | 화요일은 좀 어려워요.
+답변 | I can do Wednesday. | 수요일은 돼요.
+답변 | Either day is fine with me. | 둘 다 괜찮아요.
+답변 | Anytime after two is good. | 두 시 이후면 언제든 좋아요.
+답변 | Let me get back to you on that. | 확인하고 다시 말씀드릴게요.
+@32 I need to reschedule ~
+변경 | Can I change my appointment to Friday? | 예약을 금요일로 바꿀 수 있을까요?
+변경 | Could we postpone the call? | 통화를 미룰 수 있을까요?
+변경 | Can we bump it to next week? | 다음 주로 미뤄도 될까요?
+변경 | I need to move our meeting up an hour. | 미팅을 한 시간 앞당겨야 해요.
+변경 | Something urgent came up at work. | 회사에 급한 일이 생겼어요.
+변경 | I'm stuck in traffic, can we push it back? | 차가 막혀서 그런데 미뤄도 될까요?
+변경 | Would it be possible to change the date? | 날짜 변경 가능할까요?
+변경 | Is there a fee to reschedule? | 일정 변경하면 수수료 있어요?
+변경 | Thanks for being flexible. | 맞춰 주셔서 감사해요.
+변경 | Sorry for the change of plans. | 계획 바꿔서 죄송해요.
+@33 I need to cancel ~
+취소 | I won't be able to make it tomorrow. | 내일 못 갈 것 같아요.
+취소 | Could you cancel my booking? | 제 예약 취소해 주시겠어요?
+취소 | I'd like to cancel the rest of my sessions. | 남은 수업 취소하고 싶어요.
+취소 | Can I get a refund if I cancel? | 취소하면 환불돼요?
+취소 | How far in advance do I need to cancel? | 며칠 전까지 취소해야 해요?
+취소 | I'm sick, so I have to cancel. | 아파서 취소해야 해요.
+취소 | Please cancel my membership. | 회원권 해지해 주세요.
+취소 | Has my cancellation gone through? | 취소 처리됐나요?
+취소 | Can I get a confirmation email for the cancellation? | 취소 확인 메일 받을 수 있을까요?
+취소 | Sorry, we'll have to call it off. | 미안, 취소해야 할 것 같아.
+@34 Just calling to confirm ~
+확인 | I'm calling to confirm your reservation for tonight. | 오늘 저녁 예약 확인차 전화드렸어요.
+확인 | Can you confirm the appointment time? | 예약 시간 확인해 주시겠어요?
+확인 | Is everything still on for tomorrow? | 내일 일정 그대로죠?
+확인 | We're still meeting at six, right? | 여섯 시에 만나는 거 맞지?
+확인 | Please call us if you need to cancel. | 취소하시려면 전화 주세요.
+확인 | Press one to confirm. | 확인하시려면 1번을 누르세요.
+확인 | Yes, I'll be there. | 네, 갈게요.
+확인 | Can you send me a confirmation text? | 확인 문자 보내 주실 수 있나요?
+확인 | I never got a confirmation email. | 확인 메일을 못 받았어요.
+확인 | Great, see you then. | 좋아요, 그때 봬요.
+@35 How much does it cost to ~?
+가격 | How much would it be to repaint the room? | 방을 다시 칠하면 얼마 정도예요?
+가격 | How much is shipping to Korea? | 한국까지 배송비 얼마예요?
+가격 | Is there a discount for students? | 학생 할인 있어요?
+가격 | Are there any hidden fees? | 숨은 수수료 있어요?
+가격 | Does the price include tax? | 가격에 세금 포함이에요?
+가격 | What's the cheapest option? | 제일 저렴한 건 뭐예요?
+가격 | Can you send me a quote? | 견적서 보내 주실래요?
+가격 | That's a bit over my budget. | 예산보다 좀 비싸네요.
+가격 | Do I pay now or when I pick it up? | 지금 내요, 찾으러 갈 때 내요?
+가격 | Is the consultation free? | 상담은 무료예요?
+@36 What are your hours ~?
+영업 | Are you open now? | 지금 열었어요?
+영업 | What time do you close today? | 오늘 몇 시에 닫아요?
+영업 | Are you open on Christmas Day? | 크리스마스에도 열어요?
+영업 | When's your last appointment of the day? | 마지막 예약 시간이 언제예요?
+영업 | Do you close for lunch? | 점심시간에 문 닫아요?
+영업 | What's the address? | 주소가 어떻게 돼요?
+영업 | Which entrance should I use? | 어느 입구로 가면 돼요?
+영업 | Is it near the subway station? | 지하철역 근처예요?
+영업 | Do you deliver to my area? | 저희 동네도 배달돼요?
+영업 | Is there a long wait right now? | 지금 많이 기다려야 해요?
+@37 Can everyone hear me?
+확인 | Can you all see my face? | 다들 제 얼굴 보이세요?
+확인 | Is my mic working? | 제 마이크 되나요?
+확인 | Is the sound okay? | 소리 괜찮아요?
+확인 | Give me a thumbs-up if you can hear me. | 들리면 엄지 척 해 주세요.
+확인 | Can people in the room hear me? | 회의실에 계신 분들 들리세요?
+확인 | I can hear you loud and clear. | 아주 잘 들려요.
+확인 | We can see you, but we can't hear you. | 보이긴 하는데 소리가 안 들려요.
+확인 | Is anyone else having audio issues? | 다른 분도 소리 문제 있으세요?
+확인 | Let's do a quick sound check. | 소리 빠르게 점검해 보죠.
+확인 | Okay, it looks like we're all set. | 네, 다 준비된 것 같네요.
+@38 You're on mute
+음소거 | I think your mic is off. | 마이크가 꺼진 것 같아요.
+음소거 | We can't hear you. You're muted. | 안 들려요. 음소거예요.
+음소거 | Oops, I was talking on mute. | 앗, 음소거로 말하고 있었네요.
+음소거 | Could you unmute yourself? | 음소거 풀어 주실래요?
+음소거 | I'll mute everyone during the presentation. | 발표 중에는 다 음소거할게요.
+음소거 | The host muted me. | 호스트가 저를 음소거했어요.
+음소거 | Press the space bar to talk. | 스페이스바 누르고 말씀하세요.
+음소거 | Can you mute your other device? | 다른 기기 음소거해 주실래요?
+음소거 | I'm hearing an echo. Is someone unmuted? | 소리가 울려요. 누가 음소거 안 하셨나요?
+음소거 | Sorry, I forgot to unmute. | 죄송해요, 음소거 푸는 걸 깜빡했어요.
+@39 Your video is frozen
+영상 | You froze for a few seconds. | 몇 초 동안 화면이 멈췄어요.
+영상 | Your video keeps freezing. | 화면이 자꾸 멈춰요.
+영상 | We can't see you anymore. | 이제 안 보여요.
+영상 | Your face is cut off. | 얼굴이 잘려서 보여요.
+영상 | There's a lot of light behind you. | 뒤쪽이 너무 밝아요.
+영상 | Your camera is upside down. | 카메라가 거꾸로 보여요.
+영상 | You're really blurry. | 화면이 많이 흐려요.
+영상 | Can you move your camera up a little? | 카메라 조금 위로 올려 주실래요?
+영상 | Is my video okay now? | 이제 제 화면 괜찮아요?
+영상 | Yes, we can see you clearly now. | 네, 이제 잘 보여요.
+@40 Let me share my screen
+공유 | I'm going to share my screen now. | 이제 화면 공유할게요.
+공유 | Is my screen showing? | 제 화면 나와요?
+공유 | Can you see my mouse pointer? | 마우스 포인터 보이세요?
+공유 | Let me make it full screen. | 전체 화면으로 할게요.
+공유 | Sorry, wrong tab. | 죄송해요, 탭을 잘못 띄웠네요.
+공유 | Let me switch to the next slide. | 다음 슬라이드로 넘길게요.
+공유 | I'll pass screen sharing to Ella. | 화면 공유를 엘라한테 넘길게요.
+공유 | I can't share my screen for some reason. | 왜인지 화면 공유가 안 돼요.
+공유 | Could you make the text bigger? | 글자 좀 크게 해 주실래요?
+공유 | Okay, I'll stop sharing. | 네, 공유 끝낼게요.
+@41 I'll drop ~ in the chat
+채팅 | I'll paste the link here. | 링크 여기 붙여 넣을게요.
+채팅 | Check the chat for the meeting notes. | 회의록은 채팅창 확인하세요.
+채팅 | Did you see my message in the chat? | 채팅창에 제 메시지 보셨어요?
+채팅 | Please type your questions as we go. | 진행하면서 질문은 채팅으로 남겨 주세요.
+채팅 | I'll send it privately. | 개인 메시지로 보낼게요.
+채팅 | Someone said they can't hear. | 누가 소리가 안 들린대요.
+채팅 | I'll read out the questions from the chat. | 채팅 질문 읽어 드릴게요.
+채팅 | The chat is a little behind. | 채팅이 좀 늦게 떠요.
+채팅 | Can you copy that into the chat? | 그거 채팅창에 복사해 주실래요?
+채팅 | Thanks for all the comments in the chat. | 채팅으로 의견 많이 주셔서 감사해요.
+@42 I'm having trouble ~
+문제 | I'm having trouble logging in. | 로그인이 잘 안 돼요.
+문제 | I'm having trouble with my camera. | 카메라가 잘 안 돼요.
+문제 | I can't seem to share my screen. | 화면 공유가 안 되는 것 같아요.
+문제 | My mic isn't picking anything up. | 마이크가 소리를 못 잡아요.
+문제 | The link isn't working. | 링크가 안 열려요.
+문제 | It says I need to update the app. | 앱을 업데이트해야 한대요.
+문제 | I'm stuck in the waiting room. | 대기실에서 못 들어가고 있어요.
+문제 | My computer is really slow today. | 오늘 컴퓨터가 너무 느려요.
+문제 | I keep getting an error message. | 자꾸 오류 메시지가 떠요.
+문제 | Is anyone else having the same issue? | 다른 분도 같은 문제 있으세요?
+@43 Let me try ~
+해결 | Let me log out and log back in. | 로그아웃했다가 다시 들어올게요.
+해결 | I'll try a different browser. | 다른 브라우저로 해 볼게요.
+해결 | Let me check my settings. | 설정 확인해 볼게요.
+해결 | I'll unplug my headset and plug it back in. | 헤드셋 뺐다가 다시 꽂아 볼게요.
+해결 | Let me turn off my Wi-Fi and use data. | 와이파이 끄고 데이터로 해 볼게요.
+해결 | I'll reboot my laptop. | 노트북 재부팅할게요.
+해결 | Let me close some other programs. | 다른 프로그램 좀 닫아 볼게요.
+해결 | Try clearing your cache. | 캐시 지워 보세요.
+해결 | Did that fix it? | 이제 해결됐어요?
+해결 | Okay, that seems to have worked. | 네, 된 것 같아요.
+@44 I got disconnected
+재접속 | Sorry, my internet went down. | 죄송해요, 인터넷이 끊겼어요.
+재접속 | I'm back. Can you hear me? | 다시 왔어요. 들리세요?
+재접속 | Did I miss anything important? | 중요한 거 놓쳤나요?
+재접속 | Could someone fill me in? | 누가 요약 좀 해 주실래요?
+재접속 | It kicked me out of the meeting. | 회의에서 튕겼어요.
+재접속 | I think I'm back now. | 이제 다시 들어온 것 같아요.
+재접속 | Looks like Mike dropped off. | 마이크가 나간 것 같네요.
+재접속 | Let's pause until she's back. | 다시 들어올 때까지 잠깐 멈추죠.
+재접속 | Sorry about the interruption. | 흐름 끊어서 죄송해요.
+재접속 | Let's pick up where we left off. | 하던 데서 이어서 하죠.
+@45 Sorry, I'm in a noisy place
+소음 | Sorry, it's a bit loud here. | 죄송해요, 여기가 좀 시끄러워요.
+소음 | Sorry, my neighbor is drilling. | 죄송해요, 이웃이 드릴질을 해서요.
+소음 | There's a siren outside. One second. | 밖에 사이렌 소리가 나요. 잠깐만요.
+소음 | I'm at the airport, so it's noisy. | 공항이라 시끄러워요.
+소음 | I'm going to step outside. | 밖으로 나갈게요.
+소음 | Can you still hear me okay? | 그래도 잘 들리세요?
+소음 | Sorry, my baby just woke up. | 죄송해요, 아기가 방금 깼어요.
+소음 | I'll stay on mute unless I'm talking. | 말할 때 빼고 음소거하고 있을게요.
+소음 | There's a lot of wind here. | 여기 바람이 많이 불어요.
+소음 | Okay, it's quieter now. | 이제 좀 조용해졌어요.
+@46 I have to drop off ~
+퇴장 | I need to leave at the top of the hour. | 정각에 나가 봐야 해요.
+퇴장 | I have a hard stop at three. | 세 시엔 무조건 나가야 해요.
+퇴장 | Sorry, I have to run. | 죄송해요, 급히 가 봐야 해요.
+퇴장 | I'll need to leave a few minutes early. | 몇 분 일찍 나가야 해요.
+퇴장 | Can we cover my part first? | 제 부분 먼저 해도 될까요?
+퇴장 | Please send me the action items. | 할 일 목록 보내 주세요.
+퇴장 | I'll follow up by email. | 이메일로 이어서 연락드릴게요.
+퇴장 | Thanks, everyone. I'm signing off. | 다들 감사해요. 저는 나갈게요.
+퇴장 | Bye, everyone! | 다들 안녕히 계세요!
+퇴장 | I'll leave the meeting running for you. | 회의는 열어 둘게요.
+@47 Let's give it a few more minutes
+대기 | Let's wait for a couple more people. | 몇 분 더 오실 때까지 기다리죠.
+대기 | I think a few people are running late. | 몇 분이 좀 늦으시는 것 같아요.
+대기 | Let's start in two minutes. | 2분 뒤에 시작하죠.
+대기 | While we wait, how's everyone doing? | 기다리는 동안, 다들 어떻게 지내세요?
+대기 | Can you all hear me while we wait? | 기다리는 동안 다들 제 소리 들리세요?
+대기 | We'll start once Jane joins. | 제인 들어오면 시작할게요.
+대기 | Okay, let's not wait any longer. | 네, 더 기다리지 말고 하죠.
+대기 | Thanks for being on time. | 제시간에 와 주셔서 감사해요.
+대기 | Let's kick things off. | 시작하죠.
+대기 | We'll fill in latecomers later. | 늦게 오시는 분은 나중에 설명해 드릴게요.
+@48 Could you go over ~ again?
+재설명 | Could you explain that part again? | 그 부분 다시 설명해 주실래요?
+재설명 | Can you go back two slides? | 슬라이드 두 장 전으로 가 주실래요?
+재설명 | Could you clarify the deadline? | 마감일 다시 확인해 주실래요?
+재설명 | Can you give us a quick recap? | 간단히 요약해 주실래요?
+재설명 | I didn't quite follow the last point. | 마지막 내용을 잘 못 따라갔어요.
+재설명 | Could you share that link again? | 그 링크 다시 공유해 주실래요?
+재설명 | Can you say who's responsible for what? | 누가 뭘 맡는지 말씀해 주실래요?
+재설명 | Could you slow down on the numbers? | 숫자는 좀 천천히 해 주실래요?
+재설명 | Can you show us that chart again? | 그 차트 다시 보여 주실래요?
+재설명 | Thanks, that's clear now. | 감사해요, 이제 이해됐어요.
+@49 Does anyone have ~?
+질문 | Do we have any questions so far? | 지금까지 질문 있으세요?
+질문 | Does anyone have a different view? | 다른 의견 있는 분?
+질문 | Anything else before we wrap up? | 마무리하기 전에 더 있으세요?
+질문 | Does anyone have the latest numbers? | 최신 숫자 갖고 계신 분?
+질문 | Has everyone had a chance to speak? | 다들 말씀하셨죠?
+질문 | Let's hear from someone who hasn't spoken yet. | 아직 말씀 안 하신 분 얘기도 들어 보죠.
+질문 | Feel free to unmute and ask. | 편하게 음소거 풀고 질문하세요.
+질문 | No questions? Great. | 질문 없으세요? 좋아요.
+질문 | Any last thoughts? | 마지막으로 하실 말씀?
+질문 | Does that make sense to everyone? | 다들 이해되셨어요?
+@50 I'd like to add something
+발언 | Can I add something quickly? | 빨리 하나 덧붙여도 될까요?
+발언 | If I could just jump in for a second, | 잠깐만 끼어들자면,
+발언 | I have a quick question for Jenny. | 제니한테 짧은 질문이 있어요.
+발언 | I'd like to share a different idea. | 다른 아이디어를 말씀드리고 싶어요.
+발언 | I agree, and I'd also add that we need more time. | 동의하고, 시간도 더 필요하다고 덧붙이고 싶어요.
+발언 | Sorry, I raised my hand a while ago. | 죄송한데 아까 손들기 눌렀어요.
+발언 | Just to follow up on that point, | 그 얘기에 이어서 말하자면,
+발언 | One more thing before we move on. | 넘어가기 전에 하나만 더요.
+발언 | I'm not sure I agree with that. | 그건 잘 동의가 안 돼요.
+발언 | That's all from me. | 제 얘기는 여기까지예요.
+@51 We're running out of time
+시간 | We're almost out of time. | 시간이 거의 다 됐어요.
+시간 | Let's speed things up a little. | 조금 속도를 내죠.
+시간 | We'll have to skip the last item. | 마지막 안건은 넘어가야겠어요.
+시간 | Let's park that for now. | 그건 일단 보류하죠.
+시간 | Can we schedule another call for this? | 이건 따로 통화 일정 잡을까요?
+시간 | Let's keep each update to two minutes. | 업데이트는 각자 2분 안으로 하죠.
+시간 | I want to be mindful of everyone's time. | 다들 시간 생각해서 진행할게요.
+시간 | Sorry we went over. | 시간 넘겨서 죄송해요.
+시간 | We'll stop here for today. | 오늘은 여기서 멈출게요.
+시간 | Let's finish five minutes early. | 5분 일찍 끝내죠.
+@52 To sum up, ~
+요약 | So, the main takeaway is that we need more data. | 핵심은 데이터가 더 필요하다는 거예요.
+요약 | In short, we're on track. | 간단히 말해 순조로워요.
+요약 | Let me go over who's doing what. | 누가 뭘 하는지 정리할게요.
+요약 | Jake, you'll handle the design, right? | 제이크, 디자인은 맡아 주는 거죠?
+요약 | The deadline is next Friday. | 마감은 다음 주 금요일이에요.
+요약 | I'll share the recording later today. | 녹화본은 오늘 중으로 공유할게요.
+요약 | Let's check in again on Thursday. | 목요일에 다시 확인하죠.
+요약 | Thanks for a great discussion. | 좋은 논의 감사해요.
+요약 | Any last questions before we end? | 끝내기 전에 마지막 질문 있으세요?
+요약 | Have a good rest of your day. | 남은 하루 잘 보내세요.
+@53 Can you see ~ on your end?
+상대쪽 | Is it working on your end? | 그쪽에선 돼요?
+상대쪽 | Can you hear the music on your end? | 그쪽에서 음악 들려요?
+상대쪽 | What do you see on your screen? | 화면에 뭐가 보여요?
+상대쪽 | It's frozen on my end. | 제 쪽에선 멈춰 있어요.
+상대쪽 | It loads fine on my end. | 제 쪽에선 잘 열려요.
+상대쪽 | Try refreshing on your end. | 그쪽에서 새로고침해 보세요.
+상대쪽 | Is the link working for you? | 링크 열려요?
+상대쪽 | The slides look blurry on my end. | 제 쪽에선 슬라이드가 흐려요.
+상대쪽 | Let me know if it changes on your end. | 그쪽 화면 바뀌면 말씀해 주세요.
+상대쪽 | Everything looks good from here. | 여기선 다 괜찮아 보여요.
+@54 Could we turn on cameras ~?
+카메라 | Would everyone mind turning on cameras? | 다들 카메라 켜 주실 수 있을까요?
+카메라 | Cameras on, please, if you can. | 가능하면 카메라 켜 주세요.
+카메라 | Cameras are optional today. | 오늘은 카메라 안 켜셔도 돼요.
+카메라 | I'll turn my camera on in a minute. | 잠시 후에 카메라 켤게요.
+카메라 | My camera isn't working today. | 오늘 카메라가 안 돼요.
+카메라 | Sorry, I'm eating, so camera off. | 죄송해요, 밥 먹는 중이라 카메라 끌게요.
+카메라 | It's nice to finally see your face. | 드디어 얼굴 보니 반갑네요.
+카메라 | Love the bookshelf behind you. | 뒤에 책장 멋지네요.
+카메라 | Can you turn off the filter? | 필터 꺼 주실래요?
+카메라 | Let's turn cameras off to save bandwidth. | 인터넷 아끼게 카메라 꺼 두죠.
+@55 I think you have the wrong number
+잘못된전화 | Sorry, you've got the wrong number. | 죄송한데 잘못 거셨어요.
+잘못된전화 | Who are you trying to reach? | 누구한테 거신 거예요?
+잘못된전화 | No problem, it happens. | 괜찮아요, 그럴 수 있죠.
+잘못된전화 | Oh, sorry. I dialed the wrong number. | 아, 죄송해요. 번호를 잘못 눌렀어요.
+잘못된전화 | This isn't a restaurant. | 여기 식당 아니에요.
+잘못된전화 | I think you're looking for the old owner of this number. | 이 번호 예전 주인을 찾으시는 것 같아요.
+잘못된전화 | Can you double-check the number? | 번호 다시 확인해 보실래요?
+잘못된전화 | I've had this number for years. | 이 번호 쓴 지 몇 년 됐어요.
+잘못된전화 | You might want to check the website. | 홈페이지 확인해 보세요.
+잘못된전화 | Good luck finding them. | 찾으시길 바라요.
+@56 I've been on hold for ~
+불만 | I've been waiting forever. | 진짜 오래 기다렸어요.
+불만 | Why does it take so long to reach someone? | 연결이 왜 이렇게 오래 걸려요?
+불만 | I keep explaining the same thing. | 같은 얘기를 계속 하고 있어요.
+불만 | Can you note this on my account? | 제 계정에 이거 기록해 주실래요?
+불만 | Can I get your name in case we get disconnected? | 끊길 수도 있으니 성함 알려 주실래요?
+불만 | Please don't transfer me again. | 또 돌리지 말아 주세요.
+불만 | I'd like to speak to a supervisor. | 책임자와 통화하고 싶어요.
+불만 | Is there an email I can use instead? | 대신 쓸 수 있는 이메일 있어요?
+불만 | I appreciate your patience. | 기다려 주셔서 감사해요.
+불만 | Finally, a real person! | 드디어 사람이랑 연결됐네요!
+@57 I'm not interested, thanks
+거절 | No, thank you. | 아니요, 괜찮아요.
+거절 | I'm happy with my current plan. | 지금 요금제에 만족해요.
+거절 | Please remove my number. | 제 번호 삭제해 주세요.
+거절 | Can you send me information by email instead? | 대신 이메일로 정보 보내 주실래요?
+거절 | I don't make decisions over the phone. | 전화로는 결정 안 해요.
+거절 | I'll think about it and call you if I'm interested. | 생각해 보고 관심 있으면 전화드릴게요.
+거절 | I never entered any contest. | 저는 이벤트에 응모한 적 없어요.
+거절 | I'm going to hang up now. | 이제 끊을게요.
+거절 | Who exactly do you work for? | 정확히 어느 회사세요?
+거절 | Please stop calling me. | 그만 전화해 주세요.
+@58 My battery's about to die
+끊김 | My phone's at two percent. | 폰 배터리가 2%야.
+끊김 | I'm going underground, I'll lose signal. | 지하로 들어가서 신호 끊길 거야.
+끊김 | Let me call you back on Wi-Fi. | 와이파이로 다시 걸게.
+끊김 | Can I borrow your charger? | 충전기 좀 빌려도 될까?
+끊김 | I'll text you the rest. | 나머지는 문자로 보낼게.
+끊김 | My phone keeps overheating. | 폰이 자꾸 뜨거워져.
+끊김 | I'm out of minutes this month. | 이번 달 통화량 다 썼어.
+끊김 | There's no service in the elevator. | 엘리베이터에선 안 터져.
+끊김 | I'll find a spot with better reception. | 신호 잘 잡히는 데 찾아볼게.
+끊김 | Let's talk properly when I'm home. | 집에 가서 제대로 얘기하자.
+@59 Sorry, I have to take this
+다른전화 | Sorry, it's the school calling. | 미안, 학교에서 전화가 왔어.
+다른전화 | Do you mind if I get this? | 이거 받아도 될까?
+다른전화 | Hold that thought, I'll be right back. | 그 얘기 잠깐 기억해 둬, 금방 올게.
+다른전화 | Can I put you on speaker? | 스피커로 해도 돼?
+다른전화 | I need to switch to the other line. | 다른 전화로 넘어가야 해.
+다른전화 | Let me call you back in two minutes. | 2분 뒤에 다시 걸게.
+다른전화 | Sorry for keeping you waiting. | 기다리게 해서 미안.
+다른전화 | That was my mom. Anyway, | 엄마였어. 아무튼,
+다른전화 | Sorry, this one's urgent. | 미안, 이건 급한 거라서.
+다른전화 | I'm all yours now. | 이제 얘기해도 돼.
+@60 Did the call drop?
+끊김 | Hello? Can you hear me? | 여보세요? 들려?
+끊김 | I think the call dropped again. | 또 끊긴 것 같아.
+끊김 | You went quiet for a while. | 한동안 소리가 안 들렸어.
+끊김 | Sorry, we got cut off. | 미안, 끊겼어.
+끊김 | I lost you for a second there. | 방금 잠깐 소리가 안 들렸어.
+끊김 | Let me try calling again. | 다시 걸어 볼게.
+끊김 | The reception's bad in my building. | 우리 건물이 신호가 안 좋아.
+끊김 | Let's just text instead. | 그냥 문자로 하자.
+끊김 | Okay, you're back. | 아, 다시 들린다.
+끊김 | What was the last thing you heard? | 마지막으로 들은 게 뭐야?
